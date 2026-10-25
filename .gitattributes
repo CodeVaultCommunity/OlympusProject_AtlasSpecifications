@@ -1,0 +1,17 @@
+* text=auto eol=lf
+
+*.json text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+*.tex text eol=lf
+*.sty text eol=lf
+*.svg text eol=lf
+*.png binary
+*.pdf binary
+
+# Atlas example Markdown/LaTeX files may carry authored CRLF/LF sequences as
+# content. Never let Git rewrite their bytes on checkout. These patterns come
+# last because the last matching attribute wins.
+**/*.atlas.md -text
+**/*.atlas.tex -text

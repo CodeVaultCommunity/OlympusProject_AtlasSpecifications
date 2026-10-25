@@ -1,0 +1,134 @@
+{
+  "format": "atlas-json/Alpha-v0.1.0",
+  "atlas": {
+    "document_id": "ATLAS-DRAFT-001",
+    "title": {
+      "text": "Untitled specification"
+    },
+    "subtitle": {
+      "text": "Working draft: project scope and requirements are not yet defined"
+    },
+    "revision": "1",
+    "spec_version": "Alpha-v0.1.0",
+    "profile_version": "Alpha-v0.1.0",
+    "translator_version": "0.1.0",
+    "language": "en",
+    "status": "draft",
+    "authors": [
+      {
+        "name": {
+          "text": "Author to be assigned"
+        },
+        "role": {
+          "text": "Unassigned specification owner"
+        }
+      }
+    ],
+    "created": "2026-10-25",
+    "updated": "2026-10-25",
+    "keywords": [],
+    "structure": [
+      {
+        "id": "SEC-CONTEXT",
+        "level": 1,
+        "title": {
+          "text": "Context and vocabulary"
+        },
+        "blocks": [],
+        "items": []
+      },
+      {
+        "id": "SEC-ENTITIES",
+        "level": 1,
+        "title": {
+          "text": "Entities and validity"
+        },
+        "blocks": [],
+        "items": []
+      },
+      {
+        "id": "SEC-TOOLS",
+        "level": 1,
+        "title": {
+          "text": "Abstract tools"
+        },
+        "blocks": [],
+        "items": []
+      },
+      {
+        "id": "SEC-CASES",
+        "level": 1,
+        "title": {
+          "text": "Use cases and acceptance"
+        },
+        "blocks": [],
+        "items": []
+      },
+      {
+        "id": "SEC-INTERACTION",
+        "level": 1,
+        "title": {
+          "text": "Interaction constraints"
+        },
+        "blocks": [],
+        "items": []
+      }
+    ],
+    "actors": [],
+    "vocabulary": [],
+    "types": [],
+    "entities": [],
+    "tools": [],
+    "use_cases": [],
+    "boundaries": [],
+    "graphs": [],
+    "resources": [],
+    "assumptions": [],
+    "decisions": [],
+    "open_issues": [
+      {
+        "id": "ISSUE-SCOPE",
+        "title": {
+          "text": "Project scope and accountable author are unassigned"
+        },
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "No stakeholder brief, actors, use cases, product requirements or acceptance criteria have been supplied. This structurally valid draft does not claim a complete L1 specification or an executed Needs-to-L1 derivation."
+          }
+        ],
+        "status": "open",
+        "refs": []
+      }
+    ],
+    "sources": [],
+    "history": [
+      {
+        "id": "HISTORY-INITIAL",
+        "version": "1",
+        "date": "2026-10-25",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Initialized an empty working draft using the Atlas Specifications Alpha-v0.1.0 starter. No business requirements are asserted."
+          }
+        ]
+      }
+    ],
+    "presentation": {
+      "markdown": {
+        "include_toc": true
+      },
+      "latex": {
+        "documentclass": "article",
+        "class_options": [
+          "11pt"
+        ],
+        "paper": "a4paper",
+        "toc": true,
+        "figure_width": "0.8\\linewidth"
+      }
+    },
+    "extensions": {}
+  }
+}

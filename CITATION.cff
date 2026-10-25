@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite Atlas Specifications when using its model, representation profiles or translator."
+title: "Atlas Specifications"
+type: software
+version: Alpha-v0.1.0
+license: MIT
+authors:
+  - given-names: "Douglas"
+    family-names: "de Oliveira Alkimim"
+    website: "https://github.com/douglas-alkimim"
+abstract: >-
+  An abstract model for OAL L1 use-case specifications, with Atlas JSON,
+  Atlas Markdown and Atlas LaTeX representation implementations, a preserving
+  Python translator, valid starters, didactic specifications and a portable AI skill.
+keywords:
+  - use-case specifications
+  - OAL
+  - abstract model
+  - requirements
+  - representation conversion
+  - traceability
