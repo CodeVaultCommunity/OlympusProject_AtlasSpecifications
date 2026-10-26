@@ -1,0 +1,7 @@
+{
+  "files": 52,
+  "local_targets": 691,
+  "fragments": 257,
+  "problems": [],
+  "scope": "Root, release guides, artwork, current edition Markdown/HTML links outside fenced examples; OAL .txt snapshots retain source-repository references."
+}

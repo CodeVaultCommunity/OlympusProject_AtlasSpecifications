@@ -48,8 +48,8 @@
       "current_sha256": "3ad32059e3b97d774069293b3219037f55ed9c18df33b1c2cb5c8ae4e3cbb592"
     }
   ],
-  "responsibility_status": "pending_confirmation",
-  "responsible_person": null,
+  "responsibility_status": "confirmed",
+  "responsible_person": "Douglas de Oliveira Alkimim",
   "prepublication_cleanup": {
     "date": "2026-10-26",
     "prior_atlas_commit": "e3552b4508a3cd84aee153cb3920ca7314e851c7",
@@ -105,6 +105,17 @@
           "/atlas/history/2/description/0/text"
         ]
       }
+    ]
+  },
+  "responsibility_confirmation": {
+    "date": "2026-10-26",
+    "basis": "Explicit user confirmation in the Atlas task: Sim, registrar Douglas como responsável.",
+    "scope": "Responsibility for review and traceability of the editorial Alpha-to-Stable migration: changes, preservation and rationale.",
+    "does_not_assert": [
+      "Approval of the example requirements",
+      "Stakeholder approval",
+      "Application behavior",
+      "Remote publication"
     ]
   }
 }

@@ -1,0 +1,1625 @@
+{
+  "algorithm": "SHA-256",
+  "atlas_edition": "Stable-v1.0.0",
+  "scope": "All Git-indexed delivery files, using actual working-tree bytes; stage new delivery files before generation.",
+  "excluded_paths": [
+    "CONTENT-SHA256.json"
+  ],
+  "files": [
+    {
+      "path": ".editorconfig",
+      "size_bytes": 255,
+      "sha256": "c18aceb30c145c7b954d5d162e05c4700e195e677b8fcc7da11624346d06508c"
+    },
+    {
+      "path": ".gitattributes",
+      "size_bytes": 555,
+      "sha256": "605d44c39b92c60c7768ee6e17e713127d7ef5403cc0547afaa984580681f6f7"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "size_bytes": 2106,
+      "sha256": "a74c46aeaf27eab21fee0426d0e376c5146834e6f4d1d3889393b385cb97c792"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 117,
+      "sha256": "86fda7ca5a4509782de02bd946c92849b4d789227c8441e7831ecf3bab566a36"
+    },
+    {
+      "path": "AGENTS.md",
+      "size_bytes": 5475,
+      "sha256": "108adbcd67b631a535f5930ba6cc4f91bb1afd70615f2ffae3d11eb8a4a88857"
+    },
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 710,
+      "sha256": "fa77dad920541fb02d4756cb2fe291661b3f2491d6b135f19a57e7a17cc33dc4"
+    },
+    {
+      "path": "CLAUDE.md",
+      "size_bytes": 40,
+      "sha256": "553b2179c75dbabaa7289a6e11e00b29d1e6d2984be1414656ef6ea5a3878213"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 13744,
+      "sha256": "50ebe8ea4a68a6171292d1f8eb32a9d702bd7d3d0e700ad8eb79f92fb810674f"
+    },
+    {
+      "path": "README.pt-br.md",
+      "size_bytes": 14384,
+      "sha256": "bc7928cf50bbf7e85982d584e0ea3a11d058c6a7c2be04210d827ab03a43d72a"
+    },
+    {
+      "path": "assets/README.md",
+      "size_bytes": 3963,
+      "sha256": "4af2f378da65f278bba4b9af4d793b55fb7bed90858fe5754ac9a60c3a4deef3"
+    },
+    {
+      "path": "assets/README.pt-br.md",
+      "size_bytes": 4219,
+      "sha256": "7d75b351ba4fe3d236d9f2a45d3c48beee15b194c0155602b63a71c53798e054"
+    },
+    {
+      "path": "assets/atlas-banner-en.png",
+      "size_bytes": 1222430,
+      "sha256": "9ca4434b1ee5214c49017e7c6893e9fef5c7aaacd36e73d8337c45d8461c0c2f"
+    },
+    {
+      "path": "assets/atlas-banner-pt-br.png",
+      "size_bytes": 1222977,
+      "sha256": "0a0dce751ca675e3b559bc2b4010c8e230ec6200165b6c35ad71d0ffb783a47b"
+    },
+    {
+      "path": "assets/atlas-content-en.png",
+      "size_bytes": 117454,
+      "sha256": "67856c5f3161cd66531e2041b9a9359c87991e22dd563bccc5de1dd1dbf62d2b"
+    },
+    {
+      "path": "assets/atlas-content-pt-br.png",
+      "size_bytes": 122270,
+      "sha256": "cd4075dffbef54d11c5e42fc36cff78d6b212ec1e44933299cf8458201f1301e"
+    },
+    {
+      "path": "assets/atlas-icon.png",
+      "size_bytes": 1749523,
+      "sha256": "82bae6d6d6f212cff287617ae5d4f455a50e86494349340103bf6a8aa9bb1f1c"
+    },
+    {
+      "path": "assets/atlas-model-en.png",
+      "size_bytes": 111725,
+      "sha256": "199298324eff8eae456a8834ebcf85c9896099aa77b139c482db65aebac36b4f"
+    },
+    {
+      "path": "assets/atlas-model-pt-br.png",
+      "size_bytes": 118384,
+      "sha256": "b3ec022b4337122dc5210183c4c22b4e00b3763e0edb62125ef63094b54334f5"
+    },
+    {
+      "path": "assets/atlas-translation-en.png",
+      "size_bytes": 135865,
+      "sha256": "0ad3c1031cb50cfb13cf069dc09c45785d9629a7f986ab2b7e59dc82f0d00d6d"
+    },
+    {
+      "path": "assets/atlas-translation-pt-br.png",
+      "size_bytes": 140242,
+      "sha256": "97940170f660d4ba561c7d12bb906283d7145f282a6cea7738374592815fca84"
+    },
+    {
+      "path": "assets/olympus-icon.png",
+      "size_bytes": 1341958,
+      "sha256": "f75bf137a7f4278a5ec92d3581ee71c4c94d2193b181b5b575e726aba1b9e6a1"
+    },
+    {
+      "path": "assets/sources/ARTWORK-PROMPT.md",
+      "size_bytes": 1354,
+      "sha256": "968c495ffa8c47000302bc3ea4fda3fb4b4ee7fe18398d651d19bc612d6c2ff5"
+    },
+    {
+      "path": "assets/sources/atlas-banner-en.svg",
+      "size_bytes": 6893193,
+      "sha256": "53b74727761fdc466885a1154feee516aa5f43da34ad02f0b6022d66279351dc"
+    },
+    {
+      "path": "assets/sources/atlas-banner-pt-br.svg",
+      "size_bytes": 6893193,
+      "sha256": "68e811abe25bbde99cf0f1d8862451d52819593d8fb63c89e9a04ea93c525473"
+    },
+    {
+      "path": "assets/sources/atlas-content-en.svg",
+      "size_bytes": 6532,
+      "sha256": "b048d12445237f486d6d64c11cb1f655b0564b6a15be3e6097a50ca1676e8615"
+    },
+    {
+      "path": "assets/sources/atlas-content-pt-br.svg",
+      "size_bytes": 6600,
+      "sha256": "e972870afdb535ba46f08526bfdaeffb0f504adc76a36af38fe3b7c7e5dabc94"
+    },
+    {
+      "path": "assets/sources/atlas-hero-art.png",
+      "size_bytes": 2076876,
+      "sha256": "b9d3b665cc6a4d122599311f9f5d5e39b28e3a9e6c751dae6075b44f62b191c4"
+    },
+    {
+      "path": "assets/sources/atlas-icon-original.png",
+      "size_bytes": 1749523,
+      "sha256": "82bae6d6d6f212cff287617ae5d4f455a50e86494349340103bf6a8aa9bb1f1c"
+    },
+    {
+      "path": "assets/sources/atlas-model-en.svg",
+      "size_bytes": 6213,
+      "sha256": "349cb3a6407bbe95364a392e36e3487618c29464581e57d5d2bcff3a2b9ad6a0"
+    },
+    {
+      "path": "assets/sources/atlas-model-pt-br.svg",
+      "size_bytes": 6287,
+      "sha256": "4e5f914e73cd3c57683b4cd0bf632b71d17cfc198acd901d12220de5507e2951"
+    },
+    {
+      "path": "assets/sources/atlas-translation-en.svg",
+      "size_bytes": 8504,
+      "sha256": "25b7b67c624b9cb945a5d938648ff34508d614557c99a7db97d679149102f904"
+    },
+    {
+      "path": "assets/sources/atlas-translation-pt-br.svg",
+      "size_bytes": 8588,
+      "sha256": "0d42a61b88b25434916dfac4d099f65a9fdfb1d51e115fd11b4d49d12b92363b"
+    },
+    {
+      "path": "assets/sources/olympus-icon-original.png",
+      "size_bytes": 1341958,
+      "sha256": "f75bf137a7f4278a5ec92d3581ee71c4c94d2193b181b5b575e726aba1b9e6a1"
+    },
+    {
+      "path": "assets/sources/render_images.py",
+      "size_bytes": 14953,
+      "sha256": "7ae7e2ce2bbac1ef8d3256e6501e26778d3817373c7281a7d8012805a8771a00"
+    },
+    {
+      "path": "docs/releasing.md",
+      "size_bytes": 5384,
+      "sha256": "ef817106f1a44b919880764d90bf0b54b1ff64b1b44c9b5ccb786aa2ff35b624"
+    },
+    {
+      "path": "docs/releasing.pt-br.md",
+      "size_bytes": 5611,
+      "sha256": "c8e0f1d8981dd9efd523bbd08872cf9f794a3ba815472843f717bdd7a49b2e60"
+    },
+    {
+      "path": "scripts/build_distribution.py",
+      "size_bytes": 2309,
+      "sha256": "ae9d51bcef50803b6ba91c29d5b812517cd396404739d6a291a893dc8776b2a5"
+    },
+    {
+      "path": "scripts/check_archive.py",
+      "size_bytes": 2562,
+      "sha256": "f9f74fdf34fa8d61e8814b78b209c78f28293874ef73501b7aaea9c757c6686d"
+    },
+    {
+      "path": "scripts/content_inventory.py",
+      "size_bytes": 6002,
+      "sha256": "3cd1b95a276c82c523b69bc559a38937a3ee182d6d6d01e6606122f52b368fa8"
+    },
+    {
+      "path": "scripts/tests/test_content_inventory.py",
+      "size_bytes": 9728,
+      "sha256": "e91c7372a8221bc1d8ec719cde4f33eb1b02a2a3a564c2ec8ba86b05151cdf13"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/README.md",
+      "size_bytes": 71885,
+      "sha256": "29421e96675b0bffe7a6594c7e4e54408e647e66aeb777e8de35da3c3ec082da"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/README.pt-br.md",
+      "size_bytes": 65480,
+      "sha256": "9bd478350f8a0dd8dd53aeaa51c6eadd2da68d690bf39d36efd1b802e8d26b30"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/README.md",
+      "size_bytes": 4509,
+      "sha256": "929017b43285f770a8e4eb1a9be24d597474427af3f8839b4a467d8c5caa8100"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/README.pt-br.md",
+      "size_bytes": 4749,
+      "sha256": "558fbd73737cf78c14b26fbf8f508ea903716d3808325105d1756091d92a28f1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/build.py",
+      "size_bytes": 10407,
+      "sha256": "77a9e899d803f5d5e8f0d1a117b5b40ce070a875843d1a71dc32525c7f349cfc"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/composition/README.md",
+      "size_bytes": 2103,
+      "sha256": "e832da812d2c589f277448d5f39b5f340568aa0a5e1154c0a05db8ca51248e6e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/composition/README.pt-br.md",
+      "size_bytes": 2141,
+      "sha256": "c0867dbf5f4846b24e3221167177b507aa99f8f86961e267926dbf84bef481ef"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/composition/example.atlas.json",
+      "size_bytes": 114372,
+      "sha256": "f1cfdd1bb7c1ee889965d71e1c7f37ce02a2b7c99767f786b83982906db3d190"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/composition/example.atlas.md",
+      "size_bytes": 176176,
+      "sha256": "b9c032c4eb3ab47252d406b869bcf25a2aede58bdba81c538852fbeb66562edf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/composition/example.atlas.pdf",
+      "size_bytes": 375576,
+      "sha256": "d37834450f7fcb55d3d7cdff1ed019476f94cfb0d7bc4fa9c382289df1b8e18b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/composition/example.atlas.tex",
+      "size_bytes": 229719,
+      "sha256": "f776a9393d7eae2929d2623d4eb585df05fc6cc9d3705ad96c0848a3180e2572"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/README.md",
+      "size_bytes": 1653,
+      "sha256": "86df303cd19a08fde6d9824ce2ced0289aba0043a8c8fa0d2aa3a4757868255c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/README.pt-br.md",
+      "size_bytes": 1738,
+      "sha256": "78f5d947ae09ac8842c629cb2f0348f0fa0c8ca3cdf6bf28121a768e0084bc81"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/assets/request-flow.png",
+      "size_bytes": 73547,
+      "sha256": "53545111afdda2bcf5b113667ef14dc2233ca3f7e5e730749d3f50473ed81f8b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/assets/request-flow.svg",
+      "size_bytes": 10124,
+      "sha256": "71f3a97b667a88041cc5812da8c8e7e1ddaced2f9c835e56c2c7d6d1b4252206"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/assets/request-form.png",
+      "size_bytes": 22242,
+      "sha256": "5dd57bf8bccc9bcd9b68e1be1ea50163777caf93d83f6fbfec1a099eb1d84347"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/assets/request-form.svg",
+      "size_bytes": 1663,
+      "sha256": "f5a97fb7cb43af9681b2083fe1deebe38bb3eda24adb947c3314317fc8a24de9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/example.atlas.json",
+      "size_bytes": 58920,
+      "sha256": "776d6107129a6fef602e8ba81290c36b2bbdfd38f590ac61c91e5872e74e99c6"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/example.atlas.md",
+      "size_bytes": 90544,
+      "sha256": "89da7249fcb48446d840c24424dd2c12a061befcb10c9d36bf22f393dd51d938"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/example.atlas.pdf",
+      "size_bytes": 357505,
+      "sha256": "25a0bb1ef7d047786b08b2cc1f7da6a2364b32effb395bafccf4e675eb16064d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/example.atlas.tex",
+      "size_bytes": 112191,
+      "sha256": "dc19ef03a25624662dc66ad606841e4d09bb9f9152d01a7cd2671154bb8fb23a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/README.md",
+      "size_bytes": 5111,
+      "sha256": "3148a4768f03e1bf20ae0a05f2dde3e7c1da1bb979594037a831c0c4cac8c3ee"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/README.pt-br.md",
+      "size_bytes": 5592,
+      "sha256": "1f14ff930280faa22825c1c63f267316c5abc5b86ee41949dce10684b6123998"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/example.atlas.json",
+      "size_bytes": 128907,
+      "sha256": "ea45b98dec6bcd2be96107fcf10775088b62026a8e5f0df6785ab3027414a468"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/example.atlas.md",
+      "size_bytes": 190188,
+      "sha256": "91d993613398430be45289d3c729dbb8690fea2f5e2b069aa5d30b9265b21c07"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/example.atlas.pdf",
+      "size_bytes": 382825,
+      "sha256": "c7621dc90f21e776fecc682285b50bf60e442333846aec7fa8dbf41c7ab086be"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/example.atlas.tex",
+      "size_bytes": 241409,
+      "sha256": "b2d6a4443765616fc6c1f1e122b694e1ab78789070393cace147278eab969f4b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/needs.md",
+      "size_bytes": 3180,
+      "sha256": "dc21e1ab9264487e561c9999e5d08daaa9f9d777592665cc73355157c17a9b9b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/traceability.md",
+      "size_bytes": 5417,
+      "sha256": "fd748e12094661bdf423eae4f2ec184cebea226bc166bddaf21f5fa6253deea3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/json/README.md",
+      "size_bytes": 7910,
+      "sha256": "1b0faacb515559f887337de4c2abe15a41ee0d4e736028a98dd0da09f10b22ec"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/json/README.pt-br.md",
+      "size_bytes": 8158,
+      "sha256": "9f8a7ef2c388912814a942ede0e35ed6c8fced1b874724e0418839fd0eb990a1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/json/atlas.schema.json",
+      "size_bytes": 55910,
+      "sha256": "1072c3b4ef28ba46f5c1024812464850269cf7783ad4dbe7e21f39403ba74edb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/json/starter.atlas.json",
+      "size_bytes": 3107,
+      "sha256": "af26f1a77653311a6439925b69746a25d3213885e8467ae3d87f7dfd55e4ab7c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/latex/README.md",
+      "size_bytes": 15542,
+      "sha256": "36384e9a6d87fa171f53584befa062588974ca904a649e5be670143a73d1eb2d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/latex/README.pt-br.md",
+      "size_bytes": 15526,
+      "sha256": "c553fc52d39e2eb54c91ddcaa9b0eaeb48716551780a5ac76a9d2a4c05ab6e15"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/latex/atlas-presentation.example.tex",
+      "size_bytes": 1404,
+      "sha256": "b0329d91bfd2f32bd2b612fb09d1d27a6e7eb51c6ee59a8c9186e764f7b958a4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/latex/atlas.sty",
+      "size_bytes": 9396,
+      "sha256": "a6b85b5a9b2769c4f4392b0e05ef71fec743d11bdb11da9e21ec491b7e503b41"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/latex/starter.atlas.tex",
+      "size_bytes": 5899,
+      "sha256": "cf9a8a001b3d7d67e0a473bdaa7e9c23fd6126a65d1f33f97d03acc58846778d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/markdown/README.md",
+      "size_bytes": 9448,
+      "sha256": "e8a95a5bd38adb2e703f811d7ca6bb8e9a656d2e94a77726b2826f87bcefad28"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/markdown/README.pt-br.md",
+      "size_bytes": 8901,
+      "sha256": "97d0305c81607490d06188651532d39a67fae1af5855b3fa6d533865b331c88f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/implementations/markdown/starter.atlas.md",
+      "size_bytes": 5029,
+      "sha256": "338721f3230c737cc4fa529b480d99ce6df19644898ed45a500a5a2030a56534"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/pyproject.toml",
+      "size_bytes": 786,
+      "sha256": "2cc042dfe35ebe0bc961ba725359efd035d1099babe8e4522d3f5bbbacd68fc2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/SKILL.md",
+      "size_bytes": 8137,
+      "sha256": "f2dcdb78169370eaca8a2a7927454a4feb151f82ee521c6bb50e287cf4b67fbe"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/agents/openai.yaml",
+      "size_bytes": 249,
+      "sha256": "062abe7840acfe8d37f45a2b40f33106d066ae913ab159217de657a6c2d19c89"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/assets/atlas-presentation.example.tex",
+      "size_bytes": 1404,
+      "sha256": "b0329d91bfd2f32bd2b612fb09d1d27a6e7eb51c6ee59a8c9186e764f7b958a4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/assets/starter.atlas.json",
+      "size_bytes": 3107,
+      "sha256": "af26f1a77653311a6439925b69746a25d3213885e8467ae3d87f7dfd55e4ab7c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/references/atlas-json.md",
+      "size_bytes": 8239,
+      "sha256": "78b2928c1631a327275e0e6a0fb2f00ea387fa1ba80a039992aa69e3b3ee8af1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/references/atlas-latex.md",
+      "size_bytes": 15877,
+      "sha256": "7e1559284d8614b15151fbe3ae0d53ab07fa0cf83d2efa6ce4f4d5f96654f5f4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/references/atlas-markdown.md",
+      "size_bytes": 9709,
+      "sha256": "9792a9354a81f2770ed6f99c5d10bc6dd463cc12cae73123bb7f17551b575d99"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/references/atlas-specification.md",
+      "size_bytes": 72263,
+      "sha256": "bb0a2afa8c930dbd6924fe5299ef60bfba29ddde0156d64dc2f89c02b10a993d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/references/workflow.md",
+      "size_bytes": 4461,
+      "sha256": "7f2ecb920fe3fb3983df7969c4c566ba590eee772467311fda6d54a0695e740a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/atlas_translate.py",
+      "size_bytes": 1244,
+      "sha256": "382a91d4605d060a4dc217a35938c8cceba377d6f67666e4c02c7a19193430ff"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/requirements.txt",
+      "size_bytes": 20,
+      "sha256": "9984fa6ad6d35d2468011c4c278583e9bb4983d83be6bb3f5aabcef9c99b19b7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/__init__.py",
+      "size_bytes": 1106,
+      "sha256": "f6e7712dceb925b519bfab2140884fcea057ca9529837ef7a535458aa796c4f8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/__main__.py",
+      "size_bytes": 48,
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/base.py",
+      "size_bytes": 987,
+      "sha256": "04d302f1862a7636dc79d18feda08d3ec503591adfaa1d517659bf29e8570a33"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/json_adapter.py",
+      "size_bytes": 2279,
+      "sha256": "081384e4f3ebdd85245dd12165aef5079b09a9e3447d90c5eff45d3972da34bd"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/latex_adapter.py",
+      "size_bytes": 37856,
+      "sha256": "11aaac145039f25501727495b2e398fe4b5088933b4eb311f6c81f470ec6d9d1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/markdown_adapter.py",
+      "size_bytes": 49492,
+      "sha256": "f8bc7cf0b9f652e86584b289fb444ae10e02e691f3366f082475808a86aa7d33"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/cli.py",
+      "size_bytes": 10350,
+      "sha256": "68e27611aa040839c37569caace0a8892ddc620fd6a83314448ef3a554ce26eb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/errors.py",
+      "size_bytes": 1853,
+      "sha256": "ee9cbd830b7358c4e717b39c37fb9c2a1464d0140934d0d69e3c068d781d376e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/graph_render.py",
+      "size_bytes": 7805,
+      "sha256": "e23e895b556718d24faf0b145ce17644f8138ba1019555ed04960d658ed09397"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/registry.py",
+      "size_bytes": 5682,
+      "sha256": "0cb46333ca16f55c292887a82088d810d92f35e49b2b2a43c6fbd311bb34da9e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/schemas/atlas.schema.json",
+      "size_bytes": 55910,
+      "sha256": "1072c3b4ef28ba46f5c1024812464850269cf7783ad4dbe7e21f39403ba74edb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/slots.py",
+      "size_bytes": 5632,
+      "sha256": "2e234b4d15159bb6b4b88cab9b72930a00ca6d980e6238192ecb7a114a8dbef2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/templates/atlas.sty",
+      "size_bytes": 9396,
+      "sha256": "a6b85b5a9b2769c4f4392b0e05ef71fec743d11bdb11da9e21ec491b7e503b41"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/util.py",
+      "size_bytes": 5331,
+      "sha256": "4ba00edeeab6801135d61dab1243c2cfd11e60b2272798bc73934ebf09dd80df"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/scripts/vendor/atlas_spec/validation.py",
+      "size_bytes": 41974,
+      "sha256": "544f3cd67b9842608eae4d74168a199ae71e85ec7cff19ad7dd136878e6bbaec"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/atlas-specs/source-map.json",
+      "size_bytes": 7652,
+      "sha256": "a29504d2687a0b942d0de02a1b9c278fa6468e3d80ad178e878285202c2e3753"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/skills/build.py",
+      "size_bytes": 7587,
+      "sha256": "f4577b440886411860ac1fc90582fdd2386293e29396f70dee1c0cc3b63d49e1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/conftest.py",
+      "size_bytes": 4221,
+      "sha256": "121084c678e4ae3c2fdff4ea562394905837f79c7af62cc1b1663ae8eef59a15"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/test_distribution.py",
+      "size_bytes": 4822,
+      "sha256": "30920ff6942907bc97143e0daab52cade01101bb305b332914f3b1a54843d93f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/test_latex_presentation.py",
+      "size_bytes": 7072,
+      "sha256": "365d823b5eb98cb207b72d8e75d67a8ca1b2e427f313d156817b3d76256bc2db"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/test_packaging.py",
+      "size_bytes": 3337,
+      "sha256": "73d34caad7c2b757f14cfc8db167364601be4469cd639a578c1d607342bfba4c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/test_release_regressions.py",
+      "size_bytes": 5783,
+      "sha256": "e89dc1c3d50f162413117a7e158bc598f6314698f5dacbcf95e86c16ef95615c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/test_resources_and_cli.py",
+      "size_bytes": 5133,
+      "sha256": "d8fc5f308c01773762b2909dcd31ee52a59e5a271140b0a9ba1b2391f84bcce1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/test_roundtrip.py",
+      "size_bytes": 10004,
+      "sha256": "73393d0b953918c1666c9944a7e6d0b85cd20cbc6c7cfbbb43a5be309b4cd0bd"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/test_validation_and_errors.py",
+      "size_bytes": 10946,
+      "sha256": "2cab5186f29df8bae4455f362e4f765a872040a2fea90fc73847e3eb32275bd1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/README.md",
+      "size_bytes": 5141,
+      "sha256": "d0ca348aaf9b131888e862b899d4656694cb2bfb3e5ceb49b111ef46f6908e0f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/README.pt-br.md",
+      "size_bytes": 5449,
+      "sha256": "230dc09c0cc8ccd6c32366c5d07dc9beb00f5a3fd957ba9f8236a99132c5d9d0"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/atlas_translate.py",
+      "size_bytes": 1244,
+      "sha256": "382a91d4605d060a4dc217a35938c8cceba377d6f67666e4c02c7a19193430ff"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/__init__.py",
+      "size_bytes": 1106,
+      "sha256": "f6e7712dceb925b519bfab2140884fcea057ca9529837ef7a535458aa796c4f8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/__main__.py",
+      "size_bytes": 48,
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/adapters/base.py",
+      "size_bytes": 987,
+      "sha256": "04d302f1862a7636dc79d18feda08d3ec503591adfaa1d517659bf29e8570a33"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/adapters/json_adapter.py",
+      "size_bytes": 2279,
+      "sha256": "081384e4f3ebdd85245dd12165aef5079b09a9e3447d90c5eff45d3972da34bd"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/adapters/latex_adapter.py",
+      "size_bytes": 37856,
+      "sha256": "11aaac145039f25501727495b2e398fe4b5088933b4eb311f6c81f470ec6d9d1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/adapters/markdown_adapter.py",
+      "size_bytes": 49492,
+      "sha256": "f8bc7cf0b9f652e86584b289fb444ae10e02e691f3366f082475808a86aa7d33"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/cli.py",
+      "size_bytes": 10350,
+      "sha256": "68e27611aa040839c37569caace0a8892ddc620fd6a83314448ef3a554ce26eb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/errors.py",
+      "size_bytes": 1853,
+      "sha256": "ee9cbd830b7358c4e717b39c37fb9c2a1464d0140934d0d69e3c068d781d376e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/graph_render.py",
+      "size_bytes": 7805,
+      "sha256": "e23e895b556718d24faf0b145ce17644f8138ba1019555ed04960d658ed09397"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/registry.py",
+      "size_bytes": 5682,
+      "sha256": "0cb46333ca16f55c292887a82088d810d92f35e49b2b2a43c6fbd311bb34da9e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/schemas/atlas.schema.json",
+      "size_bytes": 55910,
+      "sha256": "1072c3b4ef28ba46f5c1024812464850269cf7783ad4dbe7e21f39403ba74edb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/slots.py",
+      "size_bytes": 5632,
+      "sha256": "2e234b4d15159bb6b4b88cab9b72930a00ca6d980e6238192ecb7a114a8dbef2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/templates/atlas.sty",
+      "size_bytes": 9396,
+      "sha256": "a6b85b5a9b2769c4f4392b0e05ef71fec743d11bdb11da9e21ec491b7e503b41"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/util.py",
+      "size_bytes": 5331,
+      "sha256": "4ba00edeeab6801135d61dab1243c2cfd11e60b2272798bc73934ebf09dd80df"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/translator/src/atlas_spec/validation.py",
+      "size_bytes": 41974,
+      "sha256": "544f3cd67b9842608eae4d74168a199ae71e85ec7cff19ad7dd136878e6bbaec"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/COMPATIBILITY.md",
+      "size_bytes": 4731,
+      "sha256": "cdb782eb109ad444100b09926a46d2f2a8b46a594381ea68571c0a090bf3b40f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/COMPATIBILITY.pt-br.md",
+      "size_bytes": 4815,
+      "sha256": "f96f2fc5cbdbac8c9b616ac32cb3ca682e48f6c3d638b2a489e394f6a1ef867f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/DIAGNOSTICS.md",
+      "size_bytes": 4157,
+      "sha256": "eb032cc48c97277e68a1cc3d31aef9386c71e9ca46b244fda35fc6789b66777d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/README.md",
+      "size_bytes": 72152,
+      "sha256": "bddcf0720ec65b53b951cd52e7c8515adc04e798acfc621b5cb48b48e8cfff5b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/README.pt-br.md",
+      "size_bytes": 65815,
+      "sha256": "afe829edfe13c70930b330d14706180eaab1f278ee6a4fd807307ce9d9ab1b0b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/README.md",
+      "size_bytes": 4510,
+      "sha256": "998354f138d8dfac4ad6a9135ba495b349dd23a30492a5e19c6a529ed74a5d9a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/README.pt-br.md",
+      "size_bytes": 4750,
+      "sha256": "edb028cb6849ffaa460fb2f285dbe36a62c9d13252f370878642d6abee83b9f4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/build.py",
+      "size_bytes": 10421,
+      "sha256": "7a6c74d56632ca2f3c8773834e43ba02c67972f0fb3688ab626fda0083bb5fd0"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/README.md",
+      "size_bytes": 2103,
+      "sha256": "e832da812d2c589f277448d5f39b5f340568aa0a5e1154c0a05db8ca51248e6e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/README.pt-br.md",
+      "size_bytes": 2141,
+      "sha256": "c0867dbf5f4846b24e3221167177b507aa99f8f86961e267926dbf84bef481ef"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/example.atlas.json",
+      "size_bytes": 114924,
+      "sha256": "63a65c44f9fb4151c00389a954e9ce87531754c7c19076743b6dd6693ff62f96"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/example.atlas.md",
+      "size_bytes": 176819,
+      "sha256": "e4247b9c82d7e8ed18687068556133dcbc59f1929f5f682ef0d348ad4023d3ce"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/example.atlas.pdf",
+      "size_bytes": 460396,
+      "sha256": "399c278deca96134bd89d3e2df23e49aedd42566dc2828f662572be5d16c91d2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/example.atlas.tex",
+      "size_bytes": 248914,
+      "sha256": "0a3dc81ca3230d9be0b90dbeb1af1b7a62ba4f8d472cb45df774751721bb572e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/README.md",
+      "size_bytes": 1653,
+      "sha256": "86df303cd19a08fde6d9824ce2ced0289aba0043a8c8fa0d2aa3a4757868255c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/README.pt-br.md",
+      "size_bytes": 1738,
+      "sha256": "78f5d947ae09ac8842c629cb2f0348f0fa0c8ca3cdf6bf28121a768e0084bc81"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/assets/request-flow.png",
+      "size_bytes": 73547,
+      "sha256": "53545111afdda2bcf5b113667ef14dc2233ca3f7e5e730749d3f50473ed81f8b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/assets/request-flow.svg",
+      "size_bytes": 10124,
+      "sha256": "71f3a97b667a88041cc5812da8c8e7e1ddaced2f9c835e56c2c7d6d1b4252206"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/assets/request-form.png",
+      "size_bytes": 22242,
+      "sha256": "5dd57bf8bccc9bcd9b68e1be1ea50163777caf93d83f6fbfec1a099eb1d84347"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/assets/request-form.svg",
+      "size_bytes": 1663,
+      "sha256": "f5a97fb7cb43af9681b2083fe1deebe38bb3eda24adb947c3314317fc8a24de9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/example.atlas.json",
+      "size_bytes": 59472,
+      "sha256": "731ef7e7f9e0dcda1b9dea1cae45a51a43bd16083948dae121d18fdd77bc746e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/example.atlas.md",
+      "size_bytes": 91187,
+      "sha256": "80c8cda0ec0be1a8d25bd63fb94a1bc506541f4fbcf688f5c604f5e6aa1c87d4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/example.atlas.pdf",
+      "size_bytes": 399990,
+      "sha256": "6c4e6727d3de6a0c95a1c438d66ff1dc36da36170a6a9ff50f81dfaef39bfeaf"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/example.atlas.tex",
+      "size_bytes": 121169,
+      "sha256": "68b35c2ffa6efb91b257b7fbf3e5aec3acfe1767948b855720cf5e4d8dc70539"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/README.md",
+      "size_bytes": 5501,
+      "sha256": "80bd1e94e12075ddf717c6a41e5a852eec255ee0684ff0d9e78e601d38dd2a84"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/README.pt-br.md",
+      "size_bytes": 5979,
+      "sha256": "f591d0348294d5604b47b3d7b1b91430f44d5b47a77cc26968a7829dd1acbda6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/example.atlas.json",
+      "size_bytes": 130253,
+      "sha256": "fa14749cf58a179792ee66231e413cd912ddf944174824919b8c4615e91d87c8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/example.atlas.md",
+      "size_bytes": 191741,
+      "sha256": "199d561ffaad21c0c53de24fe1dc87d9bf28ee6db03e3ec03b1935639fb9e8b5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/example.atlas.pdf",
+      "size_bytes": 463553,
+      "sha256": "4836238ebf96da1ddeb94d4d9166521453f55d1ad2d58544000d65e63620ad79"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/example.atlas.tex",
+      "size_bytes": 259856,
+      "sha256": "f64b74f211ce7b4fa677c37ef4117e3b7229da314ac03119ccf402cf4dda07bd"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/needs.md",
+      "size_bytes": 3180,
+      "sha256": "dc21e1ab9264487e561c9999e5d08daaa9f9d777592665cc73355157c17a9b9b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/revisions/README.md",
+      "size_bytes": 2829,
+      "sha256": "0cf98c61a7a046b153dabcb0f9140b1b8df77bf751c3d6163a94e83c917ff6b3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/revisions/revision-2.atlas.json",
+      "size_bytes": 129459,
+      "sha256": "b94ca14964d5a9b418eb7512f32edf9d2bd8e3cb56b84dde9e95e9f7f43f44b3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/revisions/revision-3.atlas.json",
+      "size_bytes": 130253,
+      "sha256": "fa14749cf58a179792ee66231e413cd912ddf944174824919b8c4615e91d87c8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/traceability.md",
+      "size_bytes": 5441,
+      "sha256": "87758bad318570b4618cbf493fc574e720a8d0ef1c7901a8c3fe988a8ad61a7e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/json/README.md",
+      "size_bytes": 8584,
+      "sha256": "2804c166a68b1627dbd1d66b218d8259af0b979ce70ce9b7c970d348bde129bd"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/json/README.pt-br.md",
+      "size_bytes": 8889,
+      "sha256": "469afd48b82f78fd8c42eef9843ca5465f1c9a8c5ed8ba77c3c53f20a8eafbc3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/json/atlas.schema.json",
+      "size_bytes": 55891,
+      "sha256": "c695b889a86ca51942559fb2d88c7d4e192f312eff8dfb3fa2e1e74a92c8cb8f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/json/starter.atlas.json",
+      "size_bytes": 3659,
+      "sha256": "9679c8de59873117aae8f3a1814319cfb6a14f71aea857949d8548193f4fd768"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/latex/README.md",
+      "size_bytes": 17150,
+      "sha256": "c976e562a76765290e6ddedf7bbfa1e631f0e44cb73aa81e0fb77ff711faa71f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/latex/README.pt-br.md",
+      "size_bytes": 17313,
+      "sha256": "f583674a2ac0f7ab189f4f98c0b7971ac4013906698a8fab0e5b160f1e348e8a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/latex/atlas-presentation.example.tex",
+      "size_bytes": 1404,
+      "sha256": "b0329d91bfd2f32bd2b612fb09d1d27a6e7eb51c6ee59a8c9186e764f7b958a4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/latex/atlas.sty",
+      "size_bytes": 10751,
+      "sha256": "4b3e3f06b0f2c49b1e132832e23ec566ebf0bfe95d77c84c19422fb68430b0af"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/latex/starter.atlas.tex",
+      "size_bytes": 7222,
+      "sha256": "e63c54d662dfa652f7edc0b3c9e34ecbecfdfb7a7b53322035853ab2fb1df772"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/markdown/README.md",
+      "size_bytes": 9758,
+      "sha256": "0f371867b937de34b3235cfbfe0c301f2a9db8369c199b41b005d081496601fc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/markdown/README.pt-br.md",
+      "size_bytes": 9227,
+      "sha256": "080bc5391f38080bc32793cadfa46ec5284c9d9ef3a0c0d3c141218c14e02803"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/markdown/starter.atlas.md",
+      "size_bytes": 5672,
+      "sha256": "d2a1db5bd22bc0512414fea90aa6d7410b2d397e0ceba1ef26e8d95761d3030d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/pyproject.toml",
+      "size_bytes": 787,
+      "sha256": "0c0ebba2168a76ce08f010c003c85cbff1aca03cc33daa48f04898a9a238fc16"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/SKILL.md",
+      "size_bytes": 8140,
+      "sha256": "c2b17977548bdce5de1e92c91a12b65c8ca6fbd39e74cc325ac7d9f8968de73e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/agents/openai.yaml",
+      "size_bytes": 250,
+      "sha256": "feeea6f5d8c511f6ad5967f6b1a229139664ad9ae076d31984505de33b269fbb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/assets/atlas-presentation.example.tex",
+      "size_bytes": 1404,
+      "sha256": "b0329d91bfd2f32bd2b612fb09d1d27a6e7eb51c6ee59a8c9186e764f7b958a4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/assets/starter.atlas.json",
+      "size_bytes": 3659,
+      "sha256": "9679c8de59873117aae8f3a1814319cfb6a14f71aea857949d8548193f4fd768"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/atlas-json.md",
+      "size_bytes": 8930,
+      "sha256": "e6bec65f91b946e0c3bbc4f7dee04ebf7f087d7546acc71d49e440285871d20c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/atlas-latex.md",
+      "size_bytes": 17485,
+      "sha256": "e3841eed0a60276af9f720229a48dca295e71830bd10d05761e3f9d37d36211f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/atlas-markdown.md",
+      "size_bytes": 10019,
+      "sha256": "6f211cb15fc1b814e4c773283e1428c4dbc142cdba6668a771d9c8eb536133a7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/atlas-specification.md",
+      "size_bytes": 72615,
+      "sha256": "67365e29891e6ce8ac7be5f6086b056d1ae8e9e2ec257c7a191fdc2fd29df447"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/compatibility.md",
+      "size_bytes": 4986,
+      "sha256": "9c1739987d922c6486b8a37959cf8fa241d09548db57766e419a9c9d3025e712"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/diagnostics.md",
+      "size_bytes": 4320,
+      "sha256": "8fd05100a362250efa1c9deb7d18e78f9f06330922b132180d44f27cf511c8c7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/workflow.md",
+      "size_bytes": 4461,
+      "sha256": "7f2ecb920fe3fb3983df7969c4c566ba590eee772467311fda6d54a0695e740a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/atlas_translate.py",
+      "size_bytes": 1244,
+      "sha256": "382a91d4605d060a4dc217a35938c8cceba377d6f67666e4c02c7a19193430ff"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/requirements.txt",
+      "size_bytes": 20,
+      "sha256": "9984fa6ad6d35d2468011c4c278583e9bb4983d83be6bb3f5aabcef9c99b19b7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/__init__.py",
+      "size_bytes": 1107,
+      "sha256": "a8f7cf8ba0b0035e67134bd7b4fa24e62876acd026db58bb96c9467b9e9ba751"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/__main__.py",
+      "size_bytes": 48,
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/base.py",
+      "size_bytes": 987,
+      "sha256": "04d302f1862a7636dc79d18feda08d3ec503591adfaa1d517659bf29e8570a33"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/json_adapter.py",
+      "size_bytes": 2280,
+      "sha256": "093ce8248b735d525858b891d568d6753cdedbc4443bf0b4e21868ac86a11576"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/latex_adapter.py",
+      "size_bytes": 44090,
+      "sha256": "b502877ba0d048e394ca2618d17df830cb9125484f2413a77db9898db46fcfe7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/markdown_adapter.py",
+      "size_bytes": 49709,
+      "sha256": "511bef59c48b333bf306fa8f86c454e2a087d51c508d41183c79d52020bb0cf4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/cli.py",
+      "size_bytes": 10352,
+      "sha256": "4c789dc2b8f3bdd94cd42698084c29925bc3cb3347e0c3db6e90bcec999f173b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/errors.py",
+      "size_bytes": 1853,
+      "sha256": "ee9cbd830b7358c4e717b39c37fb9c2a1464d0140934d0d69e3c068d781d376e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/graph_render.py",
+      "size_bytes": 14083,
+      "sha256": "9b564209862455518401c7d019c07009437c1cd26b24e9cebf2b2b58f5d627de"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/registry.py",
+      "size_bytes": 5686,
+      "sha256": "1b51af7a2c138ccda1f66a5c873d0b16808b1d3c7e922a10d94f22eb51923cd9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/schemas/atlas.schema.json",
+      "size_bytes": 55891,
+      "sha256": "c695b889a86ca51942559fb2d88c7d4e192f312eff8dfb3fa2e1e74a92c8cb8f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/slots.py",
+      "size_bytes": 5632,
+      "sha256": "2e234b4d15159bb6b4b88cab9b72930a00ca6d980e6238192ecb7a114a8dbef2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/templates/atlas.sty",
+      "size_bytes": 10751,
+      "sha256": "4b3e3f06b0f2c49b1e132832e23ec566ebf0bfe95d77c84c19422fb68430b0af"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/util.py",
+      "size_bytes": 5615,
+      "sha256": "63afd75c39d724c4996e2d6629135bc877656b1352c065383ce3059cedf4c1df"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/validation.py",
+      "size_bytes": 43424,
+      "sha256": "843acb7725744a3fb3e5e87a9a013a8e83160fb45d7f4f9764d0e96bc9d6ae9f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/source-map.json",
+      "size_bytes": 8215,
+      "sha256": "d7748dab0f3a9485f8c11f18c3fc8fb51f0331d77910e4fa7d796fb94c6603b6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/build.py",
+      "size_bytes": 7722,
+      "sha256": "c23df5a993d86b92ac7acfcac7024c7b6d7ba602c2b4d199e65387c5079336c4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/conftest.py",
+      "size_bytes": 4221,
+      "sha256": "121084c678e4ae3c2fdff4ea562394905837f79c7af62cc1b1663ae8eef59a15"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/fixtures/legacy_stable/README.md",
+      "size_bytes": 884,
+      "sha256": "885e19a6b1900fa8d0301867e5388885f73fa9e4c434d3145b3a1f2fbe13a716"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/fixtures/legacy_stable/composition.atlas.tex",
+      "size_bytes": 230521,
+      "sha256": "d086642edc3093b32090ec801f908af4e9efad4cbbfae1e0857c7c6228b7696f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/fixtures/legacy_stable/minimal.atlas.tex",
+      "size_bytes": 112993,
+      "sha256": "c78d5f33ef2a6e9bf3cee4ff025a89f714dbc0ef0893fc1e570d200bdb4f3ccf"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/fixtures/legacy_stable/task-board.atlas.tex",
+      "size_bytes": 243329,
+      "sha256": "285d54a709b3668650f69b416155b1a4b49620dddd823fb7ab74f4b5445572b5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_distribution.py",
+      "size_bytes": 4833,
+      "sha256": "3ee2091f98fbc4e1fd32eff957c7b3a705b2e14bc7e2a3711eea027c1d0ed20c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_latex_presentation.py",
+      "size_bytes": 7072,
+      "sha256": "365d823b5eb98cb207b72d8e75d67a8ca1b2e427f313d156817b3d76256bc2db"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_packaging.py",
+      "size_bytes": 3347,
+      "sha256": "4708a5ab49a8e8bc68e241f8b25b3452bdd03275e80e14b3428ccbea0874b87d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_publication_layout.py",
+      "size_bytes": 4143,
+      "sha256": "66b4a63f56509d28bb6521ba32bffc599209708cc3f65bd8e91ff4fb178f9d73"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_release_regressions.py",
+      "size_bytes": 5783,
+      "sha256": "e89dc1c3d50f162413117a7e158bc598f6314698f5dacbcf95e86c16ef95615c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_resources_and_cli.py",
+      "size_bytes": 5136,
+      "sha256": "9075108a41e193822c3062afc64b0ddd0723131996eac9eaebd975a8ad06b7c9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_roundtrip.py",
+      "size_bytes": 10004,
+      "sha256": "73393d0b953918c1666c9944a7e6d0b85cd20cbc6c7cfbbb43a5be309b4cd0bd"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_stable_contract.py",
+      "size_bytes": 4122,
+      "sha256": "c60b2ec9eb3c52b9f1d3ec0b18dbf38fca80b72db3f8fc0d665726b0ff8326fc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_stable_regressions.py",
+      "size_bytes": 7921,
+      "sha256": "ee1c34f35c0532b71c2ebc47bbdfaa349fa934aa7641d9990524981fe92c1a1f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_validation_and_errors.py",
+      "size_bytes": 10948,
+      "sha256": "8d628c1691d8b8922a48d295e80a907f49a64fe42fae848bf5790f1bc77e8039"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/README.md",
+      "size_bytes": 6447,
+      "sha256": "70b33f9fa6deedf93538a89478ba073dc76aa82427df798f4607dec453d80f7f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/README.pt-br.md",
+      "size_bytes": 6755,
+      "sha256": "c6a655016c5c2b2314a99af911a61dbd9d87e0d3b0fffc13a776a6b89c86e915"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/atlas_translate.py",
+      "size_bytes": 1244,
+      "sha256": "382a91d4605d060a4dc217a35938c8cceba377d6f67666e4c02c7a19193430ff"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/__init__.py",
+      "size_bytes": 1107,
+      "sha256": "a8f7cf8ba0b0035e67134bd7b4fa24e62876acd026db58bb96c9467b9e9ba751"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/__main__.py",
+      "size_bytes": 48,
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/adapters/base.py",
+      "size_bytes": 987,
+      "sha256": "04d302f1862a7636dc79d18feda08d3ec503591adfaa1d517659bf29e8570a33"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/adapters/json_adapter.py",
+      "size_bytes": 2280,
+      "sha256": "093ce8248b735d525858b891d568d6753cdedbc4443bf0b4e21868ac86a11576"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/adapters/latex_adapter.py",
+      "size_bytes": 44090,
+      "sha256": "b502877ba0d048e394ca2618d17df830cb9125484f2413a77db9898db46fcfe7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/adapters/markdown_adapter.py",
+      "size_bytes": 49709,
+      "sha256": "511bef59c48b333bf306fa8f86c454e2a087d51c508d41183c79d52020bb0cf4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/cli.py",
+      "size_bytes": 10352,
+      "sha256": "4c789dc2b8f3bdd94cd42698084c29925bc3cb3347e0c3db6e90bcec999f173b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/errors.py",
+      "size_bytes": 1853,
+      "sha256": "ee9cbd830b7358c4e717b39c37fb9c2a1464d0140934d0d69e3c068d781d376e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/graph_render.py",
+      "size_bytes": 14083,
+      "sha256": "9b564209862455518401c7d019c07009437c1cd26b24e9cebf2b2b58f5d627de"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/registry.py",
+      "size_bytes": 5686,
+      "sha256": "1b51af7a2c138ccda1f66a5c873d0b16808b1d3c7e922a10d94f22eb51923cd9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/schemas/atlas.schema.json",
+      "size_bytes": 55891,
+      "sha256": "c695b889a86ca51942559fb2d88c7d4e192f312eff8dfb3fa2e1e74a92c8cb8f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/slots.py",
+      "size_bytes": 5632,
+      "sha256": "2e234b4d15159bb6b4b88cab9b72930a00ca6d980e6238192ecb7a114a8dbef2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/templates/atlas.sty",
+      "size_bytes": 10751,
+      "sha256": "4b3e3f06b0f2c49b1e132832e23ec566ebf0bfe95d77c84c19422fb68430b0af"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/util.py",
+      "size_bytes": 5615,
+      "sha256": "63afd75c39d724c4996e2d6629135bc877656b1352c065383ce3059cedf4c1df"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/validation.py",
+      "size_bytes": 43424,
+      "sha256": "843acb7725744a3fb3e5e87a9a013a8e83160fb45d7f4f9764d0e96bc9d6ae9f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/CHECKPOINT.md",
+      "size_bytes": 19019,
+      "sha256": "e2d1f5ee502ba0450a6081b3842568599e171440846188946ae5d1cc6ab2e43b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/DISTRIBUTION.md",
+      "size_bytes": 1743,
+      "sha256": "5fb6365f17437110dd47afc695cb04fdc8f156a980f27d14f4047e403e893061"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/OAL-CORRESPONDENCE.md",
+      "size_bytes": 8179,
+      "sha256": "67e19ae6fad9aadd3091d4de0d0365c608b903706cb504355b00fe014d457f50"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/RELEASE-DESCRIPTION.md",
+      "size_bytes": 1941,
+      "sha256": "c72d13b0a17c5190903d9373f9255d029f32e7881a1b33fbff13a7cd8758bf72"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/RELEASE.md",
+      "size_bytes": 24465,
+      "sha256": "92e0ba2f806a0841b7fa759a68983e6ada3603994f9d95dc67a9d9b633bd8f3c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/SEMANTIC-REVIEW.md",
+      "size_bytes": 8526,
+      "sha256": "c096ff041c0c44fd32f5e68ceaac74134845514be93710ea4475a028e972eed2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/capture_inputs.py",
+      "size_bytes": 2651,
+      "sha256": "c342c1bd73c8c544c7f5577612ff2e3214fd0e817f2210171a653df23cea4c93"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/checkpoint-inputs.json",
+      "size_bytes": 18132,
+      "sha256": "b14b3109121f893ad0ed25c75e2087536aa2d584f3fd39df8417847e9a1c2795"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/editorial-migration.json",
+      "size_bytes": 5215,
+      "sha256": "ddabdcdce8929c0ecc5d1ad2e76b11ba251181ad6be793ca3789ccfb21c06fe0"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/.gitattributes",
+      "size_bytes": 143,
+      "sha256": "2a3af01cafd09791721c110d07f243a2c9d6b41de35a6004f68642535973d41e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/alpha-final.json",
+      "size_bytes": 51100,
+      "sha256": "0e5933ecd0feffb286c605181900169da2d318702726ef164c711ae898cd1095"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/alpha-initial.json",
+      "size_bytes": 51100,
+      "sha256": "0e5933ecd0feffb286c605181900169da2d318702726ef164c711ae898cd1095"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/composition-pdflatex.txt",
+      "size_bytes": 42126,
+      "sha256": "be8909ac42aacafb9eb892be18853a822329e422c0ab6be971a6b5a39ab6d5f5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/e3552b4-release-inputs.json",
+      "size_bytes": 30121,
+      "sha256": "6c21103e9736d1240e8972e268015cfcaea5d4488d27de41861580e520e19bfa"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/environment.json",
+      "size_bytes": 815,
+      "sha256": "bdbf72d74f773d59f5f385dfe0a2cdc4999d867945f51da028fb004c86b0584f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-alpha-preservation.json",
+      "size_bytes": 181,
+      "sha256": "c5e0b88df87cfb092bb71d5fb9a1b32cd7c8f4928b8042af101cc8a1aa4a62b3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-clean-examples.txt",
+      "size_bytes": 297,
+      "sha256": "d0dd7ead70df2ceaf927f2c7a537726eaa7a75e331f27a037235b9cf9e814dc2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-clean-manifest.txt",
+      "size_bytes": 29,
+      "sha256": "91bb8343614b236da9813ab31fa330cac11b9ba8606bcd5d7c783c56346215bc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-clean-preparation.json",
+      "size_bytes": 449,
+      "sha256": "c8874b95173f1f61ed3630f89274622a7234fadba45e6130fa0bd6eef5326db1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-clean-publication.txt",
+      "size_bytes": 301,
+      "sha256": "9aabe6158e8d7acec0cc073717812ac6ad077698e91d19de4ea7cc9f38da1285"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-clean-skill.txt",
+      "size_bytes": 47,
+      "sha256": "e700c0352dc5aeded7b3caef58d64b0bcd65799069e8110a38c7ce9256562527"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-composition-pdflatex.txt",
+      "size_bytes": 52787,
+      "sha256": "d2eb328e993c643ba65f09d1b57346859bc35a6c3c330959dd960c947a2b33eb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-editorial-check.json",
+      "size_bytes": 2263,
+      "sha256": "a68e63998fb7830c6240447d3ccfe55a3eddef06db5393737610a31229d203ce"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-environments.json",
+      "size_bytes": 882,
+      "sha256": "72a6614ea4324e400b35761b5630bdda6a603d004a4ef9e0978a5562cdccc280"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-examples.txt",
+      "size_bytes": 297,
+      "sha256": "d0dd7ead70df2ceaf927f2c7a537726eaa7a75e331f27a037235b9cf9e814dc2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-inventory-before.txt",
+      "size_bytes": 4654,
+      "sha256": "f1d5c8748d39e611f53c9d1a50c1203b9f49cbc5ffe1d2b54be53cdb279c3f7e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-links.json",
+      "size_bytes": 226,
+      "sha256": "1a3e26c1454b21b3986b5f615872dcf28e62f56dcceba19581133c0c2f1889e4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-minimal-pdflatex.txt",
+      "size_bytes": 47703,
+      "sha256": "3db05b8ec10de8e142295222634a82932b116751f2f9e2ca4f3a181e9805f3f3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-oal-reference.json",
+      "size_bytes": 1161,
+      "sha256": "14d8103b9574abe71d813ebf421e4a3b96f6bcd3a72739a4ecd736b55873deeb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-publication-review.json",
+      "size_bytes": 12865,
+      "sha256": "9c8bc791974bcd95c9b581de5a610643e523632509beda4e4ade51230294a329"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-publication-state.json",
+      "size_bytes": 75,
+      "sha256": "375aaf4264c0b63510b3d7adaa7ae08fad706ce404d9c81cdd11a2aa48605da1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-publication.txt",
+      "size_bytes": 301,
+      "sha256": "9aabe6158e8d7acec0cc073717812ac6ad077698e91d19de4ea7cc9f38da1285"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-skill.txt",
+      "size_bytes": 47,
+      "sha256": "e700c0352dc5aeded7b3caef58d64b0bcd65799069e8110a38c7ce9256562527"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-smoke-pdflatex.txt",
+      "size_bytes": 21879,
+      "sha256": "e2a52c55307365b8ab2275250e7c8acf2faebd928f2e32d9f4078026d018391a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-task-board-pdflatex.txt",
+      "size_bytes": 53502,
+      "sha256": "f6e688e9b1f19245e1b9f4eefb70ff5793e415e6110ac6afa6f3bd6bd0d7ab7d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-tests311.txt",
+      "size_bytes": 357,
+      "sha256": "ad15128e6499f7246d79fe566df4d0cd346d66d1c144bb022f0ae6fdda218556"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/final-tests312.txt",
+      "size_bytes": 357,
+      "sha256": "db48ce1a80d98d04fcbb591c56ffef010a7018685423e1224407249c3d6d74ea"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/latex-second-pass.txt",
+      "size_bytes": 15184,
+      "sha256": "4f23ba98856b93f36a05e7f376d5dce0902e5b3b0e84e42eb86f8b8846977240"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/local-release-checks.json",
+      "size_bytes": 6001,
+      "sha256": "80c654e1363c64eb8079d8fa3400a90da2da10d4ea20ecb517e2a6a436726212"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/local-release-examples.txt",
+      "size_bytes": 297,
+      "sha256": "d0dd7ead70df2ceaf927f2c7a537726eaa7a75e331f27a037235b9cf9e814dc2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/local-release-links.json",
+      "size_bytes": 242,
+      "sha256": "9725a36d22af795cb8ad25f876591cdb3ed08076b6eb41193e70942a12268dba"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/local-release-skill.txt",
+      "size_bytes": 47,
+      "sha256": "e700c0352dc5aeded7b3caef58d64b0bcd65799069e8110a38c7ce9256562527"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/local-release-tests311.txt",
+      "size_bytes": 357,
+      "sha256": "b78c83f0fc2fd2e23c23319d3a437a14ad980bc7ef1be7b09cf0d848d97ae5d7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/local-release-tests312.txt",
+      "size_bytes": 357,
+      "sha256": "4424759baa76454a0d3e3e3340bfda6faf6ead98a9ebccd4fa086391c6dc1fa8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/minimal-pdflatex.txt",
+      "size_bytes": 42279,
+      "sha256": "ac003fcf3dff890cce86f33d4a667fb94173a8864d9d89a43635d1f55e2b3089"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/oal-ce225141-capture.txt",
+      "size_bytes": 29,
+      "sha256": "4d0bf0e4c6b0a78d0c9312e333c4cbc1f7857fb9d06397459c5ffd46111846db"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/oal-ce225141-checks.json",
+      "size_bytes": 3585,
+      "sha256": "457eb43b89c8ba14ff923f2f2555d3dd2a89ffbf31c375b74a670fc7ffeab27f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/oal-ce225141-examples.txt",
+      "size_bytes": 297,
+      "sha256": "d0dd7ead70df2ceaf927f2c7a537726eaa7a75e331f27a037235b9cf9e814dc2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/oal-ce225141-inventory.txt",
+      "size_bytes": 29,
+      "sha256": "91bb8343614b236da9813ab31fa330cac11b9ba8606bcd5d7c783c56346215bc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/oal-ce225141-links.json",
+      "size_bytes": 226,
+      "sha256": "3a1826641168ddd65049bbed462d72fdb331ebd49d44974d2ca03498b2d1468a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/oal-ce225141-links.txt",
+      "size_bytes": 215,
+      "sha256": "fd35d737ef51e28e475b6cc5eb3e801421fec00cd6d5d36b2ed3784299cfb532"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/oal-ce225141-reference-update.json",
+      "size_bytes": 6866,
+      "sha256": "3d3910803ff9fec6e9918d33309d46c62495f9f3d035bc606c38338083fd1243"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/oal-ce225141-skill.txt",
+      "size_bytes": 47,
+      "sha256": "e700c0352dc5aeded7b3caef58d64b0bcd65799069e8110a38c7ce9256562527"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/oal-ce225141-whitespace.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/regressions-before.txt",
+      "size_bytes": 49845,
+      "sha256": "60ba5f1ce6fc142108430c21c82b5eb92d097e4c4a93fd9ab3d689cce32ff5e6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/stable-alpha-preservation.txt",
+      "size_bytes": 73,
+      "sha256": "8ed15b659991eb28b46d886cd8e21e4bb104e74baab6f4093236c56af325ee8f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/stable-environment.json",
+      "size_bytes": 815,
+      "sha256": "3a89a283a0a9857a461b770d3ac93ac0f23ccf95063d265feb7e38ac2e1f6b0d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/stable-examples.txt",
+      "size_bytes": 297,
+      "sha256": "d0dd7ead70df2ceaf927f2c7a537726eaa7a75e331f27a037235b9cf9e814dc2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/stable-links.json",
+      "size_bytes": 64,
+      "sha256": "8eab920ff08c009d4d6600c0e9309b9f67accf2b8d703a3d3e7e5bd8dc501f54"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/stable-publication-review.json",
+      "size_bytes": 1264,
+      "sha256": "b6d2f2a8d4a15cf9f522404d52013ded4e2320edf58d11bb2b1e215f0ab702e6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/stable-publication.txt",
+      "size_bytes": 301,
+      "sha256": "9aabe6158e8d7acec0cc073717812ac6ad077698e91d19de4ea7cc9f38da1285"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/stable-skill.txt",
+      "size_bytes": 47,
+      "sha256": "e700c0352dc5aeded7b3caef58d64b0bcd65799069e8110a38c7ce9256562527"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/stable-tests.txt",
+      "size_bytes": 276,
+      "sha256": "e6c0e5497cf8adfd438224712cc558b4bd228b989c7e904edfb043e7b114568e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/task-board-pdflatex.txt",
+      "size_bytes": 42122,
+      "sha256": "08a6751e00a34d42982cd2741af081cdddde33c430abd2df0a929cbc205666bf"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/tests-after.txt",
+      "size_bytes": 276,
+      "sha256": "6f20cbe7e2b89ff9247717c1fbe7d2b8985f97557202be7c88188b54e7df0085"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/tex-engine.txt",
+      "size_bytes": 949,
+      "sha256": "f6a45f722e3abb06ca69eec4d97c85e299cd004d1f5a046e1a5dcd31783dc91e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/oal/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/oal/README.md.txt",
+      "size_bytes": 63838,
+      "sha256": "d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/oal/README.pt-br.md.txt",
+      "size_bytes": 69716,
+      "sha256": "52e0f59f7f4ead7d9a94a924bc5b339196e4d1aa68c467b7200780b81a3cc1e9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/oal/baseline.json",
+      "size_bytes": 5278,
+      "sha256": "5ec9f8b3db95c156b2b2a8d3b8e0020ad1d5ac8ff9c8164d6c4daa298f956aa3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/reference-inventory.md",
+      "size_bytes": 5678,
+      "sha256": "2f3c7ca4d0a97720e554d5a1bddd1b751ff5599a14926ca14bddea6dff78fda6"
+    }
+  ]
+}

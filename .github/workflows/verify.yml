@@ -24,7 +24,18 @@ jobs:
       - run: python -m pytest tests
       - run: python examples/build.py --check
       - run: python skills/build.py --check
-      - run: python verification/capture_release.py --check
+      - run: python -m pytest scripts/tests
+        working-directory: .
+      - run: python scripts/content_inventory.py --check
+        working-directory: .
+      - run: python scripts/build_distribution.py --output ../Atlas-Stable-check.zip
+        working-directory: .
+      - run: python scripts/check_archive.py ../Atlas-Stable-check.zip
+        working-directory: .
+      - run: python -m zipfile -e ../Atlas-Stable-check.zip ../atlas-extracted-check
+        working-directory: .
+      - run: python ../atlas-extracted-check/Atlas_Stable/scripts/check_archive.py ../atlas-extracted-check/Atlas_Stable
+        working-directory: .
   publication:
     runs-on: ubuntu-24.04
     defaults:

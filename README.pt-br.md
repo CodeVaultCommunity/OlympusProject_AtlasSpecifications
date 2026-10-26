@@ -12,7 +12,7 @@ Parte do ecossistema **Olympus**, Atlas oferece **Atlas JSON**, **Atlas Markdown
 
 Este README é a apresentação ilustrada. O [manual da edição](versioning/Stable-v1.0.0/README.pt-br.md) concentra as regras e os contratos textuais detalhados. O inglês é normativo; o português é sua tradução.
 
-A Stable está preparada para revisão; a publicação está pendente. A baseline OAL foi entregue localmente e está fixada com seus bytes originais na [correspondência da edição](versioning/Stable-v1.0.0/README.pt-br.md#oal-conformance).
+A edição Stable define o contrato 1.0.0. Sua baseline OAL está fixada com os bytes originais na [correspondência da edição](versioning/Stable-v1.0.0/README.pt-br.md#oal-conformance). O escopo de verificação e o estado da entrega estão registrados no [relatório da release](versioning/Stable-v1.0.0/verification/RELEASE.md).
 
 ## Sumário
 
@@ -98,7 +98,7 @@ Um documento inicial é um rascunho válido, com coleções de domínio vazias e
 
 | Edição | Status | Notas da versão | Regras de referência | Guia de verificação | Guia de conformidade |
 | --- | --- | --- | --- | --- | --- |
-| Stable-v1.0.0 | Candidata Stable · publicação pendente | [English](versioning/Stable-v1.0.0/README.md#release-notes) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#release-notes) | [English](versioning/Stable-v1.0.0/README.md#reference-rules) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#reference-rules) | [English](versioning/Stable-v1.0.0/README.md#verification) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#verification) | [English](versioning/Stable-v1.0.0/README.md#conformance) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#conformance) |
+| Stable-v1.0.0 | Edição Stable | [English](versioning/Stable-v1.0.0/README.md#release-notes) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#release-notes) | [English](versioning/Stable-v1.0.0/README.md#reference-rules) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#reference-rules) | [English](versioning/Stable-v1.0.0/README.md#verification) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#verification) | [English](versioning/Stable-v1.0.0/README.md#conformance) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#conformance) |
 | Alpha-v0.1.0 | Histórica · preservada | [English](versioning/Alpha-v0.1.0/README.md#release-notes) · [Português](versioning/Alpha-v0.1.0/README.pt-br.md#release-notes) | [English](versioning/Alpha-v0.1.0/README.md#reference-rules) · [Português](versioning/Alpha-v0.1.0/README.pt-br.md#reference-rules) | [English](versioning/Alpha-v0.1.0/README.md#verification) · [Português](versioning/Alpha-v0.1.0/README.pt-br.md#verification) | [English](versioning/Alpha-v0.1.0/README.md#conformance) · [Português](versioning/Alpha-v0.1.0/README.pt-br.md#conformance) |
 
 A edição mantém tradutor, dependências, testes, exemplos e skill próprios. O [guia de versionamento](versioning/Stable-v1.0.0/README.pt-br.md#versioning) distingue versões de modelo/perfis e pacote da revisão de um documento. A conversão preserva essas identidades; não é uma migração.
@@ -129,6 +129,8 @@ Cada um inclui JSON, Markdown, LaTeX e PDF. São especificações didáticas, co
 | Local | Finalidade |
 | --- | --- |
 | READMEs da raiz | Apresentação ilustrada, início rápido, navegação por versões e créditos. |
+| [CONTENT-SHA256.json](CONTENT-SHA256.json) | Tamanhos e SHA-256 exatos de todos os arquivos distribuídos, exceto o próprio inventário. |
+| [docs/releasing.pt-br.md](docs/releasing.pt-br.md) e `scripts/` | Verificação do repositório, empacotamento limpo e publicação opcional. |
 | [`assets/`](assets/README.pt-br.md) | Banners, diagramas, ambos os ícones e fontes editáveis/reproduzíveis compartilhados. |
 | [`versioning/Stable-v1.0.0/`](versioning/Stable-v1.0.0/README.pt-br.md) | Manual textual detalhado e edição completa utilizável de forma independente. |
 

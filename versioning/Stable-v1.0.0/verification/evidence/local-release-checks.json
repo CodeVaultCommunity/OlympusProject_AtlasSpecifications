@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-26",
+  "source_baseline": "44e082cf922874b263617f394f28ce2e939368a7",
+  "scope": "Local release preparation: one root inventory replaces the active per-edition inventory; updated agent routing, documentation and confirmed migration responsibility.",
+  "tests": [
+    {
+      "python": "3.11.15 (main, Jun 23 2026, 15:20:37) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b9-95a3-7500-b462-6db470cefc5f\\atlas-final\\env311\\Scripts\\python.exe",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b9-95a3-7500-b462-6db470cefc5f\\atlas-final\\env311\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\scripts\\tests",
+        "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\versioning\\Stable-v1.0.0\\tests",
+        "--basetemp",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b9-95a3-7500-b462-6db470cefc5f\\atlas-release-local\\tmp-311\\pytest"
+      ],
+      "working_directory": "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\versioning\\Stable-v1.0.0",
+      "exit_code": 0,
+      "seconds": 147.15,
+      "log": "local-release-tests311.txt",
+      "log_sha256": "b78c83f0fc2fd2e23c23319d3a437a14ad980bc7ef1be7b09cf0d848d97ae5d7",
+      "passed": 253
+    },
+    {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b9-95a3-7500-b462-6db470cefc5f\\atlas-final\\env312\\Scripts\\python.exe",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b9-95a3-7500-b462-6db470cefc5f\\atlas-final\\env312\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\scripts\\tests",
+        "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\versioning\\Stable-v1.0.0\\tests",
+        "--basetemp",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b9-95a3-7500-b462-6db470cefc5f\\atlas-release-local\\tmp-312\\pytest"
+      ],
+      "working_directory": "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\versioning\\Stable-v1.0.0",
+      "exit_code": 0,
+      "seconds": 128.87,
+      "log": "local-release-tests312.txt",
+      "log_sha256": "4424759baa76454a0d3e3e3340bfda6faf6ead98a9ebccd4fa086391c6dc1fa8",
+      "passed": 253
+    }
+  ],
+  "test_scope": {
+    "edition_tests": 220,
+    "repository_distribution_tests": 33,
+    "prior_inventory_tests_relocated": 9,
+    "total_per_python_version": 253
+  },
+  "conversions": 24,
+  "generated_skill_files": 27,
+  "unchanged_paths_compared_with_source_baseline": [
+    "versioning/Alpha-v0.1.0",
+    "versioning/Stable-v1.0.0/translator",
+    "versioning/Stable-v1.0.0/implementations",
+    "versioning/Stable-v1.0.0/examples",
+    "versioning/Stable-v1.0.0/verification/oal"
+  ],
+  "changed_execution_sources": [
+    {
+      "path": "scripts/content_inventory.py",
+      "size_bytes": 6002,
+      "sha256": "3cd1b95a276c82c523b69bc559a38937a3ee182d6d6d01e6606122f52b368fa8"
+    },
+    {
+      "path": "scripts/check_archive.py",
+      "size_bytes": 2562,
+      "sha256": "f9f74fdf34fa8d61e8814b78b209c78f28293874ef73501b7aaea9c757c6686d"
+    },
+    {
+      "path": "scripts/build_distribution.py",
+      "size_bytes": 2309,
+      "sha256": "ae9d51bcef50803b6ba91c29d5b812517cd396404739d6a291a893dc8776b2a5"
+    },
+    {
+      "path": "scripts/tests/test_content_inventory.py",
+      "size_bytes": 9728,
+      "sha256": "e91c7372a8221bc1d8ec719cde4f33eb1b02a2a3a564c2ec8ba86b05151cdf13"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "size_bytes": 2106,
+      "sha256": "a74c46aeaf27eab21fee0426d0e376c5146834e6f4d1d3889393b385cb97c792"
+    },
+    {
+      "path": "AGENTS.md",
+      "size_bytes": 5475,
+      "sha256": "108adbcd67b631a535f5930ba6cc4f91bb1afd70615f2ffae3d11eb8a4a88857"
+    },
+    {
+      "path": "CLAUDE.md",
+      "size_bytes": 40,
+      "sha256": "553b2179c75dbabaa7289a6e11e00b29d1e6d2984be1414656ef6ea5a3878213"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/README.md",
+      "size_bytes": 72152,
+      "sha256": "bddcf0720ec65b53b951cd52e7c8515adc04e798acfc621b5cb48b48e8cfff5b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/README.pt-br.md",
+      "size_bytes": 65815,
+      "sha256": "afe829edfe13c70930b330d14706180eaab1f278ee6a4fd807307ce9d9ab1b0b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/source-map.json",
+      "size_bytes": 8215,
+      "sha256": "d7748dab0f3a9485f8c11f18c3fc8fb51f0331d77910e4fa7d796fb94c6603b6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/editorial-migration.json",
+      "size_bytes": 5215,
+      "sha256": "ddabdcdce8929c0ecc5d1ad2e76b11ba251181ad6be793ca3789ccfb21c06fe0"
+    }
+  ],
+  "provenance_exclusions": "This evidence and the final root inventory are not execution source hashes. The final inventory covers this completed evidence; its commit and ZIP digest belong to an external receipt.",
+  "responsible_person": "Douglas de Oliveira Alkimim",
+  "responsibility_status": "confirmed",
+  "responsibility_scope": "Review and traceability of the editorial Alpha-to-Stable migration, explicitly confirmed by the user.",
+  "limits": [
+    "Windows/Python 3.11 and 3.12 executed locally; configured remote CI was not run.",
+    "Unchanged PDFs were not rebuilt; the prior 123-page review remains historical evidence.",
+    "Responsibility confirmation does not assert approval of the example requirements or application behavior.",
+    "No push, tag or release is authorized for this delivery."
+  ]
+}

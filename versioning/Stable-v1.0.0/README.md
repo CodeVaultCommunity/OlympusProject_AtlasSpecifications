@@ -9,7 +9,7 @@ This folder is a self-contained edition: keep its files together to use its docu
 <a id="release-notes"></a>
 ## Release notes — Stable-v1.0.0
 
-This candidate preserves the Atlas L1 scope and corrects four audited defects: absent optional entity records; typed figure/source/assumption/issue references; exact CRLF/CR/LF in LaTeX cells; and Unicode separators in opaque data. A trailing-CR delimiter boundary is also corrected. Invalid references fail before output is written.
+This edition preserves the Atlas L1 scope and corrects four audited defects: absent optional entity records; typed figure/source/assumption/issue references; exact CRLF/CR/LF in LaTeX cells; and Unicode separators in opaque data. A trailing-CR delimiter boundary is also corrected. Invalid references fail before output is written.
 
 The model/profile identities are `Stable-v1.0.0`; the package and producer of newly authored documents are `1.0.0`. The historical Alpha edition is retained unchanged. Stable rejects incompatible profiles explicitly. Conversion preserves all authored identities and history. The starters and examples were migrated editorially, with provenance, and the task board includes two valid Stable revisions demonstrating an acceptance-link change.
 
@@ -31,7 +31,7 @@ LaTeX publication in this edition includes editorial and plain themes, a self-co
 
 | Edition | Status | Release Notes | Reference rules | Verification Guide | Conformance Guide |
 | --- | --- | --- | --- | --- | --- |
-| Stable-v1.0.0 | Stable candidate · publication pending | [English](README.md#release-notes) · [Português](README.pt-br.md#release-notes) | [English](README.md#reference-rules) · [Português](README.pt-br.md#reference-rules) | [English](README.md#verification) · [Português](README.pt-br.md#verification) | [English](README.md#conformance) · [Português](README.pt-br.md#conformance) |
+| Stable-v1.0.0 | Stable edition | [English](README.md#release-notes) · [Português](README.pt-br.md#release-notes) | [English](README.md#reference-rules) · [Português](README.pt-br.md#reference-rules) | [English](README.md#verification) · [Português](README.pt-br.md#verification) | [English](README.md#conformance) · [Português](README.pt-br.md#conformance) |
 
 <a id="quick-start"></a>
 ## Start a specification

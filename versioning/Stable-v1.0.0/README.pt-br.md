@@ -9,7 +9,7 @@ Esta pasta é uma edição autossuficiente: mantenha seus arquivos juntos para u
 <a id="release-notes"></a>
 ## Notas da versão — Stable-v1.0.0
 
-Esta candidata preserva o escopo L1 do Atlas e corrige quatro defeitos auditados: ausência de registros opcionais de entidades; referências tipadas de figuras/fontes/premissas/pendências; CRLF/CR/LF exatos nas células LaTeX; e separadores Unicode em dados opacos. Corrige também a fronteira entre CR autoral final e delimitador. Referências inválidas falham antes da gravação da saída.
+Esta edição preserva o escopo L1 do Atlas e corrige quatro defeitos auditados: ausência de registros opcionais de entidades; referências tipadas de figuras/fontes/premissas/pendências; CRLF/CR/LF exatos nas células LaTeX; e separadores Unicode em dados opacos. Corrige também a fronteira entre CR autoral final e delimitador. Referências inválidas falham antes da gravação da saída.
 
 As identidades de modelo/perfil são `Stable-v1.0.0`; pacote e produtor de novos documentos são `1.0.0`. A edição Alpha histórica permanece intacta. A Stable rejeita perfis incompatíveis explicitamente. A conversão preserva todas as identidades e histórico autorais. Starters e exemplos receberam migração editorial com proveniência, e o quadro de tarefas contém duas revisões Stable válidas demonstrando uma mudança de vínculo de aceite.
 
@@ -31,7 +31,7 @@ A publicação LaTeX desta edição inclui temas editorial e plain, capa ornamen
 
 | Edição | Status | Notas da versão | Regras de referência | Guia de verificação | Guia de conformidade |
 | --- | --- | --- | --- | --- | --- |
-| Stable-v1.0.0 | Candidato Stable · publicação pendente | [English](README.md#release-notes) · [Português](README.pt-br.md#release-notes) | [English](README.md#reference-rules) · [Português](README.pt-br.md#reference-rules) | [English](README.md#verification) · [Português](README.pt-br.md#verification) | [English](README.md#conformance) · [Português](README.pt-br.md#conformance) |
+| Stable-v1.0.0 | Edição Stable | [English](README.md#release-notes) · [Português](README.pt-br.md#release-notes) | [English](README.md#reference-rules) · [Português](README.pt-br.md#reference-rules) | [English](README.md#verification) · [Português](README.pt-br.md#verification) | [English](README.md#conformance) · [Português](README.pt-br.md#conformance) |
 
 <a id="quick-start"></a>
 ## Iniciar uma especificação
