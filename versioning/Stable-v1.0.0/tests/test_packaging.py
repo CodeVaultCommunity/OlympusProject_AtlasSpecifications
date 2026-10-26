@@ -44,7 +44,7 @@ def test_install_console_script_and_package_data(tmp_path, editable):
     source = tmp_path / "edition-source"
     shutil.copytree(
         VERSION_ROOT, source,
-        ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "*.egg-info", ".pytest_cache", "build", "dist", "work"),
+        ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "*.egg-info", ".pytest_cache", ".venv", "build", "dist", "work"),
     )
     command = [str(environment_python), "-m", "pip", "install", "--quiet", "--no-index", "--no-cache-dir", "--no-build-isolation", "--no-deps"]
     if editable:

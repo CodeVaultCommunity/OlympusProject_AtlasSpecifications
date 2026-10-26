@@ -62,15 +62,17 @@ ESCAPES: list[tuple[str, str]] = [
     ("~", r"\AtlasCharTilde{}"),
 ]
 INLINE_ESCAPES: list[tuple[str, str]] = [
-    ("\r\n", r"\AtlasCharNewline{}"),
+    ("\r\n", r"\AtlasCharCRLF{}"),
     ("\n", r"\AtlasCharNewline{}"),
-    ("\r", r"\AtlasCharNewline{}"),
+    ("\r", r"\AtlasCharCR{}"),
     ("\t", r"\AtlasCharTab{}"),
 ]
 UNESCAPES = {encoded: char for char, encoded in ESCAPES}
 UNESCAPES.update(
     {
         r"\AtlasCharNewline{}": "\n",
+        r"\AtlasCharCRLF{}": "\r\n",
+        r"\AtlasCharCR{}": "\r",
         r"\AtlasCharTab{}": "\t",
     }
 )
@@ -455,13 +457,14 @@ class LatexPresenter:
     def text_env(self, node: dict, env: str = "atlastext", *, level: int | None = None, inline: bool = False) -> str:
         slot, content = self.t(node)
         escaped = escape_latex(content, inline=inline)
+        ending = "\r\n" if escaped.endswith("\r") else "\n"
         if env == "atlasheading":
             return (
                 f"\\begin{{atlasheading}}{{{slot}}}{{{level or 2}}}\n"
                 + escaped
-                + "\n\\end{atlasheading}\n"
+                + ending + "\\end{atlasheading}\n"
             )
-        return f"\\begin{{{env}}}{{{slot}}}\n" + escaped + f"\n\\end{{{env}}}\n"
+        return f"\\begin{{{env}}}{{{slot}}}\n" + escaped + ending + f"\\end{{{env}}}\n"
 
     def cell(self, node: dict) -> str:
         slot, content = self.t(node)
@@ -858,7 +861,9 @@ class LatexPresenter:
         import json
 
         text = json.dumps(self.skeleton, ensure_ascii=False, indent=2)
-        commented = "\n".join("% " + line for line in text.splitlines())
+        # json.dumps emits LF for layout. Unicode separators inside strings
+        # are content, not new structural lines that need a comment prefix.
+        commented = "\n".join("% " + line for line in text.split("\n"))
         return (
             "%\n"
             + STRUCTURE_BEGIN

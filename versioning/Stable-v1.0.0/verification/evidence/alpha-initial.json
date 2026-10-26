@@ -1,0 +1,1002 @@
+[
+  {
+    "path": "examples",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "implementations",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "skills",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "tests",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "translator",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "LICENSE",
+    "directory": false,
+    "bytes": 1084,
+    "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "pyproject.toml",
+    "directory": false,
+    "bytes": 786,
+    "sha256": "2cc042dfe35ebe0bc961ba725359efd035d1099babe8e4522d3f5bbbacd68fc2",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "README.md",
+    "directory": false,
+    "bytes": 71885,
+    "sha256": "29421e96675b0bffe7a6594c7e4e54408e647e66aeb777e8de35da3c3ec082da",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "README.pt-br.md",
+    "directory": false,
+    "bytes": 65480,
+    "sha256": "9bd478350f8a0dd8dd53aeaa51c6eadd2da68d690bf39d36efd1b802e8d26b30",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/composition",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "examples/minimal",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "examples/task-board",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "examples/build.py",
+    "directory": false,
+    "bytes": 10407,
+    "sha256": "77a9e899d803f5d5e8f0d1a117b5b40ce070a875843d1a71dc32525c7f349cfc",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/README.md",
+    "directory": false,
+    "bytes": 4509,
+    "sha256": "929017b43285f770a8e4eb1a9be24d597474427af3f8839b4a467d8c5caa8100",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/README.pt-br.md",
+    "directory": false,
+    "bytes": 4749,
+    "sha256": "558fbd73737cf78c14b26fbf8f508ea903716d3808325105d1756091d92a28f1",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/composition/example.atlas.json",
+    "directory": false,
+    "bytes": 114372,
+    "sha256": "f1cfdd1bb7c1ee889965d71e1c7f37ce02a2b7c99767f786b83982906db3d190",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/composition/example.atlas.md",
+    "directory": false,
+    "bytes": 176176,
+    "sha256": "b9c032c4eb3ab47252d406b869bcf25a2aede58bdba81c538852fbeb66562edf",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/composition/example.atlas.pdf",
+    "directory": false,
+    "bytes": 375576,
+    "sha256": "d37834450f7fcb55d3d7cdff1ed019476f94cfb0d7bc4fa9c382289df1b8e18b",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/composition/example.atlas.tex",
+    "directory": false,
+    "bytes": 229719,
+    "sha256": "f776a9393d7eae2929d2623d4eb585df05fc6cc9d3705ad96c0848a3180e2572",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/composition/README.md",
+    "directory": false,
+    "bytes": 2103,
+    "sha256": "e832da812d2c589f277448d5f39b5f340568aa0a5e1154c0a05db8ca51248e6e",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/composition/README.pt-br.md",
+    "directory": false,
+    "bytes": 2141,
+    "sha256": "c0867dbf5f4846b24e3221167177b507aa99f8f86961e267926dbf84bef481ef",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/minimal/assets",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "examples/minimal/example.atlas.json",
+    "directory": false,
+    "bytes": 58920,
+    "sha256": "776d6107129a6fef602e8ba81290c36b2bbdfd38f590ac61c91e5872e74e99c6",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/minimal/example.atlas.md",
+    "directory": false,
+    "bytes": 90544,
+    "sha256": "89da7249fcb48446d840c24424dd2c12a061befcb10c9d36bf22f393dd51d938",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/minimal/example.atlas.pdf",
+    "directory": false,
+    "bytes": 357505,
+    "sha256": "25a0bb1ef7d047786b08b2cc1f7da6a2364b32effb395bafccf4e675eb16064d",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/minimal/example.atlas.tex",
+    "directory": false,
+    "bytes": 112191,
+    "sha256": "dc19ef03a25624662dc66ad606841e4d09bb9f9152d01a7cd2671154bb8fb23a",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/minimal/README.md",
+    "directory": false,
+    "bytes": 1653,
+    "sha256": "86df303cd19a08fde6d9824ce2ced0289aba0043a8c8fa0d2aa3a4757868255c",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/minimal/README.pt-br.md",
+    "directory": false,
+    "bytes": 1738,
+    "sha256": "78f5d947ae09ac8842c629cb2f0348f0fa0c8ca3cdf6bf28121a768e0084bc81",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/minimal/assets/request-flow.png",
+    "directory": false,
+    "bytes": 73547,
+    "sha256": "53545111afdda2bcf5b113667ef14dc2233ca3f7e5e730749d3f50473ed81f8b",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/minimal/assets/request-flow.svg",
+    "directory": false,
+    "bytes": 10124,
+    "sha256": "71f3a97b667a88041cc5812da8c8e7e1ddaced2f9c835e56c2c7d6d1b4252206",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/minimal/assets/request-form.png",
+    "directory": false,
+    "bytes": 22242,
+    "sha256": "5dd57bf8bccc9bcd9b68e1be1ea50163777caf93d83f6fbfec1a099eb1d84347",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/minimal/assets/request-form.svg",
+    "directory": false,
+    "bytes": 1663,
+    "sha256": "f5a97fb7cb43af9681b2083fe1deebe38bb3eda24adb947c3314317fc8a24de9",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/task-board/example.atlas.json",
+    "directory": false,
+    "bytes": 128907,
+    "sha256": "ea45b98dec6bcd2be96107fcf10775088b62026a8e5f0df6785ab3027414a468",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/task-board/example.atlas.md",
+    "directory": false,
+    "bytes": 190188,
+    "sha256": "91d993613398430be45289d3c729dbb8690fea2f5e2b069aa5d30b9265b21c07",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/task-board/example.atlas.pdf",
+    "directory": false,
+    "bytes": 382825,
+    "sha256": "c7621dc90f21e776fecc682285b50bf60e442333846aec7fa8dbf41c7ab086be",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/task-board/example.atlas.tex",
+    "directory": false,
+    "bytes": 241409,
+    "sha256": "b2d6a4443765616fc6c1f1e122b694e1ab78789070393cace147278eab969f4b",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/task-board/needs.md",
+    "directory": false,
+    "bytes": 3180,
+    "sha256": "dc21e1ab9264487e561c9999e5d08daaa9f9d777592665cc73355157c17a9b9b",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/task-board/README.md",
+    "directory": false,
+    "bytes": 5111,
+    "sha256": "3148a4768f03e1bf20ae0a05f2dde3e7c1da1bb979594037a831c0c4cac8c3ee",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/task-board/README.pt-br.md",
+    "directory": false,
+    "bytes": 5592,
+    "sha256": "1f14ff930280faa22825c1c63f267316c5abc5b86ee41949dce10684b6123998",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "examples/task-board/traceability.md",
+    "directory": false,
+    "bytes": 5417,
+    "sha256": "fd748e12094661bdf423eae4f2ec184cebea226bc166bddaf21f5fa6253deea3",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/json",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "implementations/latex",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "implementations/markdown",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "implementations/json/atlas.schema.json",
+    "directory": false,
+    "bytes": 55910,
+    "sha256": "1072c3b4ef28ba46f5c1024812464850269cf7783ad4dbe7e21f39403ba74edb",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/json/README.md",
+    "directory": false,
+    "bytes": 7910,
+    "sha256": "1b0faacb515559f887337de4c2abe15a41ee0d4e736028a98dd0da09f10b22ec",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/json/README.pt-br.md",
+    "directory": false,
+    "bytes": 8158,
+    "sha256": "9f8a7ef2c388912814a942ede0e35ed6c8fced1b874724e0418839fd0eb990a1",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/json/starter.atlas.json",
+    "directory": false,
+    "bytes": 3107,
+    "sha256": "af26f1a77653311a6439925b69746a25d3213885e8467ae3d87f7dfd55e4ab7c",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/latex/atlas-presentation.example.tex",
+    "directory": false,
+    "bytes": 1404,
+    "sha256": "b0329d91bfd2f32bd2b612fb09d1d27a6e7eb51c6ee59a8c9186e764f7b958a4",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/latex/atlas.sty",
+    "directory": false,
+    "bytes": 9396,
+    "sha256": "a6b85b5a9b2769c4f4392b0e05ef71fec743d11bdb11da9e21ec491b7e503b41",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/latex/README.md",
+    "directory": false,
+    "bytes": 15542,
+    "sha256": "36384e9a6d87fa171f53584befa062588974ca904a649e5be670143a73d1eb2d",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/latex/README.pt-br.md",
+    "directory": false,
+    "bytes": 15526,
+    "sha256": "c553fc52d39e2eb54c91ddcaa9b0eaeb48716551780a5ac76a9d2a4c05ab6e15",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/latex/starter.atlas.tex",
+    "directory": false,
+    "bytes": 5899,
+    "sha256": "cf9a8a001b3d7d67e0a473bdaa7e9c23fd6126a65d1f33f97d03acc58846778d",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/markdown/README.md",
+    "directory": false,
+    "bytes": 9448,
+    "sha256": "e8a95a5bd38adb2e703f811d7ca6bb8e9a656d2e94a77726b2826f87bcefad28",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/markdown/README.pt-br.md",
+    "directory": false,
+    "bytes": 8901,
+    "sha256": "97d0305c81607490d06188651532d39a67fae1af5855b3fa6d533865b331c88f",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "implementations/markdown/starter.atlas.md",
+    "directory": false,
+    "bytes": 5029,
+    "sha256": "338721f3230c737cc4fa529b480d99ce6df19644898ed45a500a5a2030a56534",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "skills/build.py",
+    "directory": false,
+    "bytes": 7587,
+    "sha256": "f4577b440886411860ac1fc90582fdd2386293e29396f70dee1c0cc3b63d49e1",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/agents",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/assets",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/references",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/LICENSE",
+    "directory": false,
+    "bytes": 1084,
+    "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/SKILL.md",
+    "directory": false,
+    "bytes": 8137,
+    "sha256": "f2dcdb78169370eaca8a2a7927454a4feb151f82ee521c6bb50e287cf4b67fbe",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/source-map.json",
+    "directory": false,
+    "bytes": 7652,
+    "sha256": "a29504d2687a0b942d0de02a1b9c278fa6468e3d80ad178e878285202c2e3753",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/agents/openai.yaml",
+    "directory": false,
+    "bytes": 249,
+    "sha256": "062abe7840acfe8d37f45a2b40f33106d066ae913ab159217de657a6c2d19c89",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/assets/atlas-presentation.example.tex",
+    "directory": false,
+    "bytes": 1404,
+    "sha256": "b0329d91bfd2f32bd2b612fb09d1d27a6e7eb51c6ee59a8c9186e764f7b958a4",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/assets/starter.atlas.json",
+    "directory": false,
+    "bytes": 3107,
+    "sha256": "af26f1a77653311a6439925b69746a25d3213885e8467ae3d87f7dfd55e4ab7c",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/references/atlas-json.md",
+    "directory": false,
+    "bytes": 8239,
+    "sha256": "78b2928c1631a327275e0e6a0fb2f00ea387fa1ba80a039992aa69e3b3ee8af1",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/references/atlas-latex.md",
+    "directory": false,
+    "bytes": 15877,
+    "sha256": "7e1559284d8614b15151fbe3ae0d53ab07fa0cf83d2efa6ce4f4d5f96654f5f4",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/references/atlas-markdown.md",
+    "directory": false,
+    "bytes": 9709,
+    "sha256": "9792a9354a81f2770ed6f99c5d10bc6dd463cc12cae73123bb7f17551b575d99",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/references/atlas-specification.md",
+    "directory": false,
+    "bytes": 72263,
+    "sha256": "bb0a2afa8c930dbd6924fe5299ef60bfba29ddde0156d64dc2f89c02b10a993d",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/references/workflow.md",
+    "directory": false,
+    "bytes": 4461,
+    "sha256": "7f2ecb920fe3fb3983df7969c4c566ba590eee772467311fda6d54a0695e740a",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/atlas_translate.py",
+    "directory": false,
+    "bytes": 1244,
+    "sha256": "382a91d4605d060a4dc217a35938c8cceba377d6f67666e4c02c7a19193430ff",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/requirements.txt",
+    "directory": false,
+    "bytes": 20,
+    "sha256": "9984fa6ad6d35d2468011c4c278583e9bb4983d83be6bb3f5aabcef9c99b19b7",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/adapters",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/schemas",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/templates",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/__init__.py",
+    "directory": false,
+    "bytes": 1106,
+    "sha256": "f6e7712dceb925b519bfab2140884fcea057ca9529837ef7a535458aa796c4f8",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/__main__.py",
+    "directory": false,
+    "bytes": 48,
+    "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/cli.py",
+    "directory": false,
+    "bytes": 10350,
+    "sha256": "68e27611aa040839c37569caace0a8892ddc620fd6a83314448ef3a554ce26eb",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/errors.py",
+    "directory": false,
+    "bytes": 1853,
+    "sha256": "ee9cbd830b7358c4e717b39c37fb9c2a1464d0140934d0d69e3c068d781d376e",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/graph_render.py",
+    "directory": false,
+    "bytes": 7805,
+    "sha256": "e23e895b556718d24faf0b145ce17644f8138ba1019555ed04960d658ed09397",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/registry.py",
+    "directory": false,
+    "bytes": 5682,
+    "sha256": "0cb46333ca16f55c292887a82088d810d92f35e49b2b2a43c6fbd311bb34da9e",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/slots.py",
+    "directory": false,
+    "bytes": 5632,
+    "sha256": "2e234b4d15159bb6b4b88cab9b72930a00ca6d980e6238192ecb7a114a8dbef2",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/util.py",
+    "directory": false,
+    "bytes": 5331,
+    "sha256": "4ba00edeeab6801135d61dab1243c2cfd11e60b2272798bc73934ebf09dd80df",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/validation.py",
+    "directory": false,
+    "bytes": 41974,
+    "sha256": "544f3cd67b9842608eae4d74168a199ae71e85ec7cff19ad7dd136878e6bbaec",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/adapters/base.py",
+    "directory": false,
+    "bytes": 987,
+    "sha256": "04d302f1862a7636dc79d18feda08d3ec503591adfaa1d517659bf29e8570a33",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/adapters/json_adapter.py",
+    "directory": false,
+    "bytes": 2279,
+    "sha256": "081384e4f3ebdd85245dd12165aef5079b09a9e3447d90c5eff45d3972da34bd",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/adapters/latex_adapter.py",
+    "directory": false,
+    "bytes": 37856,
+    "sha256": "11aaac145039f25501727495b2e398fe4b5088933b4eb311f6c81f470ec6d9d1",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/adapters/markdown_adapter.py",
+    "directory": false,
+    "bytes": 49492,
+    "sha256": "f8bc7cf0b9f652e86584b289fb444ae10e02e691f3366f082475808a86aa7d33",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/schemas/atlas.schema.json",
+    "directory": false,
+    "bytes": 55910,
+    "sha256": "1072c3b4ef28ba46f5c1024812464850269cf7783ad4dbe7e21f39403ba74edb",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "skills/atlas-specs/scripts/vendor/atlas_spec/templates/atlas.sty",
+    "directory": false,
+    "bytes": 9396,
+    "sha256": "a6b85b5a9b2769c4f4392b0e05ef71fec743d11bdb11da9e21ec491b7e503b41",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "tests/conftest.py",
+    "directory": false,
+    "bytes": 4221,
+    "sha256": "121084c678e4ae3c2fdff4ea562394905837f79c7af62cc1b1663ae8eef59a15",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "tests/test_distribution.py",
+    "directory": false,
+    "bytes": 4822,
+    "sha256": "30920ff6942907bc97143e0daab52cade01101bb305b332914f3b1a54843d93f",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "tests/test_latex_presentation.py",
+    "directory": false,
+    "bytes": 7072,
+    "sha256": "365d823b5eb98cb207b72d8e75d67a8ca1b2e427f313d156817b3d76256bc2db",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "tests/test_packaging.py",
+    "directory": false,
+    "bytes": 3337,
+    "sha256": "73d34caad7c2b757f14cfc8db167364601be4469cd639a578c1d607342bfba4c",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "tests/test_release_regressions.py",
+    "directory": false,
+    "bytes": 5783,
+    "sha256": "e89dc1c3d50f162413117a7e158bc598f6314698f5dacbcf95e86c16ef95615c",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "tests/test_resources_and_cli.py",
+    "directory": false,
+    "bytes": 5133,
+    "sha256": "d8fc5f308c01773762b2909dcd31ee52a59e5a271140b0a9ba1b2391f84bcce1",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "tests/test_roundtrip.py",
+    "directory": false,
+    "bytes": 10004,
+    "sha256": "73393d0b953918c1666c9944a7e6d0b85cd20cbc6c7cfbbb43a5be309b4cd0bd",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "tests/test_validation_and_errors.py",
+    "directory": false,
+    "bytes": 10946,
+    "sha256": "2cab5186f29df8bae4455f362e4f765a872040a2fea90fc73847e3eb32275bd1",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "translator/atlas_translate.py",
+    "directory": false,
+    "bytes": 1244,
+    "sha256": "382a91d4605d060a4dc217a35938c8cceba377d6f67666e4c02c7a19193430ff",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/README.md",
+    "directory": false,
+    "bytes": 5141,
+    "sha256": "d0ca348aaf9b131888e862b899d4656694cb2bfb3e5ceb49b111ef46f6908e0f",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/README.pt-br.md",
+    "directory": false,
+    "bytes": 5449,
+    "sha256": "230dc09c0cc8ccd6c32366c5d07dc9beb00f5a3fd957ba9f8236a99132c5d9d0",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/adapters",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/schemas",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/templates",
+    "directory": true,
+    "bytes": null,
+    "sha256": null,
+    "attributes": "Directory",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/__init__.py",
+    "directory": false,
+    "bytes": 1106,
+    "sha256": "f6e7712dceb925b519bfab2140884fcea057ca9529837ef7a535458aa796c4f8",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/__main__.py",
+    "directory": false,
+    "bytes": 48,
+    "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/cli.py",
+    "directory": false,
+    "bytes": 10350,
+    "sha256": "68e27611aa040839c37569caace0a8892ddc620fd6a83314448ef3a554ce26eb",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/errors.py",
+    "directory": false,
+    "bytes": 1853,
+    "sha256": "ee9cbd830b7358c4e717b39c37fb9c2a1464d0140934d0d69e3c068d781d376e",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/graph_render.py",
+    "directory": false,
+    "bytes": 7805,
+    "sha256": "e23e895b556718d24faf0b145ce17644f8138ba1019555ed04960d658ed09397",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/registry.py",
+    "directory": false,
+    "bytes": 5682,
+    "sha256": "0cb46333ca16f55c292887a82088d810d92f35e49b2b2a43c6fbd311bb34da9e",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/slots.py",
+    "directory": false,
+    "bytes": 5632,
+    "sha256": "2e234b4d15159bb6b4b88cab9b72930a00ca6d980e6238192ecb7a114a8dbef2",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/util.py",
+    "directory": false,
+    "bytes": 5331,
+    "sha256": "4ba00edeeab6801135d61dab1243c2cfd11e60b2272798bc73934ebf09dd80df",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/validation.py",
+    "directory": false,
+    "bytes": 41974,
+    "sha256": "544f3cd67b9842608eae4d74168a199ae71e85ec7cff19ad7dd136878e6bbaec",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/adapters/base.py",
+    "directory": false,
+    "bytes": 987,
+    "sha256": "04d302f1862a7636dc79d18feda08d3ec503591adfaa1d517659bf29e8570a33",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/adapters/json_adapter.py",
+    "directory": false,
+    "bytes": 2279,
+    "sha256": "081384e4f3ebdd85245dd12165aef5079b09a9e3447d90c5eff45d3972da34bd",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/adapters/latex_adapter.py",
+    "directory": false,
+    "bytes": 37856,
+    "sha256": "11aaac145039f25501727495b2e398fe4b5088933b4eb311f6c81f470ec6d9d1",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/adapters/markdown_adapter.py",
+    "directory": false,
+    "bytes": 49492,
+    "sha256": "f8bc7cf0b9f652e86584b289fb444ae10e02e691f3366f082475808a86aa7d33",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/schemas/atlas.schema.json",
+    "directory": false,
+    "bytes": 55910,
+    "sha256": "1072c3b4ef28ba46f5c1024812464850269cf7783ad4dbe7e21f39403ba74edb",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "translator/src/atlas_spec/templates/atlas.sty",
+    "directory": false,
+    "bytes": 9396,
+    "sha256": "a6b85b5a9b2769c4f4392b0e05ef71fec743d11bdb11da9e21ec491b7e503b41",
+    "attributes": "Archive",
+    "sddl": "O:S-1-5-21-1991563151-4247622755-4201392590-1001G:S-1-5-21-1991563151-4247622755-4201392590-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  }
+]

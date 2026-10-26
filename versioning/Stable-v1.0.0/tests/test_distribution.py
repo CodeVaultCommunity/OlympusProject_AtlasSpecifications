@@ -77,7 +77,7 @@ def test_standalone_edition_has_its_runtime_and_resources(tmp_path, registry):
     edition = tmp_path / "edition"
     shutil.copytree(
         VERSION_ROOT, edition,
-        ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "*.egg-info", ".pytest_cache", "build", "dist", "work"),
+        ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "*.egg-info", ".pytest_cache", ".venv", "build", "dist", "work"),
     )
     launcher = edition / "translator" / "atlas_translate.py"
     listing = _cli(launcher, "formats", cwd=tmp_path)

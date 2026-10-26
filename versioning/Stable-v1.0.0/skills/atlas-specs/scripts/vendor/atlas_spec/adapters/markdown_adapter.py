@@ -356,11 +356,14 @@ class MarkdownPresenter:
             attrs += f" level={level}"
         if role == "list-item":
             attrs += f" ordered={'yes' if ordered else 'no'}"
+        # A bare final CR followed by LF would become one CRLF, which the
+        # reader removes as structural syntax. CR + CRLF keeps them distinct.
+        ending = "\r\n" if body.endswith("\r") else "\n"
         return (
             "\n"
             + f"<!-- atlas:text {attrs} -->\n"
             + _escape_markdown_lines(body)
-            + "\n<!-- /atlas:text id="
+            + ending + "<!-- /atlas:text id="
             + slot
             + " -->\n"
         )

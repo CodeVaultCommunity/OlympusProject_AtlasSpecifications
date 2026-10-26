@@ -465,15 +465,6 @@ class Validator:
                                 f"/atlas/use_cases/{case_id}/traceability",
                             )
                         )
-            for ref in [*case["assumptions"], *case["sources"], *case["open_issues"]]:
-                if ref not in ids:
-                    diagnostics.append(
-                        Diagnostic(
-                            "ATL-E-REF",
-                            f"use case {case_id} references unknown record {ref!r}",
-                            f"/atlas/use_cases/{case_id}",
-                        )
-                    )
 
         # shared RNF definitions
         rnf_locations: dict[str, tuple[str, dict]] = {}
@@ -558,15 +549,6 @@ class Validator:
                                 f"/atlas/boundaries/{boundary['id']}",
                             )
                         )
-            for ref in [*boundary["assumptions"], *boundary["sources"], *boundary["open_issues"]]:
-                if ref not in ids:
-                    diagnostics.append(
-                        Diagnostic(
-                            "ATL-E-REF",
-                            f"boundary {boundary['id']} references unknown record {ref!r}",
-                            f"/atlas/boundaries/{boundary['id']}",
-                        )
-                    )
 
         # figure references and graph freshness
         for graph_id, graph in graphs.items():
@@ -666,27 +648,55 @@ class Validator:
                                 f"/atlas/{record_key}/{record['id']}",
                             )
                         )
-        for case in atlas["use_cases"]:
-            for ref in case["sources"]:
-                if ref not in {s["id"] for s in atlas["sources"]}:
-                    diagnostics.append(
-                        Diagnostic(
-                            "ATL-E-REF",
-                            f"use case {case['id']} references unknown source {ref!r}",
-                            f"/atlas/use_cases/{case['id']}",
-                        )
-                    )
-        for entity in atlas["entities"]:
-            for ref in [*entity["assumptions"], *entity["open_issues"]]:
-                if ref not in ids:
-                    diagnostics.append(
-                        Diagnostic(
-                            "ATL-E-REF",
-                            f"entity {entity['id']} references unknown record {ref!r}",
-                            f"/atlas/entities/{entity['id']}",
-                        )
-                    )
+        # These fields refer to declared record categories, not to any ID in
+        # the global namespace. Entity collections are optional: reading an
+        # absent list as no references must not modify the document.
+        catalogs = {
+            key: {record["id"] for record in atlas[key]}
+            for key in ("sources", "assumptions", "open_issues")
+        }
+        for collection, fields in (
+            ("entities", ("assumptions", "open_issues")),
+            ("use_cases", ("sources", "assumptions", "open_issues")),
+            ("boundaries", ("sources", "assumptions", "open_issues")),
+        ):
+            for index, item in enumerate(atlas[collection]):
+                for field in fields:
+                    for ref in item.get(field, []):
+                        if ref not in catalogs[field]:
+                            diagnostics.append(Diagnostic(
+                                "ATL-E-REF",
+                                f"{item['id']} references {ref!r}, which is not declared in {field}",
+                                f"/atlas/{collection}/{index}/{field}",
+                            ))
+        self._check_figure_references(
+            atlas, "/atlas", {resource["id"] for resource in atlas["resources"]}, diagnostics
+        )
         return diagnostics
+
+    def _check_figure_references(
+        self, value: Any, path: str, resource_ids: set[str], diagnostics: list[Diagnostic]
+    ) -> None:
+        """Visit schema-validated model objects, excluding opaque containers.
+
+        Rich blocks occur in many nested contracts. A schema-valid object with
+        type=figure and resource is a figure block; no search through prose or
+        conventional ID prefixes is involved.
+        """
+        if isinstance(value, dict):
+            if value.get("type") == "figure" and "resource" in value:
+                if value["resource"] not in resource_ids:
+                    diagnostics.append(Diagnostic(
+                        "ATL-E-REF",
+                        f"figure references {value['resource']!r}, which is not a declared resource",
+                        f"{path}/resource",
+                    ))
+            for key, child in value.items():
+                if key not in {"extensions", "meta", "data"}:
+                    self._check_figure_references(child, f"{path}/{key}", resource_ids, diagnostics)
+        elif isinstance(value, list):
+            for index, child in enumerate(value):
+                self._check_figure_references(child, f"{path}/{index}", resource_ids, diagnostics)
 
     def _common_texts(self, value: Any) -> list[str]:
         texts: list[str] = []

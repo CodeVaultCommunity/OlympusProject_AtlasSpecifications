@@ -54,6 +54,8 @@ O conteúdo começa imediatamente após a quebra que termina o marcador inicial 
 
 CRLF/LF/CR autorais dentro do conteúdo são preservados exatamente. O codec não normaliza quebras.
 
+Após um CR autoral final, o codificador usa CRLF como separador estrutural. Isso produz CR + CRLF, de modo que remover a última quebra estrutural não consome o CR autoral. Nos demais casos, o separador gerado é LF. U+0085, U+2028 e U+2029 são caracteres de conteúdo, não delimitadores de linhas físicas do perfil.
+
 ### Prefixos
 
 - Conteúdo de título começa com `#` repetido `level` vezes e um espaço. O decodificador remove exatamente esse prefixo.

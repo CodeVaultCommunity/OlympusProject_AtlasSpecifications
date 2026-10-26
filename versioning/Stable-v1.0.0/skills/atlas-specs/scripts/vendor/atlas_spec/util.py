@@ -2,14 +2,16 @@
 
 Atlas treats UTF-8 source characters as content.  Files are decoded without
 newline translation and are written without newline translation.  Structural
-line endings emitted by the codecs are LF; authored line endings inside text
-records are whatever the source contains.
+line endings emitted by the codecs are LF, except a CRLF separator after an
+authored final CR prevents coalescing the content with its terminator. Authored
+line endings inside text records are whatever the source contains.
 """
 
 from __future__ import annotations
 
 import hashlib
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -162,7 +164,9 @@ def detect_newline(text: str) -> str:
 def split_lines_keepends(text: str) -> list[str]:
     """Split on LF, CRLF, or CR while keeping every line ending."""
 
-    return text.splitlines(keepends=True)
+    # str.splitlines also splits U+0085/U+2028/U+2029 and other content
+    # characters. The profile only treats CR, LF and CRLF as line endings.
+    return re.findall(r"[^\r\n]*(?:\r\n|\r|\n)|[^\r\n]+$", text)
 
 
 def strip_line_ending(line: str) -> tuple[str, str]:

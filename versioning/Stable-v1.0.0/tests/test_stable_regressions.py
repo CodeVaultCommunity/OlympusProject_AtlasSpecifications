@@ -145,6 +145,18 @@ def test_table_cell_line_endings_exact(registry, minimal, minimal_dir, tmp_path,
     assert atlas_content_equal(minimal, registry.decode_to_atlas_json(output, source_format="latex", resource_root=minimal_dir))
 
 
+@pytest.mark.parametrize("kind", ["paragraph", "heading", "list", "code"])
+def test_final_cr_does_not_merge_with_structural_separator(registry, minimal, minimal_dir, kind):
+    value = "text\r"
+    block = {"type": kind, "text": value}
+    if kind == "heading":
+        block["level"] = 2
+    elif kind == "list":
+        block = {"type": "list", "ordered": False, "items": [{"text": value}]}
+    minimal["atlas"]["structure"][0]["blocks"].append(block)
+    roundtrips(registry, minimal, minimal_dir)
+
+
 @pytest.mark.parametrize("separator", ["\u0085", "\u2028", "\u2029"])
 @pytest.mark.parametrize("location", ["extensions", "meta", "data", "text"])
 def test_unicode_separators_and_opaque_reference_keys(registry, minimal, minimal_dir, separator, location):

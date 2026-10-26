@@ -40,6 +40,8 @@ Required members (see the schema for full constraints):
 
 All core collections listed above under editorial content, concepts, structured material and records are required. An empty array means “declared and empty”; an absent array is invalid. `subtitle` is optional and may be `null` or a text record; these are distinct states.
 
+Nested entity members `assumptions` and `open_issues` are optional. An absent member contributes no references to validate, without inserting an empty list. Absence and `[]` are preserved distinctly; `null` is invalid for these members.
+
 ## 3. Text records
 
 ```json
@@ -64,6 +66,8 @@ ID pattern:
 ```
 
 All element IDs are globally unique, including nested field, condition, operation, node, and edge IDs. `document_id` shares the namespace. IDs are never derived from array position. References are ID strings, not indexes.
+
+References resolve to their declared category, independently of ID prefixes. Figure blocks at every permitted depth target `resources`; case/boundary `sources`, `assumptions`, `open_issues` and entity `assumptions`, `open_issues` target the corresponding catalogs. Opaque `meta`, `data` and `extensions` are excluded from reference interpretation. See the complete [reference inventory](../../verification/reference-inventory.md).
 
 ## 5. Ordering
 

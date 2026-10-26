@@ -1,5 +1,7 @@
 # Atlas Specifications · Alpha-v0.1.0
 
+> **Checkpoint de preparação da Stable, não uma release.** Este diretório de trabalho mantém as identidades Alpha de modelo/perfil/pacote enquanto os quatro defeitos auditados do runtime são corrigidos e reproduzidos. O conteúdo final do OAL Stable-v1.0.0 ainda está em edição; a pedido do usuário, o trabalho pausa antes da revisão de correspondência com OAL e da finalização da Stable. A árvore histórica `versioning/Alpha-v0.1.0/` está preservada. PDFs copiados dos exemplos são publicações Alpha históricas, não evidência de release Stable. Consulte as [evidências do checkpoint](verification/CHECKPOINT.md). Os escapes LaTeX corrigidos aqui documentados pertencem a esta cópia de trabalho e não devem ser atribuídos à implementação Alpha histórica.
+
 [English](README.md) · Português brasileiro
 
 **Atlas é um modelo abstrato para especificações declarativas de casos de uso.** Esta primeira alpha define seu contrato semântico, os perfis Atlas JSON/Markdown/LaTeX e um tradutor Python com verificação de conteúdo exato. Outros modelos podem implementar a abstração mediante mapeamento explícito. Modelo, modelo implementador, representação e artefato concreto de projeto possuem responsabilidades distintas.

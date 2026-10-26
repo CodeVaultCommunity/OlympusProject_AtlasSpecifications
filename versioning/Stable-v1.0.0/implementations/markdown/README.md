@@ -56,6 +56,8 @@ Content begins immediately after the newline that ends the start marker and ends
 
 Authored CRLF/LF/CR inside the content are preserved exactly. The codec does not normalize line endings.
 
+After an authored final CR, the encoder uses CRLF for the structural separator. This produces CR + CRLF, so removing the last structural ending cannot consume the authored CR. Elsewhere the generated separator is LF. U+0085, U+2028 and U+2029 are content characters, not physical profile-line delimiters.
+
 ### Prefix syntax
 
 - A heading record's content starts with `#` repeated `level` times and one space. The decoder removes exactly that prefix.

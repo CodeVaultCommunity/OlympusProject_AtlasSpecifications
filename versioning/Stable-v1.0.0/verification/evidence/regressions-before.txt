@@ -1,0 +1,646 @@
+FFF..FFFFFFFFFFFFFFFFFFFFFF...........FF.FFFFF........FFFFFF.FF.F.FFFFFF [ 92%]
+FFF...                                                                   [100%]
+================================== FAILURES ===================================
+___________ test_optional_entity_records_preserve_absence[removed0] ___________
+tests\test_stable_regressions.py:44: in test_optional_entity_records_preserve_absence
+    assert result.returncode == 0, result.stderr
+E   AssertionError: Traceback (most recent call last):
+E       File "<frozen runpy>", line 198, in _run_module_as_main
+E       File "<frozen runpy>", line 88, in _run_code
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\__main__.py", line 3, in <module>
+E         raise SystemExit(main())
+E                          ^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\cli.py", line 269, in main
+E         return cmd_validate(args)
+E                ^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\cli.py", line 111, in cmd_validate
+E         document = registry.decode_to_atlas_json(
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\registry.py", line 77, in decode_to_atlas_json
+E         document = adapter.decode(source, options)
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\adapters\json_adapter.py", line 43, in decode
+E         options.validator.validate(
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\validation.py", line 51, in validate
+E         diagnostics = self._semantic_errors(document)
+E                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\validation.py", line 680, in _semantic_errors
+E         for ref in [*entity["assumptions"], *entity["open_issues"]]:
+E                      ~~~~~~^^^^^^^^^^^^^^^
+E     KeyError: 'assumptions'
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\versioning\\Stable-v...*entity["assumptions"], *entity["open_issues"]]:\n                 ~~~~~~^^^^^^^^^^^^^^^\nKeyError: \'assumptions\'\n').returncode
+___________ test_optional_entity_records_preserve_absence[removed1] ___________
+tests\test_stable_regressions.py:44: in test_optional_entity_records_preserve_absence
+    assert result.returncode == 0, result.stderr
+E   AssertionError: Traceback (most recent call last):
+E       File "<frozen runpy>", line 198, in _run_module_as_main
+E       File "<frozen runpy>", line 88, in _run_code
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\__main__.py", line 3, in <module>
+E         raise SystemExit(main())
+E                          ^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\cli.py", line 269, in main
+E         return cmd_validate(args)
+E                ^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\cli.py", line 111, in cmd_validate
+E         document = registry.decode_to_atlas_json(
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\registry.py", line 77, in decode_to_atlas_json
+E         document = adapter.decode(source, options)
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\adapters\json_adapter.py", line 43, in decode
+E         options.validator.validate(
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\validation.py", line 51, in validate
+E         diagnostics = self._semantic_errors(document)
+E                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\validation.py", line 680, in _semantic_errors
+E         for ref in [*entity["assumptions"], *entity["open_issues"]]:
+E                                              ~~~~~~^^^^^^^^^^^^^^^
+E     KeyError: 'open_issues'
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\versioning\\Stable-v...*entity["open_issues"]]:\n                                         ~~~~~~^^^^^^^^^^^^^^^\nKeyError: \'open_issues\'\n').returncode
+___________ test_optional_entity_records_preserve_absence[removed2] ___________
+tests\test_stable_regressions.py:44: in test_optional_entity_records_preserve_absence
+    assert result.returncode == 0, result.stderr
+E   AssertionError: Traceback (most recent call last):
+E       File "<frozen runpy>", line 198, in _run_module_as_main
+E       File "<frozen runpy>", line 88, in _run_code
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\__main__.py", line 3, in <module>
+E         raise SystemExit(main())
+E                          ^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\cli.py", line 269, in main
+E         return cmd_validate(args)
+E                ^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\cli.py", line 111, in cmd_validate
+E         document = registry.decode_to_atlas_json(
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\registry.py", line 77, in decode_to_atlas_json
+E         document = adapter.decode(source, options)
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\adapters\json_adapter.py", line 43, in decode
+E         options.validator.validate(
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\validation.py", line 51, in validate
+E         diagnostics = self._semantic_errors(document)
+E                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "E:\Alkimim\Projetos\CodeVault\ProjectOlympus\L1-AtlasSpecifications\versioning\Stable-v1.0.0\translator\src\atlas_spec\validation.py", line 680, in _semantic_errors
+E         for ref in [*entity["assumptions"], *entity["open_issues"]]:
+E                      ~~~~~~^^^^^^^^^^^^^^^
+E     KeyError: 'assumptions'
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\versioning\\Stable-v...*entity["assumptions"], *entity["open_issues"]]:\n                 ~~~~~~^^^^^^^^^^^^^^^\nKeyError: \'assumptions\'\n').returncode
+__________ test_nested_figure_reference_category[missing-location0] ___________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__________ test_nested_figure_reference_category[missing-location1] ___________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__________ test_nested_figure_reference_category[missing-location2] ___________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__________ test_nested_figure_reference_category[missing-location3] ___________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__________ test_nested_figure_reference_category[missing-location4] ___________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__________ test_nested_figure_reference_category[missing-location5] ___________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__________ test_nested_figure_reference_category[missing-location6] ___________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__________ test_nested_figure_reference_category[missing-location7] ___________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__________ test_nested_figure_reference_category[missing-location8] ___________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__________ test_nested_figure_reference_category[missing-location9] ___________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__________ test_nested_figure_reference_category[missing-location10] __________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___________ test_nested_figure_reference_category[wrong-location0] ____________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___________ test_nested_figure_reference_category[wrong-location1] ____________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___________ test_nested_figure_reference_category[wrong-location2] ____________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___________ test_nested_figure_reference_category[wrong-location3] ____________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___________ test_nested_figure_reference_category[wrong-location4] ____________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___________ test_nested_figure_reference_category[wrong-location5] ____________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___________ test_nested_figure_reference_category[wrong-location6] ____________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___________ test_nested_figure_reference_category[wrong-location7] ____________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___________ test_nested_figure_reference_category[wrong-location8] ____________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___________ test_nested_figure_reference_category[wrong-location9] ____________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___________ test_nested_figure_reference_category[wrong-location10] ___________
+tests\test_stable_regressions.py:86: in test_nested_figure_reference_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__ test_record_references_use_declared_category[False-entities-assumptions] ___
+tests\test_stable_regressions.py:113: in test_record_references_use_declared_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__ test_record_references_use_declared_category[False-entities-open_issues] ___
+tests\test_stable_regressions.py:113: in test_record_references_use_declared_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__ test_record_references_use_declared_category[False-use_cases-assumptions] __
+tests\test_stable_regressions.py:113: in test_record_references_use_declared_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+__ test_record_references_use_declared_category[False-use_cases-open_issues] __
+tests\test_stable_regressions.py:113: in test_record_references_use_declared_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+___ test_record_references_use_declared_category[False-boundaries-sources] ____
+tests\test_stable_regressions.py:113: in test_record_references_use_declared_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+_ test_record_references_use_declared_category[False-boundaries-assumptions] __
+tests\test_stable_regressions.py:113: in test_record_references_use_declared_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+_ test_record_references_use_declared_category[False-boundaries-open_issues] __
+tests\test_stable_regressions.py:113: in test_record_references_use_declared_category
+    with pytest.raises(AtlasValidationError) as exc:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AtlasValidationError
+_____________ test_cli_bad_figure_never_publishes[False-markdown] _____________
+tests\test_stable_regressions.py:126: in test_cli_bad_figure_never_publishes
+    assert result.returncode == 2, result.stdout + result.stderr
+E   AssertionError: converted: C:\Users\Douglas\.codex\visualizations\2026\10\26\01a175b9-95a3-7500-b462-6db470cefc5f\atlas-stable-evidence\pytest-red\test_cli_bad_figure_never_publ0\input.json (json) -> C:\Users\Douglas\.codex\visualizations\2026\10\26\01a175b9-95a3-7500-b462-6db470cefc5f\atlas-stable-evidence\pytest-red\test_cli_bad_figure_never_publ0\output.txt (markdown); Atlas content preserved
+E     
+E   assert 0 == 2
+E    +  where 0 = CompletedProcess(args=['E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\versioning\\Stable-v...le-evidence\\pytest-red\\test_cli_bad_figure_never_publ0\\output.txt (markdown); Atlas content preserved\n', stderr='').returncode
+______________ test_cli_bad_figure_never_publishes[False-latex] _______________
+tests\test_stable_regressions.py:126: in test_cli_bad_figure_never_publishes
+    assert result.returncode == 2, result.stdout + result.stderr
+E   AssertionError: converted: C:\Users\Douglas\.codex\visualizations\2026\10\26\01a175b9-95a3-7500-b462-6db470cefc5f\atlas-stable-evidence\pytest-red\test_cli_bad_figure_never_publ1\input.json (json) -> C:\Users\Douglas\.codex\visualizations\2026\10\26\01a175b9-95a3-7500-b462-6db470cefc5f\atlas-stable-evidence\pytest-red\test_cli_bad_figure_never_publ1\output.txt (latex); Atlas content preserved
+E     
+E   assert 0 == 2
+E    +  where 0 = CompletedProcess(args=['E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\versioning\\Stable-v...table-evidence\\pytest-red\\test_cli_bad_figure_never_publ1\\output.txt (latex); Atlas content preserved\n', stderr='').returncode
+_____________ test_cli_bad_figure_never_publishes[True-markdown] ______________
+tests\test_stable_regressions.py:126: in test_cli_bad_figure_never_publishes
+    assert result.returncode == 2, result.stdout + result.stderr
+E   AssertionError: converted: C:\Users\Douglas\.codex\visualizations\2026\10\26\01a175b9-95a3-7500-b462-6db470cefc5f\atlas-stable-evidence\pytest-red\test_cli_bad_figure_never_publ2\input.json (json) -> C:\Users\Douglas\.codex\visualizations\2026\10\26\01a175b9-95a3-7500-b462-6db470cefc5f\atlas-stable-evidence\pytest-red\test_cli_bad_figure_never_publ2\output.txt (markdown); Atlas content preserved
+E     
+E   assert 0 == 2
+E    +  where 0 = CompletedProcess(args=['E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\versioning\\Stable-v...le-evidence\\pytest-red\\test_cli_bad_figure_never_publ2\\output.txt (markdown); Atlas content preserved\n', stderr='').returncode
+_______________ test_cli_bad_figure_never_publishes[True-latex] _______________
+tests\test_stable_regressions.py:126: in test_cli_bad_figure_never_publishes
+    assert result.returncode == 2, result.stdout + result.stderr
+E   AssertionError: converted: C:\Users\Douglas\.codex\visualizations\2026\10\26\01a175b9-95a3-7500-b462-6db470cefc5f\atlas-stable-evidence\pytest-red\test_cli_bad_figure_never_publ3\input.json (json) -> C:\Users\Douglas\.codex\visualizations\2026\10\26\01a175b9-95a3-7500-b462-6db470cefc5f\atlas-stable-evidence\pytest-red\test_cli_bad_figure_never_publ3\output.txt (latex); Atlas content preserved
+E     
+E   assert 0 == 2
+E    +  where 0 = CompletedProcess(args=['E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L1-AtlasSpecifications\\versioning\\Stable-v...table-evidence\\pytest-red\\test_cli_bad_figure_never_publ3\\output.txt (latex); Atlas content preserved\n', stderr='').returncode
+_________________ test_table_cell_line_endings_exact[A\r\nB] __________________
+tests\test_stable_regressions.py:141: in test_table_cell_line_endings_exact
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:25: in roundtrips
+    assert atlas_content_equal(document, recovered), (source, target)
+E   AssertionError: ('json', 'latex')
+E   assert False
+E    +  where False = atlas_content_equal({'format': 'atlas-json/Alpha-v0.1.0', 'atlas': {'document_id': 'ATLAS-EX-MINIMAL', 'title': {'text': 'Minimal request register'}, 'revision': '1', 'spec_version': 'Alpha-v0.1.0', ...}}, {'format': 'atlas-json/Alpha-v0.1.0', 'atlas': {'document_id': 'ATLAS-EX-MINIMAL', 'title': {'text': 'Minimal request register'}, 'revision': '1', 'spec_version': 'Alpha-v0.1.0', ...}})
+__________________ test_table_cell_line_endings_exact[A\rB] ___________________
+tests\test_stable_regressions.py:141: in test_table_cell_line_endings_exact
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:25: in roundtrips
+    assert atlas_content_equal(document, recovered), (source, target)
+E   AssertionError: ('json', 'latex')
+E   assert False
+E    +  where False = atlas_content_equal({'format': 'atlas-json/Alpha-v0.1.0', 'atlas': {'document_id': 'ATLAS-EX-MINIMAL', 'title': {'text': 'Minimal request register'}, 'revision': '1', 'spec_version': 'Alpha-v0.1.0', ...}}, {'format': 'atlas-json/Alpha-v0.1.0', 'atlas': {'document_id': 'ATLAS-EX-MINIMAL', 'title': {'text': 'Minimal request register'}, 'revision': '1', 'spec_version': 'Alpha-v0.1.0', ...}})
+____ test_table_cell_line_endings_exact[ A\r\nB\rC\nD\t a\xe7\xe3o  \r\n] _____
+tests\test_stable_regressions.py:141: in test_table_cell_line_endings_exact
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:25: in roundtrips
+    assert atlas_content_equal(document, recovered), (source, target)
+E   AssertionError: ('json', 'latex')
+E   assert False
+E    +  where False = atlas_content_equal({'format': 'atlas-json/Alpha-v0.1.0', 'atlas': {'document_id': 'ATLAS-EX-MINIMAL', 'title': {'text': 'Minimal request register'}, 'revision': '1', 'spec_version': 'Alpha-v0.1.0', ...}}, {'format': 'atlas-json/Alpha-v0.1.0', 'atlas': {'document_id': 'ATLAS-EX-MINIMAL', 'title': {'text': 'Minimal request register'}, 'revision': '1', 'spec_version': 'Alpha-v0.1.0', ...}})
+___________________ test_table_cell_line_endings_exact[\r] ____________________
+tests\test_stable_regressions.py:141: in test_table_cell_line_endings_exact
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:25: in roundtrips
+    assert atlas_content_equal(document, recovered), (source, target)
+E   AssertionError: ('json', 'markdown')
+E   assert False
+E    +  where False = atlas_content_equal({'format': 'atlas-json/Alpha-v0.1.0', 'atlas': {'document_id': 'ATLAS-EX-MINIMAL', 'title': {'text': 'Minimal request register'}, 'revision': '1', 'spec_version': 'Alpha-v0.1.0', ...}}, {'format': 'atlas-json/Alpha-v0.1.0', 'atlas': {'document_id': 'ATLAS-EX-MINIMAL', 'title': {'text': 'Minimal request register'}, 'revision': '1', 'spec_version': 'Alpha-v0.1.0', ...}})
+__________________ test_table_cell_line_endings_exact[\r\n] ___________________
+tests\test_stable_regressions.py:141: in test_table_cell_line_endings_exact
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:25: in roundtrips
+    assert atlas_content_equal(document, recovered), (source, target)
+E   AssertionError: ('json', 'latex')
+E   assert False
+E    +  where False = atlas_content_equal({'format': 'atlas-json/Alpha-v0.1.0', 'atlas': {'document_id': 'ATLAS-EX-MINIMAL', 'title': {'text': 'Minimal request register'}, 'revision': '1', 'spec_version': 'Alpha-v0.1.0', ...}}, {'format': 'atlas-json/Alpha-v0.1.0', 'atlas': {'document_id': 'ATLAS-EX-MINIMAL', 'title': {'text': 'Minimal request register'}, 'revision': '1', 'spec_version': 'Alpha-v0.1.0', ...}})
+_____ test_unicode_separators_and_opaque_reference_keys[extensions-\x85] ______
+translator\src\atlas_spec\util.py:44: in strict_json_loads
+    return json.loads(
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py:359: in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:354: in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+E   json.decoder.JSONDecodeError: Invalid control character at: line 2032 column 18 (char 44433)
+
+The above exception was the direct cause of the following exception:
+tests\test_stable_regressions.py:164: in test_unicode_separators_and_opaque_reference_keys
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:24: in roundtrips
+    recovered = registry.decode_to_atlas_json(output, source_format=target, resource_root=resource_root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\registry.py:77: in decode_to_atlas_json
+    document = adapter.decode(source, options)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:87: in decode
+    return decode_latex(text, source_path=source_path, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:269: in decode_latex
+    payload = restore(strict_json_loads("".join(structure_lines or []), location="structure appendix"), records)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\util.py:53: in strict_json_loads
+    raise AtlasParseError(
+E   atlas_spec.errors.AtlasParseError: ERROR ATL-E-JSON [structure appendix:2032:18]: invalid JSON: Invalid control character at
+____ test_unicode_separators_and_opaque_reference_keys[extensions-\u2028] _____
+translator\src\atlas_spec\util.py:44: in strict_json_loads
+    return json.loads(
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py:359: in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:354: in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+E   json.decoder.JSONDecodeError: Invalid control character at: line 2032 column 18 (char 44433)
+
+The above exception was the direct cause of the following exception:
+tests\test_stable_regressions.py:164: in test_unicode_separators_and_opaque_reference_keys
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:24: in roundtrips
+    recovered = registry.decode_to_atlas_json(output, source_format=target, resource_root=resource_root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\registry.py:77: in decode_to_atlas_json
+    document = adapter.decode(source, options)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:87: in decode
+    return decode_latex(text, source_path=source_path, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:269: in decode_latex
+    payload = restore(strict_json_loads("".join(structure_lines or []), location="structure appendix"), records)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\util.py:53: in strict_json_loads
+    raise AtlasParseError(
+E   atlas_spec.errors.AtlasParseError: ERROR ATL-E-JSON [structure appendix:2032:18]: invalid JSON: Invalid control character at
+____ test_unicode_separators_and_opaque_reference_keys[extensions-\u2029] _____
+translator\src\atlas_spec\util.py:44: in strict_json_loads
+    return json.loads(
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py:359: in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:354: in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+E   json.decoder.JSONDecodeError: Invalid control character at: line 2032 column 18 (char 44433)
+
+The above exception was the direct cause of the following exception:
+tests\test_stable_regressions.py:164: in test_unicode_separators_and_opaque_reference_keys
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:24: in roundtrips
+    recovered = registry.decode_to_atlas_json(output, source_format=target, resource_root=resource_root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\registry.py:77: in decode_to_atlas_json
+    document = adapter.decode(source, options)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:87: in decode
+    return decode_latex(text, source_path=source_path, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:269: in decode_latex
+    payload = restore(strict_json_loads("".join(structure_lines or []), location="structure appendix"), records)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\util.py:53: in strict_json_loads
+    raise AtlasParseError(
+E   atlas_spec.errors.AtlasParseError: ERROR ATL-E-JSON [structure appendix:2032:18]: invalid JSON: Invalid control character at
+________ test_unicode_separators_and_opaque_reference_keys[meta-\x85] _________
+translator\src\atlas_spec\util.py:44: in strict_json_loads
+    return json.loads(
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py:359: in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:354: in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+E   json.decoder.JSONDecodeError: Invalid control character at: line 5 column 18 (char 83)
+
+The above exception was the direct cause of the following exception:
+tests\test_stable_regressions.py:164: in test_unicode_separators_and_opaque_reference_keys
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:24: in roundtrips
+    recovered = registry.decode_to_atlas_json(output, source_format=target, resource_root=resource_root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\registry.py:77: in decode_to_atlas_json
+    document = adapter.decode(source, options)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:87: in decode
+    return decode_latex(text, source_path=source_path, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:269: in decode_latex
+    payload = restore(strict_json_loads("".join(structure_lines or []), location="structure appendix"), records)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\util.py:53: in strict_json_loads
+    raise AtlasParseError(
+E   atlas_spec.errors.AtlasParseError: ERROR ATL-E-JSON [structure appendix:5:18]: invalid JSON: Invalid control character at
+_______ test_unicode_separators_and_opaque_reference_keys[meta-\u2028] ________
+translator\src\atlas_spec\util.py:44: in strict_json_loads
+    return json.loads(
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py:359: in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:354: in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+E   json.decoder.JSONDecodeError: Invalid control character at: line 5 column 18 (char 83)
+
+The above exception was the direct cause of the following exception:
+tests\test_stable_regressions.py:164: in test_unicode_separators_and_opaque_reference_keys
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:24: in roundtrips
+    recovered = registry.decode_to_atlas_json(output, source_format=target, resource_root=resource_root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\registry.py:77: in decode_to_atlas_json
+    document = adapter.decode(source, options)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:87: in decode
+    return decode_latex(text, source_path=source_path, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:269: in decode_latex
+    payload = restore(strict_json_loads("".join(structure_lines or []), location="structure appendix"), records)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\util.py:53: in strict_json_loads
+    raise AtlasParseError(
+E   atlas_spec.errors.AtlasParseError: ERROR ATL-E-JSON [structure appendix:5:18]: invalid JSON: Invalid control character at
+_______ test_unicode_separators_and_opaque_reference_keys[meta-\u2029] ________
+translator\src\atlas_spec\util.py:44: in strict_json_loads
+    return json.loads(
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py:359: in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:354: in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+E   json.decoder.JSONDecodeError: Invalid control character at: line 5 column 18 (char 83)
+
+The above exception was the direct cause of the following exception:
+tests\test_stable_regressions.py:164: in test_unicode_separators_and_opaque_reference_keys
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:24: in roundtrips
+    recovered = registry.decode_to_atlas_json(output, source_format=target, resource_root=resource_root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\registry.py:77: in decode_to_atlas_json
+    document = adapter.decode(source, options)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:87: in decode
+    return decode_latex(text, source_path=source_path, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:269: in decode_latex
+    payload = restore(strict_json_loads("".join(structure_lines or []), location="structure appendix"), records)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\util.py:53: in strict_json_loads
+    raise AtlasParseError(
+E   atlas_spec.errors.AtlasParseError: ERROR ATL-E-JSON [structure appendix:5:18]: invalid JSON: Invalid control character at
+________ test_unicode_separators_and_opaque_reference_keys[data-\x85] _________
+translator\src\atlas_spec\util.py:44: in strict_json_loads
+    return json.loads(
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py:359: in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:354: in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+E   json.decoder.JSONDecodeError: Invalid control character at: line 419 column 24 (char 8553)
+
+The above exception was the direct cause of the following exception:
+tests\test_stable_regressions.py:164: in test_unicode_separators_and_opaque_reference_keys
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:24: in roundtrips
+    recovered = registry.decode_to_atlas_json(output, source_format=target, resource_root=resource_root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\registry.py:77: in decode_to_atlas_json
+    document = adapter.decode(source, options)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:87: in decode
+    return decode_latex(text, source_path=source_path, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:269: in decode_latex
+    payload = restore(strict_json_loads("".join(structure_lines or []), location="structure appendix"), records)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\util.py:53: in strict_json_loads
+    raise AtlasParseError(
+E   atlas_spec.errors.AtlasParseError: ERROR ATL-E-JSON [structure appendix:419:24]: invalid JSON: Invalid control character at
+_______ test_unicode_separators_and_opaque_reference_keys[data-\u2028] ________
+translator\src\atlas_spec\util.py:44: in strict_json_loads
+    return json.loads(
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py:359: in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:354: in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+E   json.decoder.JSONDecodeError: Invalid control character at: line 419 column 24 (char 8553)
+
+The above exception was the direct cause of the following exception:
+tests\test_stable_regressions.py:164: in test_unicode_separators_and_opaque_reference_keys
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:24: in roundtrips
+    recovered = registry.decode_to_atlas_json(output, source_format=target, resource_root=resource_root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\registry.py:77: in decode_to_atlas_json
+    document = adapter.decode(source, options)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:87: in decode
+    return decode_latex(text, source_path=source_path, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:269: in decode_latex
+    payload = restore(strict_json_loads("".join(structure_lines or []), location="structure appendix"), records)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\util.py:53: in strict_json_loads
+    raise AtlasParseError(
+E   atlas_spec.errors.AtlasParseError: ERROR ATL-E-JSON [structure appendix:419:24]: invalid JSON: Invalid control character at
+_______ test_unicode_separators_and_opaque_reference_keys[data-\u2029] ________
+translator\src\atlas_spec\util.py:44: in strict_json_loads
+    return json.loads(
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py:359: in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Douglas\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\decoder.py:354: in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+E   json.decoder.JSONDecodeError: Invalid control character at: line 419 column 24 (char 8553)
+
+The above exception was the direct cause of the following exception:
+tests\test_stable_regressions.py:164: in test_unicode_separators_and_opaque_reference_keys
+    roundtrips(registry, minimal, minimal_dir)
+tests\test_stable_regressions.py:24: in roundtrips
+    recovered = registry.decode_to_atlas_json(output, source_format=target, resource_root=resource_root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\registry.py:77: in decode_to_atlas_json
+    document = adapter.decode(source, options)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:87: in decode
+    return decode_latex(text, source_path=source_path, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\adapters\latex_adapter.py:269: in decode_latex
+    payload = restore(strict_json_loads("".join(structure_lines or []), location="structure appendix"), records)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+translator\src\atlas_spec\util.py:53: in strict_json_loads
+    raise AtlasParseError(
+E   atlas_spec.errors.AtlasParseError: ERROR ATL-E-JSON [structure appendix:419:24]: invalid JSON: Invalid control character at
+=========================== short test summary info ===========================
+FAILED tests/test_stable_regressions.py::test_optional_entity_records_preserve_absence[removed0]
+FAILED tests/test_stable_regressions.py::test_optional_entity_records_preserve_absence[removed1]
+FAILED tests/test_stable_regressions.py::test_optional_entity_records_preserve_absence[removed2]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[missing-location0]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[missing-location1]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[missing-location2]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[missing-location3]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[missing-location4]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[missing-location5]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[missing-location6]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[missing-location7]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[missing-location8]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[missing-location9]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[missing-location10]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[wrong-location0]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[wrong-location1]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[wrong-location2]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[wrong-location3]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[wrong-location4]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[wrong-location5]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[wrong-location6]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[wrong-location7]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[wrong-location8]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[wrong-location9]
+FAILED tests/test_stable_regressions.py::test_nested_figure_reference_category[wrong-location10]
+FAILED tests/test_stable_regressions.py::test_record_references_use_declared_category[False-entities-assumptions]
+FAILED tests/test_stable_regressions.py::test_record_references_use_declared_category[False-entities-open_issues]
+FAILED tests/test_stable_regressions.py::test_record_references_use_declared_category[False-use_cases-assumptions]
+FAILED tests/test_stable_regressions.py::test_record_references_use_declared_category[False-use_cases-open_issues]
+FAILED tests/test_stable_regressions.py::test_record_references_use_declared_category[False-boundaries-sources]
+FAILED tests/test_stable_regressions.py::test_record_references_use_declared_category[False-boundaries-assumptions]
+FAILED tests/test_stable_regressions.py::test_record_references_use_declared_category[False-boundaries-open_issues]
+FAILED tests/test_stable_regressions.py::test_cli_bad_figure_never_publishes[False-markdown]
+FAILED tests/test_stable_regressions.py::test_cli_bad_figure_never_publishes[False-latex]
+FAILED tests/test_stable_regressions.py::test_cli_bad_figure_never_publishes[True-markdown]
+FAILED tests/test_stable_regressions.py::test_cli_bad_figure_never_publishes[True-latex]
+FAILED tests/test_stable_regressions.py::test_table_cell_line_endings_exact[A\r\nB]
+FAILED tests/test_stable_regressions.py::test_table_cell_line_endings_exact[A\rB]
+FAILED tests/test_stable_regressions.py::test_table_cell_line_endings_exact[ A\r\nB\rC\nD\t a\xe7\xe3o  \r\n]
+FAILED tests/test_stable_regressions.py::test_table_cell_line_endings_exact[\r]
+FAILED tests/test_stable_regressions.py::test_table_cell_line_endings_exact[\r\n]
+FAILED tests/test_stable_regressions.py::test_unicode_separators_and_opaque_reference_keys[extensions-\x85]
+FAILED tests/test_stable_regressions.py::test_unicode_separators_and_opaque_reference_keys[extensions-\u2028]
+FAILED tests/test_stable_regressions.py::test_unicode_separators_and_opaque_reference_keys[extensions-\u2029]
+FAILED tests/test_stable_regressions.py::test_unicode_separators_and_opaque_reference_keys[meta-\x85]
+FAILED tests/test_stable_regressions.py::test_unicode_separators_and_opaque_reference_keys[meta-\u2028]
+FAILED tests/test_stable_regressions.py::test_unicode_separators_and_opaque_reference_keys[meta-\u2029]
+FAILED tests/test_stable_regressions.py::test_unicode_separators_and_opaque_reference_keys[data-\x85]
+FAILED tests/test_stable_regressions.py::test_unicode_separators_and_opaque_reference_keys[data-\u2028]
+FAILED tests/test_stable_regressions.py::test_unicode_separators_and_opaque_reference_keys[data-\u2029]
+50 failed, 28 passed in 37.05s

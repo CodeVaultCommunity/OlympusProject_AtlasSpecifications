@@ -74,6 +74,8 @@ Shape:
 
 The environment name, ID, and end marker are structure. Content starts after the line ending the begin line and ends before the line ending immediately preceding `\end{...}`; that last structural line ending is removed. Authored line endings inside content are preserved by the decoder.
 
+An authored final CR is followed by a CRLF structural separator, producing CR + CRLF rather than merging that content CR with an LF. Other generated separators are LF.
+
 ## 4. Character encoding
 
 Content is UTF-8. The following characters are encoded with unique macros:
@@ -91,7 +93,7 @@ Content is UTF-8. The following characters are encoded with unique macros:
 | `^` | `\AtlasCharCaret{}` |
 | `~` | `\AtlasCharTilde{}` |
 
-Inline table cells additionally encode newline as `\AtlasCharNewline{}` and tab as `\AtlasCharTab{}`. Other characters, including Unicode and ordinary spaces, remain literal. Decoding reverses the macros exactly. Because all backslashes are encoded, a literal `\end{atlastext}` cannot terminate an environment, and a literal `% atlas:...` cannot be mistaken for a marker.
+Inline table cells encode LF as `\AtlasCharNewline{}`, CRLF as `\AtlasCharCRLF{}`, CR as `\AtlasCharCR{}`, and tab as `\AtlasCharTab{}`. CRLF is encoded before either individual character. These distinct source forms preserve mixed endings and a final authored newline, although the style renders all three newline forms as a space. Other characters, including Unicode and ordinary spaces, remain literal. Decoding reverses the macros exactly in one pass. Because all backslashes and braces in authored text are encoded, literal macro names survive as text; a literal `\end{atlastext}` cannot terminate an environment, and a literal `% atlas:...` cannot be mistaken for a marker.
 
 The style defines each macro to typeset the intended character. Text remains human-readable in the PDF while the source is exactly recoverable.
 
@@ -103,7 +105,7 @@ Rich tables are typeset from the structure. Cells use:
 \AtlasCell{T000042}{...encoded cell...}
 ```
 
-The decoder extracts each cell macro with balanced braces and restores the text. The table layout itself is derived presentation; cell text is authoritative. Cell content is inline-escaped, so a newline is represented by `\AtlasCharNewline{}`.
+The decoder extracts each cell macro with balanced braces and restores the text. The table layout itself is derived presentation; cell text is authoritative. Cell content uses the distinct LF/CRLF/CR escapes above.
 
 The supplied renderer uses wrapping `longtable` columns and `booktabs` rules. A heading row can repeat on later PDF pages; each authoritative cell record still occurs only once in the source. Column widths, row styling, page breaks, and repeated visual headings do not create additional Atlas content.
 
@@ -123,6 +125,8 @@ At the end:
 ```
 
 Every line is a LaTeX comment. The decoder removes `% ` (or `%`) and parses the JSON strictly. It restores text slots exactly as in Markdown. Missing/duplicate/orphan slots and unknown fields are errors. Declared `meta`, entity-example `data`, and `extensions` remain opaque structural values; literal `text`, `@text`, or `id` keys there are not Atlas slots or element declarations.
+
+Only CR, LF and CRLF delimit physical profile lines. The encoder comments the LF layout lines emitted by JSON serialization. U+0085, U+2028 and U+2029 inside structural strings remain literal content; neither writer nor reader treats them as comment boundaries or normalizes them.
 
 ## 7. Derived regions and TikZ
 

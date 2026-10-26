@@ -42,6 +42,8 @@ Membros e grupos, sujeitos às restrições completas do schema:
 
 As coleções principais são obrigatórias. Uma lista vazia significa “declarada e vazia”; sua ausência é inválida. `subtitle` é opcional e pode ser `null` ou registro textual; esses estados são distintos. Consulte o schema para a obrigatoriedade exata de cada membro.
 
+Os membros internos de entidade `assumptions` e `open_issues` são opcionais. Um membro ausente não fornece referências para validar, sem inserir uma lista vazia. Ausência e `[]` são preservados distintamente; `null` é inválido nesses membros.
+
 ## 3. Registros de texto
 
 ```json
@@ -64,6 +66,8 @@ Blocos ricos são listas de objetos. Os tipos estão no [modelo abstrato, seçã
 ```
 
 IDs são únicos em todo o documento, incluindo campos, condições, operações, nós e arestas. `document_id` usa o mesmo namespace. IDs não são derivados da posição de arrays. Referências são strings de ID, sem índices posicionais.
+
+Referências resolvem para sua categoria declarada, independentemente do prefixo do ID. Figuras em toda profundidade permitida apontam para `resources`; `sources`, `assumptions`, `open_issues` de casos/fronteiras e `assumptions`, `open_issues` de entidades apontam para os catálogos correspondentes. `meta`, `data` e `extensions` opacos não são interpretados como referências. Consulte o [inventário completo de referências](../../verification/reference-inventory.md).
 
 ## 5. Ordenação
 

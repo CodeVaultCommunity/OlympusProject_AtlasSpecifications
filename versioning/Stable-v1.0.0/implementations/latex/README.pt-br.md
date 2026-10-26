@@ -72,6 +72,8 @@ Forma abreviada:
 
 Nome, ID e marcador final são estrutura. O conteúdo começa após a quebra que termina a linha inicial e termina antes da quebra imediatamente anterior a `\end{...}`; essa última quebra estrutural é removida. Quebras autorais dentro do conteúdo são preservadas pelo decodificador.
 
+Um CR autoral final é seguido de separador estrutural CRLF, produzindo CR + CRLF em vez de fundir aquele CR com um LF. Os demais separadores gerados são LF.
+
 ## 4. Codificação de caracteres
 
 O conteúdo é UTF-8. Caracteres especiais usam macros únicas:
@@ -89,7 +91,7 @@ O conteúdo é UTF-8. Caracteres especiais usam macros únicas:
 | `^` | `\AtlasCharCaret{}` |
 | `~` | `\AtlasCharTilde{}` |
 
-Células em linha também codificam quebra como `\AtlasCharNewline{}` e tabulação como `\AtlasCharTab{}`. Demais caracteres, incluindo Unicode e espaços comuns, permanecem literais. A decodificação reverte exatamente as macros. Como barras invertidas são codificadas, `\end{atlastext}` literal não encerra um ambiente e `% atlas:...` literal não é confundido com marcador.
+Células em linha codificam LF como `\AtlasCharNewline{}`, CRLF como `\AtlasCharCRLF{}`, CR como `\AtlasCharCR{}` e tabulação como `\AtlasCharTab{}`. CRLF é codificado antes dos caracteres individuais. As formas distintas preservam sequências mistas e a quebra autoral final, embora o estilo renderize as três formas de quebra como espaço. Demais caracteres, incluindo Unicode e espaços comuns, permanecem literais. A decodificação reverte exatamente as macros em uma única passagem. Como barras invertidas e chaves autorais são codificadas, nomes literais de macros permanecem texto; `\end{atlastext}` literal não encerra um ambiente e `% atlas:...` literal não é confundido com marcador.
 
 O estilo renderiza o caractere pretendido, mantendo a fonte recuperável e o PDF legível.
 
@@ -101,7 +103,7 @@ Tabelas ricas são renderizadas a partir da estrutura. Células usam:
 \AtlasCell{T000042}{...célula codificada...}
 ```
 
-O decodificador extrai a macro com balanceamento de chaves e restaura seu texto. O layout é apresentação derivada; o texto da célula é autoritativo. O escape em linha representa quebras com `\AtlasCharNewline{}`.
+O decodificador extrai a macro com balanceamento de chaves e restaura seu texto. O layout é apresentação derivada; o texto da célula é autoritativo. As células usam os escapes distintos de LF/CRLF/CR descritos acima.
 
 O renderizador fornecido usa colunas `longtable` com quebra de linha e traços `booktabs`. O cabeçalho de uma tabela pode se repetir nas páginas seguintes do PDF; cada registro autoritativo de célula continua aparecendo uma única vez na fonte. Larguras, estilo das linhas, quebras de página e repetição visual de cabeçalhos não criam conteúdo Atlas adicional.
 
@@ -120,6 +122,8 @@ No final do arquivo, a estrutura é JSON comentado. Este é um trecho ilustrativ
 ```
 
 Cada linha é um comentário. O decodificador remove `% ` ou `%`, analisa o JSON estritamente e restaura slots como no Markdown. Slots ausentes/duplicados/órfãos e membros desconhecidos são erros. `meta`, `data` de exemplos de entidade e `extensions` permanecem dados estruturais opacos; chaves `text`, `@text` e `id` nesses contêineres não são slots ou declarações Atlas.
+
+Somente CR, LF e CRLF delimitam linhas físicas do perfil. O codificador comenta as linhas de layout LF emitidas pela serialização JSON. U+0085, U+2028 e U+2029 dentro de strings estruturais permanecem conteúdo literal; nem escritor nem leitor os tratam como limites de comentários ou os normalizam.
 
 ## 7. Regiões derivadas e TikZ
 
