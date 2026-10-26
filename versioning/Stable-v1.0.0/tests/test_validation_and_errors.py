@@ -106,7 +106,7 @@ def test_shared_rnf_reference_must_be_canonical(registry, composition, compositi
 
 def test_incompatible_markdown_version(registry, minimal_dir):
     text = read_text_exact(minimal_dir / "example.atlas.md")
-    text = text.replace("representation=Alpha-v0.1.0", "representation=Alpha-v0.9.0", 1)
+    text = text.replace("representation=Stable-v1.0.0", "representation=Alpha-v0.9.0", 1)
     with pytest.raises(AtlasError) as info:
         registry.decode_to_atlas_json(text, source_format="markdown", resource_root=minimal_dir)
     expect_code(info, "ATL-E-VERSION")
@@ -114,7 +114,7 @@ def test_incompatible_markdown_version(registry, minimal_dir):
 
 def test_incompatible_latex_version(registry, minimal_dir):
     text = read_text_exact(minimal_dir / "example.atlas.tex")
-    text = text.replace("representation=Alpha-v0.1.0", "representation=Alpha-v0.9.0", 1)
+    text = text.replace("representation=Stable-v1.0.0", "representation=Alpha-v0.9.0", 1)
     with pytest.raises(AtlasError) as info:
         registry.decode_to_atlas_json(text, source_format="latex", resource_root=minimal_dir)
     expect_code(info, "ATL-E-VERSION")

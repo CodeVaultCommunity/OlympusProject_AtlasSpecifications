@@ -81,7 +81,7 @@ def test_standalone_edition_has_its_runtime_and_resources(tmp_path, registry):
     )
     launcher = edition / "translator" / "atlas_translate.py"
     listing = _cli(launcher, "formats", cwd=tmp_path)
-    assert "Alpha-v0.1.0" in listing.stdout
+    assert "Stable-v1.0.0" in listing.stdout
     _cli(launcher, "validate", edition / "examples" / "minimal" / "example.atlas.json", cwd=tmp_path)
     _portable_roundtrips(
         launcher, edition / "implementations" / "json" / "starter.atlas.json",
@@ -94,7 +94,7 @@ def test_standalone_skill_executes_all_six_conversions(tmp_path, registry):
     shutil.copytree(SKILL, skill, ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "work"))
     launcher = skill / "scripts" / "atlas_translate.py"
     listing = _cli(launcher, "formats", cwd=tmp_path)
-    assert "Alpha-v0.1.0" in listing.stdout
+    assert "Stable-v1.0.0" in listing.stdout
     _portable_roundtrips(
         launcher, skill / "assets" / "starter.atlas.json",
         tmp_path / "skill-output", registry,

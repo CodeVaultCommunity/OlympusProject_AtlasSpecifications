@@ -1,27 +1,21 @@
 > Canonical English source: `README.md`. This snapshot relocates links for standalone use. Follow SKILL.md for commands inside this bundle.
 
-# Atlas Specifications · Alpha-v0.1.0
-
-> **Stable preparation checkpoint, not a release.** This working directory retains Alpha model/profile/package identities while the four audited runtime defects are corrected and reproduced. The final OAL Stable-v1.0.0 content is still being edited; at the user's request, work pauses before OAL correspondence review and Stable finalization. The historical `versioning/Alpha-v0.1.0/` is unchanged. Copied example PDFs are historical Alpha publications, not evidence of a Stable release. See the checkpoint evidence (edition source: `verification/CHECKPOINT.md`). The corrected LaTeX escapes documented here belong to this working copy and must not be attributed to the historical Alpha implementation.
+# Atlas Specifications · Stable-v1.0.0
 
 English · Português brasileiro (edition source: `README.pt-br.md`)
 
-**Atlas is an abstract model for declarative use-case specifications.** This first alpha defines its semantic contract, Atlas JSON/Markdown/LaTeX representation profiles and a Python translator with exact-content checks. Other models may implement the abstraction through an explicit mapping. The model, an implementing model, a representation and a concrete project artifact have distinct responsibilities.
+**Atlas is an abstract model for declarative use-case specifications.** This Stable edition defines its semantic contract, Atlas JSON/Markdown/LaTeX representation profiles and a Python translator with exact-content checks. Other models may implement the abstraction through an explicit mapping. The model, an implementing model, a representation and a concrete project artifact have distinct responsibilities.
 
 This folder is a self-contained edition: keep its files together to use its documentation, starters, examples, translator and tests without the repository root. Its runtime and example resources remain local. The root README and root `assets/` folder provide the illustrated project introduction; that artwork is not needed to use this edition. The skill is also independently portable. English is the normative source; Portuguese is the corresponding reading translation. **MUST**, **MUST NOT** and **REQUIRED** identify obligations. Schema success alone does not establish semantic conformance.
 
 <a id="release-notes"></a>
-## Release notes — Alpha-v0.1.0
+## Release notes — Stable-v1.0.0
 
-This first edition establishes:
+This candidate preserves the Atlas L1 scope and corrects four audited defects: absent optional entity records; typed figure/source/assumption/issue references; exact CRLF/CR/LF in LaTeX cells; and Unicode separators in opaque data. A trailing-CR delimiter boundary is also corrected. Invalid references fail before output is written.
 
-1. **The abstract model:** concepts, identities, behavioral contracts, semantic invariants, provenance, and obligations for implementing models.
-2. **Three representation profiles:** Atlas JSON, Atlas Markdown, and Atlas LaTeX, with matching draft starters, a JSON Schema, and a LaTeX style.
-3. **Checked representation conversion:** six directed conversions, exact recovered-content comparison, and explicit resource and publication contracts.
-4. **Worked examples and an AI skill:** three didactic specifications, their reading formats and PDFs, and a portable bundle for authoring, audit, and conversion.
-5. **Verification and conformance guidance:** executable checks and a documented correspondence with OAL Alpha-v0.2.0-Alkimim's L1 responsibilities.
+The model/profile identities are `Stable-v1.0.0`; the package and producer of newly authored documents are `1.0.0`. The historical Alpha edition is retained unchanged. Stable rejects incompatible profiles explicitly. Conversion preserves all authored identities and history. The starters and examples were migrated editorially, with provenance, and the task board includes two valid Stable revisions demonstrating an acceptance-link change.
 
-This is the first alpha prepared for publication. It does not define an automatic migration from earlier prototypes. Model/profile identity, package version, and document revision remain distinct; see [versioning](#versioning). The illustrated overview lives at the repository root, while this manual retains the detailed reference text.
+OAL Stable-v1.0.0 was delivered as a local, pinned Git checkout and reviewed against the ten UCS and nine cross-layer clauses. Remote availability is not asserted. See [correspondence](#oal-conformance), the [compatibility policy](compatibility.md), verification record (edition source: `verification/RELEASE.md`), and migration record (edition source: `verification/editorial-migration.json`). Publication and stakeholder approval are separate from these checks.
 
 LaTeX publication in this edition includes editorial and plain themes, a self-contained ornamental cover, wrapped tables and optional decorative images kept outside specification content. The [publication-style contract](atlas-latex.md#publication-style) states what conversions preserve and how to retain custom appearance separately.
 
@@ -39,7 +33,7 @@ LaTeX publication in this edition includes editorial and plain themes, a self-co
 
 | Edition | Status | Release Notes | Reference rules | Verification Guide | Conformance Guide |
 | --- | --- | --- | --- | --- | --- |
-| Alpha-v0.1.0 | Current alpha · first edition | [English](atlas-specification.md#release-notes) · Português (edition source: `README.pt-br.md#release-notes`) | [English](atlas-specification.md#reference-rules) · Português (edition source: `README.pt-br.md#reference-rules`) | [English](atlas-specification.md#verification) · Português (edition source: `README.pt-br.md#verification`) | [English](atlas-specification.md#conformance) · Português (edition source: `README.pt-br.md#conformance`) |
+| Stable-v1.0.0 | Stable candidate · publication pending | [English](atlas-specification.md#release-notes) · Português (edition source: `README.pt-br.md#release-notes`) | [English](atlas-specification.md#reference-rules) · Português (edition source: `README.pt-br.md#reference-rules`) | [English](atlas-specification.md#verification) · Português (edition source: `README.pt-br.md#verification`) | [English](atlas-specification.md#conformance) · Português (edition source: `README.pt-br.md#conformance`) |
 
 <a id="quick-start"></a>
 ## Start a specification
@@ -123,7 +117,7 @@ The abstract model is independent of JSON, Markdown, and LaTeX. It can be explai
 
 | Object | Meaning | Example |
 | --- | --- | --- |
-| OAL L1 metamodel | Responsibilities an L1 model must establish. | OAL Alpha-v0.2.0-Alkimim UCS rules. |
+| OAL L1 metamodel | Responsibilities an L1 model must establish. | OAL Stable-v1.0.0 UCS rules. |
 | Atlas abstract model | Reusable semantic concepts, relations, invariants, and preservation obligations. | This document. |
 | Implementing or specializing model | Another reusable model with an explicit mapping to Atlas and the obligations it preserves. | A future domain-specific specification model implementing Atlas. |
 | Representation implementation | A concrete syntax carrying the content of the selected model. | Atlas JSON, Atlas Markdown, Atlas LaTeX. |
@@ -145,9 +139,9 @@ Every Atlas artifact declares document identity, revision, selected model/versio
 | --- | --- | --- |
 | `document_id` | Stable identifier of the specification document. | Required; follows the ID grammar. |
 | `revision` | Revision of this document's content. | Required, non-empty string. |
-| `spec_version` | Atlas abstract-model version implemented by the content. | Required; `Alpha-v0.1.0` in this version. |
-| `profile_version` | Version of the representation profile being used. | Required by the three delivered profiles; `Alpha-v0.1.0`. |
-| `translator_version` | Declared producer version retained in reference-profile content. | Required semver string by the delivered profiles; `0.1.0` for newly generated examples. It is not a content migration. |
+| `spec_version` | Atlas abstract-model version implemented by the content. | Required; `Stable-v1.0.0` in this version. |
+| `profile_version` | Version of the representation profile being used. | Required by the three delivered profiles; `Stable-v1.0.0`. |
+| `translator_version` | Declared producer version retained in reference-profile content. | Required semver string by the delivered profiles; `1.0.0` for newly generated examples. It is not a content migration. |
 | `language` | Language of the document's authored text (BCP 47-like tag). | Required. |
 | `status` | Review/approval status of the document. | Required; independent of `nature`. |
 | `title` | Authoritative document title. | Required text record. |
@@ -653,12 +647,14 @@ Semantic review must still assess objectives/scope, claim origins, actor context
 
 | Item | Pinned reference |
 | --- | --- |
-| OAL edition | **Alpha-v0.2.0-Alkimim** |
+| OAL edition | **Stable-v1.0.0** |
 | Repository | [OAL — Open Analysis Layers](https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers) |
-| Commit | `ced9645dcdb1d1d367ac1b3c913256298255094e` |
-| Normative source | [English version README at the pinned commit](https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers/blob/ced9645dcdb1d1d367ac1b3c913256298255094e/versioning/Alpha-v0.2.0-Alkimim/README.md) |
+| Commit | `a02bf8eecf222e7e0a7a34977fff49a25b5af6aa` |
+| Normative source | `versioning/Stable-v1.0.0/README.md`, snapshot of received bytes (edition source: `verification/oal/README.md.txt`) |
+| SHA-256 | `8e3d82be109b1e8baf1deab32b338b568aa7c98d407858456620336c76ce499e` |
+| Provenance | Clean local checkout; remote publication pending. Identity (edition source: `verification/oal/baseline.json`) and clause review (edition source: `verification/OAL-CORRESPONDENCE.md`). |
 | Relevant clauses | Numbered cross-layer rules and UCS rules 1–10. OAL's context skill is informative. |
-| Atlas model | **Atlas Specifications Alpha-v0.1.0**, [abstract model](#abstract-model) |
+| Atlas model | **Atlas Specifications Stable-v1.0.0**, [abstract model](#abstract-model) |
 | Claimed scope | Reusable abstract specification model of **UCS (L1)**; the three reference representation profiles and their preservation contract. |
 | Assessment type | Normative document correspondence and explicit scope review. Executed code checks are reported separately in [verification](#verification). |
 
@@ -722,18 +718,20 @@ The following are local Atlas decisions, not requirements imposed on every OAL m
 A semantic correspondence review supports the stated model-level scope. It is not a universal theorem, a runtime security audit, or a claim that unspecified downstream work is complete.
 
 
+[Stable surface policy and compatibility matrix](compatibility.md).
+
 <a id="versioning"></a>
 ## Version identities and evolution
 
 | Identity | This edition | Meaning |
 | --- | --- | --- |
-| Atlas model | `Alpha-v0.1.0` | Abstract semantic contract. |
-| Representation profiles | `Alpha-v0.1.0` | JSON, Markdown and LaTeX grammars. |
-| Python package | `atlas-spec` / `0.1.0` | Translator implementation and CLI. |
+| Atlas model | `Stable-v1.0.0` | Abstract semantic contract. |
+| Representation profiles | `Stable-v1.0.0` | JSON, Markdown and LaTeX grammars. |
+| Python package | `atlas-spec` / `1.0.0` | Translator implementation and CLI. |
 | Document revision | Artifact-specific | Authored content evolution, independent of the edition. |
-| OAL reference | `Alpha-v0.2.0-Alkimim` | External metamodel baseline. |
+| OAL reference | `Stable-v1.0.0` | External metamodel baseline. |
 
-The [release notes](#release-notes) describe this initial edition. Representation conversion does not migrate earlier prototype content or change the selected model.
+The [release notes](#release-notes) describe this Stable edition. Representation conversion does not migrate earlier prototype content or change the selected model.
 
 Adapters select a representation/version explicitly. The envelope/header and content version must agree with the supported profile. Unsupported versions or constructions are rejected. Conversion preserves `spec_version`, `profile_version`, `translator_version`, document revision and history; it does not relabel old content with the running tool's version.
 

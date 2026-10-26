@@ -1,4 +1,4 @@
-% atlas:latex profile=atlas-latex representation=Alpha-v0.1.0 translator=0.1.0
+% atlas:latex profile=atlas-latex representation=Stable-v1.0.0 translator=1.0.0
 % Atlas LaTeX. Text records are authoritative for prose; the structure
 % appendix is authoritative for non-text data. Derived environments are
 % checked against both sources when the file is imported.
@@ -23,7 +23,7 @@
 % Optional publication-only settings. The Atlas decoder does not read this file.
 \InputIfFileExists{atlas-presentation.tex}{}{}
 \begin{document}
-\AtlasBeginCover{DOC-\allowbreak{}TASK-\allowbreak{}BOARD}{1}{draft}
+\AtlasBeginCover{DOC-\allowbreak{}TASK-\allowbreak{}BOARD}{3}{draft}
 \begin{atlastitle}{T000001}
 Task board — create, complete, and list
 \end{atlastitle}
@@ -32,12 +32,12 @@ Synthetic L1 reference for Atlas Specifications
 \end{atlastext}
 \AtlasEndCover
 \AtlasMetaLine{Document}{\texttt{DOC-\allowbreak{}TASK-\allowbreak{}BOARD}}
-\AtlasMetaLine{Revision}{\texttt{1}}
+\AtlasMetaLine{Revision}{\texttt{3}}
 \AtlasMetaLine{Status}{\texttt{draft}}
 \AtlasMetaLine{Language}{\texttt{en}}
-\AtlasMetaLine{Atlas version}{\texttt{Alpha-\allowbreak{}v0.\allowbreak{}1.\allowbreak{}0}}
-\AtlasMetaLine{Profile version}{\texttt{Alpha-\allowbreak{}v0.\allowbreak{}1.\allowbreak{}0}}
-\AtlasMetaLine{Translator}{\texttt{0.\allowbreak{}1.\allowbreak{}0}}
+\AtlasMetaLine{Atlas version}{\texttt{Stable-\allowbreak{}v1.\allowbreak{}0.\allowbreak{}0}}
+\AtlasMetaLine{Profile version}{\texttt{Stable-\allowbreak{}v1.\allowbreak{}0.\allowbreak{}0}}
+\AtlasMetaLine{Translator}{\texttt{1.\allowbreak{}0.\allowbreak{}0}}
 \AtlasMetaLine{Created}{\texttt{2026-\allowbreak{}10-\allowbreak{}25}}
 \AtlasMetaLine{Updated}{\texttt{2026-\allowbreak{}10-\allowbreak{}25}}
 \AtlasLabel{Authors}
@@ -1598,9 +1598,9 @@ Given open TASK002 and completed TASK001, return TASK001 then TASK002 with exact
 \AtlasSubheading{\texttt{AC-\allowbreak{}TASK-\allowbreak{}LIST-\allowbreak{}EMPTY}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000302}
-A successful read of an empty board returns an empty list; an unavailable store instead returns failure.
+A successful consistent read of an empty authorized board returns an empty list and changes no task state or revision; an unavailable store instead returns failure, never a falsely empty success.
 \end{atlasparagraph}
-\AtlasMetaLine{Verifies}{RF-\allowbreak{}TASK-\allowbreak{}LIST-\allowbreak{}SNAPSHOT, RF-\allowbreak{}TASK-\allowbreak{}LIST-\allowbreak{}FAILURE}
+\AtlasMetaLine{Verifies}{RF-\allowbreak{}TASK-\allowbreak{}LIST-\allowbreak{}SNAPSHOT, RF-\allowbreak{}TASK-\allowbreak{}LIST-\allowbreak{}FAILURE, RNF-\allowbreak{}TASK-\allowbreak{}LIST-\allowbreak{}CONSISTENCY}
 \AtlasSubheading{\texttt{AC-\allowbreak{}TASK-\allowbreak{}LIST-\allowbreak{}INTEGRITY}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000303}
@@ -2745,6 +2745,20 @@ Reference for layer boundaries, caller context, provenance and conformance disti
 \begin{atlasparagraph}{T000428}
 Initial reference example for the first Atlas Specifications edition, Alpha-v0.1.0. This synthetic example demonstrates the model and its representations; it does not assert stakeholder approval or execution of the described business application.
 \end{atlasparagraph}
+\AtlasSubheading{\texttt{HIST-\allowbreak{}MIGRATION-\allowbreak{}STABLE}}
+\AtlasMetaLine{Version}{2}
+\AtlasMetaLine{Date}{2026-\allowbreak{}10-\allowbreak{}25}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000429}
+Explicit editorial migration from Atlas Alpha-v0.1.0 revision 1 to Atlas Stable-v1.0.0 revision 2. Prepared by Codex under Douglas de Oliveira Alkimim's execution request. Model/profile/envelope and producer identities change; existing concept IDs, domain contracts, authored history and resources are retained. This is not format conversion, a Needs-to-L1 derivation, or new stakeholder approval.
+\end{atlasparagraph}
+\AtlasSubheading{\texttt{HIST-\allowbreak{}TASK-\allowbreak{}BOARD-\allowbreak{}03}}
+\AtlasMetaLine{Version}{3}
+\AtlasMetaLine{Date}{2026-\allowbreak{}10-\allowbreak{}25}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000430}
+Clarified AC-TASK-LIST-EMPTY to make the existing no-write and consistent-snapshot guarantees explicit for an empty board; added its reference to RNF-TASK-LIST-CONSISTENCY. Source: synthetic SRC-TASK-BRIEF revision 1, choices 7 and 8. Prepared by Codex under Douglas de Oliveira Alkimim's execution request. No concept is renamed or replaced and no domain behavior is added. Rebuild the generated traceability matrix and reading formats; downstream application artifacts do not exist and have not been verified.
+\end{atlasparagraph}
 \begin{atlasderived}{DERIVED-SUMMARY}
 Derived summary: 5 sections; 1 actors; 1 entities; 1 tools; 3 use cases; 1 boundaries; 6 graphs; 0 resources.
 \end{atlasderived}
@@ -2755,10 +2769,10 @@ Derived summary: 5 sections; 1 actors; 1 entities; 1 tools; 3 use cases; 1 bound
 %   "title": {
 %     "@text": "T000001"
 %   },
-%   "revision": "1",
-%   "spec_version": "Alpha-v0.1.0",
-%   "profile_version": "Alpha-v0.1.0",
-%   "translator_version": "0.1.0",
+%   "revision": "3",
+%   "spec_version": "Stable-v1.0.0",
+%   "profile_version": "Stable-v1.0.0",
+%   "translator_version": "1.0.0",
 %   "language": "en",
 %   "status": "draft",
 %   "authors": [
@@ -5332,7 +5346,8 @@ Derived summary: 5 sections; 1 actors; 1 entities; 1 tools; 3 use cases; 1 bound
 %           ],
 %           "verifies": [
 %             "RF-TASK-LIST-SNAPSHOT",
-%             "RF-TASK-LIST-FAILURE"
+%             "RF-TASK-LIST-FAILURE",
+%             "RNF-TASK-LIST-CONSISTENCY"
 %           ]
 %         },
 %         {
@@ -6737,6 +6752,28 @@ Derived summary: 5 sections; 1 actors; 1 entities; 1 tools; 3 use cases; 1 bound
 %         {
 %           "type": "paragraph",
 %           "@text": "T000428"
+%         }
+%       ]
+%     },
+%     {
+%       "id": "HIST-MIGRATION-STABLE",
+%       "version": "2",
+%       "date": "2026-10-25",
+%       "description": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000429"
+%         }
+%       ]
+%     },
+%     {
+%       "id": "HIST-TASK-BOARD-03",
+%       "version": "3",
+%       "date": "2026-10-25",
+%       "description": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000430"
 %         }
 %       ]
 %     }

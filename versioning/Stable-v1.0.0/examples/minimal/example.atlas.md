@@ -1,4 +1,4 @@
-<!-- atlas:markdown profile=atlas-markdown representation=Alpha-v0.1.0 translator=0.1.0 -->
+<!-- atlas:markdown profile=atlas-markdown representation=Stable-v1.0.0 translator=1.0.0 -->
 <!-- Atlas Markdown. Text records below are authoritative for prose. The structure appendix is authoritative for non-text data. -->
 
 
@@ -13,9 +13,9 @@ A complete small Atlas instance with one entity, validation, tool, case, require
 
 ## Document metadata
 
-**Document:** `ATLAS-EX-MINIMAL` · **Revision:** 1 · **Status:** draft · **Language:** en
+**Document:** `ATLAS-EX-MINIMAL` · **Revision:** 2 · **Status:** draft · **Language:** en
 
-**Atlas specification:** Alpha-v0.1.0 · **Profile:** Alpha-v0.1.0 · **Translator:** 0.1.0
+**Atlas specification:** Stable-v1.0.0 · **Profile:** Stable-v1.0.0 · **Translator:** 1.0.0
 
 **Created:** 2026-10-25 · **Updated:** 2026-10-25
 
@@ -1933,6 +1933,13 @@ The authorization policy, interaction sketches, and quality targets are didactic
 Initial reference example for the first Atlas Specifications edition, Alpha-v0.1.0. This synthetic example demonstrates the model and its representations; it does not assert stakeholder approval or execution of the described business application.
 <!-- /atlas:text id=T000237 -->
 
+### 2 — 2026-10-25
+
+
+<!-- atlas:text id=T000238 role=paragraph -->
+Explicit editorial migration from Atlas Alpha-v0.1.0 revision 1 to Atlas Stable-v1.0.0 revision 2. Prepared by Codex under Douglas de Oliveira Alkimim's execution request. Model/profile/envelope and producer identities change; existing concept IDs, domain contracts, authored history and resources are retained. This is not format conversion, a Needs-to-L1 derivation, or new stakeholder approval.
+<!-- /atlas:text id=T000238 -->
+
 
 ## Appendix: derived summary
 
@@ -1952,10 +1959,10 @@ This appendix is authoritative for non-text data. Text is not duplicated here; e
   "title": {
     "@text": "T000001"
   },
-  "revision": "1",
-  "spec_version": "Alpha-v0.1.0",
-  "profile_version": "Alpha-v0.1.0",
-  "translator_version": "0.1.0",
+  "revision": "2",
+  "spec_version": "Stable-v1.0.0",
+  "profile_version": "Stable-v1.0.0",
+  "translator_version": "1.0.0",
   "language": "en",
   "status": "draft",
   "authors": [
@@ -3963,6 +3970,17 @@ This appendix is authoritative for non-text data. Text is not duplicated here; e
         {
           "type": "paragraph",
           "@text": "T000237"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MIGRATION-STABLE",
+      "version": "2",
+      "date": "2026-10-25",
+      "description": [
+        {
+          "type": "paragraph",
+          "@text": "T000238"
         }
       ]
     }

@@ -1,10 +1,10 @@
-# Atlas LaTeX — Alpha-v0.1.0
+# Atlas LaTeX — Stable-v1.0.0
 
 English · [Português brasileiro](README.pt-br.md) · [Edition manual](../../README.md#implementations)
 
 **Start here:** [starter.atlas.tex](starter.atlas.tex). It carries the same draft content as the other two starters. Empty domain collections and open scope/source questions are intentional; passing structural validation does not establish a complete L1 specification. Follow the [authoring workflow](../../README.md#quick-start) and consult the [complete examples](../../examples/README.md).
 
-Status: normative for this version. Profile identifier: `atlas-latex/Alpha-v0.1.0`. Style file: [`atlas.sty`](atlas.sty).
+Status: normative for this version. Profile identifier: `atlas-latex/Stable-v1.0.0`. Style file: [`atlas.sty`](atlas.sty).
 
 Atlas LaTeX is the structured implementation for authoring and visual publication by compilation. It uses a controlled set of comments, environments, and commands. It is not arbitrary LaTeX.
 
@@ -13,7 +13,7 @@ Atlas LaTeX is the structured implementation for authoring and visual publicatio
 The first line is:
 
 ```text
-% atlas:latex profile=atlas-latex representation=Alpha-v0.1.0 translator=0.1.0
+% atlas:latex profile=atlas-latex representation=Stable-v1.0.0 translator=1.0.0
 ```
 
 The document uses `\documentclass{article}` (or a compatible class) and loads the Atlas style:
@@ -235,7 +235,7 @@ The translator itself never compiles a PDF. Compiling a document and reviewing t
 The abbreviated snippet illustrates delimiters; use the starter linked above for a valid complete file.
 
 ```text
-% atlas:latex profile=atlas-latex representation=Alpha-v0.1.0 translator=0.1.0
+% atlas:latex profile=atlas-latex representation=Stable-v1.0.0 translator=1.0.0
 \documentclass[11pt,a4paper]{article}
 ...
 \usepackage{atlas}

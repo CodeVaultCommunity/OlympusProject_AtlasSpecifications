@@ -1,0 +1,29 @@
+{
+  "repository": "https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers",
+  "commit": "a02bf8eecf222e7e0a7a34977fff49a25b5af6aa",
+  "local_checkout": "C:/Users/Douglas/.codex/worktrees/oal-stable-v1/OAL",
+  "base_commit": "5755a4e4a5b31a9614da5d409d03d1db9cf1e20c",
+  "previous_atlas_reference_commit": "ced9645dcdb1d1d367ac1b3c913256298255094e",
+  "delivery": "Clean local Git worktree; HEAD and manual hashes independently verified. Public availability not asserted.",
+  "comparison": "All 46 numbered normative rules EN/PT exactly equal to preserved Alpha-v0.2.0-Alkimim; relevant clauses separately reviewed in ../OAL-CORRESPONDENCE.md.",
+  "files": [
+    {
+      "source_path": "versioning/Stable-v1.0.0/README.md",
+      "snapshot": "README.md.txt",
+      "bytes": 63529,
+      "sha256": "8e3d82be109b1e8baf1deab32b338b568aa7c98d407858456620336c76ce499e",
+      "numbered_rules": 46,
+      "normative_block_sha256": "f88f36c362c838e625997dcec15c1a5153f969b4f077666a292c95f8110ebc34",
+      "equal_to_alpha_normative_block": true
+    },
+    {
+      "source_path": "versioning/Stable-v1.0.0/README.pt-br.md",
+      "snapshot": "README.pt-br.md.txt",
+      "bytes": 69371,
+      "sha256": "dec2199d47e04caf65934861cc27308afb264504fce0e54a24391db8d9033bdc",
+      "numbered_rules": 46,
+      "normative_block_sha256": "4ee592d31fa76c841ed2c935ac029fb6d01962347d1aa844890acf24d93790e5",
+      "equal_to_alpha_normative_block": true
+    }
+  ]
+}

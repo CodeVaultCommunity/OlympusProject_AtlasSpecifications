@@ -1,0 +1,7 @@
+Built composition Markdown and LaTeX from JSON
+Built minimal Markdown and LaTeX from JSON
+Built task-board Markdown and LaTeX from JSON
+Built starter Markdown and LaTeX from JSON
+Published composition/example.atlas.pdf
+Published minimal/example.atlas.pdf
+Published task-board/example.atlas.pdf

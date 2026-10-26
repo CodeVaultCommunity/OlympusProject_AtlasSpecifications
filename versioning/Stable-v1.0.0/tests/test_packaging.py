@@ -67,7 +67,7 @@ def test_install_console_script_and_package_data(tmp_path, editable):
             env=environment,
         )
         assert version.returncode == 0, version.stdout + version.stderr
-        assert "Alpha-v0.1.0" in version.stdout
+        assert "Stable-v1.0.0" in version.stdout
         package = tmp_path / "document-package"
         result = subprocess.run(
             [str(executable), "package", str(VERSION_ROOT / "examples" / "minimal" / "example.atlas.json"),

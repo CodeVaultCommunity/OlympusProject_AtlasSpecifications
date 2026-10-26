@@ -1,8 +1,8 @@
-# Atlas translator 0.1.0
+# Atlas translator 1.0.0
 
 [English](README.md) · [Português (Brasil)](README.pt-br.md)
 
-Python 3.11+ implementation of the **Atlas JSON**, **Atlas Markdown** and **Atlas LaTeX** profiles for Atlas Specifications `Alpha-v0.1.0`. It translates representations of the same Atlas content; it does not derive OAL L2 artifacts, migrate specification versions, or import arbitrary Markdown/LaTeX.
+Python 3.11+ implementation of the **Atlas JSON**, **Atlas Markdown** and **Atlas LaTeX** profiles for Atlas Specifications `Stable-v1.0.0`. It translates representations of the same Atlas content; it does not derive OAL L2 artifacts, migrate specification versions, or import arbitrary Markdown/LaTeX.
 
 ## Install and run
 
@@ -66,3 +66,16 @@ The tests exercise conversion cycles, exact Unicode/line-ending preservation, di
 Packaged schema and style copies must equal the published files in `implementations/`. `skills/build.py` updates the distribution copies; `--check` reports differences without changing them. The [edition manual](../README.md) defines the preservation contract, translation process and conformance scope.
 
 **Author:** Douglas de Oliveira Alkimim. [MIT license](../LICENSE).
+
+## CLI surface / Superfície CLI
+
+| Command / Comando | Arguments and options / Argumentos e opções |
+| --- | --- |
+| `formats` | List registered formats / Lista formatos registrados. |
+| `validate INPUT` | `--format {json,markdown,latex}` (otherwise suffix / senão extensão). |
+| `convert INPUT` | Required / obrigatórios: `--from`, `--to`, `-o/--output`; optional / opcional: `--no-verify`. |
+| `package INPUT` | Required / obrigatórios: `--from`, `-o/--output`; optional / opcionais: `--name`, `--force`. |
+| Common to validate/convert/package / Comuns | `--version` selects representation profile (default `Stable-v1.0.0`); `--resources PATH`; `--no-check-resources`. / Seleção do perfil, raiz dos recursos e desativação explícita da conferência dos bytes. |
+| All / Todos | `-h/--help`; success / sucesso 0, diagnosed failure or usage error / falha diagnosticada ou erro de uso 2. |
+
+`--version` is a profile selector, not a package-version display switch. `--force` explicitly permits replacing an existing package target. Diagnostic text may change; use the [code catalog](../DIAGNOSTICS.md). / `--version` seleciona o perfil, não exibe a versão do pacote. `--force` permite substituir o destino de empacotamento. Consulte os códigos, não dependa do texto exato dos diagnósticos.

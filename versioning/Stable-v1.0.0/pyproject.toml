@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "atlas-spec"
-version = "0.1.0"
-description = "Translator and validator for Atlas Specifications Alpha-v0.1.0"
+version = "1.0.0"
+description = "Translator and validator for Atlas Specifications Stable-v1.0.0"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"

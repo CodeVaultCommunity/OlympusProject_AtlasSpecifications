@@ -1,6 +1,6 @@
 # Visual assets · Atlas Specifications
 
-[Português brasileiro](README.pt-br.md) · [Repository overview](../README.md) · [Edition manual](../versioning/Alpha-v0.1.0/README.md)
+[Português brasileiro](README.pt-br.md) · [Repository overview](../README.md) · [Edition manual](../versioning/Stable-v1.0.0/README.md)
 
 The Atlas identity uses the supplied Atlas emblem, the companion Olympus emblem and a navy, cyan and white palette. The header retains the celestial artwork, with a small Olympus icon beside the ecosystem name and a larger Atlas icon beside the project title. Both icons are also supplied as independent transparent PNG files. The header has 40-pixel rounded corners at its native 1600 × 534 size, with transparent outer corners in both SVG and PNG.
 

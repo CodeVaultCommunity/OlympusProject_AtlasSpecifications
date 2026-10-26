@@ -1,12 +1,12 @@
 > Canonical English source: `implementations/json/README.md`. This snapshot relocates links for standalone use. Follow SKILL.md for commands inside this bundle.
 
-# Atlas JSON — Alpha-v0.1.0
+# Atlas JSON — Stable-v1.0.0
 
 English · Português brasileiro (edition source: `README.pt-br.md`) · [Edition manual](atlas-specification.md#implementations)
 
 **Start here:** [starter.atlas.json](../assets/starter.atlas.json). It carries the same draft content as the other two starters. Empty domain collections and open scope/source questions are intentional; passing structural validation does not establish a complete L1 specification. Follow the [authoring workflow](atlas-specification.md#quick-start) and consult the complete examples (edition source: `../../examples/README.md`).
 
-Status: normative for this version. Schema: [`atlas.schema.json`](../scripts/vendor/atlas_spec/schemas/atlas.schema.json). Profile identifier: `atlas-json/Alpha-v0.1.0`.
+Status: normative for this version. Schema: [`atlas.schema.json`](../scripts/vendor/atlas_spec/schemas/atlas.schema.json). Profile identifier: `atlas-json/Stable-v1.0.0`.
 
 Atlas JSON is the structured implementation used for manipulation, validation, integration, and transformation. It is also the translator intermediate. It is **not** the abstract model.
 
@@ -15,7 +15,7 @@ Atlas JSON is the structured implementation used for manipulation, validation, i
 ```json
 {
   "$schema": "atlas.schema.json",
-  "format": "atlas-json/Alpha-v0.1.0",
+  "format": "atlas-json/Stable-v1.0.0",
   "atlas": { "...": "..." }
 }
 ```
@@ -23,7 +23,7 @@ Atlas JSON is the structured implementation used for manipulation, validation, i
 | Member | Required | Meaning |
 | --- | --- | --- |
 | `$schema` | No | Transport metadata pointing to the schema. Not Atlas content. |
-| `format` | Yes | Must be exactly `atlas-json/Alpha-v0.1.0`. Not Atlas content. |
+| `format` | Yes | Must be exactly `atlas-json/Stable-v1.0.0`. Not Atlas content. |
 | `atlas` | Yes | The complete Atlas content. |
 
 Unknown top-level members are rejected. Unknown members at schema-defined object levels are rejected. Declared open containers such as text `meta`, entity-example `data`, and `extensions` retain their schema-defined behavior. Their contents are opaque to slot/ID interpretation and preserved with their values and types, not silently discarded.

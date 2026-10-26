@@ -79,3 +79,7 @@ O exemplo não implementa uma aplicação de tarefas nem demonstra L2–L4. Seus
 ## Autoria
 
 Douglas de Oliveira Alkimim.
+
+[Demonstração versionada: revisões Stable 2 e 3](revisions/README.md), com motivo, delta, impacto e teste específico.
+
+`SRC-TASK-OAL` conserva a fonte Alpha histórica da autoria original; não é relabelada. A alegação atual do modelo Atlas usa a [baseline Stable revisada](../../verification/OAL-CORRESPONDENCE.md), cujas cláusulas relevantes foram comparadas com essa origem.

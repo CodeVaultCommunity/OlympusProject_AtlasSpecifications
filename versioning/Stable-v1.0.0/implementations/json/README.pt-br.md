@@ -1,10 +1,10 @@
-# Atlas JSON · Alpha-v0.1.0
+# Atlas JSON · Stable-v1.0.0
 
 [English](README.md) · Português brasileiro · [Manual da edição](../../README.pt-br.md#implementations)
 
 **Comece por:** [starter.atlas.json](starter.atlas.json). Ele contém o mesmo rascunho dos outros dois modelos iniciais. Coleções de domínio vazias e perguntas de escopo/fontes são intencionais; validação estrutural não estabelece especificação L1 completa. Siga o [fluxo de autoria](../../README.pt-br.md#quick-start) e consulte os [exemplos completos](../../examples/README.pt-br.md).
 
-Tradução da definição normativa em inglês desta versão. Schema: [atlas.schema.json](atlas.schema.json). Identificador do perfil: `atlas-json/Alpha-v0.1.0`.
+Tradução da definição normativa em inglês desta versão. Schema: [atlas.schema.json](atlas.schema.json). Identificador do perfil: `atlas-json/Stable-v1.0.0`.
 
 Atlas JSON é a implementação estruturada para manipulação, validação, integração e transformação. Também é o intermediário do tradutor. O modelo abstrato é definido separadamente.
 
@@ -15,7 +15,7 @@ O envelope contém `$schema` opcional, `format` e `atlas`. A forma abreviada aba
 ```json
 {
   "$schema": "atlas.schema.json",
-  "format": "atlas-json/Alpha-v0.1.0",
+  "format": "atlas-json/Stable-v1.0.0",
   "atlas": { "...": "..." }
 }
 ```
@@ -23,7 +23,7 @@ O envelope contém `$schema` opcional, `format` e `atlas`. A forma abreviada aba
 | Membro | Obrigatório | Significado |
 | --- | --- | --- |
 | `$schema` | Não | Indicação de schema para ferramentas; metadado de transporte. |
-| `format` | Sim | Exatamente `atlas-json/Alpha-v0.1.0`; metadado de transporte. |
+| `format` | Sim | Exatamente `atlas-json/Stable-v1.0.0`; metadado de transporte. |
 | `atlas` | Sim | Conteúdo Atlas completo. |
 
 Membros desconhecidos no envelope ou em objetos definidos pelo schema são recusados. Contêineres abertos declarados, como `meta` textual, `data` de exemplos de entidade e `extensions`, conservam o comportamento definido pelo schema. Seus dados permanecem opacos para interpretação de slots/IDs e são preservados com valores e tipos.

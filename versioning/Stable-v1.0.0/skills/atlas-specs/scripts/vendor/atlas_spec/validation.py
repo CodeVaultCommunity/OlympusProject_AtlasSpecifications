@@ -1,4 +1,4 @@
-"""Structural and referential validation for Atlas Alpha-v0.1.0."""
+"""Structural and referential validation for Atlas Stable-v1.0.0."""
 
 from __future__ import annotations
 
@@ -13,8 +13,8 @@ from jsonschema.exceptions import best_match
 from .errors import AtlasValidationError, Diagnostic
 from .util import sha256_file, sha256_text
 
-SUPPORTED_SPEC_VERSION = "Alpha-v0.1.0"
-SUPPORTED_PROFILE_VERSION = "Alpha-v0.1.0"
+SUPPORTED_SPEC_VERSION = "Stable-v1.0.0"
+SUPPORTED_PROFILE_VERSION = "Stable-v1.0.0"
 PACKAGED_SCHEMA_PATH = Path(__file__).resolve().parent / "schemas" / "atlas.schema.json"
 PUBLISHED_SCHEMA_PATH = Path(__file__).resolve().parents[3] / "implementations" / "json" / "atlas.schema.json"
 SCHEMA_PATH = PACKAGED_SCHEMA_PATH if PACKAGED_SCHEMA_PATH.is_file() else PUBLISHED_SCHEMA_PATH
@@ -44,7 +44,7 @@ class Validator:
         resource_root: Path | None = None,
         check_resources: bool = True,
     ) -> list[Diagnostic]:
-        diagnostics = self._schema_errors(document)
+        diagnostics = self._version_errors(document) or self._schema_errors(document)
         if diagnostics:
             raise AtlasValidationError(diagnostics)
 
@@ -72,12 +72,20 @@ class Validator:
             return result
         return []
 
-    # -- helpers --------------------------------------------------------
-    def _semantic_errors(self, document: dict) -> list[Diagnostic]:
-        diagnostics: list[Diagnostic] = []
-        atlas = document["atlas"]
+    def _version_errors(self, document: Any) -> list[Diagnostic]:
+        """Report recognized but unsupported identities before schema details.
 
-        if atlas["spec_version"] != SUPPORTED_SPEC_VERSION:
+        Missing or mistyped members remain schema errors. Do not assume a
+        malformed input has an Atlas object merely to inspect its versions.
+        """
+        diagnostics: list[Diagnostic] = []
+        if not isinstance(document, dict):
+            return diagnostics
+        atlas = document.get("atlas")
+        if not isinstance(atlas, dict):
+            return diagnostics
+
+        if isinstance(atlas.get("spec_version"), str) and atlas["spec_version"] != SUPPORTED_SPEC_VERSION:
             diagnostics.append(
                 Diagnostic(
                     "ATL-E-VERSION",
@@ -86,7 +94,7 @@ class Validator:
                     "/atlas/spec_version",
                 )
             )
-        if atlas["profile_version"] != SUPPORTED_PROFILE_VERSION:
+        if isinstance(atlas.get("profile_version"), str) and atlas["profile_version"] != SUPPORTED_PROFILE_VERSION:
             diagnostics.append(
                 Diagnostic(
                     "ATL-E-PROFILE-VERSION",
@@ -95,7 +103,7 @@ class Validator:
                     "/atlas/profile_version",
                 )
             )
-        if document.get("format") != f"atlas-json/{SUPPORTED_PROFILE_VERSION}":
+        if isinstance(document.get("format"), str) and document["format"] != f"atlas-json/{SUPPORTED_PROFILE_VERSION}":
             diagnostics.append(
                 Diagnostic(
                     "ATL-E-FORMAT",
@@ -105,6 +113,12 @@ class Validator:
                 )
             )
 
+        return diagnostics
+
+    # -- helpers --------------------------------------------------------
+    def _semantic_errors(self, document: dict) -> list[Diagnostic]:
+        diagnostics: list[Diagnostic] = []
+        atlas = document["atlas"]
         ids: dict[str, str] = {}
         self._collect_ids(atlas, "$", ids, diagnostics)
         root_id = atlas["document_id"]

@@ -1,0 +1,48 @@
+name: Atlas Stable verification
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    strategy:
+      matrix:
+        python: ['3.11', '3.12']
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: versioning/Stable-v1.0.0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e ".[test]"
+      - run: python -m pytest tests
+      - run: python examples/build.py --check
+      - run: python skills/build.py --check
+  publication:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: versioning/Stable-v1.0.0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e ".[test]"
+      - run: sudo apt-get update && sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended
+      - run: pdflatex --version
+      - run: python skills/build.py --check
+      - run: python examples/build.py --pdf --keep-intermediates
+      - run: python examples/build.py --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: atlas-stable-publications
+          path: |
+            versioning/Stable-v1.0.0/examples/*/*.pdf
+            versioning/Stable-v1.0.0/examples/*/*.log

@@ -1,0 +1,53 @@
+{
+  "source_edition": "Alpha-v0.1.0",
+  "source_commit": "ee8a3292b42c44abe3cd1e8cf0c1e8a176df6a04",
+  "destination_edition": "Stable-v1.0.0",
+  "date": "2026-10-25",
+  "preparer": "Codex",
+  "requested_by": "Douglas de Oliveira Alkimim",
+  "human_approval_asserted": false,
+  "changes": [
+    "format, spec_version and profile_version to Stable-v1.0.0",
+    "translator_version to 1.0.0 for the editorially produced artifacts",
+    "revision 1 to 2 and explicit appended migration history",
+    "task-board revision 2 to 3 is a separate documented change"
+  ],
+  "preserved": [
+    "document and concept identities",
+    "original history and sources",
+    "domain rules, authorization and persistence contracts",
+    "resources and opaque extensions"
+  ],
+  "documents": [
+    {
+      "path": "implementations/json/starter.atlas.json",
+      "source_sha256": "af26f1a77653311a6439925b69746a25d3213885e8467ae3d87f7dfd55e4ab7c",
+      "source_revision": "1",
+      "destination_revision": "2",
+      "migration_sha256": "210f82a721c5ebd934bf65f1feee0105f4ffc33b2d599f74fddd5079aa9e2698"
+    },
+    {
+      "path": "examples/minimal/example.atlas.json",
+      "source_sha256": "776d6107129a6fef602e8ba81290c36b2bbdfd38f590ac61c91e5872e74e99c6",
+      "source_revision": "1",
+      "destination_revision": "2",
+      "migration_sha256": "22298163ed99570f88cf3532d6ee213caa843f95873329d1ff4c758cf32e95ee"
+    },
+    {
+      "path": "examples/composition/example.atlas.json",
+      "source_sha256": "f1cfdd1bb7c1ee889965d71e1c7f37ce02a2b7c99767f786b83982906db3d190",
+      "source_revision": "1",
+      "destination_revision": "2",
+      "migration_sha256": "d58eb6755a4d308a41f03ce83b2470740c151de8a683edc8c37df266039739d3"
+    },
+    {
+      "path": "examples/task-board/example.atlas.json",
+      "source_sha256": "ea45b98dec6bcd2be96107fcf10775088b62026a8e5f0df6785ab3027414a468",
+      "source_revision": "1",
+      "destination_revision": "2",
+      "migration_sha256": "c936294e28a5f17d025119ea2e798ca03c672304add4efd36d69dd3f129950b4",
+      "current_revision": "3",
+      "current_sha256": "3ad32059e3b97d774069293b3219037f55ed9c18df33b1c2cb5c8ae4e3cbb592"
+    }
+  ]
+}

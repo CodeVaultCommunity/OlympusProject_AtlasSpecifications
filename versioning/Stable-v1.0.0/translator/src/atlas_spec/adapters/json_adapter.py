@@ -8,7 +8,7 @@ from ..errors import AtlasParseError, AtlasVersionError, Diagnostic
 from ..util import decode_text_exact, json_dumps, strict_json_loads
 from .base import Adapter, DecodeOptions, EncodeOptions
 
-PROFILE_VERSION = "Alpha-v0.1.0"
+PROFILE_VERSION = "Stable-v1.0.0"
 FORMAT = f"atlas-json/{PROFILE_VERSION}"
 
 

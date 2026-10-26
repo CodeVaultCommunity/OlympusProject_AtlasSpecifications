@@ -46,6 +46,8 @@ def bundle_files() -> dict[str, bytes]:
                         "bundled_sha256": digest(payload)})
 
     documents = {
+        EDITION / "COMPATIBILITY.md": "references/compatibility.md",
+        EDITION / "DIAGNOSTICS.md": "references/diagnostics.md",
         EDITION / "README.md": "references/atlas-specification.md",
         EDITION / "implementations/json/README.md": "references/atlas-json.md",
         EDITION / "implementations/markdown/README.md": "references/atlas-markdown.md",
@@ -98,7 +100,7 @@ def bundle_files() -> dict[str, bytes]:
     add(EDITION / "implementations/latex/atlas-presentation.example.tex", "assets/atlas-presentation.example.tex")
     add(EDITION / "LICENSE", "LICENSE")
     expected["source-map.json"] = (json.dumps({
-        "edition": "Alpha-v0.1.0",
+        "edition": "Stable-v1.0.0",
         "canonical_runtime": "translator/src/atlas_spec",
         "purpose": "Source correspondence for a generated standalone skill; not proof of semantic completeness.",
         "files": records,

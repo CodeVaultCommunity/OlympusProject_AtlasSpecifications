@@ -53,7 +53,7 @@ Gerada a partir da instância JSON por `examples/build.py`. Os IDs são exatos; 
 
 | Quality obligation / Obrigação de qualidade | Scope and targets / Escopo e alvos | Canonical definition / Definição canônica | Acceptance / Aceite |
 | --- | --- | --- | --- |
-| `RNF-TASK-LIST-CONSISTENCY` | operation: `UC-TASK-LIST`<br>`OP-TASK-LIST` | `RNF-TASK-LIST-CONSISTENCY` | `AC-TASK-LIST-CONTENT` |
+| `RNF-TASK-LIST-CONSISTENCY` | operation: `UC-TASK-LIST`<br>`OP-TASK-LIST` | `RNF-TASK-LIST-CONSISTENCY` | `AC-TASK-LIST-CONTENT`<br>`AC-TASK-LIST-EMPTY` |
 | `RNF-TASK-LIST-RETENTION` | system: `UC-TASK-LIST`<br>`OP-TASK-LIST` | `RNF-TASK-CREATE-RETENTION` | `AC-TASK-CREATE-SUCCESS` |
 
 ## Interpretation / Interpretação

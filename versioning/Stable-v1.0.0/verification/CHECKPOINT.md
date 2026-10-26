@@ -1,5 +1,7 @@
 # Stable preparation checkpoint / Checkpoint de preparação da Stable
 
+> Historical evidence at commit `fd2e2a94e7673cde1bf879eda65281c219a09754`, retained without rewriting its results. The OAL dependency was subsequently delivered; see [the release verification](RELEASE.md). Run the checkpoint capture/check command only at that checkpoint; use `capture_release.py` for current inputs. / Evidência histórica preservada; dependência OAL posteriormente entregue. Use o verificador do checkpoint naquele commit e `capture_release.py` nas entradas atuais.
+
 **2026-10-25, America/Sao_Paulo — paused at the user's request pending finalized OAL content. This is not an approved Stable release or release candidate.**
 
 **25/10/2026, America/Sao_Paulo — pausado a pedido do usuário, aguardando conteúdo final do OAL. Não é uma release Stable aprovada nem um candidato à release.**

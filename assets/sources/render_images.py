@@ -90,8 +90,8 @@ def banner(lang):
     subtitle = 'One abstract contract. Three representations.' if lang=='en' else 'Um contrato abstrato. Três representações.'
     b += text(78, 386, subtitle, 24, '#c0dce9')
     b += text(78, 434, 'JSON    ·    MARKDOWN    ·    LaTeX', 18, '#80e8ef', 600, letter_spacing='0.6')
-    b += text(78, 487, 'Alpha-v0.1.0', 16, '#afc6d7')
-    return svg(1600, 534, b, 'Atlas Specifications · Olympus · Alpha-v0.1.0', clip_radius=40)
+    b += text(78, 487, 'Stable-v1.0.0', 16, '#afc6d7')
+    return svg(1600, 534, b, 'Atlas Specifications · Olympus · Stable-v1.0.0', clip_radius=40)
 
 
 def model(lang):

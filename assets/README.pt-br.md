@@ -1,6 +1,6 @@
 # Recursos visuais · Atlas Specifications
 
-[English](README.md) · [Apresentação do repositório](../README.pt-br.md) · [Manual da edição](../versioning/Alpha-v0.1.0/README.pt-br.md)
+[English](README.md) · [Apresentação do repositório](../README.pt-br.md) · [Manual da edição](../versioning/Stable-v1.0.0/README.pt-br.md)
 
 A identidade do Atlas usa o emblema fornecido do Atlas, o emblema complementar do Olympus e uma paleta azul-marinho, ciano e branca. O cabeçalho mantém a arte celeste, com um ícone pequeno do Olympus ao lado do nome do ecossistema e um ícone maior do Atlas ao lado do título do projeto. Os dois ícones também são fornecidos como arquivos PNG transparentes independentes. O cabeçalho tem cantos arredondados de 40 pixels no tamanho original de 1600 × 534, com transparência nos cantos externos tanto no SVG quanto no PNG.
 

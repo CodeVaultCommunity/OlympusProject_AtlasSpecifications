@@ -25,8 +25,8 @@ from ..util import (
 from .base import Adapter, DecodeOptions, EncodeOptions
 
 PROFILE = "atlas-markdown"
-VERSION = "Alpha-v0.1.0"
-TRANSLATOR = "0.1.0"
+VERSION = "Stable-v1.0.0"
+TRANSLATOR = "1.0.0"
 
 HEADER_RE = re.compile(
     r"^<!-- atlas:markdown profile=atlas-markdown representation=(?P<version>\S+) "

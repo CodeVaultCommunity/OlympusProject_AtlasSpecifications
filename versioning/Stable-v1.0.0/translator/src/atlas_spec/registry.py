@@ -25,14 +25,14 @@ ALL_FORMATS = ("json", "markdown", "latex")
 
 @dataclass
 class AdapterRegistry:
-    representation_version: str = "Alpha-v0.1.0"
+    representation_version: str = "Stable-v1.0.0"
     adapter_factories: dict[tuple[str, str], type[Adapter]] = field(default_factory=dict)
     validator: Validator = field(default_factory=Validator)
 
     def __post_init__(self) -> None:
-        self.register(JsonAdapter, "json", "Alpha-v0.1.0")
-        self.register(MarkdownAdapter, "markdown", "Alpha-v0.1.0")
-        self.register(LatexAdapter, "latex", "Alpha-v0.1.0")
+        self.register(JsonAdapter, "json", "Stable-v1.0.0")
+        self.register(MarkdownAdapter, "markdown", "Stable-v1.0.0")
+        self.register(LatexAdapter, "latex", "Stable-v1.0.0")
 
     def register(
         self, adapter: type[Adapter] | Adapter, format_name: str, version: str

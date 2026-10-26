@@ -168,9 +168,9 @@ def test_cli_lists_formats():
         cwd=str(VERSION_ROOT),
     )
     assert result.returncode == 0, result.stderr
-    assert "markdown/Alpha-v0.1.0" in result.stdout
-    assert "latex/Alpha-v0.1.0" in result.stdout
-    assert "json/Alpha-v0.1.0" in result.stdout
+    assert "markdown/Stable-v1.0.0" in result.stdout
+    assert "latex/Stable-v1.0.0" in result.stdout
+    assert "json/Stable-v1.0.0" in result.stdout
 
 
 def _env() -> dict[str, str]:

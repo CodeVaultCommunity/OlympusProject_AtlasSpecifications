@@ -23,8 +23,8 @@ def _add_common(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--version",
         dest="representation_version",
-        default="Alpha-v0.1.0",
-        help="representation version (default: Alpha-v0.1.0)",
+        default="Stable-v1.0.0",
+        help="representation version (default: Stable-v1.0.0)",
     )
     parser.add_argument(
         "--resources",

@@ -20,8 +20,8 @@ from .markdown_adapter import _derived_content
 from ..graph_render import render_tikz
 
 PROFILE = "atlas-latex"
-VERSION = "Alpha-v0.1.0"
-TRANSLATOR = "0.1.0"
+VERSION = "Stable-v1.0.0"
+TRANSLATOR = "1.0.0"
 
 HEADER_RE = re.compile(
     r"^% atlas:latex profile=atlas-latex representation=(?P<version>\S+) "

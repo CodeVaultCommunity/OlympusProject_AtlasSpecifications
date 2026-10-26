@@ -1,0 +1,29 @@
+{
+  "kind": "agent visual inspection, not an automated test",
+  "engine": "MiKTeX-pdfTeX 4.23 (MiKTeX 25.12)",
+  "passes_per_document": 2,
+  "shell_escape": false,
+  "pdfs": [
+    {
+      "path": "examples/minimal/example.atlas.pdf",
+      "pages": 28,
+      "bytes": 378485,
+      "sha256": "22fe737c5114fbdd9af17c2b2aeff9ce1882eb8ef5bbac773468ea88f9a1d1fa"
+    },
+    {
+      "path": "examples/composition/example.atlas.pdf",
+      "pages": 54,
+      "bytes": 408144,
+      "sha256": "b731c3d35c9ef48f03a7c9e9d415ded36e331c7cecfd7f5b507adf4c1970082d"
+    },
+    {
+      "path": "examples/task-board/example.atlas.pdf",
+      "pages": 55,
+      "bytes": 417200,
+      "sha256": "a26421f184a02dfa61dcf92df58954ea0707327ac6e12f213736456cee4baf13"
+    }
+  ],
+  "coverage": "All 137 pages rendered at 1100px and inspected via contact sheets; detailed views of minimal p16, composition p44, task-board p50 and both banners; checkpoint smoke covers tables and exact newline macros.",
+  "result": "No clipping, overlap, missing glyphs or layout loss observed. No overfull/underfull boxes in logs. epstopdf warns that shell escape is disabled; resources use existing PNG variants.",
+  "limits": "pdfLaTeX on Windows only; not XeLaTeX/LuaLaTeX or application behavior."
+}

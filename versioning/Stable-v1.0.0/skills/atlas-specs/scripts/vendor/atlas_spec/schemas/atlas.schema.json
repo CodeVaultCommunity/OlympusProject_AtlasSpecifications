@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://atlas-specification.local/schemas/Alpha-v0.1.0/atlas.schema.json",
-  "title": "Atlas JSON document, Alpha-v0.1.0",
+  "$id": "https://atlas-specification.local/schemas/Stable-v1.0.0/atlas.schema.json",
+  "title": "Atlas JSON document, Stable-v1.0.0",
   "description": "Structural schema for the Atlas JSON profile. Referential and semantic invariants are enforced by the atlas-spec validator in addition to this schema.",
   "type": "object",
   "required": [
@@ -13,7 +13,7 @@
       "type": "string"
     },
     "format": {
-      "const": "atlas-json/Alpha-v0.1.0"
+      "const": "atlas-json/Stable-v1.0.0"
     },
     "atlas": {
       "$ref": "#/$defs/atlas"
@@ -27,7 +27,7 @@
     },
     "semanticVersion": {
       "type": "string",
-      "pattern": "^Alpha-v[0-9]+\\.[0-9]+\\.[0-9]+$"
+      "const": "Stable-v1.0.0"
     },
     "nature": {
       "type": "string",

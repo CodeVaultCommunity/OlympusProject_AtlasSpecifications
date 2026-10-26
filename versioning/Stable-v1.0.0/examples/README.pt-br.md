@@ -36,7 +36,7 @@ Instale as dependências Python a partir do `pyproject.toml` desta edição. Uma
 - O formulário web e a linha de comando são propostas ilustrativas de canal. Tela e sintaxe de comandos não se tornam requisitos obrigatórios de L1. O quadro de tarefas não escolhe um canal.
 - Uma aplicação futura deverá implementar e verificar persistência, autorização e qualidade. Este repositório entrega a especificação, suas representações, o tradutor e as verificações desses artefatos.
 
-A [matriz do quadro de tarefas](task-board/traceability.md) permite inspecionar a referência principal. Os exemplos pertencem à primeira edição publicável, `Alpha-v0.1.0`.
+A [matriz do quadro de tarefas](task-board/traceability.md) permite inspecionar a referência principal. Os exemplos pertencem à primeira edição publicável, `Stable-v1.0.0`.
 
 ## Autoria
 

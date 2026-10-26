@@ -79,3 +79,7 @@ The examples are not a task application or a demonstration of L2–L4 implementa
 ## Author
 
 Douglas de Oliveira Alkimim.
+
+[Versioned demonstration: Stable revisions 2 and 3](revisions/README.md), with reason, delta, impact and a dedicated test.
+
+`SRC-TASK-OAL` retains the historical Alpha source used in original authorship; it is not relabeled. The current Atlas model claim uses the [reviewed Stable baseline](../../verification/OAL-CORRESPONDENCE.md), whose relevant clauses were compared with that source.

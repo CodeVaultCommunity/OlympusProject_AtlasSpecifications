@@ -1,13 +1,11 @@
 ---
 name: atlas-specs
-description: Create, read, review, validate and translate Atlas Specifications Alpha-v0.1.0 documents. Use for OAL L1 use-case specifications, Atlas JSON, Atlas Markdown, Atlas LaTeX, semantic audits, model-implementation mappings, exact-content conversion, graph and resource references, and PDF publication from Atlas LaTeX.
+description: Create, read, review, validate and translate Atlas Specifications Stable-v1.0.0 documents. Use for OAL L1 use-case specifications, Atlas JSON, Atlas Markdown, Atlas LaTeX, semantic audits, model-implementation mappings, exact-content conversion, graph and resource references, and PDF publication from Atlas LaTeX.
 ---
 
-# Atlas Specifications · Alpha-v0.1.0
+# Atlas Specifications · Stable-v1.0.0
 
-> Working checkpoint for a future Stable-v1.0.0 edition. Model/profile/package identifiers remain Alpha until OAL Stable is finalized and reviewed. Do not install or distribute this working bundle as the historical Alpha implementation or an approved Stable release. Follow the checkpoint notice in the bundled model reference.
-
-Treat Atlas as an abstract OAL L1 model and the three formats as representation implementations. Use `spec_version` and `profile_version` **Alpha-v0.1.0** and translator **0.1.0**. Distinguish format conversion, document revision, model implementation and OAL layer derivation.
+Treat Atlas as an abstract OAL L1 model and the three formats as representation implementations. Use `spec_version` and `profile_version` **Stable-v1.0.0** and translator **1.0.0**. Distinguish format conversion, document revision, model implementation and OAL layer derivation.
 
 ## Select the workflow
 

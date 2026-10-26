@@ -1,10 +1,10 @@
-# Atlas Markdown · Alpha-v0.1.0
+# Atlas Markdown · Stable-v1.0.0
 
 [English](README.md) · Português brasileiro · [Manual da edição](../../README.pt-br.md#implementations)
 
 **Comece por:** [starter.atlas.md](starter.atlas.md). Ele contém o mesmo rascunho dos outros dois modelos iniciais. Coleções de domínio vazias e perguntas de escopo/fontes são intencionais; validação estrutural não estabelece especificação L1 completa. Siga o [fluxo de autoria](../../README.pt-br.md#quick-start) e consulte os [exemplos completos](../../examples/README.pt-br.md).
 
-Tradução da definição normativa em inglês desta versão. Identificador: `atlas-markdown/Alpha-v0.1.0`.
+Tradução da definição normativa em inglês desta versão. Identificador: `atlas-markdown/Stable-v1.0.0`.
 
 Atlas Markdown é a implementação textual para leitura direta, revisão e consumo por agentes. É um perfil controlado de Markdown.
 
@@ -22,7 +22,7 @@ Uma edição visível em registro textual é importada. Uma edição fora dos re
 O primeiro marcador Atlas deve ser:
 
 `````text
-<!-- atlas:markdown profile=atlas-markdown representation=Alpha-v0.1.0 translator=0.1.0 -->
+<!-- atlas:markdown profile=atlas-markdown representation=Stable-v1.0.0 translator=1.0.0 -->
 `````
 
 A versão de representação deve coincidir com o adaptador. Divergência é recusada. A versão do tradutor no cabeçalho é informativa.

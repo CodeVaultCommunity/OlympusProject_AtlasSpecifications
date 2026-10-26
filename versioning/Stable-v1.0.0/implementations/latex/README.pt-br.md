@@ -1,10 +1,10 @@
-# Atlas LaTeX · Alpha-v0.1.0
+# Atlas LaTeX · Stable-v1.0.0
 
 [English](README.md) · Português brasileiro · [Manual da edição](../../README.pt-br.md#implementations)
 
 **Comece por:** [starter.atlas.tex](starter.atlas.tex). Ele contém o mesmo rascunho dos outros dois documentos iniciais. Coleções de domínio vazias e perguntas de escopo/fontes são intencionais; validação estrutural não estabelece especificação L1 completa. Siga o [fluxo de autoria](../../README.pt-br.md#quick-start) e consulte os [exemplos completos](../../examples/README.pt-br.md).
 
-Tradução da definição normativa em inglês desta versão. Identificador: `atlas-latex/Alpha-v0.1.0`. Estilo: [atlas.sty](atlas.sty).
+Tradução da definição normativa em inglês desta versão. Identificador: `atlas-latex/Stable-v1.0.0`. Estilo: [atlas.sty](atlas.sty).
 
 Atlas LaTeX é a implementação estruturada para autoria e publicação visual por compilação. Usa um conjunto controlado de comentários, ambientes e comandos.
 
@@ -13,7 +13,7 @@ Atlas LaTeX é a implementação estruturada para autoria e publicação visual 
 A primeira linha é:
 
 ```text
-% atlas:latex profile=atlas-latex representation=Alpha-v0.1.0 translator=0.1.0
+% atlas:latex profile=atlas-latex representation=Stable-v1.0.0 translator=1.0.0
 ```
 
 O documento usa `\documentclass{article}` ou classe compatível e carrega:

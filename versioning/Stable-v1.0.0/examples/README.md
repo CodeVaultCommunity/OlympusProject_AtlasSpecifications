@@ -36,7 +36,7 @@ Install Python dependencies from this edition's `pyproject.toml`. A TeX distribu
 - The request web form and booking command line are illustrative channel proposals. Their screen/command details do not become mandatory L1 requirements. The task board intentionally chooses no channel.
 - A future application must implement and verify persistence, authorization and quality behavior. This repository supplies the specification, representations, translator and their checks.
 
-The [task-board traceability matrix](task-board/traceability.md) gives an inspectable map of the primary reference. These examples belong to the first alpha edition, `Alpha-v0.1.0`.
+The [task-board traceability matrix](task-board/traceability.md) gives an inspectable map of the primary reference. These examples belong to the first alpha edition, `Stable-v1.0.0`.
 
 ## Author
 

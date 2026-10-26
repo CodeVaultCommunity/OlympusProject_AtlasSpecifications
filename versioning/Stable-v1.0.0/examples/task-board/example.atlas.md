@@ -1,4 +1,4 @@
-<!-- atlas:markdown profile=atlas-markdown representation=Alpha-v0.1.0 translator=0.1.0 -->
+<!-- atlas:markdown profile=atlas-markdown representation=Stable-v1.0.0 translator=1.0.0 -->
 <!-- Atlas Markdown. Text records below are authoritative for prose. The structure appendix is authoritative for non-text data. -->
 
 
@@ -13,9 +13,9 @@ Synthetic L1 reference for Atlas Specifications
 
 ## Document metadata
 
-**Document:** `DOC-TASK-BOARD` · **Revision:** 1 · **Status:** draft · **Language:** en
+**Document:** `DOC-TASK-BOARD` · **Revision:** 3 · **Status:** draft · **Language:** en
 
-**Atlas specification:** Alpha-v0.1.0 · **Profile:** Alpha-v0.1.0 · **Translator:** 0.1.0
+**Atlas specification:** Stable-v1.0.0 · **Profile:** Stable-v1.0.0 · **Translator:** 1.0.0
 
 **Created:** 2026-10-25 · **Updated:** 2026-10-25
 
@@ -2316,12 +2316,12 @@ Verifies `RF-TASK-LIST-SNAPSHOT`, `RNF-TASK-LIST-CONSISTENCY`
 
 
 <!-- atlas:text id=T000302 role=paragraph -->
-A successful read of an empty board returns an empty list; an unavailable store instead returns failure.
+A successful consistent read of an empty authorized board returns an empty list and changes no task state or revision; an unavailable store instead returns failure, never a falsely empty success.
 <!-- /atlas:text id=T000302 -->
 
 
 
-Verifies `RF-TASK-LIST-SNAPSHOT`, `RF-TASK-LIST-FAILURE`
+Verifies `RF-TASK-LIST-SNAPSHOT`, `RF-TASK-LIST-FAILURE`, `RNF-TASK-LIST-CONSISTENCY`
 
 #### `AC-TASK-LIST-INTEGRITY`
 
@@ -3672,6 +3672,20 @@ Reference for layer boundaries, caller context, provenance and conformance disti
 Initial reference example for the first Atlas Specifications edition, Alpha-v0.1.0. This synthetic example demonstrates the model and its representations; it does not assert stakeholder approval or execution of the described business application.
 <!-- /atlas:text id=T000428 -->
 
+### 2 — 2026-10-25
+
+
+<!-- atlas:text id=T000429 role=paragraph -->
+Explicit editorial migration from Atlas Alpha-v0.1.0 revision 1 to Atlas Stable-v1.0.0 revision 2. Prepared by Codex under Douglas de Oliveira Alkimim's execution request. Model/profile/envelope and producer identities change; existing concept IDs, domain contracts, authored history and resources are retained. This is not format conversion, a Needs-to-L1 derivation, or new stakeholder approval.
+<!-- /atlas:text id=T000429 -->
+
+### 3 — 2026-10-25
+
+
+<!-- atlas:text id=T000430 role=paragraph -->
+Clarified AC-TASK-LIST-EMPTY to make the existing no-write and consistent-snapshot guarantees explicit for an empty board; added its reference to RNF-TASK-LIST-CONSISTENCY. Source: synthetic SRC-TASK-BRIEF revision 1, choices 7 and 8. Prepared by Codex under Douglas de Oliveira Alkimim's execution request. No concept is renamed or replaced and no domain behavior is added. Rebuild the generated traceability matrix and reading formats; downstream application artifacts do not exist and have not been verified.
+<!-- /atlas:text id=T000430 -->
+
 
 ## Appendix: derived summary
 
@@ -3691,10 +3705,10 @@ This appendix is authoritative for non-text data. Text is not duplicated here; e
   "title": {
     "@text": "T000001"
   },
-  "revision": "1",
-  "spec_version": "Alpha-v0.1.0",
-  "profile_version": "Alpha-v0.1.0",
-  "translator_version": "0.1.0",
+  "revision": "3",
+  "spec_version": "Stable-v1.0.0",
+  "profile_version": "Stable-v1.0.0",
+  "translator_version": "1.0.0",
   "language": "en",
   "status": "draft",
   "authors": [
@@ -6268,7 +6282,8 @@ This appendix is authoritative for non-text data. Text is not duplicated here; e
           ],
           "verifies": [
             "RF-TASK-LIST-SNAPSHOT",
-            "RF-TASK-LIST-FAILURE"
+            "RF-TASK-LIST-FAILURE",
+            "RNF-TASK-LIST-CONSISTENCY"
           ]
         },
         {
@@ -7673,6 +7688,28 @@ This appendix is authoritative for non-text data. Text is not duplicated here; e
         {
           "type": "paragraph",
           "@text": "T000428"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MIGRATION-STABLE",
+      "version": "2",
+      "date": "2026-10-25",
+      "description": [
+        {
+          "type": "paragraph",
+          "@text": "T000429"
+        }
+      ]
+    },
+    {
+      "id": "HIST-TASK-BOARD-03",
+      "version": "3",
+      "date": "2026-10-25",
+      "description": [
+        {
+          "type": "paragraph",
+          "@text": "T000430"
         }
       ]
     }

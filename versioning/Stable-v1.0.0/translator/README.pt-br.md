@@ -1,8 +1,8 @@
-# Tradutor Atlas 0.1.0
+# Tradutor Atlas 1.0.0
 
 [English](README.md) · [Português (Brasil)](README.pt-br.md)
 
-Implementação em Python 3.11+ dos perfis **Atlas JSON**, **Atlas Markdown** e **Atlas LaTeX** para Atlas Specifications `Alpha-v0.1.0`. Traduz representações do mesmo conteúdo Atlas; não deriva artefatos L2 do OAL, não migra versões da especificação e não importa Markdown/LaTeX arbitrários.
+Implementação em Python 3.11+ dos perfis **Atlas JSON**, **Atlas Markdown** e **Atlas LaTeX** para Atlas Specifications `Stable-v1.0.0`. Traduz representações do mesmo conteúdo Atlas; não deriva artefatos L2 do OAL, não migra versões da especificação e não importa Markdown/LaTeX arbitrários.
 
 ## Instalação e uso
 
@@ -66,3 +66,16 @@ Os testes exercitam ciclos de conversão, preservação exata de Unicode/quebras
 As cópias do schema e do estilo no pacote precisam ser iguais aos arquivos publicados em `implementations/`. `skills/build.py` atualiza as cópias de distribuição; `--check` aponta diferenças sem alterá-las. O [manual da edição](../README.pt-br.md) define o contrato de preservação, o processo de tradução e o escopo de conformidade.
 
 **Autor:** Douglas de Oliveira Alkimim. [Licença MIT](../LICENSE).
+
+## CLI surface / Superfície CLI
+
+| Command / Comando | Arguments and options / Argumentos e opções |
+| --- | --- |
+| `formats` | List registered formats / Lista formatos registrados. |
+| `validate INPUT` | `--format {json,markdown,latex}` (otherwise suffix / senão extensão). |
+| `convert INPUT` | Required / obrigatórios: `--from`, `--to`, `-o/--output`; optional / opcional: `--no-verify`. |
+| `package INPUT` | Required / obrigatórios: `--from`, `-o/--output`; optional / opcionais: `--name`, `--force`. |
+| Common to validate/convert/package / Comuns | `--version` selects representation profile (default `Stable-v1.0.0`); `--resources PATH`; `--no-check-resources`. / Seleção do perfil, raiz dos recursos e desativação explícita da conferência dos bytes. |
+| All / Todos | `-h/--help`; success / sucesso 0, diagnosed failure or usage error / falha diagnosticada ou erro de uso 2. |
+
+`--version` is a profile selector, not a package-version display switch. `--force` explicitly permits replacing an existing package target. Diagnostic text may change; use the [code catalog](../DIAGNOSTICS.md). / `--version` seleciona o perfil, não exibe a versão do pacote. `--force` permite substituir o destino de empacotamento. Consulte os códigos, não dependa do texto exato dos diagnósticos.

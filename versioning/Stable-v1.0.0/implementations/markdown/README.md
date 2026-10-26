@@ -1,10 +1,10 @@
-# Atlas Markdown — Alpha-v0.1.0
+# Atlas Markdown — Stable-v1.0.0
 
 English · [Português brasileiro](README.pt-br.md) · [Edition manual](../../README.md#implementations)
 
 **Start here:** [starter.atlas.md](starter.atlas.md). It carries the same draft content as the other two starters. Empty domain collections and open scope/source questions are intentional; passing structural validation does not establish a complete L1 specification. Follow the [authoring workflow](../../README.md#quick-start) and consult the [complete examples](../../examples/README.md).
 
-Status: normative for this version. Profile identifier: `atlas-markdown/Alpha-v0.1.0`.
+Status: normative for this version. Profile identifier: `atlas-markdown/Stable-v1.0.0`.
 
 Atlas Markdown is the readable textual implementation. It is intended for direct reading and for supplying the raw document to agents. It is a controlled profile, not arbitrary Markdown.
 
@@ -22,7 +22,7 @@ A visible edit to a text record is imported. A visible edit outside text records
 The first Atlas marker must be:
 
 `````text
-<!-- atlas:markdown profile=atlas-markdown representation=Alpha-v0.1.0 translator=0.1.0 -->
+<!-- atlas:markdown profile=atlas-markdown representation=Stable-v1.0.0 translator=1.0.0 -->
 `````
 
 The representation version must match the adapter. A mismatch is rejected. The translator version is informational.
@@ -179,7 +179,7 @@ Use the structure appendix for tables, graph data, mappings, resource catalogs, 
 The abbreviated snippet illustrates delimiters; use the starter linked above for a valid complete file.
 
 `````text
-<!-- atlas:markdown profile=atlas-markdown representation=Alpha-v0.1.0 translator=0.1.0 -->
+<!-- atlas:markdown profile=atlas-markdown representation=Stable-v1.0.0 translator=1.0.0 -->
 
 <!-- atlas:text id=T000001 role=heading level=1 -->
 # Minimal request register

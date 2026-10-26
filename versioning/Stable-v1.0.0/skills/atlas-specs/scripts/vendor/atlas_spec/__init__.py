@@ -1,4 +1,4 @@
-"""Atlas Specifications translator, Alpha-v0.1.0."""
+"""Atlas Specifications translator, Stable-v1.0.0."""
 
 from .adapters.base import Adapter, DecodeOptions, EncodeOptions
 from .adapters.json_adapter import JsonAdapter
@@ -38,4 +38,4 @@ __all__ = [
     "atlas_content_equal",
 ]
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
