@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-26",
+  "previous_atlas_commit": "4160eb23c853df9629e30ad32c5421eab433dcef",
+  "previous_repository_url": "https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers",
+  "repository_url": "https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers",
+  "verified_github_full_name": "CodeVaultCommunity/OAL_OpenAnalysisLayers",
+  "old_repository_api_resolves_to_new_repository": true,
+  "historical_source_check": {
+    "original_url": "https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers/blob/ced9645dcdb1d1d367ac1b3c913256298255094e/versioning/Alpha-v0.2.0-Alkimim/README.md",
+    "final_url": "https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers/blob/ced9645dcdb1d1d367ac1b3c913256298255094e/versioning/Alpha-v0.2.0-Alkimim/README.md",
+    "http_status": 200
+  },
+  "oal_commit_unchanged": "ce225141686d4b6b3e46923866c97d84c031903f",
+  "snapshot_checks": [
+    {
+      "source_path": "versioning/Stable-v1.0.0/README.md",
+      "bytes": 63838,
+      "sha256": "d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da"
+    },
+    {
+      "source_path": "versioning/Stable-v1.0.0/README.pt-br.md",
+      "bytes": 69716,
+      "sha256": "52e0f59f7f4ead7d9a94a924bc5b339196e4d1aa68c467b7200780b81a3cc1e9"
+    }
+  ],
+  "scope": "Current repository location only. Historical authored source URLs and frozen snapshots are preserved; source identities, normative bytes and runtime are unchanged.",
+  "full_tests_and_pdf_rendering_repeated": false,
+  "publication": "Local commit only; no push, tag or release.",
+  "checks": {
+    "skill_generated_files": 27,
+    "skill_check": "passed",
+    "local_links": {
+      "files": 52,
+      "local_targets": 693,
+      "fragments": 257,
+      "problems": [],
+      "scope": "Root, release guides, artwork, current edition Markdown/HTML links outside fenced examples; OAL .txt snapshots retain source-repository references."
+    },
+    "unchanged_paths_compared_with_previous_commit": [
+      "versioning/Alpha-v0.1.0",
+      "versioning/Stable-v1.0.0/translator",
+      "versioning/Stable-v1.0.0/implementations",
+      "versioning/Stable-v1.0.0/examples",
+      "versioning/Stable-v1.0.0/tests",
+      "scripts",
+      "versioning/Stable-v1.0.0/verification/oal/README.md.txt",
+      "versioning/Stable-v1.0.0/verification/oal/README.pt-br.md.txt",
+      "versioning/Stable-v1.0.0/verification/oal/LICENSE"
+    ],
+    "remaining_old_urls": "Historical Alpha, authored source provenance, legacy fixtures and URL-history evidence only.",
+    "git_diff_whitespace": "passed"
+  }
+}

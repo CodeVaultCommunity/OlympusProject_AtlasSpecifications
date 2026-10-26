@@ -32,7 +32,7 @@ The Stable edition defines the 1.0.0 contract. Its OAL baseline is pinned with t
 
 <p align="center"><img src="assets/atlas-model-en.png" alt="OAL L1, the Atlas abstract model, implementing models, representation profiles and concrete artifacts" width="900"></p>
 
-[OAL — Open Analysis Layers](https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers) defines responsibilities for reusable models at each development layer. Atlas uses **OAL Stable-v1.0.0** as its reference for **L1 · Use Case Specification**, making intended behavior explicit before selecting code organization and interaction mechanisms.
+[OAL — Open Analysis Layers](https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers) defines responsibilities for reusable models at each development layer. Atlas uses **OAL Stable-v1.0.0** as its reference for **L1 · Use Case Specification**, making intended behavior explicit before selecting code organization and interaction mechanisms.
 
 The diagram distinguishes the OAL metamodel, the Atlas abstract model, models implementing that abstraction, and concrete project artifacts. A project specification can have several file representations without becoming several models. An implementing model declares how it preserves Atlas concepts and invariants.
 

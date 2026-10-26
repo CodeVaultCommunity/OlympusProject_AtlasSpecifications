@@ -534,7 +534,7 @@ A revisão semântica ainda deve avaliar objetivos/escopo, origens das afirmaç�
 | Item | Referência fixada |
 | --- | --- |
 | Edição OAL | **Stable-v1.0.0** |
-| Repositório | [OAL — Open Analysis Layers](https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers) |
+| Repositório | [OAL — Open Analysis Layers](https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers) |
 | Commit | `ce225141686d4b6b3e46923866c97d84c031903f` |
 | Fonte normativa | `versioning/Stable-v1.0.0/README.md`, [snapshot dos bytes recebidos](verification/oal/README.md.txt) |
 | SHA-256 | `d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da` |

@@ -648,7 +648,7 @@ Semantic review must still assess objectives/scope, claim origins, actor context
 | Item | Pinned reference |
 | --- | --- |
 | OAL edition | **Stable-v1.0.0** |
-| Repository | [OAL — Open Analysis Layers](https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers) |
+| Repository | [OAL — Open Analysis Layers](https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers) |
 | Commit | `ce225141686d4b6b3e46923866c97d84c031903f` |
 | Normative source | `versioning/Stable-v1.0.0/README.md`, snapshot of received bytes (edition source: `verification/oal/README.md.txt`) |
 | SHA-256 | `d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da` |

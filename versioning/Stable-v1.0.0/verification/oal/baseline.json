@@ -1,5 +1,5 @@
 {
-  "repository": "https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers",
+  "repository": "https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers",
   "commit": "ce225141686d4b6b3e46923866c97d84c031903f",
   "local_checkout": "E:\\Alkimim\\Projetos\\CodeVault\\OAL",
   "base_commit": "5755a4e4a5b31a9614da5d409d03d1db9cf1e20c",
@@ -95,6 +95,16 @@
       "previous_stable_commit": "a02bf8eecf222e7e0a7a34977fff49a25b5af6aa",
       "commit": "bdea8a4269e2788f25b68d2925c125d7e62c04ed",
       "tree": "5baee0a40771711981397ff332532d4d54e798fe"
+    }
+  ],
+  "repository_url_history": [
+    {
+      "date": "2026-10-26",
+      "previous_url": "https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers",
+      "current_url": "https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers",
+      "reason": "Repository renamed by its owner; current repository location updated without changing the pinned OAL commit or snapshot bytes.",
+      "pinned_commit_unchanged": true,
+      "historical_source_urls": "Retained as authored provenance. The old ced9645 source URL was checked and redirects with HTTP 200 to the same commit/path in the renamed repository."
     }
   ]
 }

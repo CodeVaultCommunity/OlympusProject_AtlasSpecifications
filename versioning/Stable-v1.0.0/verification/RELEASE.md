@@ -8,9 +8,17 @@ Model/profile `Stable-v1.0.0`, package `atlas-spec` 1.0.0. The separate working 
 
 Modelo/perfil e pacote mantêm suas identidades. A branch separada foi integrada e removida localmente antes desta rodada. Não houve push, tag, release ou alteração do Todoist.
 
-## Current local release preparation / Preparação local atual
+## OAL repository URL update / Atualização do endereço OAL
 
-The [current execution record](evidence/local-release-checks.json) reports **253 tests on each of Python 3.11.15 and 3.12.14**: 220 edition tests plus 33 repository distribution tests. The previous nine inventory regressions moved from the edition into the root suite and retain ordering/mutation coverage; additional cases cover full Alpha/evidence/CI inclusion, malformed metadata, ZIP duplicates/prefixes/symlinks, clean extraction without Git or cache creation, indexed additions/deletions and real committed-archive creation. [Python 3.11 log](evidence/local-release-tests311.txt), [Python 3.12 log](evidence/local-release-tests312.txt).
+The [current OAL repository](https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers) replaces its former address in current root/edition documentation, baseline metadata and generated skill references. [Scoped evidence](evidence/oal-repository-url-update.json) records the repository and historical-source redirect checks, unchanged snapshot hashes and affected-file verification. The root inventory and final ZIP are regenerated. The OAL pin remains `ce225141686d4b6b3e46923866c97d84c031903f`.
+
+Only documentation and location metadata changed after Atlas `4160eb23c853df9629e30ad32c5421eab433dcef`. Its 253-test runs remain prior implementation evidence; full tests and PDF rendering were not repeated for this URL-only change. Runtime, examples, historical revisions, fixtures, PDFs and normative snapshots retain their bytes. Current skill consistency, local links, inventory and archive/extraction checks are repeated; final package identities are in the external receipt.
+
+A renomeação atualiza os links atuais e os hashes dos arquivos afetados, sem alterar o contrato nem os bytes normativos. URLs autorais históricas foram preservadas; o link antigo com commit fixado continua acessível por redirecionamento. Entrega somente local, sem push, tag ou release.
+
+## Local preparation at 4160eb2 / Preparação local em 4160eb2
+
+The [execution record for that preparation](evidence/local-release-checks.json) reports **253 tests on each of Python 3.11.15 and 3.12.14**: 220 edition tests plus 33 repository distribution tests. The previous nine inventory regressions moved from the edition into the root suite and retain ordering/mutation coverage; additional cases cover full Alpha/evidence/CI inclusion, malformed metadata, ZIP duplicates/prefixes/symlinks, clean extraction without Git or cache creation, indexed additions/deletions and real committed-archive creation. [Python 3.11 log](evidence/local-release-tests311.txt), [Python 3.12 log](evidence/local-release-tests312.txt).
 
 The single root `CONTENT-SHA256.json` replaces the active per-edition `release-inputs.json` and its capture helper. It covers every indexed delivery file except itself, including this report and all completed evidence. Repository checks and packaging now live in `scripts/`; the OAL schema pattern is adapted with `atlas_edition` from `CITATION.cff`. Generation uses actual bytes and deterministic POSIX path order; checking accepts equivalent record order while rejecting duplicates and real content changes. Final inventory/ZIP identities and complete archive/extraction verification are recorded externally to avoid circular hashes.
 

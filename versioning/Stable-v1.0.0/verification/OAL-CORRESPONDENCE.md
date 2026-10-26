@@ -4,6 +4,10 @@ Document-level clause comparison, separate from stakeholder approval and applica
 
 ## Exact input / Entrada exata
 
+The repository's current address is [OAL_OpenAnalysisLayers](https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers). The 2026-10-26 rename changes its location, not the pinned commit or normative snapshot bytes. Historical authored source URLs remain intact; the old `ced9645` source link was verified to redirect to the same commit/path with HTTP 200. [URL update evidence](evidence/oal-repository-url-update.json).
+
+O endereço atual do repositório foi atualizado após a renomeação. Commit, snapshots e hashes normativos permanecem iguais. As URLs históricas de proveniência continuam preservadas e o link antigo com commit fixado redireciona para o mesmo conteúdo.
+
 The [baseline record](oal/baseline.json) identifies local commit `ce225141686d4b6b3e46923866c97d84c031903f`, a verified canonical archive and accessible local Git tree and byte-exact EN/PT snapshots. Normative source: `versioning/Stable-v1.0.0/README.md`; SHA-256 `d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da`. The [English snapshot](oal/README.md.txt) is the authority; [Portuguese](oal/README.pt-br.md.txt) is the translation. Original license is retained. Remote availability of this commit was not asserted or required.
 
 O registro identifica commit local, checkout limpo e snapshots exatos EN/PT. O snapshot inglês é normativo e o português é tradução; a licença original foi preservada. Não se afirma disponibilidade pública do commit.

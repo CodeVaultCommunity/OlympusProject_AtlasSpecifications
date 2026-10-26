@@ -48,13 +48,13 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 13744,
-      "sha256": "50ebe8ea4a68a6171292d1f8eb32a9d702bd7d3d0e700ad8eb79f92fb810674f"
+      "size_bytes": 13742,
+      "sha256": "18ede43f6e04eb37c89294c96754d652bb5767097a1e48b607ab966f349039ed"
     },
     {
       "path": "README.pt-br.md",
-      "size_bytes": 14384,
-      "sha256": "bc7928cf50bbf7e85982d584e0ea3a11d058c6a7c2be04210d827ab03a43d72a"
+      "size_bytes": 14382,
+      "sha256": "104c36659bb78ebf7f2f431603b266893252936c28af8f91f137d4882c10dd3c"
     },
     {
       "path": "assets/README.md",
@@ -723,13 +723,13 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/README.md",
-      "size_bytes": 72152,
-      "sha256": "bddcf0720ec65b53b951cd52e7c8515adc04e798acfc621b5cb48b48e8cfff5b"
+      "size_bytes": 72150,
+      "sha256": "b06bfc70b65ce567cc7d03ab281c1c13529ef5eaa0e96037c19ca64aa36b10a1"
     },
     {
       "path": "versioning/Stable-v1.0.0/README.pt-br.md",
-      "size_bytes": 65815,
-      "sha256": "afe829edfe13c70930b330d14706180eaab1f278ee6a4fd807307ce9d9ab1b0b"
+      "size_bytes": 65813,
+      "sha256": "22d1695d0c723eb516b35d3afe4e92ea637977b885b6c64b4f80be593026fb6e"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/README.md",
@@ -988,8 +988,8 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/atlas-specification.md",
-      "size_bytes": 72615,
-      "sha256": "67365e29891e6ce8ac7be5f6086b056d1ae8e9e2ec257c7a191fdc2fd29df447"
+      "size_bytes": 72613,
+      "sha256": "c8f44f738936c3c51cf1503b64e9bbf93e08d9f2c877967f3007fca7ceeb6051"
     },
     {
       "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/compatibility.md",
@@ -1094,7 +1094,7 @@
     {
       "path": "versioning/Stable-v1.0.0/skills/atlas-specs/source-map.json",
       "size_bytes": 8215,
-      "sha256": "d7748dab0f3a9485f8c11f18c3fc8fb51f0331d77910e4fa7d796fb94c6603b6"
+      "sha256": "326804afb47dfed941f2593ef3c4491997fc8c4d554ea6adb500d8e6656c8e36"
     },
     {
       "path": "versioning/Stable-v1.0.0/skills/build.py",
@@ -1278,18 +1278,18 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/OAL-CORRESPONDENCE.md",
-      "size_bytes": 8179,
-      "sha256": "67e19ae6fad9aadd3091d4de0d0365c608b903706cb504355b00fe014d457f50"
+      "size_bytes": 8862,
+      "sha256": "f9677cb608bc8b3ca33fb16b50439da74a66ada706ff0cfe97c81672ef3882b7"
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/RELEASE-DESCRIPTION.md",
-      "size_bytes": 1941,
-      "sha256": "c72d13b0a17c5190903d9373f9255d029f32e7881a1b33fbff13a7cd8758bf72"
+      "size_bytes": 2461,
+      "sha256": "07e801386e57e472609d8fcb96a6ebf1e37404f49acc7bd8688ef63dc4b076bf"
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/RELEASE.md",
-      "size_bytes": 24465,
-      "sha256": "92e0ba2f806a0841b7fa759a68983e6ada3603994f9d95dc67a9d9b633bd8f3c"
+      "size_bytes": 25818,
+      "sha256": "67b63ee5f12b70397d354f1713a0981ab90f0cb893472a03324ebcff60561605"
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/SEMANTIC-REVIEW.md",
@@ -1537,6 +1537,11 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "versioning/Stable-v1.0.0/verification/evidence/oal-repository-url-update.json",
+      "size_bytes": 2570,
+      "sha256": "fc7a9d81891c9d899694aca56b445c1eb68c9d1f90c7c98664d309176e634db7"
+    },
+    {
       "path": "versioning/Stable-v1.0.0/verification/evidence/regressions-before.txt",
       "size_bytes": 49845,
       "sha256": "60ba5f1ce6fc142108430c21c82b5eb92d097e4c4a93fd9ab3d689cce32ff5e6"
@@ -1613,8 +1618,8 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/oal/baseline.json",
-      "size_bytes": 5278,
-      "sha256": "5ec9f8b3db95c156b2b2a8d3b8e0020ad1d5ac8ff9c8164d6c4daa298f956aa3"
+      "size_bytes": 5894,
+      "sha256": "b9f855634bdf43305426b1b9a933bba6633d632dc881493da7be735eb2014e4b"
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/reference-inventory.md",
