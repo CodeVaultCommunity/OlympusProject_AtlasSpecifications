@@ -160,7 +160,7 @@ def main() -> int:
             registry.convert_file(paths["json"], paths[fmt], source_format="json", target_format=fmt, resource_root=resource_root)
         print(f"Built {label} Markdown and LaTeX from JSON")
     source = EDITION / "examples/task-board/example.atlas.json"
-    (source.parent / "traceability.md").write_text(traceability(json.loads(source.read_text(encoding="utf-8"))), encoding="utf-8")
+    (source.parent / "traceability.md").write_text(traceability(json.loads(source.read_text(encoding="utf-8"))), encoding="utf-8", newline="\n")
     if args.pdf:
         compile_pdfs(args.pdflatex, args.keep_intermediates)
     return 0

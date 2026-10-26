@@ -34,8 +34,30 @@ def inputs():
                 continue
             paths.append(path)
     paths += [p for p in ROOT.iterdir() if p.is_file()]
-    return [{"path": p.relative_to(ROOT).as_posix(), "bytes": p.stat().st_size,
-             "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(paths)]
+    records = [{"path": p.relative_to(ROOT).as_posix(), "bytes": p.stat().st_size,
+                "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in paths]
+    return sorted(records, key=lambda record: record["path"])
+
+
+def compare(expected, actual):
+    """Return actionable differences, rejecting duplicates before indexing."""
+    def index(records, label):
+        result = {}
+        for record in records:
+            path = record["path"]
+            if path in result:
+                raise SystemExit(f"duplicate path in {label}: {path}")
+            result[path] = record
+        return result
+
+    before, after = index(expected, "manifest"), index(actual, "inventory")
+    differences = [f"missing: {p}" for p in sorted(before.keys() - after.keys())]
+    differences += [f"added: {p}" for p in sorted(after.keys() - before.keys())]
+    for path in sorted(before.keys() & after.keys()):
+        for field, label in (("bytes", "size"), ("sha256", "hash")):
+            if before[path][field] != after[path][field]:
+                differences.append(f"{label} differs: {path}")
+    return differences
 
 
 def main():
@@ -45,8 +67,9 @@ def main():
     actual = inputs()
     if args.check:
         expected = json.loads(OUTPUT.read_text(encoding="utf-8"))["files"]
-        if expected != actual:
-            raise SystemExit("Release inputs changed: rerun affected checks and recapture before updating the report.")
+        differences = compare(expected, actual)
+        if differences:
+            raise SystemExit("Release inputs changed:\n" + "\n".join(differences))
         print(f"Verified {len(actual)} release inputs")
     else:
         manifest = {

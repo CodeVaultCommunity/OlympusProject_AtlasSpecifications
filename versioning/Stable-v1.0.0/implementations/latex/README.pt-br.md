@@ -230,3 +230,9 @@ O tradutor não compila PDFs. Compilar e revisar páginas renderizadas são etap
 - Os exemplos usam caracteres compatíveis com pdfLaTeX; XeLaTeX/LuaLaTeX podem ser necessários para outros sistemas de escrita.
 
 Arquivos completos: [documento inicial](starter.atlas.tex), [solicitação mínima](../../examples/minimal/example.atlas.tex) e [composição](../../examples/composition/example.atlas.tex). Os PDFs compilados ficam junto dos exemplos.
+
+## Publicação compacta e compatibilidade
+
+O padrão aplica tabelas quebráveis de metadados e catálogos, com cabeçalhos repetidos visualmente. Registros longos usam detalhes de largura completa; linhas excessivas de tabelas autorais usam blocos quebráveis por célula. Cada slot continua ocorrendo uma única vez no fonte. Seções principais começam nova página após a primeira; títulos reservam espaço para conteúdo. A capa e os temas editorial/plain continuam disponíveis.
+
+As figuras seguem `owner` e `flow`/`flows`, junto da validação ou caso dono, uma única vez; o apêndice conserva nós/arestas autoritativos e índices com links. O renderizador compacto usa rótulos de 9,5 pt e chaves de 8,5 pt antes da eventual escala; os exemplos cabem sem escala. Grafos excepcionalmente grandes ainda exigem revisão visual. A decodificação reconhece exatamente os renderizadores Stable legado e atual, sem aceitar TikZ arbitrário ou desativar a detecção de adulteração.

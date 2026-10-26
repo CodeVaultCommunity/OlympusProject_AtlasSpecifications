@@ -31,35 +31,18 @@ Minimal request register
 A complete small Atlas instance with one entity, validation, tool, case, requirement set, and web boundary.
 \end{atlastext}
 \AtlasEndCover
-\AtlasMetaLine{Document}{\texttt{ATLAS-\allowbreak{}EX-\allowbreak{}MINIMAL}}
-\AtlasMetaLine{Revision}{\texttt{2}}
-\AtlasMetaLine{Status}{\texttt{draft}}
-\AtlasMetaLine{Language}{\texttt{en}}
-\AtlasMetaLine{Atlas version}{\texttt{Stable-\allowbreak{}v1.\allowbreak{}0.\allowbreak{}0}}
-\AtlasMetaLine{Profile version}{\texttt{Stable-\allowbreak{}v1.\allowbreak{}0.\allowbreak{}0}}
-\AtlasMetaLine{Translator}{\texttt{1.\allowbreak{}0.\allowbreak{}0}}
-\AtlasMetaLine{Created}{\texttt{2026-\allowbreak{}10-\allowbreak{}25}}
-\AtlasMetaLine{Updated}{\texttt{2026-\allowbreak{}10-\allowbreak{}25}}
-\AtlasLabel{Authors}
-\begin{atlasitem}{T000002}
-Douglas de Oliveira Alkimim
-\end{atlasitem}
-\begin{atlastext}{T000003}
-Specification author
-\end{atlastext}
-\AtlasLabel{Keywords}
-\begin{atlasitem}{T000005}
-minimal
-\end{atlasitem}
-\begin{atlasitem}{T000006}
-request
-\end{atlasitem}
-\begin{atlasitem}{T000007}
-validation
-\end{atlasitem}
-\begin{atlasitem}{T000008}
-boundary
-\end{atlasitem}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Document} & \texttt{ATLAS-\allowbreak{}EX-\allowbreak{}MINIMAL} & \textcolor{AtlasMuted}{Revision} & \texttt{2}\\
+\textcolor{AtlasMuted}{Status} & \texttt{draft} & \textcolor{AtlasMuted}{Language} & \texttt{en}\\
+\textcolor{AtlasMuted}{Atlas version} & \texttt{Stable-\allowbreak{}v1.\allowbreak{}0.\allowbreak{}0} & \textcolor{AtlasMuted}{Profile version} & \texttt{Stable-\allowbreak{}v1.\allowbreak{}0.\allowbreak{}0}\\
+\textcolor{AtlasMuted}{Translator} & \texttt{1.\allowbreak{}0.\allowbreak{}0} & \textcolor{AtlasMuted}{Created} & \texttt{2026-\allowbreak{}10-\allowbreak{}25}\\
+\textcolor{AtlasMuted}{Updated} & \texttt{2026-\allowbreak{}10-\allowbreak{}25} &  & \\
+\end{AtlasMetaTable}
+\par\Needspace{10\baselineskip}\AtlasLabel{Authors}
+\begin{AtlasCatalog}
+\AtlasCell{T000002}{Douglas de Oliveira Alkimim} &  & Role: \AtlasCell{T000003}{Specification author}\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\AtlasMetaLine{Keywords}{\AtlasCell{T000005}{minimal}; \AtlasCell{T000006}{request}; \AtlasCell{T000007}{validation}; \AtlasCell{T000008}{boundary}}
 \begin{atlasheading}{T000009}{2}
 Context, actors, and scope
 \end{atlasheading}
@@ -75,37 +58,25 @@ The tool is deliberately abstract: it states a persistence contract without choo
 \begin{atlasparagraph}{T000013}
 This is a synthetic specification example. Source SRC-REQUEST-BRIEF is a teaching baseline, not evidence of stakeholder approval or a claimed Needs-to-L1 derivation.
 \end{atlasparagraph}
-\AtlasSubheading{ACTOR \texttt{ACT-REQUESTER}}
-\AtlasLabel{Name}
-\begin{atlastext}{T000022}
-Requester
-\end{atlastext}
-\AtlasMetaLine{Kind}{person}
-\AtlasLabel{Description}
-\begin{atlasparagraph}{T000023}
-A person who submits a request to the register.
-\end{atlasparagraph}
-\AtlasSubheading{TERM \texttt{VOC-REQUEST-CODE}}
-\AtlasLabel{Term}
-\begin{atlastext}{T000024}
-Request code
-\end{atlastext}
-\AtlasLabel{Definition}
-\begin{atlasparagraph}{T000025}
-The exact text identifier of a retained request.
-\end{atlasparagraph}
-\AtlasMetaLine{Synonyms}{none}
+\par\Needspace{10\baselineskip}\AtlasLabel{Actor}
+\begin{AtlasCatalog}
+\hypertarget{ACT-REQUESTER}{}ACT-\allowbreak{}REQUESTER\newline{}\AtlasCell{T000022}{Requester} &  & Kind: person\newline{}Description: \AtlasCell{T000023}{A person who submits a request to the register.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\par\Needspace{10\baselineskip}\AtlasLabel{Term}
+\begin{AtlasCatalog}
+\hypertarget{VOC-REQUEST-CODE}{}VOC-\allowbreak{}REQUEST-\allowbreak{}CODE\newline{}\AtlasCell{T000024}{Request code} &  & Definition: \AtlasCell{T000025}{The exact text identifier of a retained request.}\newline{}Synonyms: none\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\AtlasSectionBreak
 \begin{atlasheading}{T000014}{2}
 Entities and validations
 \end{atlasheading}
 \begin{atlasparagraph}{T000015}
 The entity holds request data and defines validity; it has no collaborators.
 \end{atlasparagraph}
-\AtlasSubheading{ENTITY \texttt{ENT-REQUEST}}
-\AtlasLabel{Name}
-\begin{atlastext}{T000026}
-Request
-\end{atlastext}
+\par\Needspace{8\baselineskip}\hypertarget{ENT-REQUEST}{}\AtlasSubheading{ENTITY \texttt{ENT-REQUEST}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Name} & \AtlasCell{T000026}{Request} &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Meaning}
 \begin{atlasparagraph}{T000027}
 A request asks the register to retain a quantity of a catalog code. The request is identified by its code.
@@ -116,166 +87,146 @@ A request asks the register to retain a quantity of a catalog code. The request 
 Two requests are the same when their codes are equal.
 \end{atlasparagraph}
 \AtlasMetaLine{Fields}{FLD-\allowbreak{}REQUEST-\allowbreak{}CODE}
-\AtlasLabel{Fields}
-\AtlasSubheading{\texttt{FLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
-\AtlasLabel{Name}
-\begin{atlastext}{T000029}
-Request code
-\end{atlastext}
-\AtlasMetaLine{Type}{text}
-\AtlasMetaLine{Cardinality}{1}
-\AtlasMetaLine{Required}{true}
-\AtlasLabel{Description}
-\begin{atlasparagraph}{T000030}
-A non-empty code chosen by the requester.
-\end{atlasparagraph}
-\AtlasLabel{Constraints}
-\begin{atlasparagraph}{T000031}
-The code is preserved exactly; case is significant.
-\end{atlasparagraph}
-\AtlasLabel{Examples}
-\AtlasLabel{Valid}
-\begin{atlasitem}{T000032}
-REQ-001
-\end{atlasitem}
-\begin{atlasitem}{T000033}
-req-001
-\end{atlasitem}
-\AtlasLabel{Invalid}
-\begin{atlasitem}{T000034}
-
-\end{atlasitem}
-\AtlasSubheading{\texttt{FLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}}
-\AtlasLabel{Name}
-\begin{atlastext}{T000035}
-Quantity
-\end{atlastext}
-\AtlasMetaLine{Type}{integer}
-\AtlasMetaLine{Cardinality}{1}
-\AtlasMetaLine{Required}{true}
-\AtlasLabel{Description}
-\begin{atlasparagraph}{T000036}
-The number of units requested.
-\end{atlasparagraph}
-\AtlasLabel{Constraints}
-\begin{atlasparagraph}{T000037}
-The value must be an integer greater than or equal to 1.
-\end{atlasparagraph}
-\AtlasLabel{Examples}
-\AtlasLabel{Valid}
-\begin{atlasitem}{T000038}
-1
-\end{atlasitem}
-\begin{atlasitem}{T000039}
-2
-\end{atlasitem}
-\AtlasLabel{Invalid}
-\begin{atlasitem}{T000040}
-0
-\end{atlasitem}
-\begin{atlasitem}{T000041}
-1.5
-\end{atlasitem}
+\par\Needspace{10\baselineskip}\AtlasLabel{Fields}
+\begin{AtlasCatalog}
+\hypertarget{FLD-REQUEST-CODE}{}FLD-\allowbreak{}REQUEST-\allowbreak{}CODE\newline{}\AtlasCell{T000029}{Request code} & Type: text\newline{}Cardinality: 1\newline{}Required: true & Description: \AtlasCell{T000030}{A non-empty code chosen by the requester.}\newline{}Constraints: \AtlasCell{T000031}{The code is preserved exactly; case is significant.}\newline{}Examples: Valid: \AtlasCell{T000032}{REQ-001}; \AtlasCell{T000033}{req-001}; Invalid: \AtlasCell{T000034}{}\\\addlinespace[.35em]
+\hypertarget{FLD-REQUEST-QUANTITY}{}FLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY\newline{}\AtlasCell{T000035}{Quantity} & Type: integer\newline{}Cardinality: 1\newline{}Required: true & Description: \AtlasCell{T000036}{The number of units requested.}\newline{}Constraints: \AtlasCell{T000037}{The value must be an integer greater than or equal to 1.}\newline{}Examples: Valid: \AtlasCell{T000038}{1}; \AtlasCell{T000039}{2}; Invalid: \AtlasCell{T000040}{0}; \AtlasCell{T000041}{1.5}\\\addlinespace[.35em]
+\end{AtlasCatalog}
 \AtlasMetaLine{Relationships}{none}
 \AtlasMetaLine{States}{none}
 \AtlasMetaLine{Transitions}{none}
-\AtlasLabel{Validations}
-\AtlasSubheading{\texttt{VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}}
-\AtlasLabel{Name}
-\begin{atlastext}{T000042}
-Quantity is a positive integer
-\end{atlastext}
-\AtlasMetaLine{Scope}{field}
+\par\Needspace{12\baselineskip}\AtlasLabel{Validations}
+\par\Needspace{8\baselineskip}\hypertarget{VLD-REQUEST-QUANTITY}{}\AtlasSubheading{\texttt{VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Name} & \AtlasCell{T000042}{Quantity is a positive integer} & \textcolor{AtlasMuted}{Scope} & field\\
+\end{AtlasMetaTable}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000043}
 The quantity field is valid when its value is an integer greater than or equal to 1.
 \end{atlasparagraph}
-\AtlasLabel{Inputs}
-\AtlasLabel{Name}
-\begin{atlastext}{T000044}
-Quantity
-\end{atlastext}
-\AtlasMetaLine{Source}{field}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000045}
-The value supplied for FLD-REQUEST-QUANTITY.
-\end{atlasparagraph}
-\AtlasLabel{Conditions}
-\AtlasSubheading{\texttt{C-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}INT}}
-\AtlasLabel{Condition}
-\begin{atlastext}{T000046}
-The value is an integer.
-\end{atlastext}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000047}
-A fractional or textual value fails this condition.
-\end{atlasparagraph}
-\AtlasSubheading{\texttt{C-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN}}
-\AtlasLabel{Condition}
-\begin{atlastext}{T000048}
-The value is at least 1.
-\end{atlastext}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000049}
-Zero and negative values fail this condition.
-\end{atlasparagraph}
-\AtlasLabel{Results}
-\AtlasMetaLine{Outcome}{pass}
-\AtlasLabel{Description}
-\begin{atlasparagraph}{T000050}
-Both conditions hold; the field accepts the value.
-\end{atlasparagraph}
-\AtlasMetaLine{Outcome}{fail}
-\AtlasLabel{Description}
-\begin{atlasparagraph}{T000051}
-At least one condition fails; the field rejects the value.
-\end{atlasparagraph}
-\AtlasMetaLine{Flow}{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}
-\AtlasSubheading{\texttt{VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
-\AtlasLabel{Name}
-\begin{atlastext}{T000052}
-Request code is non-empty text
-\end{atlastext}
-\AtlasMetaLine{Scope}{field}
+\par\Needspace{10\baselineskip}\AtlasLabel{Inputs}
+\begin{AtlasCatalog}
+\AtlasCell{T000044}{Quantity} & Source: field & Meaning: \AtlasCell{T000045}{The value supplied for FLD-REQUEST-QUANTITY.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\par\Needspace{10\baselineskip}\AtlasLabel{Conditions}
+\begin{AtlasCatalog}
+\hypertarget{C-VLD-REQ-INT}{}C-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}INT\newline{}\AtlasCell{T000046}{The value is an integer.} &  & Meaning: \AtlasCell{T000047}{A fractional or textual value fails this condition.}\\\addlinespace[.35em]
+\hypertarget{C-VLD-REQ-MIN}{}C-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN\newline{}\AtlasCell{T000048}{The value is at least 1.} &  & Meaning: \AtlasCell{T000049}{Zero and negative values fail this condition.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\par\Needspace{10\baselineskip}\AtlasLabel{Results}
+\begin{AtlasCatalog}
+ & Outcome: pass & Description: \AtlasCell{T000050}{Both conditions hold; the field accepts the value.}\\\addlinespace[.35em]
+ & Outcome: fail & Description: \AtlasCell{T000051}{At least one condition fails; the field rejects the value.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Flow} & GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY &  & \\
+\end{AtlasMetaTable}
+% atlas:tikz:begin id=TIKZ-GRAPH-VLD-REQUEST-QUANTITY
+\sbox{\AtlasGraphBox}{%
+\scalebox{1.0000}{%
+\begin{tikzpicture}[
+  >=Stealth, line width=0.65pt, draw=black!65,
+  box/.style={draw, rounded corners=3pt, fill=blue!4, align=center, text width=2.6cm, minimum height=1.0cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont},
+  decision/.style={draw, diamond, aspect=1.7, fill=orange!8, align=center, text width=2.0cm, inner sep=3pt, font=\fontsize{9.5}{11}\selectfont},
+  terminal/.style={draw, rounded corners=9pt, fill=blue!8, align=center, text width=2.8cm, minimum height=1.0cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont\bfseries},
+  state/.style={draw, ellipse, fill=blue!4, align=center, text width=2.6cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont},
+  note/.style={draw, dashed, fill=black!3, align=center, text width=2.6cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont\itshape},
+  edgekey/.style={fill=white, inner sep=1.5pt, font=\fontsize{8.5}{10}\selectfont\bfseries}
+]
+\node[terminal] (n0) at (0.00,0.00) {Start};
+\node[box] (n1) at (0.00,-1.45) {Read quantity};
+\node[decision] (n2) at (0.00,-3.25) {Integer?};
+\node[decision] (n3) at (-1.65,-5.40) {At least 1?};
+\node[terminal] (n4) at (-1.65,-7.25) {Valid};
+\node[terminal] (n5) at (1.65,-5.40) {Invalid: not\\an integer};
+\node[terminal] (n6) at (1.65,-7.25) {Invalid: less\\than 1};
+\draw[->] (n0.south) -- node[edgekey,pos=0.65]{E1} (n1.north);
+\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E2} (n2.north);
+\draw[->] (n2.south) -- node[edgekey,pos=0.65]{E3} (n5.north);
+\draw[->] (n2.south) -- node[edgekey,pos=0.65]{E4} (n3.north);
+\draw[->] (n3.south) -- node[edgekey,pos=0.65]{E5} (n6.north);
+\draw[->] (n3.south) -- node[edgekey,pos=0.65]{E6} (n4.north);
+\end{tikzpicture}%
+}}
+\Needspace{\dimexpr\ht\AtlasGraphBox+\dp\AtlasGraphBox+5.10cm\relax}
+\hypertarget{figure-GRAPH-VLD-REQUEST-QUANTITY}{}
+\noindent{\large\bfseries Quantity validation}\par
+\noindent{\small GRAPH-VLD-REQUEST-QUANTITY}\par
+\begin{center}\usebox{\AtlasGraphBox}\end{center}
+\begingroup\small\setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}
+\begin{longtable}{@{}p{.07\linewidth}p{.90\linewidth}@{}}
+\textbf{Key} & \textbf{Edge identity and label}\\\midrule\endhead
+\textbf{E1} & E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}1\\
+\textbf{E2} & E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}2\\
+\textbf{E3} & E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}3 --- no\\
+\textbf{E4} & E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}4 --- yes\\
+\textbf{E5} & E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}5 --- no\\
+\textbf{E6} & E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}6 --- yes\\
+\end{longtable}\endgroup
+% atlas:tikz:end id=TIKZ-GRAPH-VLD-REQUEST-QUANTITY
+\par\Needspace{8\baselineskip}\hypertarget{VLD-REQUEST-CODE}{}\AtlasSubheading{\texttt{VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Name} & \AtlasCell{T000052}{Request code is non-empty text} & \textcolor{AtlasMuted}{Scope} & field\\
+\end{AtlasMetaTable}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000053}
 The code must be text containing at least one character. Preserve the code exactly; case is significant.
 \end{atlasparagraph}
-\AtlasLabel{Inputs}
-\AtlasLabel{Name}
-\begin{atlastext}{T000054}
-Code
-\end{atlastext}
-\AtlasMetaLine{Source}{field}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000055}
-FLD-REQUEST-CODE candidate.
-\end{atlasparagraph}
-\AtlasLabel{Conditions}
-\AtlasSubheading{\texttt{C-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}NONEMPTY}}
-\AtlasLabel{Condition}
-\begin{atlastext}{T000056}
-The code is text with at least one character.
-\end{atlastext}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000057}
-An empty or non-text code fails.
-\end{atlasparagraph}
-\AtlasLabel{Results}
-\AtlasMetaLine{Outcome}{pass}
-\AtlasLabel{Description}
-\begin{atlasparagraph}{T000058}
-Accept unchanged.
-\end{atlasparagraph}
-\AtlasMetaLine{Outcome}{fail}
-\AtlasLabel{Description}
-\begin{atlasparagraph}{T000059}
-Refuse before persistence.
-\end{atlasparagraph}
-\AtlasMetaLine{Flow}{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}
-\AtlasLabel{Examples}
-\AtlasSubheading{\texttt{EX-\allowbreak{}REQUEST-\allowbreak{}VALID}}
-\AtlasMetaLine{Kind}{valid}
+\par\Needspace{10\baselineskip}\AtlasLabel{Inputs}
+\begin{AtlasCatalog}
+\AtlasCell{T000054}{Code} & Source: field & Meaning: \AtlasCell{T000055}{FLD-REQUEST-CODE candidate.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\par\Needspace{10\baselineskip}\AtlasLabel{Conditions}
+\begin{AtlasCatalog}
+\hypertarget{C-VLD-REQ-CODE-NONEMPTY}{}C-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}NONEMPTY\newline{}\AtlasCell{T000056}{The code is text with at least one character.} &  & Meaning: \AtlasCell{T000057}{An empty or non-text code fails.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\par\Needspace{10\baselineskip}\AtlasLabel{Results}
+\begin{AtlasCatalog}
+ & Outcome: pass & Description: \AtlasCell{T000058}{Accept unchanged.}\\\addlinespace[.35em]
+ & Outcome: fail & Description: \AtlasCell{T000059}{Refuse before persistence.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Flow} & GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}CODE &  & \\
+\end{AtlasMetaTable}
+% atlas:tikz:begin id=TIKZ-GRAPH-VLD-REQUEST-CODE
+\sbox{\AtlasGraphBox}{%
+\scalebox{1.0000}{%
+\begin{tikzpicture}[
+  >=Stealth, line width=0.65pt, draw=black!65,
+  box/.style={draw, rounded corners=3pt, fill=blue!4, align=center, text width=2.6cm, minimum height=1.0cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont},
+  decision/.style={draw, diamond, aspect=1.7, fill=orange!8, align=center, text width=2.0cm, inner sep=3pt, font=\fontsize{9.5}{11}\selectfont},
+  terminal/.style={draw, rounded corners=9pt, fill=blue!8, align=center, text width=2.8cm, minimum height=1.0cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont\bfseries},
+  state/.style={draw, ellipse, fill=blue!4, align=center, text width=2.6cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont},
+  note/.style={draw, dashed, fill=black!3, align=center, text width=2.6cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont\itshape},
+  edgekey/.style={fill=white, inner sep=1.5pt, font=\fontsize{8.5}{10}\selectfont\bfseries}
+]
+\node[terminal] (n0) at (0.00,0.00) {Receive code};
+\node[decision] (n1) at (0.00,-1.80) {Non-empty text?};
+\node[terminal] (n2) at (-1.65,-3.60) {Pass unchanged};
+\node[terminal] (n3) at (1.65,-3.60) {Invalid code};
+\draw[->] (n0.south) -- node[edgekey,pos=0.65]{E1} (n1.north);
+\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E2} (n2.north);
+\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E3} (n3.north);
+\end{tikzpicture}%
+}}
+\Needspace{\dimexpr\ht\AtlasGraphBox+\dp\AtlasGraphBox+3.75cm\relax}
+\hypertarget{figure-GRAPH-VLD-REQUEST-CODE}{}
+\noindent{\large\bfseries Request code validity}\par
+\noindent{\small GRAPH-VLD-REQUEST-CODE}\par
+\begin{center}\usebox{\AtlasGraphBox}\end{center}
+\begingroup\small\setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}
+\begin{longtable}{@{}p{.07\linewidth}p{.90\linewidth}@{}}
+\textbf{Key} & \textbf{Edge identity and label}\\\midrule\endhead
+\textbf{E1} & E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}1\\
+\textbf{E2} & E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}2 --- yes\\
+\textbf{E3} & E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}3 --- no\\
+\end{longtable}\endgroup
+% atlas:tikz:end id=TIKZ-GRAPH-VLD-REQUEST-CODE
+\par\Needspace{12\baselineskip}\AtlasLabel{Examples}
+\par\Needspace{8\baselineskip}\hypertarget{EX-REQUEST-VALID}{}\AtlasSubheading{\texttt{EX-\allowbreak{}REQUEST-\allowbreak{}VALID}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Kind} & valid &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000060}
 A request with a non-empty code and a positive quantity.
@@ -289,8 +240,10 @@ A request with a non-empty code and a positive quantity.
 \noindent \}\par
 \end{quote}
 \end{minipage}\par
-\AtlasSubheading{\texttt{EX-\allowbreak{}REQUEST-\allowbreak{}INVALID}}
-\AtlasMetaLine{Kind}{invalid}
+\par\Needspace{8\baselineskip}\hypertarget{EX-REQUEST-INVALID}{}\AtlasSubheading{\texttt{EX-\allowbreak{}REQUEST-\allowbreak{}INVALID}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Kind} & invalid &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000061}
 A request whose quantity is zero.
@@ -306,52 +259,35 @@ A request whose quantity is zero.
 \end{minipage}\par
 \AtlasMetaLine{Assumptions}{ASM-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}UNIQUE}
 \AtlasMetaLine{Open issues}{OI-\allowbreak{}REQUEST-\allowbreak{}LATENCY}
+\AtlasSectionBreak
 \begin{atlasheading}{T000016}{2}
 Abstract tools
 \end{atlasheading}
 \begin{atlasparagraph}{T000017}
 The tool exposes a capability and a contract, not an implementation.
 \end{atlasparagraph}
-\AtlasSubheading{TOOL \texttt{TOL-REQUEST-STORE}}
-\AtlasLabel{Name}
-\begin{atlastext}{T000062}
-Request store
-\end{atlastext}
+\par\Needspace{8\baselineskip}\hypertarget{TOL-REQUEST-STORE}{}\AtlasSubheading{TOOL \texttt{TOL-REQUEST-STORE}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Name} & \AtlasCell{T000062}{Request store} &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Purpose}
 \begin{atlasparagraph}{T000063}
 Retain request records durably. The contract does not choose a database, transport, or file layout.
 \end{atlasparagraph}
-\AtlasLabel{Operations}
-\AtlasSubheading{\texttt{OP-\allowbreak{}REQUEST-\allowbreak{}STORE}}
-\AtlasLabel{Name}
-\begin{atlastext}{T000064}
-Store request
-\end{atlastext}
+\par\Needspace{12\baselineskip}\AtlasLabel{Operations}
+\par\Needspace{8\baselineskip}\hypertarget{OP-REQUEST-STORE}{}\AtlasSubheading{\texttt{OP-\allowbreak{}REQUEST-\allowbreak{}STORE}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Name} & \AtlasCell{T000064}{Store request} &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Purpose}
 \begin{atlasparagraph}{T000065}
 Create one retained request record when its code is unused.
 \end{atlasparagraph}
-\AtlasLabel{Inputs}
-\AtlasLabel{Name}
-\begin{atlastext}{T000066}
-Request code
-\end{atlastext}
-\AtlasMetaLine{Type}{text}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000067}
-The code to retain.
-\end{atlasparagraph}
-\AtlasMetaLine{Required}{true}
-\AtlasLabel{Name}
-\begin{atlastext}{T000068}
-Quantity
-\end{atlastext}
-\AtlasMetaLine{Type}{integer}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000069}
-An already validated positive integer.
-\end{atlasparagraph}
-\AtlasMetaLine{Required}{true}
+\par\Needspace{10\baselineskip}\AtlasLabel{Inputs}
+\begin{AtlasCatalog}
+\AtlasCell{T000066}{Request code} & Type: text\newline{}Required: true & Meaning: \AtlasCell{T000067}{The code to retain.}\\\addlinespace[.35em]
+\AtlasCell{T000068}{Quantity} & Type: integer\newline{}Required: true & Meaning: \AtlasCell{T000069}{An already validated positive integer.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
 \AtlasLabel{Conditions}
 \begin{atlasparagraph}{T000070}
 The code is not allocated to a retained request.
@@ -362,43 +298,19 @@ The store is available.
 \begin{atlasparagraph}{T000072}
 Inputs described as ready entities already satisfy canonical entity invariants. Do not duplicate those validations inside this tool. When constructing entities from raw retained records, use the canonical entity hydration rules; operation-specific external conditions remain this tool's responsibility.
 \end{atlasparagraph}
-\AtlasLabel{Results}
-\AtlasLabel{Name}
-\begin{atlastext}{T000073}
-Stored request
-\end{atlastext}
-\AtlasMetaLine{Type}{REQUEST}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000074}
-The retained request with its code and quantity.
-\end{atlasparagraph}
-\AtlasLabel{Guarantees}
-\begin{atlasparagraph}{T000075}
-After a successful result, the record is readable by code in the same retained store.
-\end{atlasparagraph}
+\par\Needspace{10\baselineskip}\AtlasLabel{Results}
+\begin{AtlasCatalog}
+\AtlasCell{T000073}{Stored request} & Type: REQUEST & Meaning: \AtlasCell{T000074}{The retained request with its code and quantity.}\newline{}Guarantees: \AtlasCell{T000075}{After a successful result, the record is readable by code in the same retained store.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
 \AtlasLabel{Effects}
 \begin{atlasparagraph}{T000076}
 One request record is added to the retained store.
 \end{atlasparagraph}
-\AtlasLabel{Failures}
-\AtlasMetaLine{Code}{DUPLICATE\_\allowbreak{}CODE}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000077}
-The code is already allocated.
-\end{atlasparagraph}
-\AtlasLabel{Consumer distinction}
-\begin{atlasparagraph}{T000078}
-The consumer must distinguish this from a successful store and from an unavailable store.
-\end{atlasparagraph}
-\AtlasMetaLine{Code}{STORE\_\allowbreak{}UNAVAILABLE}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000079}
-The store did not confirm the write.
-\end{atlasparagraph}
-\AtlasLabel{Consumer distinction}
-\begin{atlasparagraph}{T000080}
-Return write\AtlasCharUnderscore{}outcome=not\AtlasCharUnderscore{}applied only when the tool can guarantee no write; otherwise return write\AtlasCharUnderscore{}outcome=unknown. Neither outcome is confirmation. An unknown outcome must not trigger an automatic retry.
-\end{atlasparagraph}
+\par\Needspace{10\baselineskip}\AtlasLabel{Failures}
+\begin{AtlasCatalog}
+DUPLICATE\_\allowbreak{}CODE &  & Meaning: \AtlasCell{T000077}{The code is already allocated.}\newline{}Consumer distinction: \AtlasCell{T000078}{The consumer must distinguish this from a successful store and from an unavailable store.}\\\addlinespace[.35em]
+STORE\_\allowbreak{}UNAVAILABLE &  & Meaning: \AtlasCell{T000079}{The store did not confirm the write.}\newline{}Consumer distinction: \AtlasCell{T000080}{Return write\AtlasCharUnderscore{}outcome=not\AtlasCharUnderscore{}applied only when the tool can guarantee no write; otherwise return write\AtlasCharUnderscore{}outcome=unknown. Neither outcome is confirmation. An unknown outcome must not trigger an automatic retry.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
 \AtlasLabel{Guarantees}
 \begin{atlasparagraph}{T000081}
 A successful result confirms one retained record.
@@ -406,27 +318,25 @@ A successful result confirms one retained record.
 \begin{atlasparagraph}{T000082}
 A duplicate-code failure leaves the existing record unchanged.
 \end{atlasparagraph}
+\AtlasSectionBreak
 \begin{atlasheading}{T000018}{2}
 Use cases
 \end{atlasheading}
 \begin{atlasparagraph}{T000019}
 Functional and non-functional requirements are declared in the case.
 \end{atlasparagraph}
-\AtlasSubheading{USE CASE \texttt{UC-REQUEST-SUBMIT}}
-\AtlasLabel{Name}
-\begin{atlastext}{T000083}
-Submit request
-\end{atlastext}
+\par\Needspace{8\baselineskip}\hypertarget{UC-REQUEST-SUBMIT}{}\AtlasSubheading{USE CASE \texttt{UC-REQUEST-SUBMIT}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Name} & \AtlasCell{T000083}{Submit request} &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Objective}
 \begin{atlasparagraph}{T000084}
 Retain one valid request and confirm the stored record.
 \end{atlasparagraph}
 \AtlasLabel{Actors}
-\AtlasMetaLine{Actor}{ACT-\allowbreak{}REQUESTER}
-\AtlasLabel{Permission}
-\begin{atlastext}{T000085}
-Permitted to submit requests.
-\end{atlastext}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Actor} & ACT-\allowbreak{}REQUESTER & \textcolor{AtlasMuted}{Permission} & \AtlasCell{T000085}{Permitted to submit requests.}\\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000086}
 The requester supplies a code and quantity.
@@ -448,49 +358,38 @@ Caller context must contain a resolved authenticated principal, the relevant cas
 \begin{atlasparagraph}{T000091}
 The initiating actor is ACT-REQUESTER. The actor is a role; the caller is the concrete principal. The identity/authentication mechanism and channel encoding remain later design decisions.
 \end{atlasparagraph}
-\AtlasLabel{Inputs}
-\AtlasLabel{Name}
-\begin{atlastext}{T000092}
-Request code
-\end{atlastext}
-\AtlasMetaLine{Type}{text}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000093}
-The code that identifies the request.
-\end{atlasparagraph}
-\AtlasMetaLine{Required}{true}
-\AtlasLabel{Name}
-\begin{atlastext}{T000094}
-Quantity
-\end{atlastext}
-\AtlasMetaLine{Type}{integer}
-\AtlasLabel{Meaning}
-\begin{atlasparagraph}{T000095}
-The number of units requested.
-\end{atlasparagraph}
-\AtlasMetaLine{Required}{true}
+\par\Needspace{10\baselineskip}\AtlasLabel{Inputs}
+\begin{AtlasCatalog}
+\AtlasCell{T000092}{Request code} & Type: text\newline{}Required: true & Meaning: \AtlasCell{T000093}{The code that identifies the request.}\\\addlinespace[.35em]
+\AtlasCell{T000094}{Quantity} & Type: integer\newline{}Required: true & Meaning: \AtlasCell{T000095}{The number of units requested.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
 \AtlasLabel{Entry conditions}
 \begin{atlasparagraph}{T000096}
 Requests may arrive without valid caller context; the explicit denial path handles them before any collaborator is invoked.
 \end{atlasparagraph}
 \AtlasLabel{Entities}
-\AtlasMetaLine{Entity}{ENT-\allowbreak{}REQUEST}
-\AtlasMetaLine{Validations}{VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY, VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Entity} & ENT-\allowbreak{}REQUEST &  & \\
+\end{AtlasMetaTable}
+\AtlasMetaLine{Validations}{\hyperlink{VLD-REQUEST-QUANTITY}{VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}, \hyperlink{VLD-REQUEST-CODE}{VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
 \AtlasLabel{Purpose}
 \begin{atlasparagraph}{T000097}
 Hold the supplied code and quantity and validate the quantity.
 \end{atlasparagraph}
 \AtlasLabel{Tools}
-\AtlasMetaLine{Tool}{TOL-\allowbreak{}REQUEST-\allowbreak{}STORE}
-\AtlasMetaLine{Operation}{OP-\allowbreak{}REQUEST-\allowbreak{}STORE}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Tool} & TOL-\allowbreak{}REQUEST-\allowbreak{}STORE & \textcolor{AtlasMuted}{Operation} & OP-\allowbreak{}REQUEST-\allowbreak{}STORE\\
+\end{AtlasMetaTable}
 \AtlasLabel{Purpose}
 \begin{atlasparagraph}{T000098}
 Retain the request after validation succeeds.
 \end{atlasparagraph}
 \AtlasMetaLine{Calls}{none}
-\AtlasLabel{Outcomes}
-\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}CONFIRMED}}
-\AtlasMetaLine{Kind}{success}
+\par\Needspace{12\baselineskip}\AtlasLabel{Outcomes}
+\par\Needspace{8\baselineskip}\hypertarget{OUT-REQUEST-CONFIRMED}{}\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}CONFIRMED}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Kind} & success &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000099}
 The request is retained and confirmed.
@@ -499,8 +398,10 @@ The request is retained and confirmed.
 \begin{atlasparagraph}{T000100}
 One new request record exists in the store.
 \end{atlasparagraph}
-\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}INVALID}}
-\AtlasMetaLine{Kind}{refusal}
+\par\Needspace{8\baselineskip}\hypertarget{OUT-REQUEST-INVALID}{}\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}INVALID}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Kind} & refusal &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000101}
 The code or quantity is invalid; the request is refused.
@@ -509,8 +410,10 @@ The code or quantity is invalid; the request is refused.
 \begin{atlasparagraph}{T000102}
 No store call and no retained record.
 \end{atlasparagraph}
-\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}DENIED}}
-\AtlasMetaLine{Kind}{refusal}
+\par\Needspace{8\baselineskip}\hypertarget{OUT-REQUEST-DENIED}{}\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}DENIED}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Kind} & refusal &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000103}
 The actor is absent or not permitted.
@@ -519,8 +422,10 @@ The actor is absent or not permitted.
 \begin{atlasparagraph}{T000104}
 No validation, store call, or retained record.
 \end{atlasparagraph}
-\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}FAILURE}}
-\AtlasMetaLine{Kind}{failure}
+\par\Needspace{8\baselineskip}\hypertarget{OUT-REQUEST-STORE-FAILURE}{}\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}FAILURE}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Kind} & failure &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000105}
 The store reports that it is unavailable.
@@ -529,8 +434,10 @@ The store reports that it is unavailable.
 \begin{atlasparagraph}{T000106}
 No confirmed request is reported.
 \end{atlasparagraph}
-\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}DUPLICATE}}
-\AtlasMetaLine{Kind}{refusal}
+\par\Needspace{8\baselineskip}\hypertarget{OUT-REQUEST-DUPLICATE}{}\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}DUPLICATE}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Kind} & refusal &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000107}
 The request code is already retained.
@@ -539,32 +446,38 @@ The request code is already retained.
 \begin{atlasparagraph}{T000108}
 This invocation leaves the existing request unchanged.
 \end{atlasparagraph}
-\AtlasLabel{Functional requirements}
-\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}01}}
+\par\Needspace{12\baselineskip}\AtlasLabel{Functional requirements}
+\par\Needspace{8\baselineskip}\hypertarget{RF-REQUEST-01}{}\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}01}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000109}
 The case admits only an actor with the requester permission and refuses every other actor before any validation, store call, or effect.
 \end{atlasparagraph}
-\AtlasMetaLine{Scope}{case}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Scope} & case &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, INT-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
 \AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}PERM, N-\allowbreak{}REQ-\allowbreak{}DENY, E-\allowbreak{}REQ-\allowbreak{}2}
-\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}02}}
+\par\Needspace{8\baselineskip}\hypertarget{RF-REQUEST-02}{}\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}02}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000110}
 The case applies VLD-REQUEST-QUANTITY to the supplied quantity and, when the validation reports fail, refuses the request with the invalid-data outcome and no store call.
 \end{atlasparagraph}
-\AtlasMetaLine{Scope}{case}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Scope} & case &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, INT-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
 \AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}VALIDATE, N-\allowbreak{}REQ-\allowbreak{}QTYDEC, N-\allowbreak{}REQ-\allowbreak{}INVALID, E-\allowbreak{}REQ-\allowbreak{}4, E-\allowbreak{}REQ-\allowbreak{}5}
-\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}03}}
+\par\Needspace{8\baselineskip}\hypertarget{RF-REQUEST-03}{}\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}03}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000111}
 After a passing validation, the case calls OP-REQUEST-STORE with the code and quantity; a stored result produces the confirmation outcome.
 \end{atlasparagraph}
-\AtlasMetaLine{Scope}{operation}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Scope} & operation &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, OP-\allowbreak{}REQUEST-\allowbreak{}STORE}
 \AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}STORE, E-\allowbreak{}REQ-\allowbreak{}6, E-\allowbreak{}REQ-\allowbreak{}7}
-\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}04}}
+\par\Needspace{8\baselineskip}\hypertarget{RF-REQUEST-04}{}\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}04}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000112}
 When OP-REQUEST-STORE reports STORE\AtlasCharUnderscore{}UNAVAILABLE, the case reports the store-unavailable failure and does not claim a confirmed request.
@@ -572,36 +485,46 @@ When OP-REQUEST-STORE reports STORE\AtlasCharUnderscore{}UNAVAILABLE, the case r
 \begin{atlasparagraph}{T000113}
 Preserve whether the tool guarantees not\AtlasCharUnderscore{}applied or reports unknown. A lost confirmation is not evidence of no write; do not automatically retry.
 \end{atlasparagraph}
-\AtlasMetaLine{Scope}{operation}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Scope} & operation &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, OP-\allowbreak{}REQUEST-\allowbreak{}STORE}
 \AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}STOREERROR, E-\allowbreak{}REQ-\allowbreak{}8}
-\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}05}}
+\par\Needspace{8\baselineskip}\hypertarget{RF-REQUEST-05}{}\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}05}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000114}
 A confirmed request result contains the supplied code and quantity and identifies the new record.
 \end{atlasparagraph}
-\AtlasMetaLine{Scope}{interaction}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Scope} & interaction &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, INT-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
 \AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}SUCCESS, E-\allowbreak{}REQ-\allowbreak{}7}
-\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}06}}
+\par\Needspace{8\baselineskip}\hypertarget{RF-REQUEST-06}{}\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}06}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000115}
 When OP-REQUEST-STORE reports DUPLICATE\AtlasCharUnderscore{}CODE, refuse the duplicate and leave the existing request unchanged; do not report confirmation.
 \end{atlasparagraph}
-\AtlasMetaLine{Scope}{operation}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Scope} & operation &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, OP-\allowbreak{}REQUEST-\allowbreak{}STORE}
 \AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}DUPLICATE, E-\allowbreak{}REQ-\allowbreak{}DUPLICATE}
-\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}07}}
+\par\Needspace{8\baselineskip}\hypertarget{RF-REQUEST-07}{}\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}07}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000116}
 After authorization and before quantity validation, apply VLD-REQUEST-CODE. Refuse invalid code without storage; preserve valid code exactly.
 \end{atlasparagraph}
-\AtlasMetaLine{Scope}{case}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Scope} & case &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
 \AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}INVALID, N-\allowbreak{}REQ-\allowbreak{}CODE, N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID, E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}2, E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}3}
-\AtlasLabel{Nonfunctional requirements}
-\AtlasSubheading{\texttt{RNF-\allowbreak{}REQUEST-\allowbreak{}01}}
-\AtlasMetaLine{Scope}{interaction}
+\par\Needspace{12\baselineskip}\AtlasLabel{Nonfunctional requirements}
+\par\Needspace{8\baselineskip}\hypertarget{RNF-REQUEST-01}{}\AtlasSubheading{\texttt{RNF-\allowbreak{}REQUEST-\allowbreak{}01}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Scope} & interaction &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Applies to}{INT-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000117}
@@ -616,16 +539,10 @@ The elapsed time from the submit stimulus to the visible result is at most 2 sec
 Run 30 sequential submissions with valid and invalid quantities against the declared local configuration and record the result time for each.
 \end{atlasparagraph}
 \AtlasLabel{Metric}
-\AtlasLabel{Name}
-\begin{atlastext}{T000120}
-Visible result time
-\end{atlastext}
-\AtlasLabel{Unit}
-\begin{atlastext}{T000121}
-seconds
-\end{atlastext}
-\AtlasMetaLine{Target}{2}
-\AtlasMetaLine{Operator}{<=\allowbreak{}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Name} & \AtlasCell{T000120}{Visible result time} & \textcolor{AtlasMuted}{Unit} & \AtlasCell{T000121}{seconds}\\
+\textcolor{AtlasMuted}{Target} & 2 & \textcolor{AtlasMuted}{Operator} & <=\allowbreak{}\\
+\end{AtlasMetaTable}
 \AtlasLabel{Measurement}
 \AtlasLabel{Start}
 \begin{atlasparagraph}{T000122}
@@ -641,7 +558,9 @@ The result state is visible to the actor.
 Origin: SRC-REQUEST-BRIEF. This is a synthetic teaching obligation; any numeric target and scenario count are illustrative assumptions, not an accepted production SLA or a measurement made by this repository.
 \end{atlasparagraph}
 \AtlasLabel{Flows}
-\AtlasMetaLine{Main}{GRAPH-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Main} & GRAPH-\allowbreak{}REQUEST-\allowbreak{}SUBMIT &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Subflows}{none}
 \AtlasLabel{Flow text}
 \begin{atlasparagraph}{T000125}
@@ -659,86 +578,129 @@ On pass, call OP-REQUEST-STORE (RF-REQUEST-03). A stored result produces the con
 \begin{atlasparagraph}{T000129}
 DUPLICATE\AtlasCharUnderscore{}CODE is the duplicate refusal with no change to the preexisting request (RF-REQUEST-06). A write failure retains its known-not-applied versus unknown distinction (RF-REQUEST-04).
 \end{atlasparagraph}
-\AtlasLabel{Acceptance criteria}
-\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}01}}
+\par\Needspace{12\baselineskip}\AtlasLabel{Acceptance criteria}
+\par\Needspace{8\baselineskip}\hypertarget{AC-REQUEST-01}{}\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}01}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000130}
 A requester with a valid code and quantity of 2 receives a confirmed result; a later lookup of the code returns quantity 2.
 \end{atlasparagraph}
 \AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}02, RF-\allowbreak{}REQUEST-\allowbreak{}03, RF-\allowbreak{}REQUEST-\allowbreak{}05}
-\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}02}}
+\par\Needspace{8\baselineskip}\hypertarget{AC-REQUEST-02}{}\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}02}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000131}
 A quantity of 0 is refused as invalid data, and no record is created.
 \end{atlasparagraph}
 \AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
-\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}03}}
+\par\Needspace{8\baselineskip}\hypertarget{AC-REQUEST-03}{}\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}03}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000132}
 An actor absent from the permitted set is refused before validation or store access.
 \end{atlasparagraph}
 \AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}01}
-\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}04}}
+\par\Needspace{8\baselineskip}\hypertarget{AC-REQUEST-04}{}\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}04}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000133}
 Submit the same code twice. The second attempt reports duplicate-code refusal and preserves the first retained quantity.
 \end{atlasparagraph}
 \AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}06}
-\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}05}}
+\par\Needspace{8\baselineskip}\hypertarget{AC-REQUEST-05}{}\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}05}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000134}
 If a store write has an unknown final outcome, return the failure without claiming success or no write and without automatic retry.
 \end{atlasparagraph}
 \AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}04}
-\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}06}}
+\par\Needspace{8\baselineskip}\hypertarget{AC-REQUEST-06}{}\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}06}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000135}
 An empty code is refused before quantity validation and store invocation.
 \end{atlasparagraph}
 \AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}07}
-\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT-\allowbreak{}QUALITY}}
+\par\Needspace{8\baselineskip}\hypertarget{AC-REQUEST-SUBMIT-QUALITY}{}\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT-\allowbreak{}QUALITY}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000136}
 In the declared didactic configuration, demonstrate the canonical quality criterion and its stated verification procedure; preserve its status as a teaching assumption, not a measured production claim.
 \end{atlasparagraph}
 \AtlasMetaLine{Verifies}{RNF-\allowbreak{}REQUEST-\allowbreak{}01}
-\AtlasLabel{Traceability}
-\AtlasSubheading{\texttt{TRC-\allowbreak{}REQUEST-\allowbreak{}01}}
-\AtlasMetaLine{Source}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
-\AtlasMetaLine{Targets}{VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY, AC-\allowbreak{}REQUEST-\allowbreak{}02}
-\AtlasLabel{Note}
-\begin{atlasparagraph}{T000137}
-The case applies the entity validation and states the refusal.
-\end{atlasparagraph}
-\AtlasSubheading{\texttt{TRC-\allowbreak{}REQUEST-\allowbreak{}02}}
-\AtlasMetaLine{Source}{RF-\allowbreak{}REQUEST-\allowbreak{}03}
-\AtlasMetaLine{Targets}{OP-\allowbreak{}REQUEST-\allowbreak{}STORE, AC-\allowbreak{}REQUEST-\allowbreak{}01}
-\AtlasLabel{Note}
-\begin{atlasparagraph}{T000138}
-The abstract tool contract carries the persistence guarantee.
-\end{atlasparagraph}
-\AtlasSubheading{\texttt{TRC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT-\allowbreak{}ORIGIN}}
-\AtlasMetaLine{Source}{SRC-\allowbreak{}REQUEST-\allowbreak{}BRIEF}
-\AtlasMetaLine{Targets}{RF-\allowbreak{}REQUEST-\allowbreak{}01, RF-\allowbreak{}REQUEST-\allowbreak{}02, RF-\allowbreak{}REQUEST-\allowbreak{}03, RF-\allowbreak{}REQUEST-\allowbreak{}04, RF-\allowbreak{}REQUEST-\allowbreak{}05, RF-\allowbreak{}REQUEST-\allowbreak{}06, RF-\allowbreak{}REQUEST-\allowbreak{}07, RNF-\allowbreak{}REQUEST-\allowbreak{}01}
-\AtlasLabel{Note}
-\begin{atlasparagraph}{T000139}
-Versioned synthetic origin for these example obligations.
-\end{atlasparagraph}
+\par\Needspace{10\baselineskip}\AtlasLabel{Traceability}
+\begin{AtlasCatalog}
+\hypertarget{TRC-REQUEST-01}{}TRC-\allowbreak{}REQUEST-\allowbreak{}01 & Source: RF-\allowbreak{}REQUEST-\allowbreak{}02 & Targets: VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY; AC-\allowbreak{}REQUEST-\allowbreak{}02\newline{}Note: \AtlasCell{T000137}{The case applies the entity validation and states the refusal.}\\\addlinespace[.35em]
+\hypertarget{TRC-REQUEST-02}{}TRC-\allowbreak{}REQUEST-\allowbreak{}02 & Source: RF-\allowbreak{}REQUEST-\allowbreak{}03 & Targets: OP-\allowbreak{}REQUEST-\allowbreak{}STORE; AC-\allowbreak{}REQUEST-\allowbreak{}01\newline{}Note: \AtlasCell{T000138}{The abstract tool contract carries the persistence guarantee.}\\\addlinespace[.35em]
+\hypertarget{TRC-REQUEST-SUBMIT-ORIGIN}{}TRC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT-\allowbreak{}ORIGIN & Source: SRC-\allowbreak{}REQUEST-\allowbreak{}BRIEF & Targets: RF-\allowbreak{}REQUEST-\allowbreak{}01; RF-\allowbreak{}REQUEST-\allowbreak{}02; RF-\allowbreak{}REQUEST-\allowbreak{}03; RF-\allowbreak{}REQUEST-\allowbreak{}04; RF-\allowbreak{}REQUEST-\allowbreak{}05; RF-\allowbreak{}REQUEST-\allowbreak{}06; RF-\allowbreak{}REQUEST-\allowbreak{}07; RNF-\allowbreak{}REQUEST-\allowbreak{}01\newline{}Note: \AtlasCell{T000139}{Versioned synthetic origin for these example obligations.}\\\addlinespace[.35em]
+\end{AtlasCatalog}
 \AtlasMetaLine{Assumptions}{ASM-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}UNIQUE}
 \AtlasMetaLine{Sources}{SRC-\allowbreak{}REQUEST-\allowbreak{}BRIEF}
 \AtlasMetaLine{Open issues}{OI-\allowbreak{}REQUEST-\allowbreak{}LATENCY}
+% atlas:tikz:begin id=TIKZ-GRAPH-REQUEST-SUBMIT
+\sbox{\AtlasGraphBox}{%
+\scalebox{1.0000}{%
+\begin{tikzpicture}[
+  >=Stealth, line width=0.65pt, draw=black!65,
+  box/.style={draw, rounded corners=3pt, fill=blue!4, align=center, text width=2.6cm, minimum height=1.0cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont},
+  decision/.style={draw, diamond, aspect=1.7, fill=orange!8, align=center, text width=2.0cm, inner sep=3pt, font=\fontsize{9.5}{11}\selectfont},
+  terminal/.style={draw, rounded corners=9pt, fill=blue!8, align=center, text width=2.8cm, minimum height=1.0cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont\bfseries},
+  state/.style={draw, ellipse, fill=blue!4, align=center, text width=2.6cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont},
+  note/.style={draw, dashed, fill=black!3, align=center, text width=2.6cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont\itshape},
+  edgekey/.style={fill=white, inner sep=1.5pt, font=\fontsize{8.5}{10}\selectfont\bfseries}
+]
+\node[terminal] (n0) at (0.00,0.00) {Start};
+\node[decision] (n1) at (0.00,-1.80) {Actor permitted?};
+\node[terminal] (n2) at (-1.65,-3.65) {Refuse: actor\\not permitted};
+\node[box] (n3) at (0.00,-7.36) {Apply VLD-\\REQUEST-QUANTITY};
+\node[decision] (n4) at (0.00,-9.22) {Quantity valid?};
+\node[terminal] (n5) at (-1.65,-11.07) {Invalid code\\or quantity};
+\node[box] (n6) at (1.65,-11.07) {Store request};
+\node[terminal] (n7) at (-3.30,-12.82) {Report STORE\_\\UNAVAILABLE};
+\node[terminal] (n8) at (0.00,-12.82) {Request\\confirmed};
+\node[terminal] (n9) at (3.30,-12.82) {Duplicate\\code; no\\change};
+\node[box] (n10) at (1.65,-3.65) {Apply code\\validity};
+\node[decision] (n11) at (0.00,-5.51) {Code valid?};
+\draw[->] (n0.south) -- node[edgekey,pos=0.65]{E1} (n1.north);
+\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E2} (n2.north);
+\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E3} (n10.north);
+\draw[->] (n3.south) -- node[edgekey,pos=0.65]{E4} (n4.north);
+\draw[->] (n4.south) -- node[edgekey,pos=0.65]{E5} (n5.north);
+\draw[->] (n4.south) -- node[edgekey,pos=0.65]{E6} (n6.north);
+\draw[->] (n6.south) -- node[edgekey,pos=0.65]{E7} (n8.north);
+\draw[->] (n6.south) -- node[edgekey,pos=0.65]{E8} (n7.north);
+\draw[->] (n6.south) -- node[edgekey,pos=0.65]{E9} (n9.north);
+\draw[->] (n10.south) -- node[edgekey,pos=0.65]{E10} (n11.north);
+\draw[->] (n11.south) -- node[edgekey,pos=0.65]{E11} (n3.north);
+\draw[->] (n11.south) -- (0.00,-6.64) -- (5.75,-6.64) -- node[edgekey,pos=0.500]{E12} (5.75,-10.24) -- (-1.65,-10.24) -- (n5.north);
+\end{tikzpicture}%
+}}
+\Needspace{\dimexpr\ht\AtlasGraphBox+\dp\AtlasGraphBox+1.50cm\relax}
+\hypertarget{figure-GRAPH-REQUEST-SUBMIT}{}
+\noindent{\large\bfseries Submit request}\par
+\noindent{\small GRAPH-REQUEST-SUBMIT}\par
+\begin{center}\usebox{\AtlasGraphBox}\end{center}
+\begingroup\small\setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}
+\begin{longtable}{@{}p{.07\linewidth}p{.90\linewidth}@{}}
+\textbf{Key} & \textbf{Edge identity and label}\\\midrule\endhead
+\textbf{E1} & E-\allowbreak{}REQ-\allowbreak{}1\\
+\textbf{E2} & E-\allowbreak{}REQ-\allowbreak{}2 --- no\\
+\textbf{E3} & E-\allowbreak{}REQ-\allowbreak{}3 --- yes\\
+\textbf{E4} & E-\allowbreak{}REQ-\allowbreak{}4\\
+\textbf{E5} & E-\allowbreak{}REQ-\allowbreak{}5 --- fail\\
+\textbf{E6} & E-\allowbreak{}REQ-\allowbreak{}6 --- pass\\
+\textbf{E7} & E-\allowbreak{}REQ-\allowbreak{}7 --- stored\\
+\textbf{E8} & E-\allowbreak{}REQ-\allowbreak{}8 --- STORE\_UNAVAILABLE\\
+\textbf{E9} & E-\allowbreak{}REQ-\allowbreak{}DUPLICATE --- DUPLICATE\_CODE\\
+\textbf{E10} & E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}1\\
+\textbf{E11} & E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}2 --- pass\\
+\textbf{E12} & E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}3 --- fail\\
+\end{longtable}\endgroup
+% atlas:tikz:end id=TIKZ-GRAPH-REQUEST-SUBMIT
+\AtlasSectionBreak
 \begin{atlasheading}{T000020}{2}
 Interaction boundaries
 \end{atlasheading}
 \begin{atlasparagraph}{T000021}
 The boundary maps the case inputs and results to a web form.
 \end{atlasparagraph}
-\AtlasSubheading{BOUNDARY \texttt{BND-REQUEST-WEB}}
-\AtlasLabel{Name}
-\begin{atlastext}{T000140}
-Request register web form
-\end{atlastext}
-\AtlasMetaLine{Modality}{web}
+\par\Needspace{8\baselineskip}\hypertarget{BND-REQUEST-WEB}{}\AtlasSubheading{BOUNDARY \texttt{BND-REQUEST-WEB}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Name} & \AtlasCell{T000140}{Request register web form} & \textcolor{AtlasMuted}{Modality} & web\\
+\end{AtlasMetaTable}
 \AtlasLabel{Purpose}
 \begin{atlasparagraph}{T000141}
 Expose the submit-request case through one form.
@@ -750,12 +712,11 @@ Origin classification: this channel is an illustrative solution proposal. Its fo
 \begin{atlasparagraph}{T000143}
 Requesters using the local register.
 \end{atlasparagraph}
-\AtlasLabel{Interactions}
-\AtlasSubheading{\texttt{INT-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}}
-\AtlasLabel{Name}
-\begin{atlastext}{T000144}
-Submit request form
-\end{atlastext}
+\par\Needspace{12\baselineskip}\AtlasLabel{Interactions}
+\par\Needspace{8\baselineskip}\hypertarget{INT-REQUEST-SUBMIT}{}\AtlasSubheading{\texttt{INT-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Name} & \AtlasCell{T000144}{Submit request form} &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000145}
 A form with Request code, Quantity, and Submit request. The result area presents confirmation, invalid data, duplicate code, or store failure.
@@ -763,51 +724,60 @@ A form with Request code, Quantity, and Submit request. The result area presents
 \begin{atlasparagraph}{T000146}
 Illustration only; no channel-specific UI or command choice is promoted to a domain RF by appearing here.
 \end{atlasparagraph}
-\AtlasMetaLine{Use case}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Use case} & UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Trigger}
 \begin{atlasparagraph}{T000147}
 The requester activates Submit request.
 \end{atlasparagraph}
 \AtlasLabel{Input mapping}
-\AtlasMetaLine{Source}{form.\allowbreak{}code}
-\AtlasMetaLine{Target}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT.\allowbreak{}input.\allowbreak{}code}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Source} & form.\allowbreak{}code & \textcolor{AtlasMuted}{Target} & UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT.\allowbreak{}input.\allowbreak{}code\\
+\end{AtlasMetaTable}
 \AtlasLabel{Meaning}
 \begin{atlasparagraph}{T000148}
 Maps the Request code field to the case code input.
 \end{atlasparagraph}
-\AtlasMetaLine{Source}{form.\allowbreak{}quantity}
-\AtlasMetaLine{Target}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT.\allowbreak{}input.\allowbreak{}quantity}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Source} & form.\allowbreak{}quantity & \textcolor{AtlasMuted}{Target} & UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT.\allowbreak{}input.\allowbreak{}quantity\\
+\end{AtlasMetaTable}
 \AtlasLabel{Meaning}
 \begin{atlasparagraph}{T000149}
 Maps the Quantity field to the case quantity input.
 \end{atlasparagraph}
 \AtlasLabel{Result mapping}
-\AtlasMetaLine{Source}{OUT-\allowbreak{}REQUEST-\allowbreak{}CONFIRMED}
-\AtlasMetaLine{Target}{result.\allowbreak{}confirmation}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Source} & OUT-\allowbreak{}REQUEST-\allowbreak{}CONFIRMED & \textcolor{AtlasMuted}{Target} & result.\allowbreak{}confirmation\\
+\end{AtlasMetaTable}
 \AtlasLabel{Meaning}
 \begin{atlasparagraph}{T000150}
 The request is retained and confirmed.
 \end{atlasparagraph}
-\AtlasMetaLine{Source}{OUT-\allowbreak{}REQUEST-\allowbreak{}INVALID}
-\AtlasMetaLine{Target}{result.\allowbreak{}invalid\_\allowbreak{}data}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Source} & OUT-\allowbreak{}REQUEST-\allowbreak{}INVALID & \textcolor{AtlasMuted}{Target} & result.\allowbreak{}invalid\_\allowbreak{}data\\
+\end{AtlasMetaTable}
 \AtlasLabel{Meaning}
 \begin{atlasparagraph}{T000151}
 The code or quantity is invalid; the request is refused.
 \end{atlasparagraph}
-\AtlasMetaLine{Source}{OUT-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}FAILURE}
-\AtlasMetaLine{Target}{result.\allowbreak{}store\_\allowbreak{}unavailable}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Source} & OUT-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}FAILURE & \textcolor{AtlasMuted}{Target} & result.\allowbreak{}store\_\allowbreak{}unavailable\\
+\end{AtlasMetaTable}
 \AtlasLabel{Meaning}
 \begin{atlasparagraph}{T000152}
 The store reports that it is unavailable.
 \end{atlasparagraph}
-\AtlasMetaLine{Source}{OUT-\allowbreak{}REQUEST-\allowbreak{}DENIED}
-\AtlasMetaLine{Target}{result.\allowbreak{}out-\allowbreak{}request-\allowbreak{}denied}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Source} & OUT-\allowbreak{}REQUEST-\allowbreak{}DENIED & \textcolor{AtlasMuted}{Target} & result.\allowbreak{}out-\allowbreak{}request-\allowbreak{}denied\\
+\end{AtlasMetaTable}
 \AtlasLabel{Meaning}
 \begin{atlasparagraph}{T000153}
 The actor is absent or not permitted.
 \end{atlasparagraph}
-\AtlasMetaLine{Source}{OUT-\allowbreak{}REQUEST-\allowbreak{}DUPLICATE}
-\AtlasMetaLine{Target}{result.\allowbreak{}out-\allowbreak{}request-\allowbreak{}duplicate}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Source} & OUT-\allowbreak{}REQUEST-\allowbreak{}DUPLICATE & \textcolor{AtlasMuted}{Target} & result.\allowbreak{}out-\allowbreak{}request-\allowbreak{}duplicate\\
+\end{AtlasMetaTable}
 \AtlasLabel{Meaning}
 \begin{atlasparagraph}{T000154}
 The request code is already retained.
@@ -830,70 +800,35 @@ A form with a Request code field, a Quantity field, and a Submit request button.
 \AtlasMetaLine{Sources}{SRC-\allowbreak{}REQUEST-\allowbreak{}BRIEF}
 \AtlasMetaLine{Open issues}{OI-\allowbreak{}REQUEST-\allowbreak{}LATENCY}
 \AtlasAppendixHeading{Appendix: graphs}
-\AtlasSubheading{Graph \texttt{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}}
+\begin{AtlasCatalog}
+\hyperlink{technical-GRAPH-VLD-REQUEST-QUANTITY}{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY} & validation & \hyperlink{VLD-REQUEST-QUANTITY}{VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}; \hyperlink{figure-GRAPH-VLD-REQUEST-QUANTITY}{Figure}\\
+\hyperlink{technical-GRAPH-REQUEST-SUBMIT}{GRAPH-\allowbreak{}REQUEST-\allowbreak{}SUBMIT} & use\_\allowbreak{}case & \hyperlink{UC-REQUEST-SUBMIT}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}; \hyperlink{figure-GRAPH-REQUEST-SUBMIT}{Figure}\\
+\hyperlink{technical-GRAPH-VLD-REQUEST-CODE}{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}CODE} & validation & \hyperlink{VLD-REQUEST-CODE}{VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}; \hyperlink{figure-GRAPH-VLD-REQUEST-CODE}{Figure}\\
+\end{AtlasCatalog}
+\par\Needspace{8\baselineskip}\hypertarget{technical-GRAPH-VLD-REQUEST-QUANTITY}{}\AtlasSubheading{Graph \texttt{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}}
 \begin{atlastext}{T000157}
 Quantity validation
 \end{atlastext}
 \AtlasMetaLine{Kind}{flow}
-\AtlasLabel{Nodes}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}START} (start)}
-\begin{atlastext}{T000158}
-Start
-\end{atlastext}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}READ} (action)}
-\begin{atlastext}{T000159}
-Read quantity
-\end{atlastext}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE} (decision)}
-\begin{atlastext}{T000160}
-Integer?
-\end{atlastext}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN} (decision)}
-\begin{atlastext}{T000161}
-At least 1?
-\end{atlastext}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}PASS} (result)}
-\begin{atlastext}{T000162}
-Valid
-\end{atlastext}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}TYPE} (refusal)}
-\begin{atlastext}{T000163}
-Invalid: not an integer
-\end{atlastext}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}MIN} (refusal)}
-\begin{atlastext}{T000164}
-Invalid: less than 1
-\end{atlastext}
-\AtlasLabel{Edges}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}1}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}START} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}READ}}
-\AtlasMetaLine{Requirement refs}{none}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}2}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}READ} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE}}
-\AtlasMetaLine{Requirement refs}{none}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}3}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}TYPE}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000165}
-no
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{none}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}4}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000166}
-yes
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{none}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}5}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}MIN}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000167}
-no
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{none}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}6}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}PASS}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000168}
-yes
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{none}
-\par\noindent\begin{minipage}{\linewidth}
+\par\Needspace{10\baselineskip}\AtlasLabel{Nodes}
+\begin{AtlasCatalog}
+\hypertarget{N-VLD-REQ-START}{}N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}START & Type: start & Label: \AtlasCell{T000158}{Start}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{N-VLD-REQ-READ}{}N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}READ & Type: action & Label: \AtlasCell{T000159}{Read quantity}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{N-VLD-REQ-TYPE}{}N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE & Type: decision & Label: \AtlasCell{T000160}{Integer?}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{N-VLD-REQ-MIN}{}N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN & Type: decision & Label: \AtlasCell{T000161}{At least 1?}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{N-VLD-REQ-PASS}{}N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}PASS & Type: result & Label: \AtlasCell{T000162}{Valid}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{N-VLD-REQ-FAIL-TYPE}{}N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}TYPE & Type: refusal & Label: \AtlasCell{T000163}{Invalid: not an integer}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{N-VLD-REQ-FAIL-MIN}{}N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}MIN & Type: refusal & Label: \AtlasCell{T000164}{Invalid: less than 1}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\par\Needspace{10\baselineskip}\AtlasLabel{Edges}
+\begin{AtlasCatalog}
+\hypertarget{E-VLD-REQ-1}{}E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}1 & From: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}START\newline{}To: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}READ & Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{E-VLD-REQ-2}{}E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}2 & From: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}READ\newline{}To: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE & Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{E-VLD-REQ-3}{}E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}3 & From: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE\newline{}To: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}TYPE & Requirement refs: none\newline{}Label: \AtlasCell{T000165}{no}\\\addlinespace[.35em]
+\hypertarget{E-VLD-REQ-4}{}E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}4 & From: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE\newline{}To: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN & Requirement refs: none\newline{}Label: \AtlasCell{T000166}{yes}\\\addlinespace[.35em]
+\hypertarget{E-VLD-REQ-5}{}E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}5 & From: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN\newline{}To: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}MIN & Requirement refs: none\newline{}Label: \AtlasCell{T000167}{no}\\\addlinespace[.35em]
+\hypertarget{E-VLD-REQ-6}{}E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}6 & From: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN\newline{}To: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}PASS & Requirement refs: none\newline{}Label: \AtlasCell{T000168}{yes}\\\addlinespace[.35em]
+\end{AtlasCatalog}
 \begin{atlasderived}{DERIVED-GRAPH-GRAPH-VLD-REQUEST-QUANTITY}
 Topology of GRAPH-VLD-REQUEST-QUANTITY:
 
@@ -914,179 +849,42 @@ Edges:
 - E-VLD-REQ-5: N-VLD-REQ-MIN -> N-VLD-REQ-FAIL-MIN
 - E-VLD-REQ-6: N-VLD-REQ-MIN -> N-VLD-REQ-PASS
 \end{atlasderived}
-\end{minipage}\par
-% atlas:tikz:begin id=TIKZ-GRAPH-VLD-REQUEST-QUANTITY
-\clearpage
-\noindent{\large\bfseries Quantity validation}\par
-\noindent{\small GRAPH-VLD-REQUEST-QUANTITY}\par
-\begin{center}
-\scalebox{1.0000}{%
-\begin{tikzpicture}[
-  >=Stealth, line width=0.65pt, draw=black!65,
-  box/.style={draw, rounded corners=3pt, fill=blue!4, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small},
-  decision/.style={draw, diamond, aspect=1.7, fill=orange!8, align=center, text width=2.5cm, inner sep=3pt, font=\small},
-  terminal/.style={draw, rounded corners=9pt, fill=blue!8, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small\bfseries},
-  state/.style={draw, ellipse, fill=blue!4, align=center, text width=3.3cm, inner sep=5pt, font=\small},
-  note/.style={draw, dashed, fill=black!3, align=center, text width=3.5cm, inner sep=5pt, font=\small\itshape},
-  edgekey/.style={fill=white, inner sep=1.5pt, font=\scriptsize\bfseries}
-]
-\node[terminal] (n0) at (0.00,0.00) {Start};
-\node[box] (n1) at (0.00,-1.85) {Read quantity};
-\node[decision] (n2) at (0.00,-4.05) {Integer?};
-\node[decision] (n3) at (-2.20,-6.60) {At least 1?};
-\node[terminal] (n4) at (-2.20,-8.86) {Valid};
-\node[terminal] (n5) at (2.20,-6.60) {Invalid: not\\an integer};
-\node[terminal] (n6) at (2.20,-8.86) {Invalid: less\\than 1};
-\draw[->] (n0.south) -- node[edgekey,pos=0.65]{E1} (n1.north);
-\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E2} (n2.north);
-\draw[->] (n2.south) -- node[edgekey,pos=0.65]{E3} (n5.north);
-\draw[->] (n2.south) -- node[edgekey,pos=0.65]{E4} (n3.north);
-\draw[->] (n3.south) -- node[edgekey,pos=0.65]{E5} (n6.north);
-\draw[->] (n3.south) -- node[edgekey,pos=0.65]{E6} (n4.north);
-\end{tikzpicture}%
-}
-\end{center}
-\noindent\textbf{Edge key}\par
-\begingroup\small\raggedright\setlength{\parskip}{1pt}
-\noindent\textbf{E1} E-VLD-REQ-1\par
-\noindent\textbf{E2} E-VLD-REQ-2\par
-\noindent\textbf{E3} E-VLD-REQ-3 --- no\par
-\noindent\textbf{E4} E-VLD-REQ-4 --- yes\par
-\noindent\textbf{E5} E-VLD-REQ-5 --- no\par
-\noindent\textbf{E6} E-VLD-REQ-6 --- yes\par
-\endgroup
-\clearpage
-% atlas:tikz:end id=TIKZ-GRAPH-VLD-REQUEST-QUANTITY
-\AtlasSubheading{Graph \texttt{GRAPH-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}}
+\AtlasMetaLine{Figure}{\hyperlink{figure-GRAPH-VLD-REQUEST-QUANTITY}{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}}
+\par\Needspace{8\baselineskip}\hypertarget{technical-GRAPH-REQUEST-SUBMIT}{}\AtlasSubheading{Graph \texttt{GRAPH-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}}
 \begin{atlastext}{T000169}
 Submit request
 \end{atlastext}
 \AtlasMetaLine{Kind}{flow}
-\AtlasLabel{Nodes}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}START} (start)}
-\begin{atlastext}{T000170}
-Start
-\end{atlastext}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}PERM} (decision)}
-\begin{atlastext}{T000171}
-Actor permitted?
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}01}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}DENY} (refusal)}
-\begin{atlastext}{T000172}
-Refuse: actor not permitted
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}01}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}VALIDATE} (validation)}
-\begin{atlastext}{T000173}
-Apply VLD-REQUEST-QUANTITY
-\end{atlastext}
-\AtlasMetaLine{Call}{validation \texttt{VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}QTYDEC} (decision)}
-\begin{atlastext}{T000174}
-Quantity valid?
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}INVALID} (refusal)}
-\begin{atlastext}{T000175}
-Invalid code or quantity
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}02, RF-\allowbreak{}REQUEST-\allowbreak{}07}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}STORE} (operation)}
-\begin{atlastext}{T000176}
-Store request
-\end{atlastext}
-\AtlasMetaLine{Call}{operation \texttt{OP-\allowbreak{}REQUEST-\allowbreak{}STORE}}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}03}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}STOREERROR} (failure)}
-\begin{atlastext}{T000177}
-Report STORE\AtlasCharUnderscore{}UNAVAILABLE
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}04}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}SUCCESS} (result)}
-\begin{atlastext}{T000178}
-Request confirmed
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}05}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}DUPLICATE} (refusal)}
-\begin{atlastext}{T000179}
-Duplicate code; no change
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}06}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE} (validation)}
-\begin{atlastext}{T000180}
-Apply code validity
-\end{atlastext}
-\AtlasMetaLine{Call}{validation \texttt{VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}07}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID} (decision)}
-\begin{atlastext}{T000181}
-Code valid?
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}07}
-\AtlasLabel{Edges}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}1}: \texttt{N-\allowbreak{}REQ-\allowbreak{}START} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}PERM}}
-\AtlasMetaLine{Requirement refs}{none}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}2}: \texttt{N-\allowbreak{}REQ-\allowbreak{}PERM} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}DENY}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000182}
-no
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}01}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}3}: \texttt{N-\allowbreak{}REQ-\allowbreak{}PERM} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000183}
-yes
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{none}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}4}: \texttt{N-\allowbreak{}REQ-\allowbreak{}VALIDATE} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}QTYDEC}}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}5}: \texttt{N-\allowbreak{}REQ-\allowbreak{}QTYDEC} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}INVALID}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000184}
-fail
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}6}: \texttt{N-\allowbreak{}REQ-\allowbreak{}QTYDEC} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}STORE}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000185}
-pass
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}03}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}7}: \texttt{N-\allowbreak{}REQ-\allowbreak{}STORE} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}SUCCESS}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000186}
-stored
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}03, RF-\allowbreak{}REQUEST-\allowbreak{}05}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}8}: \texttt{N-\allowbreak{}REQ-\allowbreak{}STORE} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}STOREERROR}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000187}
-STORE\AtlasCharUnderscore{}UNAVAILABLE
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}04}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}DUPLICATE}: \texttt{N-\allowbreak{}REQ-\allowbreak{}STORE} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}DUPLICATE}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000188}
-DUPLICATE\AtlasCharUnderscore{}CODE
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}06}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}1}: \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID}}
-\AtlasMetaLine{Requirement refs}{none}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}2}: \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}VALIDATE}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000189}
-pass
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}07}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}3}: \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}INVALID}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000190}
-fail
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}07}
-\par\noindent\begin{minipage}{\linewidth}
+\par\Needspace{10\baselineskip}\AtlasLabel{Nodes}
+\begin{AtlasCatalog}
+\hypertarget{N-REQ-START}{}N-\allowbreak{}REQ-\allowbreak{}START & Type: start & Label: \AtlasCell{T000170}{Start}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{N-REQ-PERM}{}N-\allowbreak{}REQ-\allowbreak{}PERM & Type: decision & Label: \AtlasCell{T000171}{Actor permitted?}\newline{}Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}01\\\addlinespace[.35em]
+\hypertarget{N-REQ-DENY}{}N-\allowbreak{}REQ-\allowbreak{}DENY & Type: refusal & Label: \AtlasCell{T000172}{Refuse: actor not permitted}\newline{}Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}01\\\addlinespace[.35em]
+\hypertarget{N-REQ-VALIDATE}{}N-\allowbreak{}REQ-\allowbreak{}VALIDATE & Type: validation & Label: \AtlasCell{T000173}{Apply VLD-REQUEST-QUANTITY}\newline{}Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}02\newline{}Call: Kind: validation; Identifier: VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY\\\addlinespace[.35em]
+\hypertarget{N-REQ-QTYDEC}{}N-\allowbreak{}REQ-\allowbreak{}QTYDEC & Type: decision & Label: \AtlasCell{T000174}{Quantity valid?}\newline{}Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}02\\\addlinespace[.35em]
+\hypertarget{N-REQ-INVALID}{}N-\allowbreak{}REQ-\allowbreak{}INVALID & Type: refusal & Label: \AtlasCell{T000175}{Invalid code or quantity}\newline{}Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}02; RF-\allowbreak{}REQUEST-\allowbreak{}07\\\addlinespace[.35em]
+\hypertarget{N-REQ-STORE}{}N-\allowbreak{}REQ-\allowbreak{}STORE & Type: operation & Label: \AtlasCell{T000176}{Store request}\newline{}Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}03\newline{}Call: Kind: operation; Identifier: OP-\allowbreak{}REQUEST-\allowbreak{}STORE\\\addlinespace[.35em]
+\hypertarget{N-REQ-STOREERROR}{}N-\allowbreak{}REQ-\allowbreak{}STOREERROR & Type: failure & Label: \AtlasCell{T000177}{Report STORE\AtlasCharUnderscore{}UNAVAILABLE}\newline{}Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}04\\\addlinespace[.35em]
+\hypertarget{N-REQ-SUCCESS}{}N-\allowbreak{}REQ-\allowbreak{}SUCCESS & Type: result & Label: \AtlasCell{T000178}{Request confirmed}\newline{}Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}05\\\addlinespace[.35em]
+\hypertarget{N-REQ-DUPLICATE}{}N-\allowbreak{}REQ-\allowbreak{}DUPLICATE & Type: refusal & Label: \AtlasCell{T000179}{Duplicate code; no change}\newline{}Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}06\\\addlinespace[.35em]
+\hypertarget{N-REQ-CODE}{}N-\allowbreak{}REQ-\allowbreak{}CODE & Type: validation & Label: \AtlasCell{T000180}{Apply code validity}\newline{}Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}07\newline{}Call: Kind: validation; Identifier: VLD-\allowbreak{}REQUEST-\allowbreak{}CODE\\\addlinespace[.35em]
+\hypertarget{N-REQ-CODE-VALID}{}N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID & Type: decision & Label: \AtlasCell{T000181}{Code valid?}\newline{}Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}07\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\par\Needspace{10\baselineskip}\AtlasLabel{Edges}
+\begin{AtlasCatalog}
+\hypertarget{E-REQ-1}{}E-\allowbreak{}REQ-\allowbreak{}1 & From: N-\allowbreak{}REQ-\allowbreak{}START\newline{}To: N-\allowbreak{}REQ-\allowbreak{}PERM & Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{E-REQ-2}{}E-\allowbreak{}REQ-\allowbreak{}2 & From: N-\allowbreak{}REQ-\allowbreak{}PERM\newline{}To: N-\allowbreak{}REQ-\allowbreak{}DENY & Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}01\newline{}Label: \AtlasCell{T000182}{no}\\\addlinespace[.35em]
+\hypertarget{E-REQ-3}{}E-\allowbreak{}REQ-\allowbreak{}3 & From: N-\allowbreak{}REQ-\allowbreak{}PERM\newline{}To: N-\allowbreak{}REQ-\allowbreak{}CODE & Requirement refs: none\newline{}Label: \AtlasCell{T000183}{yes}\\\addlinespace[.35em]
+\hypertarget{E-REQ-4}{}E-\allowbreak{}REQ-\allowbreak{}4 & From: N-\allowbreak{}REQ-\allowbreak{}VALIDATE\newline{}To: N-\allowbreak{}REQ-\allowbreak{}QTYDEC & Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}02\\\addlinespace[.35em]
+\hypertarget{E-REQ-5}{}E-\allowbreak{}REQ-\allowbreak{}5 & From: N-\allowbreak{}REQ-\allowbreak{}QTYDEC\newline{}To: N-\allowbreak{}REQ-\allowbreak{}INVALID & Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}02\newline{}Label: \AtlasCell{T000184}{fail}\\\addlinespace[.35em]
+\hypertarget{E-REQ-6}{}E-\allowbreak{}REQ-\allowbreak{}6 & From: N-\allowbreak{}REQ-\allowbreak{}QTYDEC\newline{}To: N-\allowbreak{}REQ-\allowbreak{}STORE & Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}03\newline{}Label: \AtlasCell{T000185}{pass}\\\addlinespace[.35em]
+\hypertarget{E-REQ-7}{}E-\allowbreak{}REQ-\allowbreak{}7 & From: N-\allowbreak{}REQ-\allowbreak{}STORE\newline{}To: N-\allowbreak{}REQ-\allowbreak{}SUCCESS & Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}03; RF-\allowbreak{}REQUEST-\allowbreak{}05\newline{}Label: \AtlasCell{T000186}{stored}\\\addlinespace[.35em]
+\hypertarget{E-REQ-8}{}E-\allowbreak{}REQ-\allowbreak{}8 & From: N-\allowbreak{}REQ-\allowbreak{}STORE\newline{}To: N-\allowbreak{}REQ-\allowbreak{}STOREERROR & Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}04\newline{}Label: \AtlasCell{T000187}{STORE\AtlasCharUnderscore{}UNAVAILABLE}\\\addlinespace[.35em]
+\hypertarget{E-REQ-DUPLICATE}{}E-\allowbreak{}REQ-\allowbreak{}DUPLICATE & From: N-\allowbreak{}REQ-\allowbreak{}STORE\newline{}To: N-\allowbreak{}REQ-\allowbreak{}DUPLICATE & Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}06\newline{}Label: \AtlasCell{T000188}{DUPLICATE\AtlasCharUnderscore{}CODE}\\\addlinespace[.35em]
+\hypertarget{E-REQ-CODE-1}{}E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}1 & From: N-\allowbreak{}REQ-\allowbreak{}CODE\newline{}To: N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID & Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{E-REQ-CODE-2}{}E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}2 & From: N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID\newline{}To: N-\allowbreak{}REQ-\allowbreak{}VALIDATE & Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}07\newline{}Label: \AtlasCell{T000189}{pass}\\\addlinespace[.35em]
+\hypertarget{E-REQ-CODE-3}{}E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}3 & From: N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID\newline{}To: N-\allowbreak{}REQ-\allowbreak{}INVALID & Requirement refs: RF-\allowbreak{}REQUEST-\allowbreak{}07\newline{}Label: \AtlasCell{T000190}{fail}\\\addlinespace[.35em]
+\end{AtlasCatalog}
 \begin{atlasderived}{DERIVED-GRAPH-GRAPH-REQUEST-SUBMIT}
 Topology of GRAPH-REQUEST-SUBMIT:
 
@@ -1118,104 +916,25 @@ Edges:
 - E-REQ-CODE-2: N-REQ-CODE-VALID -> N-REQ-VALIDATE
 - E-REQ-CODE-3: N-REQ-CODE-VALID -> N-REQ-INVALID
 \end{atlasderived}
-\end{minipage}\par
-% atlas:tikz:begin id=TIKZ-GRAPH-REQUEST-SUBMIT
-\clearpage
-\noindent{\large\bfseries Submit request}\par
-\noindent{\small GRAPH-REQUEST-SUBMIT}\par
-\begin{center}
-\scalebox{0.8773}{%
-\begin{tikzpicture}[
-  >=Stealth, line width=0.65pt, draw=black!65,
-  box/.style={draw, rounded corners=3pt, fill=blue!4, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small},
-  decision/.style={draw, diamond, aspect=1.7, fill=orange!8, align=center, text width=2.5cm, inner sep=3pt, font=\small},
-  terminal/.style={draw, rounded corners=9pt, fill=blue!8, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small\bfseries},
-  state/.style={draw, ellipse, fill=blue!4, align=center, text width=3.3cm, inner sep=5pt, font=\small},
-  note/.style={draw, dashed, fill=black!3, align=center, text width=3.5cm, inner sep=5pt, font=\small\itshape},
-  edgekey/.style={fill=white, inner sep=1.5pt, font=\scriptsize\bfseries}
-]
-\node[terminal] (n0) at (0.00,0.00) {Start};
-\node[decision] (n1) at (0.00,-2.20) {Actor permitted?};
-\node[terminal] (n2) at (-2.20,-4.46) {Refuse: actor\\not permitted};
-\node[box] (n3) at (0.00,-8.96) {Apply VLD-\\REQUEST-QUANTITY};
-\node[decision] (n4) at (0.00,-11.22) {Quantity valid?};
-\node[terminal] (n5) at (-2.20,-13.47) {Invalid code\\or quantity};
-\node[box] (n6) at (2.20,-13.47) {Store request};
-\node[terminal] (n7) at (-4.40,-15.62) {Report STORE\_\\UNAVAILABLE};
-\node[terminal] (n8) at (0.00,-15.62) {Request\\confirmed};
-\node[terminal] (n9) at (4.40,-15.62) {Duplicate\\code; no\\change};
-\node[box] (n10) at (2.20,-4.46) {Apply code\\validity};
-\node[decision] (n11) at (0.00,-6.71) {Code valid?};
-\draw[->] (n0.south) -- node[edgekey,pos=0.65]{E1} (n1.north);
-\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E2} (n2.north);
-\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E3} (n10.north);
-\draw[->] (n3.south) -- node[edgekey,pos=0.65]{E4} (n4.north);
-\draw[->] (n4.south) -- node[edgekey,pos=0.65]{E5} (n5.north);
-\draw[->] (n4.south) -- node[edgekey,pos=0.65]{E6} (n6.north);
-\draw[->] (n6.south) -- node[edgekey,pos=0.65]{E7} (n8.north);
-\draw[->] (n6.south) -- node[edgekey,pos=0.65]{E8} (n7.north);
-\draw[->] (n6.south) -- node[edgekey,pos=0.65]{E9} (n9.north);
-\draw[->] (n10.south) -- node[edgekey,pos=0.65]{E10} (n11.north);
-\draw[->] (n11.south) -- node[edgekey,pos=0.65]{E11} (n3.north);
-\draw[->] (n11.south) -- (0.00,-7.84) -- (6.85,-7.84) -- node[edgekey,pos=0.500]{E12} (6.85,-12.64) -- (-2.20,-12.64) -- (n5.north);
-\end{tikzpicture}%
-}
-\end{center}
-\noindent\textbf{Edge key}\par
-\begingroup\small\raggedright\setlength{\parskip}{1pt}
-\noindent\textbf{E1} E-REQ-1\par
-\noindent\textbf{E2} E-REQ-2 --- no\par
-\noindent\textbf{E3} E-REQ-3 --- yes\par
-\noindent\textbf{E4} E-REQ-4\par
-\noindent\textbf{E5} E-REQ-5 --- fail\par
-\noindent\textbf{E6} E-REQ-6 --- pass\par
-\noindent\textbf{E7} E-REQ-7 --- stored\par
-\noindent\textbf{E8} E-REQ-8 --- STORE\_UNAVAILABLE\par
-\noindent\textbf{E9} E-REQ-DUPLICATE --- DUPLICATE\_CODE\par
-\noindent\textbf{E10} E-REQ-CODE-1\par
-\noindent\textbf{E11} E-REQ-CODE-2 --- pass\par
-\noindent\textbf{E12} E-REQ-CODE-3 --- fail\par
-\endgroup
-\clearpage
-% atlas:tikz:end id=TIKZ-GRAPH-REQUEST-SUBMIT
-\AtlasSubheading{Graph \texttt{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
+\AtlasMetaLine{Figure}{\hyperlink{figure-GRAPH-REQUEST-SUBMIT}{GRAPH-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}}
+\par\Needspace{8\baselineskip}\hypertarget{technical-GRAPH-VLD-REQUEST-CODE}{}\AtlasSubheading{Graph \texttt{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
 \begin{atlastext}{T000191}
 Request code validity
 \end{atlastext}
 \AtlasMetaLine{Kind}{flow}
-\AtlasLabel{Nodes}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}START} (start)}
-\begin{atlastext}{T000192}
-Receive code
-\end{atlastext}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK} (decision)}
-\begin{atlastext}{T000193}
-Non-empty text?
-\end{atlastext}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}PASS} (result)}
-\begin{atlastext}{T000194}
-Pass unchanged
-\end{atlastext}
-\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}FAIL} (refusal)}
-\begin{atlastext}{T000195}
-Invalid code
-\end{atlastext}
-\AtlasLabel{Edges}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}1}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}START} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK}}
-\AtlasMetaLine{Requirement refs}{none}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}2}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}PASS}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000196}
-yes
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{none}
-\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}3}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}FAIL}}
-\AtlasLabel{Label}
-\begin{atlastext}{T000197}
-no
-\end{atlastext}
-\AtlasMetaLine{Requirement refs}{none}
-\par\noindent\begin{minipage}{\linewidth}
+\par\Needspace{10\baselineskip}\AtlasLabel{Nodes}
+\begin{AtlasCatalog}
+\hypertarget{N-VLD-REQ-CODE-START}{}N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}START & Type: start & Label: \AtlasCell{T000192}{Receive code}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{N-VLD-REQ-CODE-CHECK}{}N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK & Type: decision & Label: \AtlasCell{T000193}{Non-empty text?}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{N-VLD-REQ-CODE-PASS}{}N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}PASS & Type: result & Label: \AtlasCell{T000194}{Pass unchanged}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{N-VLD-REQ-CODE-FAIL}{}N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}FAIL & Type: refusal & Label: \AtlasCell{T000195}{Invalid code}\newline{}Requirement refs: none\\\addlinespace[.35em]
+\end{AtlasCatalog}
+\par\Needspace{10\baselineskip}\AtlasLabel{Edges}
+\begin{AtlasCatalog}
+\hypertarget{E-VLD-REQ-CODE-1}{}E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}1 & From: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}START\newline{}To: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK & Requirement refs: none\\\addlinespace[.35em]
+\hypertarget{E-VLD-REQ-CODE-2}{}E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}2 & From: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK\newline{}To: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}PASS & Requirement refs: none\newline{}Label: \AtlasCell{T000196}{yes}\\\addlinespace[.35em]
+\hypertarget{E-VLD-REQ-CODE-3}{}E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}3 & From: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK\newline{}To: N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}FAIL & Requirement refs: none\newline{}Label: \AtlasCell{T000197}{no}\\\addlinespace[.35em]
+\end{AtlasCatalog}
 \begin{atlasderived}{DERIVED-GRAPH-GRAPH-VLD-REQUEST-CODE}
 Topology of GRAPH-VLD-REQUEST-CODE:
 
@@ -1230,49 +949,17 @@ Edges:
 - E-VLD-REQ-CODE-2: N-VLD-REQ-CODE-CHECK -> N-VLD-REQ-CODE-PASS
 - E-VLD-REQ-CODE-3: N-VLD-REQ-CODE-CHECK -> N-VLD-REQ-CODE-FAIL
 \end{atlasderived}
-\end{minipage}\par
-% atlas:tikz:begin id=TIKZ-GRAPH-VLD-REQUEST-CODE
-\clearpage
-\noindent{\large\bfseries Request code validity}\par
-\noindent{\small GRAPH-VLD-REQUEST-CODE}\par
-\begin{center}
-\scalebox{1.0000}{%
-\begin{tikzpicture}[
-  >=Stealth, line width=0.65pt, draw=black!65,
-  box/.style={draw, rounded corners=3pt, fill=blue!4, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small},
-  decision/.style={draw, diamond, aspect=1.7, fill=orange!8, align=center, text width=2.5cm, inner sep=3pt, font=\small},
-  terminal/.style={draw, rounded corners=9pt, fill=blue!8, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small\bfseries},
-  state/.style={draw, ellipse, fill=blue!4, align=center, text width=3.3cm, inner sep=5pt, font=\small},
-  note/.style={draw, dashed, fill=black!3, align=center, text width=3.5cm, inner sep=5pt, font=\small\itshape},
-  edgekey/.style={fill=white, inner sep=1.5pt, font=\scriptsize\bfseries}
-]
-\node[terminal] (n0) at (0.00,0.00) {Receive code};
-\node[decision] (n1) at (0.00,-2.20) {Non-empty text?};
-\node[terminal] (n2) at (-2.20,-4.40) {Pass unchanged};
-\node[terminal] (n3) at (2.20,-4.40) {Invalid code};
-\draw[->] (n0.south) -- node[edgekey,pos=0.65]{E1} (n1.north);
-\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E2} (n2.north);
-\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E3} (n3.north);
-\end{tikzpicture}%
-}
-\end{center}
-\noindent\textbf{Edge key}\par
-\begingroup\small\raggedright\setlength{\parskip}{1pt}
-\noindent\textbf{E1} E-VLD-REQ-CODE-1\par
-\noindent\textbf{E2} E-VLD-REQ-CODE-2 --- yes\par
-\noindent\textbf{E3} E-VLD-REQ-CODE-3 --- no\par
-\endgroup
-\clearpage
-% atlas:tikz:end id=TIKZ-GRAPH-VLD-REQUEST-CODE
+\AtlasMetaLine{Figure}{\hyperlink{figure-GRAPH-VLD-REQUEST-CODE}{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
 \AtlasAppendixHeading{Appendix: resources}
 \AtlasSubheading{Resource \texttt{RES-\allowbreak{}REQUEST-\allowbreak{}WIRE}}
 \AtlasMetaLine{Path}{\texttt{assets/\allowbreak{}request-\allowbreak{}form.\allowbreak{}svg}}
 \AtlasMetaLine{Media type}{image/\allowbreak{}svg+xml}
 \AtlasMetaLine{SHA-256}{\texttt{f5a97fb7cb43af96\allowbreak{}81b2083fe1deebe3\allowbreak{}8bb3eda24adb947c\allowbreak{}3314317fc8a24de9\allowbreak{}}}
 \AtlasLabel{Drawing source}
-\AtlasMetaLine{Path}{assets/\allowbreak{}request-\allowbreak{}form.\allowbreak{}svg}
-\AtlasMetaLine{Revision}{1}
-\AtlasMetaLine{Tool}{scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Path} & assets/\allowbreak{}request-\allowbreak{}form.\allowbreak{}svg & \textcolor{AtlasMuted}{Revision} & 1\\
+\textcolor{AtlasMuted}{Tool} & scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Caption}
 \begin{atlasparagraph}{T000198}
 Request form wireframe: Request code, Quantity, and Submit request.
@@ -1291,22 +978,19 @@ Quantity
 \begin{atlasitem}{T000202}
 Submit request
 \end{atlasitem}
-\AtlasLabel{Variants}
-\AtlasMetaLine{Path}{assets/\allowbreak{}request-\allowbreak{}form.\allowbreak{}png}
-\AtlasMetaLine{Media type}{image/\allowbreak{}png}
-\AtlasMetaLine{Sha256}{5dd57bf8bccc9bcd\allowbreak{}9b68e1be1ea50163\allowbreak{}777caf93d83f6fbf\allowbreak{}ec1a099eb1d84347\allowbreak{}}
-\AtlasMetaLine{Size}{22242}
-\AtlasMetaLine{Relation}{publication}
-\AtlasMetaLine{Derived from}{assets/\allowbreak{}request-\allowbreak{}form.\allowbreak{}svg}
-\AtlasMetaLine{Producer}{scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py}
+\par\Needspace{10\baselineskip}\AtlasLabel{Variants}
+\begin{AtlasCatalog}
+ &  & Path: assets/\allowbreak{}request-\allowbreak{}form.\allowbreak{}png\newline{}Media type: image/\allowbreak{}png\newline{}Sha256: 5dd57bf8bccc9bcd\allowbreak{}9b68e1be1ea50163\allowbreak{}777caf93d83f6fbf\allowbreak{}ec1a099eb1d84347\allowbreak{}\newline{}Size: 22242\newline{}Relation: publication\newline{}Derived from: assets/\allowbreak{}request-\allowbreak{}form.\allowbreak{}svg\newline{}Producer: scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py\\\addlinespace[.35em]
+\end{AtlasCatalog}
 \AtlasSubheading{Resource \texttt{RES-\allowbreak{}REQUEST-\allowbreak{}FLOW}}
 \AtlasMetaLine{Path}{\texttt{assets/\allowbreak{}request-\allowbreak{}flow.\allowbreak{}svg}}
 \AtlasMetaLine{Media type}{image/\allowbreak{}svg+xml}
 \AtlasMetaLine{SHA-256}{\texttt{71f3a97b667a8804\allowbreak{}1cc5812da8c8e7e1\allowbreak{}ddaced2f9c835e56\allowbreak{}c2c7d6d1b4252206\allowbreak{}}}
 \AtlasLabel{Drawing source}
-\AtlasMetaLine{Path}{assets/\allowbreak{}request-\allowbreak{}flow.\allowbreak{}svg}
-\AtlasMetaLine{Revision}{1286331986e92aa7\allowbreak{}0d90981f34da7aaa\allowbreak{}1dc45b09fa69106b\allowbreak{}4717745a2a095c0a\allowbreak{}}
-\AtlasMetaLine{Tool}{scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Path} & assets/\allowbreak{}request-\allowbreak{}flow.\allowbreak{}svg & \textcolor{AtlasMuted}{Revision} & 1286331986e92aa7\allowbreak{}0d90981f34da7aaa\allowbreak{}1dc45b09fa69106b\allowbreak{}4717745a2a095c0a\allowbreak{}\\
+\textcolor{AtlasMuted}{Tool} & scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Derived from graph}{GRAPH-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
 \AtlasLabel{Caption}
 \begin{atlasparagraph}{T000203}
@@ -1380,28 +1064,25 @@ pass
 \begin{atlasitem}{T000225}
 fail
 \end{atlasitem}
-\AtlasLabel{Variants}
-\AtlasMetaLine{Path}{assets/\allowbreak{}request-\allowbreak{}flow.\allowbreak{}png}
-\AtlasMetaLine{Media type}{image/\allowbreak{}png}
-\AtlasMetaLine{Sha256}{53545111afdda2bc\allowbreak{}f5b113667ef14dc2\allowbreak{}233ca3f7e5e73074\allowbreak{}9d3f50473ed81f8b\allowbreak{}}
-\AtlasMetaLine{Size}{73547}
-\AtlasMetaLine{Relation}{publication}
-\AtlasMetaLine{Derived from}{assets/\allowbreak{}request-\allowbreak{}flow.\allowbreak{}svg}
-\AtlasMetaLine{Producer}{scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py}
+\par\Needspace{10\baselineskip}\AtlasLabel{Variants}
+\begin{AtlasCatalog}
+ &  & Path: assets/\allowbreak{}request-\allowbreak{}flow.\allowbreak{}png\newline{}Media type: image/\allowbreak{}png\newline{}Sha256: 53545111afdda2bc\allowbreak{}f5b113667ef14dc2\allowbreak{}233ca3f7e5e73074\allowbreak{}9d3f50473ed81f8b\allowbreak{}\newline{}Size: 73547\newline{}Relation: publication\newline{}Derived from: assets/\allowbreak{}request-\allowbreak{}flow.\allowbreak{}svg\newline{}Producer: scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py\\\addlinespace[.35em]
+\end{AtlasCatalog}
 \AtlasAppendixHeading{Appendix: assumptions}
 \AtlasSubheading{\texttt{ASM-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}UNIQUE}}
 \AtlasLabel{Statement}
 \begin{atlasparagraph}{T000226}
 A future implementation of the request store can enforce code uniqueness atomically.
 \end{atlasparagraph}
-\AtlasMetaLine{Status}{open}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Status} & open &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Affected}{TOL-\allowbreak{}REQUEST-\allowbreak{}STORE, UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
 \AtlasAppendixHeading{Appendix: decisions}
 \AtlasSubheading{\texttt{DEC-\allowbreak{}MIN-\allowbreak{}TOOL-\allowbreak{}ABSTRACTION}}
-\AtlasLabel{Title}
-\begin{atlastext}{T000227}
-Keep the store abstract
-\end{atlastext}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Title} & \AtlasCell{T000227}{Keep the store abstract} &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Context}
 \begin{atlasparagraph}{T000228}
 The example needs persistence but must not choose a technology.
@@ -1418,29 +1099,29 @@ Specify SQLite tables and SQL statements.
 \begin{atlasparagraph}{T000231}
 Implementations may choose storage, but must satisfy the contract.
 \end{atlasparagraph}
-\AtlasMetaLine{Status}{accepted}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Status} & accepted &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Refs}{TOL-\allowbreak{}REQUEST-\allowbreak{}STORE}
 \AtlasAppendixHeading{Appendix: open issues}
 \AtlasSubheading{\texttt{OI-\allowbreak{}REQUEST-\allowbreak{}LATENCY}}
-\AtlasLabel{Title}
-\begin{atlastext}{T000232}
-Confirm the latency target
-\end{atlastext}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Title} & \AtlasCell{T000232}{Confirm the latency target} &  & \\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000233}
 The 2-second target is a verifiable example target; a production adoption must confirm it with stakeholders.
 \end{atlasparagraph}
-\AtlasMetaLine{Status}{open}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Status} & open &  & \\
+\end{AtlasMetaTable}
 \AtlasMetaLine{Refs}{RNF-\allowbreak{}REQUEST-\allowbreak{}01}
 \AtlasAppendixHeading{Appendix: sources}
 \AtlasSubheading{\texttt{SRC-\allowbreak{}REQUEST-\allowbreak{}BRIEF}}
-\AtlasLabel{Title}
-\begin{atlastext}{T000234}
-Illustrative request-register brief
-\end{atlastext}
-\AtlasMetaLine{Uri}{null}
-\AtlasMetaLine{Revision}{2}
-\AtlasMetaLine{Accessed}{null}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Title} & \AtlasCell{T000234}{Illustrative request-register brief} & \textcolor{AtlasMuted}{Uri} & null\\
+\textcolor{AtlasMuted}{Revision} & 2 & \textcolor{AtlasMuted}{Accessed} & null\\
+\end{AtlasMetaTable}
 \AtlasLabel{Note}
 \begin{atlasparagraph}{T000235}
 Internal teaching source; not a commissioned requirement.
@@ -1450,18 +1131,20 @@ The authorization policy, interaction sketches, and quality targets are didactic
 \end{atlasparagraph}
 \AtlasAppendixHeading{Appendix: history}
 \AtlasSubheading{\texttt{HIST-\allowbreak{}REQUEST-\allowbreak{}01}}
-\AtlasMetaLine{Version}{1}
-\AtlasMetaLine{Date}{2026-\allowbreak{}10-\allowbreak{}25}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Version} & 1 & \textcolor{AtlasMuted}{Date} & 2026-\allowbreak{}10-\allowbreak{}25\\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000237}
 Initial reference example for the first Atlas Specifications edition, Alpha-v0.1.0. This synthetic example demonstrates the model and its representations; it does not assert stakeholder approval or execution of the described business application.
 \end{atlasparagraph}
 \AtlasSubheading{\texttt{HIST-\allowbreak{}MIGRATION-\allowbreak{}STABLE}}
-\AtlasMetaLine{Version}{2}
-\AtlasMetaLine{Date}{2026-\allowbreak{}10-\allowbreak{}25}
+\begin{AtlasMetaTable}
+\textcolor{AtlasMuted}{Version} & 2 & \textcolor{AtlasMuted}{Date} & 2026-\allowbreak{}10-\allowbreak{}25\\
+\end{AtlasMetaTable}
 \AtlasLabel{Description}
 \begin{atlasparagraph}{T000238}
-Explicit editorial migration from Atlas Alpha-v0.1.0 revision 1 to Atlas Stable-v1.0.0 revision 2. Prepared by Codex under Douglas de Oliveira Alkimim's execution request. Model/profile/envelope and producer identities change; existing concept IDs, domain contracts, authored history and resources are retained. This is not format conversion, a Needs-to-L1 derivation, or new stakeholder approval.
+Explicit editorial migration from Atlas Alpha-v0.1.0 revision 1 to Atlas Stable-v1.0.0 revision 2. Model/profile/envelope and producer identities change; existing concept IDs, domain contracts, authored history and resources are retained. This is not format conversion, a Needs-to-L1 derivation, or new stakeholder approval.
 \end{atlasparagraph}
 \begin{atlasderived}{DERIVED-SUMMARY}
 Derived summary: 5 sections; 1 actors; 1 entities; 1 tools; 1 use cases; 1 boundaries; 3 graphs; 2 resources.

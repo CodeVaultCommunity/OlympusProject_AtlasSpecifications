@@ -15,3 +15,6 @@
 # last because the last matching attribute wins.
 **/*.atlas.md -text
 **/*.atlas.tex -text
+
+# Preserve raw process evidence exactly; line ending conversion would alter it.
+versioning/Stable-v1.0.0/verification/evidence/** -text

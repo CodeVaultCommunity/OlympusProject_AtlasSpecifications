@@ -58,7 +58,7 @@ def _depths(graph: dict) -> dict[str, int]:
     return depth
 
 
-def render_tikz(graph: dict) -> str:
+def render_tikz_legacy(graph: dict) -> str:
     nodes = graph["nodes"]
     depths = _depths(graph)
     rows: dict[int, list[dict]] = {}
@@ -153,4 +153,113 @@ def render_tikz(graph: dict) -> str:
             detail += " --- " + _escape_tikz(label)
         lines.append(f"\\noindent\\textbf{{E{edge_number}}} {detail}\\par")
     lines.extend([r"\endgroup", r"\clearpage"])
+    return "\n".join(lines)
+
+
+# The legacy renderer above is frozen for exact validation of existing Stable files.
+def render_tikz(graph: dict) -> str:
+    nodes = graph["nodes"]
+    depths = _depths(graph)
+    rows: dict[int, list[dict]] = {}
+    labels: dict[str, str] = {}
+    heights: dict[int, float] = {}
+    for node in nodes:
+        rank = depths[node["id"]]
+        rows.setdefault(rank, []).append(node)
+        label_width = 16 if node["type"] == "decision" else (
+            14 if node["type"] in {"start", "end", "result", "refusal", "failure"} else 18
+        )
+        label, count = _label(node.get("label"), label_width)
+        labels[node["id"]] = label
+        height = max(1.0, count * 0.38 + 0.35)
+        if node["type"] == "decision":
+            height *= 1.7
+        heights[rank] = max(heights.get(rank, 0), height)
+    positions: dict[str, tuple[float, float]] = {}
+    y = 0.0
+    previous = None
+    for rank in sorted(rows):
+        if previous is not None:
+            y -= heights[previous] / 2 + heights[rank] / 2 + 0.45
+        for column, node in enumerate(rows[rank]):
+            positions[node["id"]] = ((column - (len(rows[rank]) - 1) / 2) * 3.3, y)
+        previous = rank
+    index = {node["id"]: i for i, node in enumerate(nodes)}
+    half_width = max((abs(x) for x, _ in positions.values()), default=0) + 2.0
+    detours = [edge for edge in graph["edges"]
+               if edge["from"] in depths and edge["to"] in depths
+               and depths[edge["to"]] != depths[edge["from"]] + 1]
+    width = half_width * 2 + (0.7 + len(detours) * 0.25 if detours else 0)
+    height = abs(y) + max(heights.values(), default=1)
+    graph_budget = 22.0
+    scale = min(1.0, 15.4 / max(width, 1), graph_budget / max(height, 1))
+    legend_lines = sum(max(1, (len(edge["id"]) + len((edge.get("label") or {}).get("text", "")) + 79) // 80) for edge in graph["edges"])
+    # Keep short legends with their diagrams; larger legends remain breakable.
+    reserved_extra = 1.5
+    if legend_lines <= 8:
+        reserved_extra += (legend_lines + 2) * 0.45
+    lines = [
+        r"\sbox{\AtlasGraphBox}{%",
+        f"\\scalebox{{{scale:.4f}}}{{%",
+        r"\begin{tikzpicture}[",
+        r"  >=Stealth, line width=0.65pt, draw=black!65,",
+        r"  box/.style={draw, rounded corners=3pt, fill=blue!4, align=center, text width=2.6cm, minimum height=1.0cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont},",
+        r"  decision/.style={draw, diamond, aspect=1.7, fill=orange!8, align=center, text width=2.0cm, inner sep=3pt, font=\fontsize{9.5}{11}\selectfont},",
+        r"  terminal/.style={draw, rounded corners=9pt, fill=blue!8, align=center, text width=2.8cm, minimum height=1.0cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont\bfseries},",
+        r"  state/.style={draw, ellipse, fill=blue!4, align=center, text width=2.6cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont},",
+        r"  note/.style={draw, dashed, fill=black!3, align=center, text width=2.6cm, inner sep=5pt, font=\fontsize{9.5}{11}\selectfont\itshape},",
+        r"  edgekey/.style={fill=white, inner sep=1.5pt, font=\fontsize{8.5}{10}\selectfont\bfseries}",
+        "]",
+    ]
+    for node in nodes:
+        style = {
+            "decision": "decision", "start": "terminal", "end": "terminal",
+            "result": "terminal", "refusal": "terminal", "failure": "terminal",
+            "state": "state", "note": "note",
+        }.get(node["type"], "box")
+        x, y = positions[node["id"]]
+        lines.append(f"\\node[{style}] (n{index[node['id']]}) at ({x:.2f},{y:.2f}) {{{labels[node['id']]}}};")
+    detour_index = 0
+    for edge_number, edge in enumerate(graph["edges"], 1):
+        if edge["from"] not in index or edge["to"] not in index:
+            continue
+        source, target = f"n{index[edge['from']]}", f"n{index[edge['to']]}"
+        key = f"E{edge_number}"
+        if depths[edge["to"]] == depths[edge["from"]] + 1:
+            lines.append(f"\\draw[->] ({source}.south) -- node[edgekey,pos=0.65]{{{key}}} ({target}.north);")
+        else:
+            lane = half_width + 0.45 + detour_index * 0.25
+            detour_index += 1
+            sx, sy = positions[edge["from"]]
+            tx, ty = positions[edge["to"]]
+            if edge["from"] == edge["to"]:
+                lines.append(f"\\draw[->] ({source}.east) to[out=0,in=90,looseness=5] node[edgekey]{{{key}}} ({target}.north);")
+            else:
+                exit_y = sy - heights[depths[edge["from"]]] / 2 - 0.28
+                entry_y = ty + heights[depths[edge["to"]]] / 2 + 0.28
+                key_position = detour_index / (len(detours) + 1)
+                lines.append(
+                    f"\\draw[->] ({source}.south) -- ({sx:.2f},{exit_y:.2f}) "
+                    f"-- ({lane:.2f},{exit_y:.2f}) "
+                    f"-- node[edgekey,pos={key_position:.3f}]{{{key}}} ({lane:.2f},{entry_y:.2f}) "
+                    f"-- ({tx:.2f},{entry_y:.2f}) -- ({target}.north);"
+                )
+    lines.extend([r"\end{tikzpicture}%", "}}",
+                  # Measure the actual drawing; the layout estimate is only
+                  # for scaling very large graphs, never for reserving pages.
+                  r"\Needspace{\dimexpr\ht\AtlasGraphBox+\dp\AtlasGraphBox+" + f"{reserved_extra:.2f}cm" + r"\relax}",
+                  "\\hypertarget{figure-" + graph["id"] + "}{}",
+                  r"\noindent{\large\bfseries " + _escape_tikz(graph["title"]["text"]) + "}\\par",
+                  r"\noindent{\small " + _escape_tikz(graph["id"]) + "}\\par",
+                  r"\begin{center}\usebox{\AtlasGraphBox}\end{center}",
+                  r"\begingroup\small\setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}",
+                  r"\begin{longtable}{@{}p{.07\linewidth}p{.90\linewidth}@{}}",
+                  r"\textbf{Key} & \textbf{Edge identity and label}\\\midrule\endhead"])
+    for edge_number, edge in enumerate(graph["edges"], 1):
+        label = (edge.get("label") or {}).get("text", "")
+        detail = _escape_tikz(edge["id"]).replace("-", r"-\allowbreak{}")
+        if label:
+            detail += " --- " + _escape_tikz(label)
+        lines.append(f"\\textbf{{E{edge_number}}} & {detail}" + r"\\")
+    lines.extend([r"\end{longtable}\endgroup"])
     return "\n".join(lines)

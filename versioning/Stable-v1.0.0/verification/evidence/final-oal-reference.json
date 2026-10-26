@@ -1,0 +1,27 @@
+{
+  "commit": "bdea8a4269e2788f25b68d2925c125d7e62c04ed",
+  "tree": "5baee0a40771711981397ff332532d4d54e798fe",
+  "changes": [
+    {
+      "source_path": "versioning/Stable-v1.0.0/README.md",
+      "previous_bytes": 63529,
+      "previous_sha256": "8e3d82be109b1e8baf1deab32b338b568aa7c98d407858456620336c76ce499e",
+      "bytes": 63750,
+      "sha256": "70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84",
+      "rules": 46,
+      "normative_body_equal": true,
+      "normative_body_sha256": "eaa49c57d9f6d30ae01572c2b02f7e184416382335eeeeaa1220f721bf93d5c8"
+    },
+    {
+      "source_path": "versioning/Stable-v1.0.0/README.pt-br.md",
+      "previous_bytes": 69371,
+      "previous_sha256": "dec2199d47e04caf65934861cc27308afb264504fce0e54a24391db8d9033bdc",
+      "bytes": 69631,
+      "sha256": "5bfe9578f8d967488225ec8591e6524afccb20c4bacabc269102bc6700c8605d",
+      "rules": 46,
+      "normative_body_equal": true,
+      "normative_body_sha256": "f9a728469db159143325e93d0946b2490e82c09e1dadbe2df0b574d39c5a9285"
+    }
+  ],
+  "license_sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+}

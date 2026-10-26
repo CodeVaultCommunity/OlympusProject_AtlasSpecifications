@@ -1,0 +1,804 @@
+{
+  "audited_source_commit": "ee8a3292b42c44abe3cd1e8cf0c1e8a176df6a04",
+  "scope": "Actual Stable edition, root files, artwork and CI bytes; captured before final report.",
+  "alpha_preservation": "Separate initial manifest including Windows ACLs; historical Alpha is excluded here.",
+  "exclusions": [
+    "verification/RELEASE-DESCRIPTION.md",
+    "verification/RELEASE.md",
+    "verification/release-inputs.json",
+    "verification/evidence/**",
+    "versioning/Alpha-v0.1.0/**",
+    "*.egg-info",
+    ".git",
+    ".pytest_cache",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+    "work",
+    "*.aux",
+    "*.gz",
+    "*.log",
+    "*.out",
+    "*.pyc",
+    "*.pyo",
+    "*.toc"
+  ],
+  "files": [
+    {
+      "path": ".editorconfig",
+      "bytes": 255,
+      "sha256": "c18aceb30c145c7b954d5d162e05c4700e195e677b8fcc7da11624346d06508c"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 418,
+      "sha256": "d331cb35544d11434c7e3c7b751b706c3a64d8f85db9e13d79a5dfa6b96ec4ee"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "bytes": 1469,
+      "sha256": "8d3f3669f2a391bd0ae5ce8935b45fa05514c9c71a28375aa2a49a93f29a32c7"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 117,
+      "sha256": "86fda7ca5a4509782de02bd946c92849b4d789227c8441e7831ecf3bab566a36"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 5160,
+      "sha256": "c09c72dbdc5fe7d62f5c8e4732d99647d51abfb20846560b2c179240513be204"
+    },
+    {
+      "path": "assets/atlas-banner-en.png",
+      "bytes": 1222430,
+      "sha256": "9ca4434b1ee5214c49017e7c6893e9fef5c7aaacd36e73d8337c45d8461c0c2f"
+    },
+    {
+      "path": "assets/atlas-banner-pt-br.png",
+      "bytes": 1222977,
+      "sha256": "0a0dce751ca675e3b559bc2b4010c8e230ec6200165b6c35ad71d0ffb783a47b"
+    },
+    {
+      "path": "assets/atlas-content-en.png",
+      "bytes": 117454,
+      "sha256": "67856c5f3161cd66531e2041b9a9359c87991e22dd563bccc5de1dd1dbf62d2b"
+    },
+    {
+      "path": "assets/atlas-content-pt-br.png",
+      "bytes": 122270,
+      "sha256": "cd4075dffbef54d11c5e42fc36cff78d6b212ec1e44933299cf8458201f1301e"
+    },
+    {
+      "path": "assets/atlas-icon.png",
+      "bytes": 1749523,
+      "sha256": "82bae6d6d6f212cff287617ae5d4f455a50e86494349340103bf6a8aa9bb1f1c"
+    },
+    {
+      "path": "assets/atlas-model-en.png",
+      "bytes": 111725,
+      "sha256": "199298324eff8eae456a8834ebcf85c9896099aa77b139c482db65aebac36b4f"
+    },
+    {
+      "path": "assets/atlas-model-pt-br.png",
+      "bytes": 118384,
+      "sha256": "b3ec022b4337122dc5210183c4c22b4e00b3763e0edb62125ef63094b54334f5"
+    },
+    {
+      "path": "assets/atlas-translation-en.png",
+      "bytes": 135865,
+      "sha256": "0ad3c1031cb50cfb13cf069dc09c45785d9629a7f986ab2b7e59dc82f0d00d6d"
+    },
+    {
+      "path": "assets/atlas-translation-pt-br.png",
+      "bytes": 140242,
+      "sha256": "97940170f660d4ba561c7d12bb906283d7145f282a6cea7738374592815fca84"
+    },
+    {
+      "path": "assets/olympus-icon.png",
+      "bytes": 1341958,
+      "sha256": "f75bf137a7f4278a5ec92d3581ee71c4c94d2193b181b5b575e726aba1b9e6a1"
+    },
+    {
+      "path": "assets/README.md",
+      "bytes": 3963,
+      "sha256": "4af2f378da65f278bba4b9af4d793b55fb7bed90858fe5754ac9a60c3a4deef3"
+    },
+    {
+      "path": "assets/README.pt-br.md",
+      "bytes": 4219,
+      "sha256": "7d75b351ba4fe3d236d9f2a45d3c48beee15b194c0155602b63a71c53798e054"
+    },
+    {
+      "path": "assets/sources/ARTWORK-PROMPT.md",
+      "bytes": 1354,
+      "sha256": "968c495ffa8c47000302bc3ea4fda3fb4b4ee7fe18398d651d19bc612d6c2ff5"
+    },
+    {
+      "path": "assets/sources/atlas-banner-en.svg",
+      "bytes": 6893193,
+      "sha256": "53b74727761fdc466885a1154feee516aa5f43da34ad02f0b6022d66279351dc"
+    },
+    {
+      "path": "assets/sources/atlas-banner-pt-br.svg",
+      "bytes": 6893193,
+      "sha256": "68e811abe25bbde99cf0f1d8862451d52819593d8fb63c89e9a04ea93c525473"
+    },
+    {
+      "path": "assets/sources/atlas-content-en.svg",
+      "bytes": 6532,
+      "sha256": "b048d12445237f486d6d64c11cb1f655b0564b6a15be3e6097a50ca1676e8615"
+    },
+    {
+      "path": "assets/sources/atlas-content-pt-br.svg",
+      "bytes": 6600,
+      "sha256": "e972870afdb535ba46f08526bfdaeffb0f504adc76a36af38fe3b7c7e5dabc94"
+    },
+    {
+      "path": "assets/sources/atlas-hero-art.png",
+      "bytes": 2076876,
+      "sha256": "b9d3b665cc6a4d122599311f9f5d5e39b28e3a9e6c751dae6075b44f62b191c4"
+    },
+    {
+      "path": "assets/sources/atlas-icon-original.png",
+      "bytes": 1749523,
+      "sha256": "82bae6d6d6f212cff287617ae5d4f455a50e86494349340103bf6a8aa9bb1f1c"
+    },
+    {
+      "path": "assets/sources/atlas-model-en.svg",
+      "bytes": 6213,
+      "sha256": "349cb3a6407bbe95364a392e36e3487618c29464581e57d5d2bcff3a2b9ad6a0"
+    },
+    {
+      "path": "assets/sources/atlas-model-pt-br.svg",
+      "bytes": 6287,
+      "sha256": "4e5f914e73cd3c57683b4cd0bf632b71d17cfc198acd901d12220de5507e2951"
+    },
+    {
+      "path": "assets/sources/atlas-translation-en.svg",
+      "bytes": 8504,
+      "sha256": "25b7b67c624b9cb945a5d938648ff34508d614557c99a7db97d679149102f904"
+    },
+    {
+      "path": "assets/sources/atlas-translation-pt-br.svg",
+      "bytes": 8588,
+      "sha256": "0d42a61b88b25434916dfac4d099f65a9fdfb1d51e115fd11b4d49d12b92363b"
+    },
+    {
+      "path": "assets/sources/olympus-icon-original.png",
+      "bytes": 1341958,
+      "sha256": "f75bf137a7f4278a5ec92d3581ee71c4c94d2193b181b5b575e726aba1b9e6a1"
+    },
+    {
+      "path": "assets/sources/render_images.py",
+      "bytes": 14953,
+      "sha256": "7ae7e2ce2bbac1ef8d3256e6501e26778d3817373c7281a7d8012805a8771a00"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 710,
+      "sha256": "fa77dad920541fb02d4756cb2fe291661b3f2491d6b135f19a57e7a17cc33dc4"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 1463,
+      "sha256": "de59506e900434e54fad772eb7fead5a723539090d1e696c5e50ba1e74f0dcf9"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13403,
+      "sha256": "6449c42f3820777ee7d7319b29953da4773fedfd360c44f1e6c8655bbba0c266"
+    },
+    {
+      "path": "README.pt-br.md",
+      "bytes": 14031,
+      "sha256": "ef20226bf348729ca526127399db1d134fc2be96f00e086f2ef4d87850a02a6d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/COMPATIBILITY.md",
+      "bytes": 4280,
+      "sha256": "a537e9607abfd994ea0f658757137ae71e6e6a8814745d1fe98e93426380770a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/COMPATIBILITY.pt-br.md",
+      "bytes": 4343,
+      "sha256": "2c6172de6e54d88512e524c6841656870b625723bfba480ed990b4bf7b68a347"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/DIAGNOSTICS.md",
+      "bytes": 4157,
+      "sha256": "eb032cc48c97277e68a1cc3d31aef9386c71e9ca46b244fda35fc6789b66777d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/build.py",
+      "bytes": 10407,
+      "sha256": "77a9e899d803f5d5e8f0d1a117b5b40ce070a875843d1a71dc32525c7f349cfc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/example.atlas.json",
+      "bytes": 114997,
+      "sha256": "d58eb6755a4d308a41f03ce83b2470740c151de8a683edc8c37df266039739d3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/example.atlas.md",
+      "bytes": 176892,
+      "sha256": "cc32da1de02df57e5a009d03ef4986e4cbaeaaa29bf25a920af1c34686e4f23a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/example.atlas.pdf",
+      "bytes": 408144,
+      "sha256": "b731c3d35c9ef48f03a7c9e9d415ded36e331c7cecfd7f5b507adf4c1970082d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/example.atlas.tex",
+      "bytes": 230594,
+      "sha256": "746b4aa737d5a44d3a7e1803b422c6f57ac9d0f0c8cf2b6896dc3cbac676cf0b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/README.md",
+      "bytes": 2103,
+      "sha256": "e832da812d2c589f277448d5f39b5f340568aa0a5e1154c0a05db8ca51248e6e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/composition/README.pt-br.md",
+      "bytes": 2141,
+      "sha256": "c0867dbf5f4846b24e3221167177b507aa99f8f86961e267926dbf84bef481ef"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/assets/request-flow.png",
+      "bytes": 73547,
+      "sha256": "53545111afdda2bcf5b113667ef14dc2233ca3f7e5e730749d3f50473ed81f8b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/assets/request-flow.svg",
+      "bytes": 10124,
+      "sha256": "71f3a97b667a88041cc5812da8c8e7e1ddaced2f9c835e56c2c7d6d1b4252206"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/assets/request-form.png",
+      "bytes": 22242,
+      "sha256": "5dd57bf8bccc9bcd9b68e1be1ea50163777caf93d83f6fbfec1a099eb1d84347"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/assets/request-form.svg",
+      "bytes": 1663,
+      "sha256": "f5a97fb7cb43af9681b2083fe1deebe38bb3eda24adb947c3314317fc8a24de9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/example.atlas.json",
+      "bytes": 59545,
+      "sha256": "22298163ed99570f88cf3532d6ee213caa843f95873329d1ff4c758cf32e95ee"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/example.atlas.md",
+      "bytes": 91260,
+      "sha256": "2fbbd6d94ac661f6944334554f783b38aefb3a27eaa95e14fa65d7609a60d259"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/example.atlas.pdf",
+      "bytes": 378485,
+      "sha256": "22fe737c5114fbdd9af17c2b2aeff9ce1882eb8ef5bbac773468ea88f9a1d1fa"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/example.atlas.tex",
+      "bytes": 113066,
+      "sha256": "1ee26ad40c747186d050e0c7347c937f02d4bcec98ef4149d06fc6105f69df60"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/README.md",
+      "bytes": 1653,
+      "sha256": "86df303cd19a08fde6d9824ce2ced0289aba0043a8c8fa0d2aa3a4757868255c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/minimal/README.pt-br.md",
+      "bytes": 1738,
+      "sha256": "78f5d947ae09ac8842c629cb2f0348f0fa0c8ca3cdf6bf28121a768e0084bc81"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/README.md",
+      "bytes": 4510,
+      "sha256": "998354f138d8dfac4ad6a9135ba495b349dd23a30492a5e19c6a529ed74a5d9a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/README.pt-br.md",
+      "bytes": 4750,
+      "sha256": "edb028cb6849ffaa460fb2f285dbe36a62c9d13252f370878642d6abee83b9f4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/example.atlas.json",
+      "bytes": 130399,
+      "sha256": "3ad32059e3b97d774069293b3219037f55ed9c18df33b1c2cb5c8ae4e3cbb592"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/example.atlas.md",
+      "bytes": 191887,
+      "sha256": "c8cb1b07343d3fa2a933c75156c0098afaac3ad6e7c0f6bbf9f994fb041c0e07"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/example.atlas.pdf",
+      "bytes": 417200,
+      "sha256": "a26421f184a02dfa61dcf92df58954ea0707327ac6e12f213736456cee4baf13"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/example.atlas.tex",
+      "bytes": 243475,
+      "sha256": "b7aa3d7ac8f2a31a204fb8f5c885e93242e7325b5972ab6153130431a80c61f5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/needs.md",
+      "bytes": 3180,
+      "sha256": "dc21e1ab9264487e561c9999e5d08daaa9f9d777592665cc73355157c17a9b9b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/README.md",
+      "bytes": 5501,
+      "sha256": "80bd1e94e12075ddf717c6a41e5a852eec255ee0684ff0d9e78e601d38dd2a84"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/README.pt-br.md",
+      "bytes": 5979,
+      "sha256": "f591d0348294d5604b47b3d7b1b91430f44d5b47a77cc26968a7829dd1acbda6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/revisions/README.md",
+      "bytes": 2838,
+      "sha256": "16ca03e6dd679747453e61ee39f2d8c1912c839eb5dccd674511a5f3d4009d9c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/revisions/revision-2.atlas.json",
+      "bytes": 129532,
+      "sha256": "c936294e28a5f17d025119ea2e798ca03c672304add4efd36d69dd3f129950b4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/revisions/revision-3.atlas.json",
+      "bytes": 130399,
+      "sha256": "3ad32059e3b97d774069293b3219037f55ed9c18df33b1c2cb5c8ae4e3cbb592"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/task-board/traceability.md",
+      "bytes": 5441,
+      "sha256": "87758bad318570b4618cbf493fc574e720a8d0ef1c7901a8c3fe988a8ad61a7e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/json/atlas.schema.json",
+      "bytes": 55891,
+      "sha256": "c695b889a86ca51942559fb2d88c7d4e192f312eff8dfb3fa2e1e74a92c8cb8f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/json/README.md",
+      "bytes": 8584,
+      "sha256": "2804c166a68b1627dbd1d66b218d8259af0b979ce70ce9b7c970d348bde129bd"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/json/README.pt-br.md",
+      "bytes": 8889,
+      "sha256": "469afd48b82f78fd8c42eef9843ca5465f1c9a8c5ed8ba77c3c53f20a8eafbc3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/json/starter.atlas.json",
+      "bytes": 3732,
+      "sha256": "210f82a721c5ebd934bf65f1feee0105f4ffc33b2d599f74fddd5079aa9e2698"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/latex/atlas-presentation.example.tex",
+      "bytes": 1404,
+      "sha256": "b0329d91bfd2f32bd2b612fb09d1d27a6e7eb51c6ee59a8c9186e764f7b958a4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/latex/atlas.sty",
+      "bytes": 9469,
+      "sha256": "b9946034c1232765933672095fd6f8b7684836963240b6fa004c919f7a09537f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/latex/README.md",
+      "bytes": 16276,
+      "sha256": "5d0d12b8265be3858e6a513ad76184ed35899732f27c1330769d038055460393"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/latex/README.pt-br.md",
+      "bytes": 16321,
+      "sha256": "54db4f0e8e90e5a5552cc61c44f3874fc8ad74e72053ddcf942fa6292bfbafd4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/latex/starter.atlas.tex",
+      "bytes": 6774,
+      "sha256": "02afcc02b290e7316efe63ae12bb43df100e91f1387cc08d5a8b32d2210de223"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/markdown/README.md",
+      "bytes": 9758,
+      "sha256": "0f371867b937de34b3235cfbfe0c301f2a9db8369c199b41b005d081496601fc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/markdown/README.pt-br.md",
+      "bytes": 9227,
+      "sha256": "080bc5391f38080bc32793cadfa46ec5284c9d9ef3a0c0d3c141218c14e02803"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/implementations/markdown/starter.atlas.md",
+      "bytes": 5745,
+      "sha256": "275beff66730daa4f312ac743ec25df8c433c60fd7480563fcdffb58ad288fd3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/LICENSE",
+      "bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/pyproject.toml",
+      "bytes": 787,
+      "sha256": "0c0ebba2168a76ce08f010c003c85cbff1aca03cc33daa48f04898a9a238fc16"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/README.md",
+      "bytes": 72179,
+      "sha256": "a9210e4f1bde334ad2df484613fb419b2d5095769ff5ed7b6e7aca8e097ad65e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/README.pt-br.md",
+      "bytes": 65842,
+      "sha256": "d82361ba073ea8f98fb78c22b59a7a70ad6a95fa4798a5a8c49ccb22a04a2bd0"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/agents/openai.yaml",
+      "bytes": 250,
+      "sha256": "feeea6f5d8c511f6ad5967f6b1a229139664ad9ae076d31984505de33b269fbb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/assets/atlas-presentation.example.tex",
+      "bytes": 1404,
+      "sha256": "b0329d91bfd2f32bd2b612fb09d1d27a6e7eb51c6ee59a8c9186e764f7b958a4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/assets/starter.atlas.json",
+      "bytes": 3732,
+      "sha256": "210f82a721c5ebd934bf65f1feee0105f4ffc33b2d599f74fddd5079aa9e2698"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/LICENSE",
+      "bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/atlas-json.md",
+      "bytes": 8930,
+      "sha256": "e6bec65f91b946e0c3bbc4f7dee04ebf7f087d7546acc71d49e440285871d20c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/atlas-latex.md",
+      "bytes": 16611,
+      "sha256": "f9eff5b5a078089bebdd42a514d5aa1fb73d94a127984e0c892d27c7870db979"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/atlas-markdown.md",
+      "bytes": 10019,
+      "sha256": "6f211cb15fc1b814e4c773283e1428c4dbc142cdba6668a771d9c8eb536133a7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/atlas-specification.md",
+      "bytes": 72642,
+      "sha256": "1b04637c93a953531dd8191e700257bd7317bfa4d00ad50397e86f728cac7914"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/compatibility.md",
+      "bytes": 4535,
+      "sha256": "12e8c7d6ce1d1014200c6511b57fe2ca1a83fb5e26eb74f92c8e5b7ae927cca7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/diagnostics.md",
+      "bytes": 4320,
+      "sha256": "8fd05100a362250efa1c9deb7d18e78f9f06330922b132180d44f27cf511c8c7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/workflow.md",
+      "bytes": 4461,
+      "sha256": "7f2ecb920fe3fb3983df7969c4c566ba590eee772467311fda6d54a0695e740a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/atlas_translate.py",
+      "bytes": 1244,
+      "sha256": "382a91d4605d060a4dc217a35938c8cceba377d6f67666e4c02c7a19193430ff"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/requirements.txt",
+      "bytes": 20,
+      "sha256": "9984fa6ad6d35d2468011c4c278583e9bb4983d83be6bb3f5aabcef9c99b19b7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/__init__.py",
+      "bytes": 1107,
+      "sha256": "a8f7cf8ba0b0035e67134bd7b4fa24e62876acd026db58bb96c9467b9e9ba751"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/__main__.py",
+      "bytes": 48,
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/base.py",
+      "bytes": 987,
+      "sha256": "04d302f1862a7636dc79d18feda08d3ec503591adfaa1d517659bf29e8570a33"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/json_adapter.py",
+      "bytes": 2280,
+      "sha256": "093ce8248b735d525858b891d568d6753cdedbc4443bf0b4e21868ac86a11576"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/latex_adapter.py",
+      "bytes": 38144,
+      "sha256": "102ea16cc4f06e2effcf19079accc8564e79feacf64a9668fc245418a5d0ad59"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/adapters/markdown_adapter.py",
+      "bytes": 49709,
+      "sha256": "511bef59c48b333bf306fa8f86c454e2a087d51c508d41183c79d52020bb0cf4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/cli.py",
+      "bytes": 10352,
+      "sha256": "4c789dc2b8f3bdd94cd42698084c29925bc3cb3347e0c3db6e90bcec999f173b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/errors.py",
+      "bytes": 1853,
+      "sha256": "ee9cbd830b7358c4e717b39c37fb9c2a1464d0140934d0d69e3c068d781d376e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/graph_render.py",
+      "bytes": 7805,
+      "sha256": "e23e895b556718d24faf0b145ce17644f8138ba1019555ed04960d658ed09397"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/registry.py",
+      "bytes": 5686,
+      "sha256": "1b51af7a2c138ccda1f66a5c873d0b16808b1d3c7e922a10d94f22eb51923cd9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/schemas/atlas.schema.json",
+      "bytes": 55891,
+      "sha256": "c695b889a86ca51942559fb2d88c7d4e192f312eff8dfb3fa2e1e74a92c8cb8f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/slots.py",
+      "bytes": 5632,
+      "sha256": "2e234b4d15159bb6b4b88cab9b72930a00ca6d980e6238192ecb7a114a8dbef2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/templates/atlas.sty",
+      "bytes": 9469,
+      "sha256": "b9946034c1232765933672095fd6f8b7684836963240b6fa004c919f7a09537f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/util.py",
+      "bytes": 5615,
+      "sha256": "63afd75c39d724c4996e2d6629135bc877656b1352c065383ce3059cedf4c1df"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/scripts/vendor/atlas_spec/validation.py",
+      "bytes": 43424,
+      "sha256": "843acb7725744a3fb3e5e87a9a013a8e83160fb45d7f4f9764d0e96bc9d6ae9f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/SKILL.md",
+      "bytes": 8140,
+      "sha256": "c2b17977548bdce5de1e92c91a12b65c8ca6fbd39e74cc325ac7d9f8968de73e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/atlas-specs/source-map.json",
+      "bytes": 8215,
+      "sha256": "03b51c21d816634018a6ea6c9ca3fa9510ec8142f4b6ffd41dbebc4b0395aa70"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skills/build.py",
+      "bytes": 7722,
+      "sha256": "c23df5a993d86b92ac7acfcac7024c7b6d7ba602c2b4d199e65387c5079336c4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/conftest.py",
+      "bytes": 4221,
+      "sha256": "121084c678e4ae3c2fdff4ea562394905837f79c7af62cc1b1663ae8eef59a15"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_distribution.py",
+      "bytes": 4833,
+      "sha256": "3ee2091f98fbc4e1fd32eff957c7b3a705b2e14bc7e2a3711eea027c1d0ed20c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_latex_presentation.py",
+      "bytes": 7072,
+      "sha256": "365d823b5eb98cb207b72d8e75d67a8ca1b2e427f313d156817b3d76256bc2db"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_packaging.py",
+      "bytes": 3347,
+      "sha256": "4708a5ab49a8e8bc68e241f8b25b3452bdd03275e80e14b3428ccbea0874b87d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_release_regressions.py",
+      "bytes": 5783,
+      "sha256": "e89dc1c3d50f162413117a7e158bc598f6314698f5dacbcf95e86c16ef95615c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_resources_and_cli.py",
+      "bytes": 5136,
+      "sha256": "9075108a41e193822c3062afc64b0ddd0723131996eac9eaebd975a8ad06b7c9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_roundtrip.py",
+      "bytes": 10004,
+      "sha256": "73393d0b953918c1666c9944a7e6d0b85cd20cbc6c7cfbbb43a5be309b4cd0bd"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_stable_contract.py",
+      "bytes": 4122,
+      "sha256": "c60b2ec9eb3c52b9f1d3ec0b18dbf38fca80b72db3f8fc0d665726b0ff8326fc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_stable_regressions.py",
+      "bytes": 7921,
+      "sha256": "ee1c34f35c0532b71c2ebc47bbdfaa349fa934aa7641d9990524981fe92c1a1f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/tests/test_validation_and_errors.py",
+      "bytes": 10948,
+      "sha256": "8d628c1691d8b8922a48d295e80a907f49a64fe42fae848bf5790f1bc77e8039"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/atlas_translate.py",
+      "bytes": 1244,
+      "sha256": "382a91d4605d060a4dc217a35938c8cceba377d6f67666e4c02c7a19193430ff"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/README.md",
+      "bytes": 6447,
+      "sha256": "70b33f9fa6deedf93538a89478ba073dc76aa82427df798f4607dec453d80f7f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/README.pt-br.md",
+      "bytes": 6755,
+      "sha256": "c6a655016c5c2b2314a99af911a61dbd9d87e0d3b0fffc13a776a6b89c86e915"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/__init__.py",
+      "bytes": 1107,
+      "sha256": "a8f7cf8ba0b0035e67134bd7b4fa24e62876acd026db58bb96c9467b9e9ba751"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/__main__.py",
+      "bytes": 48,
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/adapters/base.py",
+      "bytes": 987,
+      "sha256": "04d302f1862a7636dc79d18feda08d3ec503591adfaa1d517659bf29e8570a33"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/adapters/json_adapter.py",
+      "bytes": 2280,
+      "sha256": "093ce8248b735d525858b891d568d6753cdedbc4443bf0b4e21868ac86a11576"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/adapters/latex_adapter.py",
+      "bytes": 38144,
+      "sha256": "102ea16cc4f06e2effcf19079accc8564e79feacf64a9668fc245418a5d0ad59"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/adapters/markdown_adapter.py",
+      "bytes": 49709,
+      "sha256": "511bef59c48b333bf306fa8f86c454e2a087d51c508d41183c79d52020bb0cf4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/cli.py",
+      "bytes": 10352,
+      "sha256": "4c789dc2b8f3bdd94cd42698084c29925bc3cb3347e0c3db6e90bcec999f173b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/errors.py",
+      "bytes": 1853,
+      "sha256": "ee9cbd830b7358c4e717b39c37fb9c2a1464d0140934d0d69e3c068d781d376e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/graph_render.py",
+      "bytes": 7805,
+      "sha256": "e23e895b556718d24faf0b145ce17644f8138ba1019555ed04960d658ed09397"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/registry.py",
+      "bytes": 5686,
+      "sha256": "1b51af7a2c138ccda1f66a5c873d0b16808b1d3c7e922a10d94f22eb51923cd9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/schemas/atlas.schema.json",
+      "bytes": 55891,
+      "sha256": "c695b889a86ca51942559fb2d88c7d4e192f312eff8dfb3fa2e1e74a92c8cb8f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/slots.py",
+      "bytes": 5632,
+      "sha256": "2e234b4d15159bb6b4b88cab9b72930a00ca6d980e6238192ecb7a114a8dbef2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/templates/atlas.sty",
+      "bytes": 9469,
+      "sha256": "b9946034c1232765933672095fd6f8b7684836963240b6fa004c919f7a09537f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/util.py",
+      "bytes": 5615,
+      "sha256": "63afd75c39d724c4996e2d6629135bc877656b1352c065383ce3059cedf4c1df"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/translator/src/atlas_spec/validation.py",
+      "bytes": 43424,
+      "sha256": "843acb7725744a3fb3e5e87a9a013a8e83160fb45d7f4f9764d0e96bc9d6ae9f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/capture_inputs.py",
+      "bytes": 2651,
+      "sha256": "c342c1bd73c8c544c7f5577612ff2e3214fd0e817f2210171a653df23cea4c93"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/capture_release.py",
+      "bytes": 2859,
+      "sha256": "1da7b862355edfae02407e68a19ee67be3e3980cdd89edc810b4d7cd404775c5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/checkpoint-inputs.json",
+      "bytes": 18132,
+      "sha256": "b14b3109121f893ad0ed25c75e2087536aa2d584f3fd39df8417847e9a1c2795"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/CHECKPOINT.md",
+      "bytes": 18916,
+      "sha256": "6c4de9f6516656ed70f4a4908f0c7313cf940d67f375df60a971873f15d1238f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/editorial-migration.json",
+      "bytes": 2174,
+      "sha256": "94ccec4b6997e9c2f8e09428fc4cc0007b5e52791f21f4308b6f5c9f715113e0"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/oal/baseline.json",
+      "bytes": 1455,
+      "sha256": "e63f49ab6cc517303719955c89fd62a9ec3829bbd1248003c28ae8124817c65f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/oal/LICENSE",
+      "bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/oal/README.md.txt",
+      "bytes": 63529,
+      "sha256": "8e3d82be109b1e8baf1deab32b338b568aa7c98d407858456620336c76ce499e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/oal/README.pt-br.md.txt",
+      "bytes": 69371,
+      "sha256": "dec2199d47e04caf65934861cc27308afb264504fce0e54a24391db8d9033bdc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/OAL-CORRESPONDENCE.md",
+      "bytes": 6913,
+      "sha256": "1d5b9b4cb8b4599e0af27b888c071e8a616788fc3e3dc910ffd6263abe6d6101"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/reference-inventory.md",
+      "bytes": 5678,
+      "sha256": "2f3c7ca4d0a97720e554d5a1bddd1b751ff5599a14926ca14bddea6dff78fda6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/verification/SEMANTIC-REVIEW.md",
+      "bytes": 8511,
+      "sha256": "2c37527a5323b73eb28abf38600c52718b0d4a2f744dd04e3d772b514c15ee28"
+    }
+  ]
+}

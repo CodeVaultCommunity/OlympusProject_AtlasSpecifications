@@ -14,7 +14,7 @@ English is normative. Stable identifies a contract, not publication or stakehold
 | Existing producer / revision / history | Authored data; preserved exactly by conversion, even if producer differs from the running package. |
 | Stable input → Stable representation | Supported in all six directions under the preservation/resource contract. |
 | Alpha input → Stable runtime | Rejected with explicit version diagnostics. Use the preserved Alpha edition and its own runtime for Alpha documents. |
-| Alpha → Stable content | Separate editorial migration with source, destination, preparer, intended changes and revision. No generic migrator is supplied. |
+| Alpha → Stable content | Separate editorial migration with source, destination, accountable person, intended changes and revision. No generic migrator is supplied. |
 | Other / future model or profile | Unsupported unless explicitly implemented and documented. No promise of interoperability with another major version. |
 | PDF | Publication only; no reverse import or payload equality claim. |
 
@@ -35,3 +35,5 @@ Compatible optional additions require a minor version and a declared capability/
 Package versions describe implementation evolution. Model/profile identities select contracts independently; package updates must not silently relabel payloads. A document revision records authored changes rather than codec executions. Historical versions remain addressable by their own edition directories.
 
 The supplied starter and three examples record an explicit Alpha revision 1 → Stable revision 2 migration in `HIST-MIGRATION-STABLE`. The migration ledger (edition source: `verification/editorial-migration.json`) retains input hashes and responsibility; the task-board revision demonstration (edition source: `examples/task-board/revisions/README.md`) is a separate revision 2 → 3 change.
+
+Before formal migration acceptance, identify the accountable person explicitly; a requester or tool is not automatically that person. An unconfirmed candidate records `responsibility_status: pending_confirmation`, `responsible_person: null` and no human approval claim. Presentation-only evolution accepts both the original Stable TikZ form and the current compact form, each regenerated exactly from its graph; arbitrary edits still fail.

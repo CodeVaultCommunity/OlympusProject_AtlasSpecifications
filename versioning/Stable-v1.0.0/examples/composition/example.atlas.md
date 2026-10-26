@@ -3646,7 +3646,7 @@ Initial reference example for the first Atlas Specifications edition, Alpha-v0.1
 
 
 <!-- atlas:text id=T000415 role=paragraph -->
-Explicit editorial migration from Atlas Alpha-v0.1.0 revision 1 to Atlas Stable-v1.0.0 revision 2. Prepared by Codex under Douglas de Oliveira Alkimim's execution request. Model/profile/envelope and producer identities change; existing concept IDs, domain contracts, authored history and resources are retained. This is not format conversion, a Needs-to-L1 derivation, or new stakeholder approval.
+Explicit editorial migration from Atlas Alpha-v0.1.0 revision 1 to Atlas Stable-v1.0.0 revision 2. Model/profile/envelope and producer identities change; existing concept IDs, domain contracts, authored history and resources are retained. This is not format conversion, a Needs-to-L1 derivation, or new stakeholder approval.
 <!-- /atlas:text id=T000415 -->
 
 

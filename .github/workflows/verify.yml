@@ -24,6 +24,7 @@ jobs:
       - run: python -m pytest tests
       - run: python examples/build.py --check
       - run: python skills/build.py --check
+      - run: python verification/capture_release.py --check
   publication:
     runs-on: ubuntu-24.04
     defaults:

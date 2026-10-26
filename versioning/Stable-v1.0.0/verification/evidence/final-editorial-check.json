@@ -1,0 +1,57 @@
+{
+  "baseline": "e3552b4508a3cd84aee153cb3920ca7314e851c7",
+  "verified_records": [
+    {
+      "path": "implementations/json/starter.atlas.json",
+      "before_sha256": "210f82a721c5ebd934bf65f1feee0105f4ffc33b2d599f74fddd5079aa9e2698",
+      "after_sha256": "9679c8de59873117aae8f3a1814319cfb6a14f71aea857949d8548193f4fd768",
+      "changed_paths": [
+        "/atlas/history/1/description/0/text"
+      ]
+    },
+    {
+      "path": "examples/composition/example.atlas.json",
+      "before_sha256": "d58eb6755a4d308a41f03ce83b2470740c151de8a683edc8c37df266039739d3",
+      "after_sha256": "63a65c44f9fb4151c00389a954e9ce87531754c7c19076743b6dd6693ff62f96",
+      "changed_paths": [
+        "/atlas/history/1/description/0/text"
+      ]
+    },
+    {
+      "path": "examples/minimal/example.atlas.json",
+      "before_sha256": "22298163ed99570f88cf3532d6ee213caa843f95873329d1ff4c758cf32e95ee",
+      "after_sha256": "731ef7e7f9e0dcda1b9dea1cae45a51a43bd16083948dae121d18fdd77bc746e",
+      "changed_paths": [
+        "/atlas/history/1/description/0/text"
+      ]
+    },
+    {
+      "path": "examples/task-board/example.atlas.json",
+      "before_sha256": "3ad32059e3b97d774069293b3219037f55ed9c18df33b1c2cb5c8ae4e3cbb592",
+      "after_sha256": "fa14749cf58a179792ee66231e413cd912ddf944174824919b8c4615e91d87c8",
+      "changed_paths": [
+        "/atlas/history/1/description/0/text",
+        "/atlas/history/2/description/0/text"
+      ]
+    },
+    {
+      "path": "examples/task-board/revisions/revision-2.atlas.json",
+      "before_sha256": "c936294e28a5f17d025119ea2e798ca03c672304add4efd36d69dd3f129950b4",
+      "after_sha256": "b94ca14964d5a9b418eb7512f32edf9d2bd8e3cb56b84dde9e95e9f7f43f44b3",
+      "changed_paths": [
+        "/atlas/history/1/description/0/text"
+      ]
+    },
+    {
+      "path": "examples/task-board/revisions/revision-3.atlas.json",
+      "before_sha256": "3ad32059e3b97d774069293b3219037f55ed9c18df33b1c2cb5c8ae4e3cbb592",
+      "after_sha256": "fa14749cf58a179792ee66231e413cd912ddf944174824919b8c4615e91d87c8",
+      "changed_paths": [
+        "/atlas/history/1/description/0/text",
+        "/atlas/history/2/description/0/text"
+      ]
+    }
+  ],
+  "only_declared_json_paths_changed": true,
+  "current_equals_revision_3": true
+}

@@ -1,12 +1,29 @@
 # OAL Stable correspondence review / Revisão da correspondência
 
-Reviewed by Codex under the Atlas execution request, 2026-10-25 (America/Sao_Paulo). This is agent document review, not human approval or an application test. / Revisado por Codex sob o pedido de execução do Atlas. É revisão documental por agente, não aprovação humana ou teste de aplicação.
+Document-level clause comparison, separate from stakeholder approval and application execution. / Comparação documental por cláusula, distinta da aprovação de stakeholders e da execução da aplicação.
 
 ## Exact input / Entrada exata
 
-The [baseline record](oal/baseline.json) identifies local commit `a02bf8eecf222e7e0a7a34977fff49a25b5af6aa`, a clean shared worktree and byte-exact EN/PT snapshots. Normative source: `versioning/Stable-v1.0.0/README.md`; SHA-256 `8e3d82be109b1e8baf1deab32b338b568aa7c98d407858456620336c76ce499e`. The [English snapshot](oal/README.md.txt) is the authority; [Portuguese](oal/README.pt-br.md.txt) is the translation. Original license is retained. Remote availability of this commit was not asserted or required.
+The [baseline record](oal/baseline.json) identifies local commit `bdea8a4269e2788f25b68d2925c125d7e62c04ed`, a verified canonical archive and accessible local Git tree and byte-exact EN/PT snapshots. Normative source: `versioning/Stable-v1.0.0/README.md`; SHA-256 `70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84`. The [English snapshot](oal/README.md.txt) is the authority; [Portuguese](oal/README.pt-br.md.txt) is the translation. Original license is retained. Remote availability of this commit was not asserted or required.
 
 O registro identifica commit local, checkout limpo e snapshots exatos EN/PT. O snapshot inglês é normativo e o português é tradução; a licença original foi preservada. Não se afirma disponibilidade pública do commit.
+
+The final reference update on 2026-10-26 compares the canonical archive with the
+Git blobs of `bdea8a4269e2788f25b68d2925c125d7e62c04ed` (tree
+`5baee0a40771711981397ff332532d4d54e798fe`). Both match exactly. Relative to
+`a02bf8eecf222e7e0a7a34977fff49a25b5af6aa`, only the manuals' introductory
+editorial/operational notices changed. The complete normative bodies beginning
+at `oal-layers`, including all 46 numbered rules in each language, remain
+byte-identical. The ten UCS and nine cross-layer assessments below therefore
+retain the same obligations and were reconfirmed against the current Atlas
+manual. The source update does not turn launcher changes into normative changes.
+
+A atualização final compara os bytes do ZIP canônico com os blobs do commit
+local e registra a igualdade em `oal/baseline.json`. As dez cláusulas UCS e nove
+transversais continuam correspondentes. A validade de domínio pode ficar na
+entidade ou no caso consumidor; ferramentas que recebem entidade pronta não
+repetem sua coerência intrínseca. `SRC-TASK-OAL` permanece a referência Alpha
+histórica dos exemplos, sem ser relabelada como origem Stable.
 
 All 46 numbered normative rules in both languages compare exactly with the preserved Alpha-v0.2.0-Alkimim normative blocks. Release/version prose differs. This comparison establishes continuity of those bytes, not Atlas conformance: each of the relevant 19 clauses was also read against Atlas's actual obligations and scope below. The other 27 L2–L4 rules are outside the claim.
 

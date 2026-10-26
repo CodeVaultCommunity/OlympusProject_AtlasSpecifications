@@ -1,0 +1,526 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+entering extended mode
+(smoke.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
+))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics
+.cfg)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.d
+ef)))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cf
+g)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.lt
+x))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+) (C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+) (C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tik
+z.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.st
+y
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.
+sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfut
+il-common.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfut
+il-latex.def)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrc
+s.code.tex
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.te
+x)))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcor
+e.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsy
+s.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sys.code.tex
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
+ys.code.tex
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
+yslibraryfiltered.code.tex))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+.cfg)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sys-pdftex.def
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sys-common-pdf.def)))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+syssoftpath.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sysprotocol.code.tex))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+ore.code.tex
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.co
+de.tex
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathuti
+l.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpar
+ser.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.basic.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.trigonometric.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.random.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.comparison.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.base.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.round.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.misc.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.integerarithmetics.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcal
+c.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathflo
+at.code.tex))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.cod
+e.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepoints.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepathconstruct.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepathusage.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orescopes.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oregraphicstate.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oretransformations.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orequick.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreobjects.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepathprocessing.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orearrows.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreshade.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreimage.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreexternal.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orelayers.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oretransparency.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepatterns.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orerdf.code.tex)))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
+leshapes.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
+leplot.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgf
+comp-version-0-65.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgf
+comp-version-1-18.sty))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.
+sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys
+.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
+ys.code.tex))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.co
+de.tex))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffo
+r.code.tex))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz\tikz.code.tex
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
+braryplothandlers.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
+lematrix.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.s
+ty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefi
+nekeys.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape
+.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcm
+ds.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr
+.sty)))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gett
+itlestring.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.s
+ty)))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc
+.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintca
+lc.sty)))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
+ilecheck.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqu
+ecounter.sty))) (atlas.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.s
+ty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-p
+dftex.def)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.c
+fg))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.s
+ty)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.s
+ty (C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+) (C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces
+.sty)))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbbreakabl
+e.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.co
+de.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
+
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill.ima
+ge.sty
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryf
+ill.image.code.tex))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjig
+saw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
+))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibraryshapes.geometric.code.tex
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shape
+s\pgflibraryshapes.geometric.code.tex))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
+braryarrows.meta.code.tex)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarypositioning.code.tex))
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-p
+dftex.def) (smoke.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
+mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
+-base.sty
+
+Package epstopdf Warning: Shell escape feature is not enabled.
+
+
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys
+.cfg)) (smoke.out) (smoke.out)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd)
+[1{C:/Users/Douglas/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/
+Douglas/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}]
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+Underfull \hbox (badness 10000) in alignment at lines 42--42
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 42--42
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 42--44
+[] [] []
+ignored error: Infinite glue shrinkage found in box being split [1]
+ignored error: Infinite glue shrinkage found in box being split [2] [3]
+[4]
+Underfull \hbox (badness 10000) in alignment at lines 424--424
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 424--424
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 424--426
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 428--428
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 428--428
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 428--430
+[] [] []
+[5] [6] (C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd)
+
+Underfull \hbox (badness 10000) in alignment at lines 538--538
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 538--538
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 538--540
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 554--554
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 554--554
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 554--556
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 558--558
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 558--558
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 558--561
+[] [] []
+[7{C:/Users/Douglas/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc
+}]
+Underfull \hbox (badness 10000) in alignment at lines 563--563
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 563--563
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 563--566
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 603--604
+[] []
+
+Underfull \hbox (badness 10000) in alignment at lines 604--611
+[] []
+[8]
+Underfull \hbox (badness 10000) in alignment at lines 622--622
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 622--622
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 622--624
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 626--626
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 626--626
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 626--628
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 630--630
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 630--630
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 630--633
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 664--665
+[] []
+
+Underfull \hbox (badness 10000) in alignment at lines 665--669
+[] []
+[9] (C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\Douglas\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+[10]
+Underfull \hbox (badness 10000) in alignment at lines 733--733
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 733--733
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 733--736
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 748--748
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 748--748
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 748--750
+[] [] []
+[11]
+Underfull \hbox (badness 10000) in alignment at lines 756--756
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 756--756
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 756--759
+[] [] []
+[12]
+Underfull \hbox (badness 10000) in alignment at lines 808--808
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 808--808
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 808--811
+[] [] []
+[13] [14] [15] [16] [17]
+Underfull \hbox (badness 10000) in alignment at lines 1071--1071
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1071--1071
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1071--1075
+[] [] []
+[18]
+Underfull \hbox (badness 10000) in alignment at lines 1123--1124
+[] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1124--1137
+[] []
+[19] [20]
+Underfull \hbox (badness 10000) in alignment at lines 1249--1249
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1249--1249
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1249--1253
+[] [] []
+[21 <./assets/request-form.png (PNG copy)>]
+Underfull \hbox (badness 10000) in alignment at lines 1260--1260
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1260--1260
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1260--1268
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1270--1270
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1270--1270
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1270--1277
+[] [] []
+[22]
+Underfull \hbox (badness 10000) in alignment at lines 1305--1305
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1305--1305
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1305--1318
+[] [] []
+ignored error: Infinite glue shrinkage found in box being split [23]
+Underfull \hbox (badness 10000) in alignment at lines 1320--1320
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1320--1320
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1320--1333
+[] [] []
+[24]
+Underfull \hbox (badness 10000) in alignment at lines 1372--1372
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1372--1372
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1372--1377
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1379--1379
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1379--1379
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1379--1383
+[] [] []
+ignored error: Infinite glue shrinkage found in box being split [25]
+Underfull \hbox (badness 10000) in alignment at lines 1428--1428
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1428--1428
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1428--1430
+[] [] []
+[26] [27]
+Underfull \hbox (badness 10000) in alignment at lines 1514--1514
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1514--1514
+[] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 1514--1516
+[] [] []
+[28] [29] (smoke.aux) )
+(see the transcript file for additional information)<C:/Users/Douglas/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Douglas/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Douglas/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Douglas/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Douglas/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Douglas/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Douglas
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/Dougla
+s/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/Dougl
+as/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/D
+ouglas/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users
+/Douglas/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on smoke.pdf (30 pages, 416668 bytes).
+Transcript written on smoke.log.
+pdflatex: major issue: So far, you have not checked for MiKTeX updates.

@@ -3676,14 +3676,14 @@ Initial reference example for the first Atlas Specifications edition, Alpha-v0.1
 
 
 <!-- atlas:text id=T000429 role=paragraph -->
-Explicit editorial migration from Atlas Alpha-v0.1.0 revision 1 to Atlas Stable-v1.0.0 revision 2. Prepared by Codex under Douglas de Oliveira Alkimim's execution request. Model/profile/envelope and producer identities change; existing concept IDs, domain contracts, authored history and resources are retained. This is not format conversion, a Needs-to-L1 derivation, or new stakeholder approval.
+Explicit editorial migration from Atlas Alpha-v0.1.0 revision 1 to Atlas Stable-v1.0.0 revision 2. Model/profile/envelope and producer identities change; existing concept IDs, domain contracts, authored history and resources are retained. This is not format conversion, a Needs-to-L1 derivation, or new stakeholder approval.
 <!-- /atlas:text id=T000429 -->
 
 ### 3 — 2026-10-25
 
 
 <!-- atlas:text id=T000430 role=paragraph -->
-Clarified AC-TASK-LIST-EMPTY to make the existing no-write and consistent-snapshot guarantees explicit for an empty board; added its reference to RNF-TASK-LIST-CONSISTENCY. Source: synthetic SRC-TASK-BRIEF revision 1, choices 7 and 8. Prepared by Codex under Douglas de Oliveira Alkimim's execution request. No concept is renamed or replaced and no domain behavior is added. Rebuild the generated traceability matrix and reading formats; downstream application artifacts do not exist and have not been verified.
+Clarified AC-TASK-LIST-EMPTY to make the existing no-write and consistent-snapshot guarantees explicit for an empty board; added its reference to RNF-TASK-LIST-CONSISTENCY. Source: synthetic SRC-TASK-BRIEF revision 1, choices 7 and 8. No concept is renamed or replaced and no domain behavior is added. Rebuild the generated traceability matrix and reading formats; downstream application artifacts do not exist and have not been verified.
 <!-- /atlas:text id=T000430 -->
 
 

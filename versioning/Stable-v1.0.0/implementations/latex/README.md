@@ -254,3 +254,9 @@ Minimal request register
 ```
 
 Full instances: [`examples/minimal/example.atlas.tex`](../../examples/minimal/example.atlas.tex), [`examples/composition/example.atlas.tex`](../../examples/composition/example.atlas.tex). Compiled publications are the adjacent PDFs.
+
+## Compact publication and compatibility
+
+The default uses breakable metadata/catalog tables with visually repeated headers. Long records use full-width details; oversized authored table rows use page-breakable cell blocks. Every slot still occurs once in the source. Main sections start a new page after the first; titles reserve useful content space. The cover and editorial/plain themes remain available.
+
+Figures follow `owner` and `flow`/`flows`, once beside their owning validation or case; the appendix retains authoritative nodes/edges and linked indexes. The compact renderer uses 9.5 pt labels and 8.5 pt edge keys before any scaling; the supplied examples fit without scaling. Exceptional large graphs still require visual review. Decoding recognizes the exact legacy and current Stable renderers, without accepting arbitrary TikZ or disabling tamper detection.

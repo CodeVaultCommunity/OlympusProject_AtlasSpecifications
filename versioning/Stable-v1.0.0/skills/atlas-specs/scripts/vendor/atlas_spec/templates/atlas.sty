@@ -7,6 +7,7 @@
 \RequirePackage{graphicx}
 \RequirePackage{array}
 \RequirePackage{booktabs}
+\RequirePackage{longtable}
 \RequirePackage{colortbl}
 \RequirePackage{tikz}
 \RequirePackage{needspace}
@@ -162,7 +163,7 @@
   \par\Needspace{3\baselineskip}\smallskip\noindent
   {\sffamily\small\bfseries\color{AtlasAccent}#1}\par\nopagebreak}
 \newcommand{\AtlasSubheading}[1]{%
-  \par\Needspace{4\baselineskip}\medskip\begingroup\raggedright\noindent
+  \par\Needspace{7\baselineskip}\medskip\begingroup\raggedright\noindent
   \sffamily\large\bfseries\color{AtlasInk}\hangindent=1em\hangafter=1
   {\color{AtlasAccent}\rule[-.15em]{2.3pt}{1.05em}}\hspace{.6em}#1%
   \par\endgroup\nopagebreak\smallskip}
@@ -175,6 +176,30 @@
   {\sffamily\small\color{AtlasMuted}#1:}\nobreakspace
   {\small #2}\par\endgroup}
 \newcommand{\AtlasCell}[2]{#2}
+\newsavebox{\AtlasGraphBox}
+
+% Repeated table heads are visual only: authoritative AtlasCell records occur
+% once in the generated source. Long records use breakable full-width details.
+\newenvironment{AtlasMetaTable}{%
+  \par\begingroup\small\setlength{\LTpre}{3pt}\setlength{\LTpost}{3pt}%
+  \setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}%
+  \begin{longtable}{@{}>{\raggedright\arraybackslash}p{.16\linewidth}%
+    >{\raggedright\arraybackslash}p{.32\linewidth}%
+    >{\raggedright\arraybackslash}p{.16\linewidth}%
+    >{\raggedright\arraybackslash}p{\dimexpr.36\linewidth-6\tabcolsep\relax}@{}}%
+}{\end{longtable}\endgroup}
+\newenvironment{AtlasCatalog}{%
+  \par\begingroup\small\setlength{\LTpre}{3pt}\setlength{\LTpost}{5pt}%
+  \setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}%
+  \begin{longtable}{@{}>{\raggedright\arraybackslash}p{.26\linewidth}%
+    >{\raggedright\arraybackslash}p{.22\linewidth}%
+    >{\raggedright\arraybackslash}p{\dimexpr.52\linewidth-4\tabcolsep\relax}@{}}%
+  \toprule\rowcolor{AtlasTint}\textbf{Identity / name} &
+  \textbf{Contract} & \textbf{Description / details}\\\midrule\endhead
+  \bottomrule\endfoot
+}{\end{longtable}\endgroup}
+\newcommand{\AtlasSectionBreak}{%
+  \par\ifdim\pagetotal>\baselineskip\clearpage\fi}
 
 \newcommand{\AtlasHeadingStyle}[1]{%
   \sffamily\bfseries\color{AtlasInk}%

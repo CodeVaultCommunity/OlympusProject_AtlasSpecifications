@@ -1,0 +1,31 @@
+{
+  "platform": "Windows",
+  "environments_outside_distribution": true,
+  "installed_with": "uv pip install -e .[test,assets] in new external virtual environments; exact package versions below",
+  "environments": [
+    {
+      "python": "3.11.15 (main, Jun 23 2026, 15:20:37) [MSC v.1944 64 bit (AMD64)]",
+      "packages": {
+        "atlas-spec": "1.0.0",
+        "pytest": "9.1.1",
+        "jsonschema": "4.26.0",
+        "setuptools": "84.2.1",
+        "wheel": "0.48.0",
+        "Pillow": "13.0.0",
+        "CairoSVG": "2.9.1"
+      }
+    },
+    {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "packages": {
+        "atlas-spec": "1.0.0",
+        "pytest": "9.1.1",
+        "jsonschema": "4.26.0",
+        "setuptools": "84.2.1",
+        "wheel": "0.48.0",
+        "Pillow": "13.0.0",
+        "CairoSVG": "2.9.1"
+      }
+    }
+  ]
+}

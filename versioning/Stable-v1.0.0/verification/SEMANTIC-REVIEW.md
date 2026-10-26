@@ -1,6 +1,6 @@
 # Semantic review and material inventory / Revisão semântica e inventário
 
-Agent review by Codex, 2026-10-25, separate from automated validation and human release approval. / Revisão por agente, distinta da validação automatizada e da aprovação humana de release.
+Document-level semantic assessment, separate from automated validation and human release approval. / Avaliação semântica documental, distinta da validação automatizada e da aprovação humana da release.
 
 ## Materials and acceptance / Materiais e aceite
 

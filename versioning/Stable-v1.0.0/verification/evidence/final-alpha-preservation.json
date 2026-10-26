@@ -1,0 +1,9 @@
+{
+  "records": 125,
+  "files": 98,
+  "bytes_sizes_attributes_and_sddl_equal": true,
+  "compared_to": [
+    "alpha-initial.json",
+    "fresh pre-adjustment capture 2026-10-26"
+  ]
+}

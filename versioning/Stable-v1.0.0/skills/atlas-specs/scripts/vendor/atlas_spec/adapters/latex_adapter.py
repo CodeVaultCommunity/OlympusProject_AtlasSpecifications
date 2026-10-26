@@ -17,7 +17,7 @@ from ..util import (
 )
 from .base import Adapter, DecodeOptions, EncodeOptions
 from .markdown_adapter import _derived_content
-from ..graph_render import render_tikz
+from ..graph_render import render_tikz, render_tikz_legacy
 
 PROFILE = "atlas-latex"
 VERSION = "Stable-v1.0.0"
@@ -300,7 +300,7 @@ def decode_latex(
             )
         graph = next(g for g in payload["graphs"] if g["id"] == graph_id)
         expected = render_tikz(graph)
-        if tikz[marker] != expected:
+        if tikz[marker] not in (expected, render_tikz_legacy(graph)):
             raise AtlasParseError(
                 Diagnostic(
                     "ATL-E-TIKZ-STALE",
@@ -440,6 +440,7 @@ class LatexPresenter:
         self.parts: list[str] = []
         self.resource_by_id = {r["id"]: r for r in payload["resources"]}
         self.full_graph_by_id = {g["id"]: g for g in self.full_payload["graphs"]}
+        self.drawn_graphs: set[str] = set()
 
     # -- text records ----------------------------------------------------
     def t(self, node: dict) -> tuple[str, str]:
@@ -499,55 +500,139 @@ class LatexPresenter:
             p.append(self.text_env(meta["subtitle"], "atlastext"))
         p.append("\\AtlasEndCover\n")
         p.append(self._metadata())
-        for section in meta["structure"]:
+        for section_index, section in enumerate(meta["structure"]):
+            if section_index and section["level"] == 1:
+                p.append("\\AtlasSectionBreak\n")
             level = min(section["level"] + 1, 6)
             p.append(self.text_env(section["title"], "atlasheading", level=level))
             p.append(self._blocks(section["blocks"]))
             by_id = self._elements_by_id()
             for element_id in section["items"]:
                 kind, element = by_id[element_id]
+                if kind in {"actor", "term", "type"}:
+                    p.append(self._catalog(kind.capitalize(), [element]))
+                    continue
                 p.append(
-                    f"\\AtlasSubheading{{{kind.replace('_', ' ').upper()} "
+                    "\\par\\Needspace{8\\baselineskip}"
+                    f"\\hypertarget{{{element_id}}}{{}}\\AtlasSubheading{{{kind.replace('_', ' ').upper()} "
                     f"\\texttt{{{element['id']}}}}}\n"
                 )
                 p.append(self._object(element))
         p.append(self._appendices())
         p.append(self._derived_summary())
-        p.append(self._structure_appendix())
         unused = sorted(set(self.texts) - self.used)
         if unused:
             p.append("\\AtlasSubheading{Unplaced text records}\n")
             for slot in unused:
                 p.append(self.text_env({"@text": slot}, "atlastext"))
+        p.append(self._structure_appendix())
         p.append("\\end{document}\n")
         return "".join(p)
 
     def _metadata(self) -> str:
         meta = self.payload
-        p = ["\\AtlasMetaLine{Document}{" + _verb(meta["document_id"]) + "}\n"]
-        p.append("\\AtlasMetaLine{Revision}{" + _verb(meta["revision"]) + "}\n")
-        p.append("\\AtlasMetaLine{Status}{" + _verb(meta["status"]) + "}\n")
-        p.append("\\AtlasMetaLine{Language}{" + _verb(meta["language"]) + "}\n")
-        p.append("\\AtlasMetaLine{Atlas version}{" + _verb(meta["spec_version"]) + "}\n")
-        p.append("\\AtlasMetaLine{Profile version}{" + _verb(meta["profile_version"]) + "}\n")
-        p.append("\\AtlasMetaLine{Translator}{" + _verb(meta["translator_version"]) + "}\n")
-        p.append("\\AtlasMetaLine{Created}{" + _verb(meta["created"]) + "}\n")
-        p.append("\\AtlasMetaLine{Updated}{" + _verb(meta["updated"]) + "}\n")
-        p.append("\\AtlasLabel{Authors}\n")
-        for author in meta["authors"]:
-            p.append(self.text_env(author["name"], "atlasitem"))
-            if "role" in author:
-                p.append(self.text_env(author["role"], "atlastext"))
-            if "contact" in author:
-                p.append(self.text_env(author["contact"], "atlastext"))
+        p, fields = [], []
+        for key, label in (
+            ("document_id", "Document"), ("revision", "Revision"), ("status", "Status"),
+            ("language", "Language"), ("spec_version", "Atlas version"),
+            ("profile_version", "Profile version"), ("translator_version", "Translator"),
+            ("created", "Created"), ("updated", "Updated")):
+            if len(str(meta[key])) <= 75:
+                fields.append((label, _verb(meta[key])))
+            else:
+                p.append(self._pairs(fields))
+                fields = []
+                p.append("\\AtlasMetaLine{" + label + "}{" + _verb(meta[key]) + "}\n")
+        p.extend([self._pairs(fields), self._catalog("Authors", meta["authors"])])
         if meta.get("keywords"):
-            p.append("\\AtlasLabel{Keywords}\n")
-            for keyword in meta["keywords"]:
-                p.append(self.text_env(keyword, "atlasitem"))
+            p.append("\\AtlasMetaLine{Keywords}{" + "; ".join(self.cell(k) for k in meta["keywords"]) + "}\n")
         if meta.get("notes"):
-            p.append("\\AtlasLabel{Document notes}\n")
-            p.append(self._blocks(meta["notes"]))
+            p.append("\\AtlasLabel{Document notes}\n" + self._blocks(meta["notes"]))
         return "".join(p)
+
+    def _pairs(self, fields: list[tuple[str, str]]) -> str:
+        if not fields:
+            return ""
+        p = [r"\begin{AtlasMetaTable}" + "\n"]
+        for i in range(0, len(fields), 2):
+            cells = []
+            for label, value in fields[i:i+2]:
+                cells.extend([r"\textcolor{AtlasMuted}{" + _escape_plain(label) + "}", value])
+            cells.extend([""] * (4-len(cells)))
+            p.append(" & ".join(cells) + r"\\" + "\n")
+        p.append(r"\end{AtlasMetaTable}" + "\n")
+        return "".join(p)
+
+    def _short(self, value: Any, budget: int = 400, *, cell_budget: int | None = None) -> bool:
+        """Only bounded, simple values enter an unbreakable table row."""
+        def size(v):
+            if isinstance(v, dict):
+                # A record's scalar type (text, integer, start, decision, etc.)
+                # is distinct from a rich block. Nested list items need their
+                # own presentation and must never lose their child text slots.
+                if v.get("type") in ("note", "quote", "heading", "list", "code", "formula", "figure", "table") or v.get("children"):
+                    return 100000
+                if "@text" in v:
+                    length = len(self.texts[v["@text"]])
+                    return 100000 if cell_budget is not None and length > cell_budget else length
+                if any(k in v for k in ("data", "meta", "flow", "flows", "operations")):
+                    return 100000
+                return sum(size(x) for k, x in v.items() if k != "extensions")
+            if isinstance(v, list):
+                return sum(size(x) + 15 for x in v)
+            return len(str(v))
+        return size(value) <= budget
+
+    def _inline(self, value: Any) -> str:
+        if isinstance(value, dict):
+            if "@text" in value:
+                return self.cell(value)
+            return "; ".join(_escape_plain(self.KEY_LABELS.get(k, k.replace("_", " ").capitalize())) + ": " + self._inline(v)
+                             for k, v in value.items() if k != "extensions" and not (k == "type" and v == "paragraph"))
+        if isinstance(value, list):
+            return "; ".join(self._inline(v) for v in value) or "none"
+        return _escape_plain(_scalar(value))
+
+    def _catalog(self, label: str, records: list[dict]) -> str:
+        p = ["\\par\\Needspace{10\\baselineskip}\\AtlasLabel{" + _escape_plain(label) + "}\n"]
+        opened = False
+        for item in records:
+            if not self._short(item, cell_budget=220):
+                if opened:
+                    p.append("\\end{AtlasCatalog}\n")
+                    opened = False
+                if "id" in item:
+                    p.append("\\par\\Needspace{8\\baselineskip}\\hypertarget{" + item["id"] + "}{}\\AtlasSubheading{" + _verb(item["id"]) + "}\n")
+                p.append(self._object(item))
+                continue
+            if not opened:
+                p.append("\\begin{AtlasCatalog}\n")
+                opened = True
+            identity, signature, details = [], [], []
+            for key, value in item.items():
+                if key in ("extensions", "meta"):
+                    continue
+                text = self._inline(value)
+                if key in ("id", "name", "term", "code", "condition"):
+                    if key == "id":
+                        text = "\\hypertarget{" + value + "}{}" + text
+                    identity.append(text)
+                elif key in ("type", "scope", "cardinality", "required", "source", "outcome", "from", "to"):
+                    signature.append(_escape_plain(self.KEY_LABELS.get(key, key.capitalize())) + ": " + text)
+                else:
+                    details.append(_escape_plain(self.KEY_LABELS.get(key, key.replace("_", " ").capitalize())) + ": " + text)
+            p.append(" & ".join(r"\newline{}".join(c) for c in (identity, signature, details)) + r"\\\addlinespace[.35em]" + "\n")
+        if opened:
+            p.append("\\end{AtlasCatalog}\n")
+        return "".join(p)
+
+    def _graph(self, graph_id: str) -> str:
+        if graph_id in self.drawn_graphs:
+            return "\\AtlasMetaLine{Graph}{\\hyperlink{figure-" + graph_id + "}{" + _escape_plain(graph_id) + "}}\n"
+        self.drawn_graphs.add(graph_id)
+        graph = self.full_graph_by_id[graph_id]
+        return (f"% atlas:tikz:begin id=TIKZ-{graph_id}\n" + render_tikz(graph)
+                + f"\n% atlas:tikz:end id=TIKZ-{graph_id}\n")
 
     def _elements_by_id(self) -> dict[str, tuple[str, dict]]:
         mapping = {
@@ -568,10 +653,28 @@ class LatexPresenter:
     # -- generic structural renderer ------------------------------------
     def _object(self, value: dict) -> str:
         p: list[str] = []
+        pairs = []
         for key, item in value.items():
             if key in {"id", "@text", "extensions"}:
                 continue
-            p.append(self._field(key, item))
+            label = self.KEY_LABELS.get(key, key.replace("_", " ").capitalize())
+            if key not in ("data", "meta") and self._short(item, 75) and (
+                not isinstance(item, (dict, list)) or isinstance(item, dict) and "@text" in item):
+                pairs.append((label, self._inline(item)))
+            else:
+                p.append(self._pairs(pairs))
+                pairs = []
+                p.append(self._field(key, item))
+        p.append(self._pairs(pairs))
+        nominated = [value["flow"]] if isinstance(value.get("flow"), str) else []
+        flows = value.get("flows", {})
+        if isinstance(flows, dict):
+            nominated += [flows["main"]] if flows.get("main") else []
+            nominated += flows.get("subflows", [])
+        for graph_id in nominated:
+            graph = self.full_graph_by_id.get(graph_id)
+            if graph and graph.get("owner", {}).get("id") == value.get("id"):
+                p.append(self._graph(graph_id))
         return "".join(p)
 
     def _field(self, key: str, value: Any) -> str:
@@ -617,18 +720,22 @@ class LatexPresenter:
                 p.append(self.text_env(item, "atlasitem"))
             return "".join(p)
         if isinstance(value, list):
+            if value and all(isinstance(v, dict) for v in value) and key in {
+                "fields", "states", "transitions", "conditions", "inputs", "outputs", "results", "failures", "relationships", "authors", "traceability", "variants"}:
+                return self._catalog(label, value)
             if not value:
                 p.append(f"\\AtlasMetaLine{{{label}}}{{none}}\n")
             elif all(not isinstance(v, (dict, list)) for v in value):
+                values = ["\\hyperlink{" + str(v) + "}{" + _escape_plain(v) + "}" if key == "validations" and isinstance(v, str) else _escape_plain(_scalar(v)) for v in value]
                 p.append(
                     f"\\AtlasMetaLine{{{label}}}{{"
-                    + _escape_plain(", ".join(_scalar(v) for v in value))
+                    + ", ".join(values)
                     + "}\n"
                 )
             elif all(isinstance(v, dict) and "id" in v for v in value):
-                p.append(f"\\AtlasLabel{{{label}}}\n")
+                p.append(f"\\par\\Needspace{{12\\baselineskip}}\\AtlasLabel{{{label}}}\n")
                 for item in value:
-                    p.append(f"\\AtlasSubheading{{\\texttt{{{_escape_plain(item['id'])}}}}}\n")
+                    p.append(f"\\par\\Needspace{{8\\baselineskip}}\\hypertarget{{{item['id']}}}{{}}\\AtlasSubheading{{\\texttt{{{_escape_plain(item['id'])}}}}}\n")
                     p.append(self._object(item))
             else:
                 p.append(f"\\AtlasLabel{{{label}}}\n")
@@ -692,6 +799,20 @@ class LatexPresenter:
             return "".join(p)
         if btype == "table":
             columns = block["columns"]
+            if any(not self._short(row, 1800) for row in block["rows"]):
+                # A longtable cannot break inside one row. Keep long cell text
+                # in independent, page-breakable authoritative environments.
+                p = ["\\AtlasLabel{Table columns}\n"]
+                for column in columns:
+                    p.append(self.text_env(column, "atlastext"))
+                for number, row in enumerate(block["rows"], 1):
+                    p.append(f"\\AtlasSubheading{{Table row {number}}}\n")
+                    for column, cell in zip(columns, row):
+                        p.append("\\AtlasLabel{" + _escape_plain(self.texts[column["@text"]]) + "}\n")
+                        p.append(self.text_env(cell, "atlastext"))
+                if "caption" in block:
+                    p.append(self.text_env(block["caption"], "atlastext"))
+                return "".join(p)
             count = max(1, len(columns))
             # Each column's two tabcolsep paddings are included in the width
             # budget. Paragraph columns wrap prose; longtable can break between
@@ -760,49 +881,30 @@ class LatexPresenter:
         p: list[str] = []
         if self.payload["graphs"]:
             p.append("\\AtlasAppendixHeading{Appendix: graphs}\n")
+            p.append("\\begin{AtlasCatalog}\n")
             for graph in self.payload["graphs"]:
-                p.append(f"\\AtlasSubheading{{Graph \\texttt{{{_escape_plain(graph['id'])}}}}}\n")
+                graph_id, owner = graph["id"], graph.get("owner", {})
+                owner_id = owner.get("id", "")
+                p.append("\\hyperlink{technical-" + graph_id + "}{" + _escape_plain(graph_id) + "} & "
+                         + _escape_plain(owner.get("kind", "unassigned")) + " & "
+                         + ("\\hyperlink{" + owner_id + "}{" + _escape_plain(owner_id) + "}; " if owner_id else "")
+                         + "\\hyperlink{figure-" + graph_id + "}{Figure}" + r"\\" + "\n")
+            p.append("\\end{AtlasCatalog}\n")
+            for graph in self.payload["graphs"]:
+                p.append(f"\\par\\Needspace{{8\\baselineskip}}\\hypertarget{{technical-{graph['id']}}}{{}}\\AtlasSubheading{{Graph \\texttt{{{_escape_plain(graph['id'])}}}}}\n")
                 p.append(self.text_env(graph["title"], "atlastext"))
                 p.append(
                     f"\\AtlasMetaLine{{Kind}}{{{_escape_plain(graph['kind'])}}}\n"
                 )
-                p.append("\\AtlasLabel{Nodes}\n")
-                for node in graph["nodes"]:
-                    p.append(
-                        f"\\AtlasSubheading{{Node \\texttt{{{_escape_plain(node['id'])}}} "
-                        f"({_escape_plain(node['type'])})}}\n"
-                    )
-                    p.append(self.text_env(node["label"], "atlastext"))
-                    if node.get("call"):
-                        p.append(
-                            "\\AtlasMetaLine{Call}{"
-                            + _escape_plain(node["call"]["kind"])
-                            + " \\texttt{"
-                            + _escape_plain(node["call"]["id"])
-                            + "}}\n"
-                        )
-                    for key in ("inputs", "outputs", "requirement_refs", "details"):
-                        if node.get(key):
-                            p.append(self._field(key, node[key]))
-                p.append("\\AtlasLabel{Edges}\n")
-                for edge in graph["edges"]:
-                    p.append(
-                        f"\\AtlasSubheading{{Edge \\texttt{{{_escape_plain(edge['id'])}}}: "
-                        f"\\texttt{{{_escape_plain(edge['from'])}}} $\\rightarrow$ "
-                        f"\\texttt{{{_escape_plain(edge['to'])}}}}}\n"
-                    )
-                    for key in ("label", "condition", "requirement_refs", "priority"):
-                        if key in edge:
-                            p.append(self._field(key, edge[key]))
+                p.append(self._catalog("Nodes", graph["nodes"]))
+                p.append(self._catalog("Edges", graph["edges"]))
                 if graph.get("notes"):
                     p.append(self._field("notes", graph["notes"]))
                 p.append(self._derived_env(f"DERIVED-GRAPH-{graph['id']}", _graph_topology(graph)))
-                full_graph = self.full_graph_by_id[graph["id"]]
-                p.append(
-                    f"% atlas:tikz:begin id=TIKZ-{graph['id']}\n"
-                    + render_tikz(full_graph)
-                    + f"\n% atlas:tikz:end id=TIKZ-{graph['id']}\n"
-                )
+                if graph["id"] not in self.drawn_graphs:
+                    p.append(self._graph(graph["id"]))
+                else:
+                    p.append("\\AtlasMetaLine{Figure}{\\hyperlink{figure-" + graph["id"] + "}{" + _escape_plain(graph["id"]) + "}}\n")
         if self.payload["resources"]:
             p.append("\\AtlasAppendixHeading{Appendix: resources}\n")
             for resource in self.payload["resources"]:
@@ -852,9 +954,6 @@ class LatexPresenter:
             + escape_latex(content)
             + "\n\\end{atlasderived}\n"
         )
-        estimated_lines = sum(max(1, (len(line) + 71) // 72) for line in content.splitlines())
-        if derived_id.startswith("DERIVED-GRAPH-") and estimated_lines <= 45:
-            return "\\par\\noindent\\begin{minipage}{\\linewidth}\n" + block + "\\end{minipage}\\par\n"
         return block
 
     def _structure_appendix(self) -> str:

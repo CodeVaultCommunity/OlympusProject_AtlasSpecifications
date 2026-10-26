@@ -535,9 +535,9 @@ A revisão semântica ainda deve avaliar objetivos/escopo, origens das afirmaç�
 | --- | --- |
 | Edição OAL | **Stable-v1.0.0** |
 | Repositório | [OAL — Open Analysis Layers](https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers) |
-| Commit | `a02bf8eecf222e7e0a7a34977fff49a25b5af6aa` |
+| Commit | `bdea8a4269e2788f25b68d2925c125d7e62c04ed` |
 | Fonte normativa | `versioning/Stable-v1.0.0/README.md`, [snapshot dos bytes recebidos](verification/oal/README.md.txt) |
-| SHA-256 | `8e3d82be109b1e8baf1deab32b338b568aa7c98d407858456620336c76ce499e` |
+| SHA-256 | `70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84` |
 | Proveniência | Checkout local limpo; publicação remota pendente. [Identificação](verification/oal/baseline.json) e [revisão por cláusula](verification/OAL-CORRESPONDENCE.md). |
 | Cláusulas | Regras numeradas entre camadas e UCS 1–10. A skill de contexto do OAL é informativa. |
 | Modelo Atlas | **Atlas Specifications Stable-v1.0.0**, [modelo abstrato](#abstract-model) |

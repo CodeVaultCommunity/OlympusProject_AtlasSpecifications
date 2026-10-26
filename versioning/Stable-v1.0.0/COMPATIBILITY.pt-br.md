@@ -12,7 +12,7 @@ O inglês é normativo. Stable identifica um contrato, não publicação ou apro
 | Produtor existente / revisão / histórico | Dados autorais, preservados exatamente na conversão mesmo quando o produtor difere do pacote em execução. |
 | Entrada Stable → representação Stable | Seis direções suportadas, conforme o contrato de preservação/recursos. |
 | Entrada Alpha → runtime Stable | Rejeitada com diagnóstico explícito de versão. Use a edição Alpha preservada e seu runtime para documentos Alpha. |
-| Conteúdo Alpha → Stable | Migração editorial separada com origem, destino, preparador, mudanças intencionais e revisão. Não há migrador genérico. |
+| Conteúdo Alpha → Stable | Migração editorial separada com origem, destino, pessoa responsável, mudanças intencionais e revisão. Não há migrador genérico. |
 | Outro modelo/perfil ou versão futura | Não suportado sem implementação e documentação explícitas. Não se promete interoperabilidade com outra major. |
 | PDF | Somente publicação; sem importação reversa ou alegação de igualdade de payload. |
 
@@ -33,3 +33,5 @@ Adições opcionais compatíveis exigem minor e capacidade/perfil declarado quan
 Versões do pacote descrevem a implementação. Identidades de modelo/perfil selecionam contratos independentemente; atualizações não devem relabelar payloads. A revisão documental registra mudanças autorais, não execuções do codec. Versões históricas continuam acessíveis em seus diretórios.
 
 Starter e três exemplos registram a migração explícita Alpha revisão 1 → Stable revisão 2 em `HIST-MIGRATION-STABLE`. O [registro](verification/editorial-migration.json) preserva hashes e responsabilidade; a [demonstração do quadro](examples/task-board/revisions/README.md) é uma mudança separada da revisão 2 para 3.
+
+Antes do aceite formal da migração, identifique a pessoa responsável; solicitante ou ferramenta não equivalem automaticamente a essa pessoa. A candidata sem confirmação registra `responsibility_status: pending_confirmation`, `responsible_person: null` e ausência de aprovação humana. A evolução visual aceita a forma TikZ Stable original e a forma compacta atual, ambas regeneradas exatamente do grafo; alterações arbitrárias continuam rejeitadas.

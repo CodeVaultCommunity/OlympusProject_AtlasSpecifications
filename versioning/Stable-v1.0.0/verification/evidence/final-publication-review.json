@@ -1,0 +1,502 @@
+{
+  "review_date": "2026-10-26",
+  "pages_rendered": 123,
+  "review": "All pages inspected as contact sheets; detailed metadata, entity fields, operations, case/section starts, small/large graphs, technical tables, semantic illustration and histories reviewed. No clipping, overlap, missing glyphs or orphan case titles observed. Natural whitespace before semantic section breaks retained.",
+  "before_pages": {
+    "minimal": 28,
+    "composition": 54,
+    "task-board": 55
+  },
+  "pdfs": [
+    {
+      "name": "minimal",
+      "pages": 25,
+      "bytes": 399990,
+      "sha256": "6c4e6727d3de6a0c95a1c438d66ff1dc36da36170a6a9ff50f81dfaef39bfeaf",
+      "internal_links": [
+        {
+          "from_page": 9,
+          "target": "VLD-REQUEST-QUANTITY",
+          "to_page": 3
+        },
+        {
+          "from_page": 9,
+          "target": "VLD-REQUEST-CODE",
+          "to_page": 5
+        },
+        {
+          "from_page": 17,
+          "target": "technical-GRAPH-VLD-REQUEST-QUANTITY",
+          "to_page": 18
+        },
+        {
+          "from_page": 17,
+          "target": "technical-GRAPH-VLD-REQUEST-QUANTITY",
+          "to_page": 18
+        },
+        {
+          "from_page": 17,
+          "target": "VLD-REQUEST-QUANTITY",
+          "to_page": 3
+        },
+        {
+          "from_page": 17,
+          "target": "figure-GRAPH-VLD-REQUEST-QUANTITY",
+          "to_page": 4
+        },
+        {
+          "from_page": 17,
+          "target": "technical-GRAPH-REQUEST-SUBMIT",
+          "to_page": 19
+        },
+        {
+          "from_page": 17,
+          "target": "technical-GRAPH-REQUEST-SUBMIT",
+          "to_page": 19
+        },
+        {
+          "from_page": 17,
+          "target": "UC-REQUEST-SUBMIT",
+          "to_page": 9
+        },
+        {
+          "from_page": 17,
+          "target": "figure-GRAPH-REQUEST-SUBMIT",
+          "to_page": 15
+        },
+        {
+          "from_page": 17,
+          "target": "technical-GRAPH-VLD-REQUEST-CODE",
+          "to_page": 21
+        },
+        {
+          "from_page": 17,
+          "target": "technical-GRAPH-VLD-REQUEST-CODE",
+          "to_page": 21
+        },
+        {
+          "from_page": 17,
+          "target": "VLD-REQUEST-CODE",
+          "to_page": 5
+        },
+        {
+          "from_page": 17,
+          "target": "figure-GRAPH-VLD-REQUEST-CODE",
+          "to_page": 5
+        },
+        {
+          "from_page": 19,
+          "target": "figure-GRAPH-VLD-REQUEST-QUANTITY",
+          "to_page": 4
+        },
+        {
+          "from_page": 21,
+          "target": "figure-GRAPH-REQUEST-SUBMIT",
+          "to_page": 15
+        },
+        {
+          "from_page": 22,
+          "target": "figure-GRAPH-VLD-REQUEST-CODE",
+          "to_page": 5
+        }
+      ],
+      "graphs": 3,
+      "diagram_scale": 1.0,
+      "node_font_tex_pt": 9.5,
+      "edge_key_font_tex_pt": 8.5,
+      "overfull_boxes": 0,
+      "missing_glyphs": 0,
+      "underfull_alignment_warnings": 78,
+      "all_internal_targets_present_on_destination_page": true,
+      "editorial_credits_found": false
+    },
+    {
+      "name": "composition",
+      "pages": 49,
+      "bytes": 460396,
+      "sha256": "399c278deca96134bd89d3e2df23e49aedd42566dc2828f662572be5d16c91d2",
+      "internal_links": [
+        {
+          "from_page": 13,
+          "target": "VLD-BOOKING-CODE",
+          "to_page": 4
+        },
+        {
+          "from_page": 18,
+          "target": "VLD-BOOKING-CODE",
+          "to_page": 4
+        },
+        {
+          "from_page": 18,
+          "target": "VLD-BOOKING-TITLE",
+          "to_page": 7
+        },
+        {
+          "from_page": 25,
+          "target": "VLD-BOOKING-CANCEL",
+          "to_page": 6
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-VLD-BOOKING-CODE",
+          "to_page": 37
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-VLD-BOOKING-CODE",
+          "to_page": 37
+        },
+        {
+          "from_page": 36,
+          "target": "VLD-BOOKING-CODE",
+          "to_page": 4
+        },
+        {
+          "from_page": 36,
+          "target": "figure-GRAPH-VLD-BOOKING-CODE",
+          "to_page": 5
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-VLD-BOOKING-CANCEL",
+          "to_page": 38
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-VLD-BOOKING-CANCEL",
+          "to_page": 38
+        },
+        {
+          "from_page": 36,
+          "target": "VLD-BOOKING-CANCEL",
+          "to_page": 6
+        },
+        {
+          "from_page": 36,
+          "target": "figure-GRAPH-VLD-BOOKING-CANCEL",
+          "to_page": 7
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-BOOKING-LOOKUP",
+          "to_page": 39
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-BOOKING-LOOKUP",
+          "to_page": 39
+        },
+        {
+          "from_page": 36,
+          "target": "UC-BOOKING-LOOKUP",
+          "to_page": 13
+        },
+        {
+          "from_page": 36,
+          "target": "figure-GRAPH-BOOKING-LOOKUP",
+          "to_page": 17
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-BOOKING-CREATE",
+          "to_page": 41
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-BOOKING-CREATE",
+          "to_page": 41
+        },
+        {
+          "from_page": 36,
+          "target": "UC-BOOKING-CREATE",
+          "to_page": 18
+        },
+        {
+          "from_page": 36,
+          "target": "figure-GRAPH-BOOKING-CREATE",
+          "to_page": 24
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-BOOKING-CANCEL",
+          "to_page": 44
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-BOOKING-CANCEL",
+          "to_page": 44
+        },
+        {
+          "from_page": 36,
+          "target": "UC-BOOKING-CANCEL",
+          "to_page": 25
+        },
+        {
+          "from_page": 36,
+          "target": "figure-GRAPH-BOOKING-CANCEL",
+          "to_page": 31
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-BOOKING-CANCEL-REFUSAL",
+          "to_page": 47
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-BOOKING-CANCEL-REFUSAL",
+          "to_page": 47
+        },
+        {
+          "from_page": 36,
+          "target": "UC-BOOKING-CANCEL",
+          "to_page": 25
+        },
+        {
+          "from_page": 36,
+          "target": "figure-GRAPH-BOOKING-CANCEL-REFUSAL",
+          "to_page": 32
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-VLD-BOOKING-TITLE",
+          "to_page": 48
+        },
+        {
+          "from_page": 36,
+          "target": "technical-GRAPH-VLD-BOOKING-TITLE",
+          "to_page": 48
+        },
+        {
+          "from_page": 36,
+          "target": "VLD-BOOKING-TITLE",
+          "to_page": 7
+        },
+        {
+          "from_page": 36,
+          "target": "figure-GRAPH-VLD-BOOKING-TITLE",
+          "to_page": 8
+        },
+        {
+          "from_page": 38,
+          "target": "figure-GRAPH-VLD-BOOKING-CODE",
+          "to_page": 5
+        },
+        {
+          "from_page": 39,
+          "target": "figure-GRAPH-VLD-BOOKING-CANCEL",
+          "to_page": 7
+        },
+        {
+          "from_page": 41,
+          "target": "figure-GRAPH-BOOKING-LOOKUP",
+          "to_page": 17
+        },
+        {
+          "from_page": 44,
+          "target": "figure-GRAPH-BOOKING-CREATE",
+          "to_page": 24
+        },
+        {
+          "from_page": 47,
+          "target": "figure-GRAPH-BOOKING-CANCEL",
+          "to_page": 31
+        },
+        {
+          "from_page": 48,
+          "target": "figure-GRAPH-BOOKING-CANCEL-REFUSAL",
+          "to_page": 32
+        },
+        {
+          "from_page": 48,
+          "target": "figure-GRAPH-VLD-BOOKING-TITLE",
+          "to_page": 8
+        }
+      ],
+      "graphs": 7,
+      "diagram_scale": 1.0,
+      "node_font_tex_pt": 9.5,
+      "edge_key_font_tex_pt": 8.5,
+      "overfull_boxes": 0,
+      "missing_glyphs": 0,
+      "underfull_alignment_warnings": 143,
+      "all_internal_targets_present_on_destination_page": true,
+      "editorial_credits_found": false
+    },
+    {
+      "name": "task-board",
+      "pages": 49,
+      "bytes": 463553,
+      "sha256": "4836238ebf96da1ddeb94d4d9166521453f55d1ad2d58544000d65e63620ad79",
+      "internal_links": [
+        {
+          "from_page": 15,
+          "target": "VLD-TASK-NEW",
+          "to_page": 5
+        },
+        {
+          "from_page": 21,
+          "target": "VLD-TASK-ID",
+          "to_page": 4
+        },
+        {
+          "from_page": 21,
+          "target": "VLD-TASK-COMPLETE",
+          "to_page": 6
+        },
+        {
+          "from_page": 38,
+          "target": "technical-GRAPH-VLD-TASK-ID",
+          "to_page": 38
+        },
+        {
+          "from_page": 38,
+          "target": "VLD-TASK-ID",
+          "to_page": 4
+        },
+        {
+          "from_page": 38,
+          "target": "figure-GRAPH-VLD-TASK-ID",
+          "to_page": 5
+        },
+        {
+          "from_page": 38,
+          "target": "technical-GRAPH-VLD-TASK-NEW",
+          "to_page": 39
+        },
+        {
+          "from_page": 38,
+          "target": "technical-GRAPH-VLD-TASK-NEW",
+          "to_page": 39
+        },
+        {
+          "from_page": 38,
+          "target": "VLD-TASK-NEW",
+          "to_page": 5
+        },
+        {
+          "from_page": 38,
+          "target": "figure-GRAPH-VLD-TASK-NEW",
+          "to_page": 6
+        },
+        {
+          "from_page": 38,
+          "target": "technical-GRAPH-VLD-TASK-COMPLETE",
+          "to_page": 40
+        },
+        {
+          "from_page": 38,
+          "target": "technical-GRAPH-VLD-TASK-COMPLETE",
+          "to_page": 40
+        },
+        {
+          "from_page": 38,
+          "target": "VLD-TASK-COMPLETE",
+          "to_page": 6
+        },
+        {
+          "from_page": 38,
+          "target": "figure-GRAPH-VLD-TASK-COMPLETE",
+          "to_page": 7
+        },
+        {
+          "from_page": 38,
+          "target": "technical-GRAPH-TASK-CREATE",
+          "to_page": 41
+        },
+        {
+          "from_page": 38,
+          "target": "UC-TASK-CREATE",
+          "to_page": 15
+        },
+        {
+          "from_page": 38,
+          "target": "figure-GRAPH-TASK-CREATE",
+          "to_page": 20
+        },
+        {
+          "from_page": 38,
+          "target": "technical-GRAPH-TASK-COMPLETE",
+          "to_page": 43
+        },
+        {
+          "from_page": 38,
+          "target": "technical-GRAPH-TASK-COMPLETE",
+          "to_page": 43
+        },
+        {
+          "from_page": 38,
+          "target": "UC-TASK-COMPLETE",
+          "to_page": 21
+        },
+        {
+          "from_page": 38,
+          "target": "figure-GRAPH-TASK-COMPLETE",
+          "to_page": 28
+        },
+        {
+          "from_page": 38,
+          "target": "technical-GRAPH-TASK-LIST",
+          "to_page": 47
+        },
+        {
+          "from_page": 38,
+          "target": "UC-TASK-LIST",
+          "to_page": 29
+        },
+        {
+          "from_page": 38,
+          "target": "figure-GRAPH-TASK-LIST",
+          "to_page": 34
+        },
+        {
+          "from_page": 39,
+          "target": "figure-GRAPH-VLD-TASK-ID",
+          "to_page": 5
+        },
+        {
+          "from_page": 40,
+          "target": "figure-GRAPH-VLD-TASK-NEW",
+          "to_page": 6
+        },
+        {
+          "from_page": 41,
+          "target": "figure-GRAPH-VLD-TASK-COMPLETE",
+          "to_page": 7
+        },
+        {
+          "from_page": 43,
+          "target": "figure-GRAPH-TASK-CREATE",
+          "to_page": 20
+        },
+        {
+          "from_page": 47,
+          "target": "figure-GRAPH-TASK-COMPLETE",
+          "to_page": 28
+        },
+        {
+          "from_page": 48,
+          "target": "figure-GRAPH-TASK-LIST",
+          "to_page": 34
+        }
+      ],
+      "graphs": 6,
+      "diagram_scale": 1.0,
+      "node_font_tex_pt": 9.5,
+      "edge_key_font_tex_pt": 8.5,
+      "overfull_boxes": 0,
+      "missing_glyphs": 0,
+      "underfull_alignment_warnings": 150,
+      "all_internal_targets_present_on_destination_page": true,
+      "editorial_credits_found": false
+    }
+  ],
+  "smoke": {
+    "pages": 30,
+    "long_repeating_table_rows": 90,
+    "oversized_row_full_width": true,
+    "full_payload_roundtrip": true,
+    "pdf_sha256": "9675aee3b1f61a2c56438e64c535e1d43893b66b6dc9d3d67c85945162f0bcdf",
+    "source_sha256": "4319c95c52f38b5eb67a174884e84fa619fa0edba2df1d07f358cfa536b82774",
+    "expected_sha256": "c3e2b2741a1da8dfc60ce6052e2474fba330a57bd3627e46c35b830abd188bc5"
+  }
+}

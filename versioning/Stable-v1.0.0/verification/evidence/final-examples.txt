@@ -1,0 +1,5 @@
+Verified composition: three representations, six conversions
+Verified minimal: three representations, six conversions
+Verified task-board: three representations, six conversions
+Verified starter: three representations, six conversions
+Verified 24 directed conversions, including the starter.

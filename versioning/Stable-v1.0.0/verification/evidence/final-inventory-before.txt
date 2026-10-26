@@ -1,0 +1,70 @@
+.FFFFFFFF                                                                [100%]
+================================== FAILURES ===================================
+______________________ test_order_is_not_content[posix] _______________________
+tests\test_release_inventory.py:41: in test_order_is_not_content
+    check(inventory, monkeypatch, rows)
+tests\test_release_inventory.py:31: in check
+    module.main()
+verification\capture_release.py:49: in main
+    raise SystemExit("Release inputs changed: rerun affected checks and recapture before updating the report.")
+E   SystemExit: Release inputs changed: rerun affected checks and recapture before updating the report.
+_____________________ test_order_is_not_content[shuffled] _____________________
+tests\test_release_inventory.py:41: in test_order_is_not_content
+    check(inventory, monkeypatch, rows)
+tests\test_release_inventory.py:31: in check
+    module.main()
+verification\capture_release.py:49: in main
+    raise SystemExit("Release inputs changed: rerun affected checks and recapture before updating the report.")
+E   SystemExit: Release inputs changed: rerun affected checks and recapture before updating the report.
+___________________ test_changes_are_not_hidden[byte-hash] ____________________
+tests\test_release_inventory.py:60: in test_changes_are_not_hidden
+    with pytest.raises(SystemExit, match=diagnostic):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: 'hash'
+E     Actual message: 'Release inputs changed: rerun affected checks and recapture before updating the report.'
+___________________ test_changes_are_not_hidden[size-size] ____________________
+tests\test_release_inventory.py:60: in test_changes_are_not_hidden
+    with pytest.raises(SystemExit, match=diagnostic):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: 'size'
+E     Actual message: 'Release inputs changed: rerun affected checks and recapture before updating the report.'
+___________________ test_changes_are_not_hidden[add-added] ____________________
+tests\test_release_inventory.py:60: in test_changes_are_not_hidden
+    with pytest.raises(SystemExit, match=diagnostic):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: 'added'
+E     Actual message: 'Release inputs changed: rerun affected checks and recapture before updating the report.'
+_________________ test_changes_are_not_hidden[remove-missing] _________________
+tests\test_release_inventory.py:60: in test_changes_are_not_hidden
+    with pytest.raises(SystemExit, match=diagnostic):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: 'missing'
+E     Actual message: 'Release inputs changed: rerun affected checks and recapture before updating the report.'
+______________ test_changes_are_not_hidden[duplicate-duplicate] _______________
+tests\test_release_inventory.py:60: in test_changes_are_not_hidden
+    with pytest.raises(SystemExit, match=diagnostic):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: 'duplicate'
+E     Actual message: 'Release inputs changed: rerun affected checks and recapture before updating the report.'
+_________________ test_capture_orders_relative_posix_strings __________________
+tests\test_release_inventory.py:66: in test_capture_orders_relative_posix_strings
+    assert names == sorted(names)
+E   AssertionError: assert ['versioning/...v1.0.0/Z.txt'] == ['versioning/...v1.0.0/a.txt']
+E     
+E     At index 0 diff: 'versioning/Stable-v1.0.0/a.txt' != 'versioning/Stable-v1.0.0/Alpha.txt'
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/test_release_inventory.py::test_order_is_not_content[posix] - Sy...
+FAILED tests/test_release_inventory.py::test_order_is_not_content[shuffled]
+FAILED tests/test_release_inventory.py::test_changes_are_not_hidden[byte-hash]
+FAILED tests/test_release_inventory.py::test_changes_are_not_hidden[size-size]
+FAILED tests/test_release_inventory.py::test_changes_are_not_hidden[add-added]
+FAILED tests/test_release_inventory.py::test_changes_are_not_hidden[remove-missing]
+FAILED tests/test_release_inventory.py::test_changes_are_not_hidden[duplicate-duplicate]
+FAILED tests/test_release_inventory.py::test_capture_orders_relative_posix_strings
+8 failed, 1 passed in 0.44s
