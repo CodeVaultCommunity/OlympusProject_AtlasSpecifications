@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers",
-  "commit": "bdea8a4269e2788f25b68d2925c125d7e62c04ed",
+  "commit": "ce225141686d4b6b3e46923866c97d84c031903f",
   "local_checkout": "E:\\Alkimim\\Projetos\\CodeVault\\OAL",
   "base_commit": "5755a4e4a5b31a9614da5d409d03d1db9cf1e20c",
   "previous_atlas_reference_commit": "ced9645dcdb1d1d367ac1b3c913256298255094e",
@@ -10,8 +10,8 @@
     {
       "source_path": "versioning/Stable-v1.0.0/README.md",
       "snapshot": "README.md.txt",
-      "bytes": 63750,
-      "sha256": "70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84",
+      "bytes": 63838,
+      "sha256": "d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da",
       "numbered_rules": 46,
       "normative_block_sha256": "f88f36c362c838e625997dcec15c1a5153f969b4f077666a292c95f8110ebc34",
       "equal_to_alpha_normative_block": true,
@@ -21,8 +21,8 @@
     {
       "source_path": "versioning/Stable-v1.0.0/README.pt-br.md",
       "snapshot": "README.pt-br.md.txt",
-      "bytes": 69631,
-      "sha256": "5bfe9578f8d967488225ec8591e6524afccb20c4bacabc269102bc6700c8605d",
+      "bytes": 69716,
+      "sha256": "52e0f59f7f4ead7d9a94a924bc5b339196e4d1aa68c467b7200780b81a3cc1e9",
       "numbered_rules": 46,
       "normative_block_sha256": "4ee592d31fa76c841ed2c935ac029fb6d01962347d1aa844890acf24d93790e5",
       "equal_to_alpha_normative_block": true,
@@ -30,36 +30,71 @@
       "normative_body_from_oal_layers_sha256": "f9a728469db159143325e93d0946b2490e82c09e1dadbe2df0b574d39c5a9285"
     }
   ],
-  "tree": "5baee0a40771711981397ff332532d4d54e798fe",
-  "previous_stable_commit": "a02bf8eecf222e7e0a7a34977fff49a25b5af6aa",
+  "tree": "dedf80b6ca53e43d5ee76c877471e9cfe041a86c",
+  "previous_stable_commit": "bdea8a4269e2788f25b68d2925c125d7e62c04ed",
   "final_reference_update": {
     "date": "2026-10-26",
-    "zip_sha256": "59ee79cb473dcdaa58677b806de98c5dfa51500ac70eab4aca9720533fb3464e",
-    "zip_bytes": 12637759,
+    "zip_sha256": "68ae64827f0f2fba720bc30a35ee0da413016e1e45e67eaf00423dbb73fc9873",
+    "zip_bytes": 12684300,
+    "scope": "Only the introductory editorial/operational notices changed. Complete normative bodies from oal-layers and all 46 numbered rules in each language remain byte-identical. Current Atlas UCS 1-10 and cross-layer 1-9 obligations were reconfirmed; no changes to the Atlas contract are required.",
+    "license_bytes": 1106,
+    "license_sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7",
     "changes": [
       {
         "source_path": "versioning/Stable-v1.0.0/README.md",
-        "previous_bytes": 63529,
-        "previous_sha256": "8e3d82be109b1e8baf1deab32b338b568aa7c98d407858456620336c76ce499e",
-        "bytes": 63750,
-        "sha256": "70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84",
+        "previous_bytes": 63750,
+        "previous_sha256": "70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84",
+        "bytes": 63838,
+        "sha256": "d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da",
         "rules": 46,
         "normative_body_equal": true,
         "normative_body_sha256": "eaa49c57d9f6d30ae01572c2b02f7e184416382335eeeeaa1220f721bf93d5c8"
       },
       {
         "source_path": "versioning/Stable-v1.0.0/README.pt-br.md",
-        "previous_bytes": 69371,
-        "previous_sha256": "dec2199d47e04caf65934861cc27308afb264504fce0e54a24391db8d9033bdc",
-        "bytes": 69631,
-        "sha256": "5bfe9578f8d967488225ec8591e6524afccb20c4bacabc269102bc6700c8605d",
+        "previous_bytes": 69631,
+        "previous_sha256": "5bfe9578f8d967488225ec8591e6524afccb20c4bacabc269102bc6700c8605d",
+        "bytes": 69716,
+        "sha256": "52e0f59f7f4ead7d9a94a924bc5b339196e4d1aa68c467b7200780b81a3cc1e9",
         "rules": 46,
         "normative_body_equal": true,
         "normative_body_sha256": "f9a728469db159143325e93d0946b2490e82c09e1dadbe2df0b574d39c5a9285"
       }
-    ],
-    "scope": "Editorial/operational reference update. The normative body from the oal-layers anchor, including all 46 numbered rules EN/PT, is byte-identical to the previous Stable snapshot. All 19 applicable Atlas clauses reconfirmed.",
-    "license_bytes": 1106,
-    "license_sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
-  }
+    ]
+  },
+  "reference_update_history": [
+    {
+      "date": "2026-10-26",
+      "zip_sha256": "59ee79cb473dcdaa58677b806de98c5dfa51500ac70eab4aca9720533fb3464e",
+      "zip_bytes": 12637759,
+      "changes": [
+        {
+          "source_path": "versioning/Stable-v1.0.0/README.md",
+          "previous_bytes": 63529,
+          "previous_sha256": "8e3d82be109b1e8baf1deab32b338b568aa7c98d407858456620336c76ce499e",
+          "bytes": 63750,
+          "sha256": "70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84",
+          "rules": 46,
+          "normative_body_equal": true,
+          "normative_body_sha256": "eaa49c57d9f6d30ae01572c2b02f7e184416382335eeeeaa1220f721bf93d5c8"
+        },
+        {
+          "source_path": "versioning/Stable-v1.0.0/README.pt-br.md",
+          "previous_bytes": 69371,
+          "previous_sha256": "dec2199d47e04caf65934861cc27308afb264504fce0e54a24391db8d9033bdc",
+          "bytes": 69631,
+          "sha256": "5bfe9578f8d967488225ec8591e6524afccb20c4bacabc269102bc6700c8605d",
+          "rules": 46,
+          "normative_body_equal": true,
+          "normative_body_sha256": "f9a728469db159143325e93d0946b2490e82c09e1dadbe2df0b574d39c5a9285"
+        }
+      ],
+      "scope": "Editorial/operational reference update. The normative body from the oal-layers anchor, including all 46 numbered rules EN/PT, is byte-identical to the previous Stable snapshot. All 19 applicable Atlas clauses reconfirmed.",
+      "license_bytes": 1106,
+      "license_sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7",
+      "previous_stable_commit": "a02bf8eecf222e7e0a7a34977fff49a25b5af6aa",
+      "commit": "bdea8a4269e2788f25b68d2925c125d7e62c04ed",
+      "tree": "5baee0a40771711981397ff332532d4d54e798fe"
+    }
+  ]
 }

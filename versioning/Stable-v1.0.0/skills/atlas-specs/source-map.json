@@ -18,8 +18,8 @@
     {
       "source": "README.md",
       "destination": "references/atlas-specification.md",
-      "source_sha256": "222a9e5ee7b3de4da498af2b59bfdaf5270e1b59bd864c4caeede131043a7476",
-      "bundled_sha256": "6dbfbb7bd5c9ea237836fdb55925c6cb8a97a45345dbf9a4e3d9b604089c599f"
+      "source_sha256": "fcbe8a073b0f4d6c590042c7d3b9b81a5d10255d80ab00a980d5660b1e528824",
+      "bundled_sha256": "266417db4ec1477e8b354e42cfa03a28f63a4c3c412d953f394d6bb659da3109"
     },
     {
       "source": "implementations/json/README.md",

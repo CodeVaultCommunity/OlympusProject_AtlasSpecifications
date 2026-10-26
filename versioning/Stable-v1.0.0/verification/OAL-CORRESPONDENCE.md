@@ -4,19 +4,19 @@ Document-level clause comparison, separate from stakeholder approval and applica
 
 ## Exact input / Entrada exata
 
-The [baseline record](oal/baseline.json) identifies local commit `bdea8a4269e2788f25b68d2925c125d7e62c04ed`, a verified canonical archive and accessible local Git tree and byte-exact EN/PT snapshots. Normative source: `versioning/Stable-v1.0.0/README.md`; SHA-256 `70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84`. The [English snapshot](oal/README.md.txt) is the authority; [Portuguese](oal/README.pt-br.md.txt) is the translation. Original license is retained. Remote availability of this commit was not asserted or required.
+The [baseline record](oal/baseline.json) identifies local commit `ce225141686d4b6b3e46923866c97d84c031903f`, a verified canonical archive and accessible local Git tree and byte-exact EN/PT snapshots. Normative source: `versioning/Stable-v1.0.0/README.md`; SHA-256 `d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da`. The [English snapshot](oal/README.md.txt) is the authority; [Portuguese](oal/README.pt-br.md.txt) is the translation. Original license is retained. Remote availability of this commit was not asserted or required.
 
 O registro identifica commit local, checkout limpo e snapshots exatos EN/PT. O snapshot inglês é normativo e o português é tradução; a licença original foi preservada. Não se afirma disponibilidade pública do commit.
 
 The final reference update on 2026-10-26 compares the canonical archive with the
-Git blobs of `bdea8a4269e2788f25b68d2925c125d7e62c04ed` (tree
-`5baee0a40771711981397ff332532d4d54e798fe`). Both match exactly. Relative to
-`a02bf8eecf222e7e0a7a34977fff49a25b5af6aa`, only the manuals' introductory
+Git blobs of `ce225141686d4b6b3e46923866c97d84c031903f` (tree
+`dedf80b6ca53e43d5ee76c877471e9cfe041a86c`). Both match exactly. Relative to
+`bdea8a4269e2788f25b68d2925c125d7e62c04ed`, only the manuals' introductory
 editorial/operational notices changed. The complete normative bodies beginning
 at `oal-layers`, including all 46 numbered rules in each language, remain
 byte-identical. The ten UCS and nine cross-layer assessments below therefore
 retain the same obligations and were reconfirmed against the current Atlas
-manual. The source update does not turn launcher changes into normative changes.
+manual. The removed operational-allowlist reference and revised release wording do not change the normative contract. The [exact introductory diffs](evidence/oal-ce225141-reference-update.json) and [previous update history](oal/baseline.json) remain available.
 
 A atualização final compara os bytes do ZIP canônico com os blobs do commit
 local e registra a igualdade em `oal/baseline.json`. As dez cláusulas UCS e nove

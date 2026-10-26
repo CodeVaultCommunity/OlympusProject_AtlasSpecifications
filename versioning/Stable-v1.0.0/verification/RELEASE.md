@@ -19,13 +19,21 @@ Modelo/perfil e pacote mantêm suas identidades. A branch separada foi integrada
 | Previous Stable candidate | `e3552b4508a3cd84aee153cb3920ca7314e851c7`; 209 tests, 24 conversions, 27 skill files, 137 PDF pages. Its [155-record inventory](evidence/e3552b4-release-inputs.json) retains its historical scope and hashes. Its report is available in that Git commit. |
 | Current inventory | [release-inputs.json](release-inputs.json): 163 covered files, with POSIX identities and exact sizes/SHA-256. Reports, this manifest, raw evidence, caches/intermediates and historical Alpha remain excluded as declared. |
 | Alpha preservation | [Final comparison](evidence/final-alpha-preservation.json): all **125** initial file/directory records equal, including **98 files**, sizes, bytes, attributes and Windows ACL SDDL. |
-| Final OAL baseline | Local commit `bdea8a4269e2788f25b68d2925c125d7e62c04ed`, tree `5baee0a40771711981397ff332532d4d54e798fe`; canonical ZIP and Git blobs independently compared. [Identity and hashes](oal/baseline.json), [19-clause review](OAL-CORRESPONDENCE.md). |
-| OAL English manual | `versioning/Stable-v1.0.0/README.md`, **63750 bytes**, SHA-256 `70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84`. Portuguese and canonical license hashes are in the baseline record. |
+| Final OAL baseline | Local commit `ce225141686d4b6b3e46923866c97d84c031903f`, tree `dedf80b6ca53e43d5ee76c877471e9cfe041a86c`; canonical ZIP and Git blobs independently compared. [Identity and hashes](oal/baseline.json), [19-clause review](OAL-CORRESPONDENCE.md). |
+| OAL English manual | `versioning/Stable-v1.0.0/README.md`, **63838 bytes**, SHA-256 `d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da`. Portuguese and canonical license hashes are in the baseline record. |
 | Editorial cleanup | [Migration ledger](editorial-migration.json) keeps old migration hashes and adds six separate before/after records. [Exact JSON delta check](evidence/final-editorial-check.json) verifies only the declared history text fields changed. |
 
 The complete OAL normative bodies, including 46 numbered rules in each language, are byte-identical to the prior Stable snapshot. The ten UCS and nine cross-layer assessments were reconfirmed. The delta is editorial/operational; launcher changes do not change the normative contract. `SRC-TASK-OAL` remains historical Alpha provenance. Public availability of either final local commit is not asserted.
 
 Os corpos normativos OAL permanecem idênticos; as 19 cláusulas aplicáveis foram reconfirmadas. A referência histórica dos exemplos foi preservada. A identidade final Atlas e o SHA-256 do ZIP efetivo são entregues fora do próprio commit, no recibo e no chat, evitando hashes circulares.
+
+## OAL reference refresh / Atualização da referência OAL
+
+On 2026-10-26, the OAL pin was refreshed from `bdea8a4269e2788f25b68d2925c125d7e62c04ed` to `ce225141686d4b6b3e46923866c97d84c031903f`. The [new comparison](evidence/oal-ce225141-reference-update.json) records exact Git/archive/extraction equality, both introductory diffs and unchanged normative bodies. The previous reference update remains in the [baseline history](oal/baseline.json) and [original evidence](evidence/final-oal-reference.json).
+
+Only OAL snapshots, provenance, generated skill references, this release documentation and the covered-input inventory changed relative to Atlas `c084786d2298be784cf0a713fdbfa7d5c6d5bdf0`. The runtime, schema, profiles, examples, PDFs and Alpha content are unchanged. The 229-test runs on each Python version and the 123-page visual review below belong to that predecessor; they were not rerun for this document-only refresh. Current checks repeat the 24 directed conversions, 27-file skill consistency, local links and 163-input inventory; their actual outputs are recorded in [refresh verification](evidence/oal-ce225141-checks.json). The new ZIP is checked against its commit and again after extraction, with results in its external receipt.
+
+Em 2026-10-26, os snapshots, o pin, a skill e o inventário foram sincronizados com a nova revisão OAL. Apenas dois parágrafos introdutórios mudaram em cada idioma. As 46 regras por idioma, as 19 correspondências aplicáveis e a licença continuam iguais. Os testes completos e a inspeção dos PDFs são evidências preservadas do commit Atlas anterior; esta atualização documental repete as verificações afetadas e registra o novo pacote separadamente.
 
 ## Final adjustments / Ajustes finais
 

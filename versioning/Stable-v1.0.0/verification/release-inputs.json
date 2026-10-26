@@ -223,12 +223,12 @@
     {
       "path": "versioning/Stable-v1.0.0/README.md",
       "bytes": 72179,
-      "sha256": "222a9e5ee7b3de4da498af2b59bfdaf5270e1b59bd864c4caeede131043a7476"
+      "sha256": "fcbe8a073b0f4d6c590042c7d3b9b81a5d10255d80ab00a980d5660b1e528824"
     },
     {
       "path": "versioning/Stable-v1.0.0/README.pt-br.md",
       "bytes": 65842,
-      "sha256": "215e033e61357fb75545f06d1b6355c0a191f1f1ae65578dc593171ec217f75a"
+      "sha256": "b47b847e07d5e489202e16743c377251593f8d03de68a9d975c78efeb766bc9f"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/README.md",
@@ -488,7 +488,7 @@
     {
       "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/atlas-specification.md",
       "bytes": 72642,
-      "sha256": "6dbfbb7bd5c9ea237836fdb55925c6cb8a97a45345dbf9a4e3d9b604089c599f"
+      "sha256": "266417db4ec1477e8b354e42cfa03a28f63a4c3c412d953f394d6bb659da3109"
     },
     {
       "path": "versioning/Stable-v1.0.0/skills/atlas-specs/references/compatibility.md",
@@ -593,7 +593,7 @@
     {
       "path": "versioning/Stable-v1.0.0/skills/atlas-specs/source-map.json",
       "bytes": 8215,
-      "sha256": "4a9ad13dc71af0727dcc99b9920d347a23aff859da235f0d53745c24a3e4241d"
+      "sha256": "933b3aa45bbe285686000dd4280214e19fe30a51684abdaba3df6c8e07de2a7a"
     },
     {
       "path": "versioning/Stable-v1.0.0/skills/build.py",
@@ -782,8 +782,8 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/OAL-CORRESPONDENCE.md",
-      "bytes": 7999,
-      "sha256": "2fe79bb6d8248bc7a98c895c550acba79ea047dacb4deff69217574b876079db"
+      "bytes": 8179,
+      "sha256": "67e19ae6fad9aadd3091d4de0d0365c608b903706cb504355b00fe014d457f50"
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/SEMANTIC-REVIEW.md",
@@ -822,18 +822,18 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/oal/README.md.txt",
-      "bytes": 63750,
-      "sha256": "70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84"
+      "bytes": 63838,
+      "sha256": "d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da"
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/oal/README.pt-br.md.txt",
-      "bytes": 69631,
-      "sha256": "5bfe9578f8d967488225ec8591e6524afccb20c4bacabc269102bc6700c8605d"
+      "bytes": 69716,
+      "sha256": "52e0f59f7f4ead7d9a94a924bc5b339196e4d1aa68c467b7200780b81a3cc1e9"
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/oal/baseline.json",
-      "bytes": 3440,
-      "sha256": "3e586c2b5645178224566b0e3eea25d6d95688ab74f267a6a2984f65bc1dc8d3"
+      "bytes": 5278,
+      "sha256": "5ec9f8b3db95c156b2b2a8d3b8e0020ad1d5ac8ff9c8164d6c4daa298f956aa3"
     },
     {
       "path": "versioning/Stable-v1.0.0/verification/reference-inventory.md",

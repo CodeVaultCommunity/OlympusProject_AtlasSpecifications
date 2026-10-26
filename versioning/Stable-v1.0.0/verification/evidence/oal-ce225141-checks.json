@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-26",
+  "status": "passed",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "previous_atlas_commit": "c084786d2298be784cf0a713fdbfa7d5c6d5bdf0",
+  "oal_commit": "ce225141686d4b6b3e46923866c97d84c031903f",
+  "checks": [
+    {
+      "command": [
+        "python.exe",
+        "examples/build.py",
+        "--check"
+      ],
+      "working_directory": "versioning\\Stable-v1.0.0",
+      "exit_code": 0,
+      "log": "oal-ce225141-examples.txt",
+      "log_sha256": "d0dd7ead70df2ceaf927f2c7a537726eaa7a75e331f27a037235b9cf9e814dc2",
+      "output": "Verified composition: three representations, six conversions\r\nVerified minimal: three representations, six conversions\r\nVerified task-board: three representations, six conversions\r\nVerified starter: three representations, six conversions\r\nVerified 24 directed conversions, including the starter.\r\n"
+    },
+    {
+      "command": [
+        "python.exe",
+        "skills/build.py",
+        "--check"
+      ],
+      "working_directory": "versioning\\Stable-v1.0.0",
+      "exit_code": 0,
+      "log": "oal-ce225141-skill.txt",
+      "log_sha256": "e700c0352dc5aeded7b3caef58d64b0bcd65799069e8110a38c7ce9256562527",
+      "output": "Verified standalone skill: 27 generated files\r\n"
+    },
+    {
+      "command": [
+        "python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b9-95a3-7500-b462-6db470cefc5f\\atlas-oal-ce225141\\check_links.py"
+      ],
+      "working_directory": "versioning\\Stable-v1.0.0",
+      "exit_code": 0,
+      "log": "oal-ce225141-links.txt",
+      "log_sha256": "fd35d737ef51e28e475b6cc5eb3e801421fec00cd6d5d36b2ed3784299cfb532",
+      "output": "{\"files\": 50, \"local_targets\": 682, \"fragments\": 261, \"problems\": [], \"scope\": \"Root, artwork, current edition Markdown/HTML links outside fenced examples; OAL .txt snapshots retain source-repository references.\"}\r\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "working_directory": ".",
+      "exit_code": 0,
+      "log": "oal-ce225141-whitespace.txt",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": [
+        "python.exe",
+        "verification/capture_release.py"
+      ],
+      "working_directory": "versioning\\Stable-v1.0.0",
+      "exit_code": 0,
+      "log": "oal-ce225141-capture.txt",
+      "log_sha256": "4d0bf0e4c6b0a78d0c9312e333c4cbc1f7857fb9d06397459c5ffd46111846db",
+      "output": "Captured 163 release inputs\r\n"
+    },
+    {
+      "command": [
+        "python.exe",
+        "verification/capture_release.py",
+        "--check"
+      ],
+      "working_directory": "versioning\\Stable-v1.0.0",
+      "exit_code": 0,
+      "log": "oal-ce225141-inventory.txt",
+      "log_sha256": "91bb8343614b236da9813ab31fa330cac11b9ba8606bcd5d7c783c56346215bc",
+      "output": "Verified 163 release inputs\r\n"
+    }
+  ],
+  "unchanged_paths_compared_with_previous_atlas_commit": [
+    "versioning/Alpha-v0.1.0",
+    "versioning/Stable-v1.0.0/translator",
+    "versioning/Stable-v1.0.0/implementations",
+    "versioning/Stable-v1.0.0/examples",
+    "versioning/Stable-v1.0.0/tests",
+    "versioning/Stable-v1.0.0/pyproject.toml"
+  ],
+  "full_tests_and_pdf_rendering_repeated": false,
+  "limits": "Document-only reference refresh; predecessor full-suite/PDF evidence is preserved without relabeling it as a new execution. Final archive verification is recorded separately in the external delivery receipt."
+}

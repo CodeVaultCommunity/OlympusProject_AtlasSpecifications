@@ -647,9 +647,9 @@ Semantic review must still assess objectives/scope, claim origins, actor context
 | --- | --- |
 | OAL edition | **Stable-v1.0.0** |
 | Repository | [OAL — Open Analysis Layers](https://github.com/CodeVaultCommunity/OAL-Open-Analysis-Layers) |
-| Commit | `bdea8a4269e2788f25b68d2925c125d7e62c04ed` |
+| Commit | `ce225141686d4b6b3e46923866c97d84c031903f` |
 | Normative source | `versioning/Stable-v1.0.0/README.md`, [snapshot of received bytes](verification/oal/README.md.txt) |
-| SHA-256 | `70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84` |
+| SHA-256 | `d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da` |
 | Provenance | Clean local checkout; remote publication pending. [Identity](verification/oal/baseline.json) and [clause review](verification/OAL-CORRESPONDENCE.md). |
 | Relevant clauses | Numbered cross-layer rules and UCS rules 1–10. OAL's context skill is informative. |
 | Atlas model | **Atlas Specifications Stable-v1.0.0**, [abstract model](#abstract-model) |

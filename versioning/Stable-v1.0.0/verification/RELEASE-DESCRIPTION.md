@@ -6,7 +6,7 @@ Atlas Stable-v1.0.0 preserves the OAL L1 model, corrects optional records, typed
 
 A candidata inclui manifesto portátil, distribuição limpa, saneamento editorial e publicação automática compacta, com grafos próximos dos donos e compatibilidade com LaTeX Stable anterior. A Alpha histórica permanece intacta.
 
-Verification: **229 tests on each of Python 3.11 and 3.12**, 24 directed conversions, 27 skill files and three rebuilt/visually reviewed PDFs totaling **123 pages**. The pinned OAL commit is `bdea8a4269e2788f25b68d2925c125d7e62c04ed`; canonical EN/PT bytes and license match Git blobs, the 46 rules remain unchanged and the 19 relevant clauses were reconfirmed. Public commit availability is not asserted.
+Prior implementation verification at Atlas `c084786d2298be784cf0a713fdbfa7d5c6d5bdf0`: **229 tests on each of Python 3.11 and 3.12**, 24 directed conversions, 27 skill files and three rebuilt/visually reviewed PDFs totaling **123 pages**. The pinned OAL commit is `ce225141686d4b6b3e46923866c97d84c031903f`; canonical EN/PT bytes and license match Git blobs, the 46 rules remain unchanged and the 19 relevant clauses were reconfirmed. Public commit availability is not asserted. This document-only OAL refresh repeats conversion, skill, local-link and inventory checks; runtime, examples and PDFs are unchanged. See the [scoped refresh evidence](RELEASE.md#oal-reference-refresh--atualização-da-referência-oal).
 
 Verificação local em Windows/Python 3.11 e 3.12/pdfLaTeX, incluindo extração e instalação limpa. Linux/Actions e outros engines continuam sem execução local. Consulte o [relatório e evidências](RELEASE.md).
 
