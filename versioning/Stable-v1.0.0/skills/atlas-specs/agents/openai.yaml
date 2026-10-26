@@ -1,0 +1,4 @@
+interface:
+  display_name: "Atlas Specifications"
+  short_description: "Create, audit and translate Atlas specifications"
+  default_prompt: "Use $atlas-specs to create or review an Atlas Alpha-v0.1.0 specification and validate its representations."

@@ -1,0 +1,226 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{atlas}[2026/10/25 Atlas Specifications Alpha-v0.1.0]
+\RequirePackage{iftex}
+\ifPDFTeX\RequirePackage{lmodern}\fi
+\RequirePackage{microtype}
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{array}
+\RequirePackage{booktabs}
+\RequirePackage{colortbl}
+\RequirePackage{tikz}
+\RequirePackage{needspace}
+\RequirePackage{fancyhdr}
+\RequirePackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning}
+
+% Presentation settings are outside the Atlas content model.
+% They introduce no text slots, resources, requirements, or graph records.
+\makeatletter
+\newif\ifatlas@plain
+\newif\ifatlas@cover
+\newcommand{\AtlasTheme}[1]{%
+  \def\atlas@requested{#1}\def\atlas@plainname{plain}%
+  \def\atlas@editorialname{editorial}%
+  \ifx\atlas@requested\atlas@plainname
+    \atlas@plaintrue
+  \else
+    \ifx\atlas@requested\atlas@editorialname
+      \atlas@plainfalse
+    \else
+      \PackageError{atlas}{Unknown theme '#1'}{Use editorial or plain.}%
+    \fi
+  \fi
+  \ifatlas@plain
+    \definecolor{AtlasInk}{HTML}{202020}%
+    \definecolor{AtlasAccent}{HTML}{454545}%
+    \definecolor{AtlasTint}{HTML}{F2F2F2}%
+    \definecolor{AtlasMuted}{HTML}{5B5B5B}%
+    \definecolor{AtlasRule}{HTML}{C8C8C8}%
+    \colorlet{AtlasCoverBackground}{white}%
+    \colorlet{AtlasCoverText}{AtlasInk}%
+    \colorlet{AtlasCoverLine}{black!45}%
+  \else
+    \definecolor{AtlasInk}{HTML}{122941}%
+    \definecolor{AtlasAccent}{HTML}{007C91}%
+    \definecolor{AtlasTint}{HTML}{EEF5F8}%
+    \definecolor{AtlasMuted}{HTML}{526577}%
+    \definecolor{AtlasRule}{HTML}{C9DCE5}%
+    \definecolor{AtlasCoverBackground}{HTML}{091C30}%
+    \definecolor{AtlasCoverText}{HTML}{F1F8FC}%
+    \definecolor{AtlasCoverLine}{HTML}{69D5E8}%
+  \fi}
+\AtlasTheme{editorial}
+
+\newcommand{\AtlasCoverImage}[1]{\def\atlas@coverimage{#1}}
+\def\atlas@coverimage{}
+\newcommand{\AtlasDecorativeImage}[2][width=.65\linewidth]{%
+  \IfFileExists{#2}{%
+    \par\begingroup\centering\includegraphics[#1]{#2}\par\endgroup
+  }{\PackageWarning{atlas}{Decorative image '#2' not found; omitted}}}
+
+% A geometric celestial illustration, not a graph of the specification.
+% It is drawn entirely by TeX; no external image file is required.
+\newcommand{\atlas@orbitalart}{%
+  \resizebox{\linewidth}{!}{%
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \useasboundingbox (0,0) rectangle (16,5.6);
+      \begin{scope}[draw=AtlasCoverLine,line cap=round]
+        \draw[opacity=.20,line width=.55pt] (0.5,.6)--(6.5,2.25)--(14.7,.7)--(8.6,-.15)--cycle;
+        \draw[opacity=.20,line width=.55pt] (1.1,.95)--(7.1,2.6)--(15.3,1.05)--(9.2,.2)--cycle;
+        \draw[opacity=.15,line width=.4pt] (3.1,.65)--(9.1,2.3) (5.6,.25)--(11.6,1.95)
+          (3.7,1.5)--(11.8,0) (6.3,2.2)--(14.2,.65);
+        \begin{scope}[shift={(8.55,3.05)}]
+          \draw[line width=.85pt,opacity=.75] (0,0) circle[radius=2.05];
+          \draw[line width=.5pt,opacity=.45] (0,0) ellipse[x radius=.76,y radius=2.05];
+          \draw[line width=.5pt,opacity=.45] (0,0) ellipse[x radius=1.46,y radius=2.05];
+          \draw[line width=.5pt,opacity=.45] (0,0) ellipse[x radius=2.05,y radius=.56];
+          \draw[line width=.5pt,opacity=.45] (0,.86) ellipse[x radius=1.86,y radius=.40];
+          \draw[line width=.5pt,opacity=.45] (0,-.86) ellipse[x radius=1.86,y radius=.40];
+          \draw[line width=.35pt,opacity=.32] (0,-2.28)--(0,2.28);
+          \draw[line width=1.0pt,rotate=-24,opacity=.95] (0,0) ellipse[x radius=3.25,y radius=.75];
+          \draw[line width=.55pt,rotate=49,opacity=.38] (0,0) ellipse[x radius=2.85,y radius=1.12];
+          \fill[AtlasCoverLine] (2.68,-1.10) circle[radius=.065];
+          \fill[AtlasCoverLine,opacity=.65] (-1.15,2.13) circle[radius=.045];
+        \end{scope}
+        \draw[opacity=.23,densely dotted] (1.15,4.45)--(3.2,3.4)--(4.7,4.9)--(6.0,4.45);
+        \draw[opacity=.23,densely dotted] (12.2,4.55)--(14.6,3.8)--(14.1,2.1)--(15.3,1.6);
+        \foreach \x/\y in {1.15/4.45,3.2/3.4,4.7/4.9,6.0/4.45,12.2/4.55,14.6/3.8,14.1/2.1,15.3/1.6}{%
+          \fill[AtlasCoverLine,opacity=.62] (\x,\y) circle[radius=.035];}
+      \end{scope}
+    \end{tikzpicture}}}
+
+\newcommand{\atlas@coverart}{%
+  \ifx\atlas@coverimage\@empty
+    \atlas@orbitalart
+  \else
+    \IfFileExists{\atlas@coverimage}{%
+      \begin{center}
+      \includegraphics[width=\linewidth,height=5.8cm,keepaspectratio]{\atlas@coverimage}%
+      \end{center}
+    }{%
+      \PackageWarning{atlas}{Cover image '\atlas@coverimage' not found; using orbital illustration}%
+      \atlas@orbitalart}
+  \fi}
+
+\newcommand{\AtlasBeginCover}[3]{%
+  \clearpage\pagenumbering{roman}\begingroup\atlas@covertrue
+  \def\atlas@document{#1}\def\atlas@revision{#2}\def\atlas@status{#3}%
+  \pagestyle{empty}\thispagestyle{empty}%
+  \pagecolor{AtlasCoverBackground}\color{AtlasCoverText}%
+  \setlength{\parskip}{.55em}\raggedright
+  \noindent{\sffamily\small\bfseries ATLAS SPECIFICATIONS}\hfill
+    {\sffamily\footnotesize L1 / UCS}\par
+  \vspace{1.0cm}\atlas@coverart\par\vspace{.8cm}%
+  \noindent{\sffamily\footnotesize\color{AtlasCoverLine} SPECIFICATION}\par\smallskip}
+
+\newcommand{\AtlasEndCover}{%
+  \par\vspace{1.1cm}\vfill
+  {\color{AtlasCoverLine}\hrule height .5pt}\vspace{.45cm}%
+  \noindent{\sffamily\small\bfseries\atlas@document}\par
+  {\sffamily\footnotesize Revision \atlas@revision\quad/\quad\atlas@status
+    \quad/\quad Alpha-v0.1.0}\par
+  \clearpage\endgroup\pagecolor{white}\color{AtlasInk}%
+  \pagenumbering{arabic}\pagestyle{atlas}}
+
+\fancypagestyle{atlas}{%
+  \fancyhf{}%
+  \fancyhead[L]{\sffamily\scriptsize\bfseries\color{AtlasMuted}ATLAS / SPECIFICATIONS}%
+  \fancyhead[R]{\sffamily\scriptsize\color{AtlasMuted}Alpha-v0.1.0}%
+  \fancyfoot[L]{\sffamily\scriptsize\color{AtlasMuted}USE CASE SPECIFICATION}%
+  \fancyfoot[R]{\sffamily\small\bfseries\color{AtlasAccent}\thepage}%
+  \renewcommand{\headrulewidth}{.3pt}%
+  \renewcommand{\footrulewidth}{0pt}}
+
+\AtBeginDocument{%
+  \setlength{\parindent}{0pt}%
+  \setlength{\parskip}{.30em}%
+  \setlength{\emergencystretch}{3em}%
+  \setlength{\headheight}{15pt}%
+  \setlength{\headsep}{.65cm}%
+  \renewcommand{\arraystretch}{1.16}%
+  \color{AtlasInk}\pagestyle{atlas}}
+
+% Exact-text character macros used by Atlas LaTeX text records.
+\newcommand{\AtlasCharBackslash}{\textbackslash}
+\newcommand{\AtlasCharLBrace}{\{}
+\newcommand{\AtlasCharRBrace}{\}}
+\newcommand{\AtlasCharPercent}{\%}
+\newcommand{\AtlasCharHash}{\#}
+\newcommand{\AtlasCharAmp}{\&}
+\newcommand{\AtlasCharUnderscore}{\_\allowbreak}
+\newcommand{\AtlasCharDollar}{\$}
+\newcommand{\AtlasCharCaret}{\textasciicircum}
+\newcommand{\AtlasCharTilde}{\textasciitilde}
+\newcommand{\AtlasCharNewline}{\space}
+\newcommand{\AtlasCharTab}{\hspace{1em}}
+
+\newcommand{\AtlasLabel}[1]{%
+  \par\Needspace{3\baselineskip}\smallskip\noindent
+  {\sffamily\small\bfseries\color{AtlasAccent}#1}\par\nopagebreak}
+\newcommand{\AtlasSubheading}[1]{%
+  \par\Needspace{4\baselineskip}\medskip\begingroup\raggedright\noindent
+  \sffamily\large\bfseries\color{AtlasInk}\hangindent=1em\hangafter=1
+  {\color{AtlasAccent}\rule[-.15em]{2.3pt}{1.05em}}\hspace{.6em}#1%
+  \par\endgroup\nopagebreak\smallskip}
+% An appendix heading is followed by an item heading and its first fields.
+% Reserve that combined space so consecutive headings do not orphan each other.
+\newcommand{\AtlasAppendixHeading}[1]{%
+  \par\Needspace{10\baselineskip}\AtlasSubheading{#1}}
+\newcommand{\AtlasMetaLine}[2]{%
+  \par\begingroup\raggedright\noindent
+  {\sffamily\small\color{AtlasMuted}#1:}\nobreakspace
+  {\small #2}\par\endgroup}
+\newcommand{\AtlasCell}[2]{#2}
+
+\newcommand{\AtlasHeadingStyle}[1]{%
+  \sffamily\bfseries\color{AtlasInk}%
+  \ifcase#1\relax\Large
+  \or\LARGE
+  \or\LARGE
+  \or\Large
+  \or\large
+  \else\normalsize\fi}
+
+\newenvironment{atlastitle}[1]
+  {\par\raggedright\sffamily\bfseries
+    \ifatlas@cover\fontsize{32}{37}\selectfont\color{AtlasCoverText}%
+    \else\LARGE\color{AtlasInk}\fi}
+  {\par\medskip}
+\newenvironment{atlasheading}[2]
+  {\par\Needspace{6\baselineskip}\bigskip\noindent
+    \def\atlas@level{#2}\AtlasHeadingStyle{#2}}
+  {\par\nobreak\ifnum\atlas@level<3
+     \vspace{.22em}{\color{AtlasRule}\hrule height .6pt}\nobreak\vspace{.45em}%
+    \else\smallskip\fi}
+\newenvironment{atlastext}[1]
+  {\par\noindent\ifatlas@cover\sffamily\large\fi}
+  {\par}
+\newenvironment{atlasparagraph}[1]
+  {\par\noindent}
+  {\par}
+\newenvironment{atlasitem}[1]
+  {\par\noindent\hangindent=1.15em\hangafter=1
+    \makebox[1.15em][l]{\textcolor{AtlasAccent}{\textbullet}}}
+  {\par}
+\newenvironment{atlasquote}[1]
+  {\begin{quote}\itshape\color{AtlasMuted}}
+  {\end{quote}}
+\newenvironment{atlasnote}[1]
+  {\begin{tcolorbox}[breakable,enhanced jigsaw,boxrule=0pt,sharp corners,
+    colback=AtlasTint,coltext=AtlasInk,borderline west={2pt}{0pt}{AtlasAccent},
+    left=8pt,right=8pt,top=6pt,bottom=6pt,before skip=7pt,after skip=7pt]
+    \small}
+  {\end{tcolorbox}}
+\newenvironment{atlascode}[1]
+  {\par\begingroup\small\ttfamily\raggedright\obeylines\obeyspaces\parindent=0pt\parskip=0pt}
+  {\par\endgroup}
+\newenvironment{atlasformula}[1]
+  {\par\begingroup\small\ttfamily\raggedright\obeylines\obeyspaces\parindent=0pt\parskip=0pt}
+  {\par\endgroup}
+\newenvironment{atlasderived}[1]
+  {\par\begingroup\small\sffamily\color{AtlasMuted}\raggedright\setlength{\parskip}{0pt}\obeylines}
+  {\par\endgroup}
+\makeatother
+\endinput

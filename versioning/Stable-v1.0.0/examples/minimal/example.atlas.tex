@@ -1,0 +1,3496 @@
+% atlas:latex profile=atlas-latex representation=Alpha-v0.1.0 translator=0.1.0
+% Atlas LaTeX. Text records are authoritative for prose; the structure
+% appendix is authoritative for non-text data. Derived environments are
+% checked against both sources when the file is imported.
+\documentclass[11pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\usepackage{atlas}
+% Optional publication-only settings. The Atlas decoder does not read this file.
+\InputIfFileExists{atlas-presentation.tex}{}{}
+\begin{document}
+\AtlasBeginCover{ATLAS-\allowbreak{}EX-\allowbreak{}MINIMAL}{1}{draft}
+\begin{atlastitle}{T000001}
+Minimal request register
+\end{atlastitle}
+\begin{atlastext}{T000004}
+A complete small Atlas instance with one entity, validation, tool, case, requirement set, and web boundary.
+\end{atlastext}
+\AtlasEndCover
+\AtlasMetaLine{Document}{\texttt{ATLAS-\allowbreak{}EX-\allowbreak{}MINIMAL}}
+\AtlasMetaLine{Revision}{\texttt{1}}
+\AtlasMetaLine{Status}{\texttt{draft}}
+\AtlasMetaLine{Language}{\texttt{en}}
+\AtlasMetaLine{Atlas version}{\texttt{Alpha-\allowbreak{}v0.\allowbreak{}1.\allowbreak{}0}}
+\AtlasMetaLine{Profile version}{\texttt{Alpha-\allowbreak{}v0.\allowbreak{}1.\allowbreak{}0}}
+\AtlasMetaLine{Translator}{\texttt{0.\allowbreak{}1.\allowbreak{}0}}
+\AtlasMetaLine{Created}{\texttt{2026-\allowbreak{}10-\allowbreak{}25}}
+\AtlasMetaLine{Updated}{\texttt{2026-\allowbreak{}10-\allowbreak{}25}}
+\AtlasLabel{Authors}
+\begin{atlasitem}{T000002}
+Douglas de Oliveira Alkimim
+\end{atlasitem}
+\begin{atlastext}{T000003}
+Specification author
+\end{atlastext}
+\AtlasLabel{Keywords}
+\begin{atlasitem}{T000005}
+minimal
+\end{atlasitem}
+\begin{atlasitem}{T000006}
+request
+\end{atlasitem}
+\begin{atlasitem}{T000007}
+validation
+\end{atlasitem}
+\begin{atlasitem}{T000008}
+boundary
+\end{atlasitem}
+\begin{atlasheading}{T000009}{2}
+Context, actors, and scope
+\end{atlasheading}
+\begin{atlasparagraph}{T000010}
+The request register retains requests identified by code. It is a declarative specification; no business application is built here.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000011}
+The scope covers submitting one request. Retrieval, deletion, pricing, stock, authentication implementation, and multi-tenant operation are outside this example.
+\end{atlasparagraph}
+\begin{atlasnote}{T000012}
+The tool is deliberately abstract: it states a persistence contract without choosing storage technology.
+\end{atlasnote}
+\begin{atlasparagraph}{T000013}
+This is a synthetic specification example. Source SRC-REQUEST-BRIEF is a teaching baseline, not evidence of stakeholder approval or a claimed Needs-to-L1 derivation.
+\end{atlasparagraph}
+\AtlasSubheading{ACTOR \texttt{ACT-REQUESTER}}
+\AtlasLabel{Name}
+\begin{atlastext}{T000022}
+Requester
+\end{atlastext}
+\AtlasMetaLine{Kind}{person}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000023}
+A person who submits a request to the register.
+\end{atlasparagraph}
+\AtlasSubheading{TERM \texttt{VOC-REQUEST-CODE}}
+\AtlasLabel{Term}
+\begin{atlastext}{T000024}
+Request code
+\end{atlastext}
+\AtlasLabel{Definition}
+\begin{atlasparagraph}{T000025}
+The exact text identifier of a retained request.
+\end{atlasparagraph}
+\AtlasMetaLine{Synonyms}{none}
+\begin{atlasheading}{T000014}{2}
+Entities and validations
+\end{atlasheading}
+\begin{atlasparagraph}{T000015}
+The entity holds request data and defines validity; it has no collaborators.
+\end{atlasparagraph}
+\AtlasSubheading{ENTITY \texttt{ENT-REQUEST}}
+\AtlasLabel{Name}
+\begin{atlastext}{T000026}
+Request
+\end{atlastext}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000027}
+A request asks the register to retain a quantity of a catalog code. The request is identified by its code.
+\end{atlasparagraph}
+\AtlasLabel{Identity}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000028}
+Two requests are the same when their codes are equal.
+\end{atlasparagraph}
+\AtlasMetaLine{Fields}{FLD-\allowbreak{}REQUEST-\allowbreak{}CODE}
+\AtlasLabel{Fields}
+\AtlasSubheading{\texttt{FLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
+\AtlasLabel{Name}
+\begin{atlastext}{T000029}
+Request code
+\end{atlastext}
+\AtlasMetaLine{Type}{text}
+\AtlasMetaLine{Cardinality}{1}
+\AtlasMetaLine{Required}{true}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000030}
+A non-empty code chosen by the requester.
+\end{atlasparagraph}
+\AtlasLabel{Constraints}
+\begin{atlasparagraph}{T000031}
+The code is preserved exactly; case is significant.
+\end{atlasparagraph}
+\AtlasLabel{Examples}
+\AtlasLabel{Valid}
+\begin{atlasitem}{T000032}
+REQ-001
+\end{atlasitem}
+\begin{atlasitem}{T000033}
+req-001
+\end{atlasitem}
+\AtlasLabel{Invalid}
+\begin{atlasitem}{T000034}
+
+\end{atlasitem}
+\AtlasSubheading{\texttt{FLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}}
+\AtlasLabel{Name}
+\begin{atlastext}{T000035}
+Quantity
+\end{atlastext}
+\AtlasMetaLine{Type}{integer}
+\AtlasMetaLine{Cardinality}{1}
+\AtlasMetaLine{Required}{true}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000036}
+The number of units requested.
+\end{atlasparagraph}
+\AtlasLabel{Constraints}
+\begin{atlasparagraph}{T000037}
+The value must be an integer greater than or equal to 1.
+\end{atlasparagraph}
+\AtlasLabel{Examples}
+\AtlasLabel{Valid}
+\begin{atlasitem}{T000038}
+1
+\end{atlasitem}
+\begin{atlasitem}{T000039}
+2
+\end{atlasitem}
+\AtlasLabel{Invalid}
+\begin{atlasitem}{T000040}
+0
+\end{atlasitem}
+\begin{atlasitem}{T000041}
+1.5
+\end{atlasitem}
+\AtlasMetaLine{Relationships}{none}
+\AtlasMetaLine{States}{none}
+\AtlasMetaLine{Transitions}{none}
+\AtlasLabel{Validations}
+\AtlasSubheading{\texttt{VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}}
+\AtlasLabel{Name}
+\begin{atlastext}{T000042}
+Quantity is a positive integer
+\end{atlastext}
+\AtlasMetaLine{Scope}{field}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000043}
+The quantity field is valid when its value is an integer greater than or equal to 1.
+\end{atlasparagraph}
+\AtlasLabel{Inputs}
+\AtlasLabel{Name}
+\begin{atlastext}{T000044}
+Quantity
+\end{atlastext}
+\AtlasMetaLine{Source}{field}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000045}
+The value supplied for FLD-REQUEST-QUANTITY.
+\end{atlasparagraph}
+\AtlasLabel{Conditions}
+\AtlasSubheading{\texttt{C-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}INT}}
+\AtlasLabel{Condition}
+\begin{atlastext}{T000046}
+The value is an integer.
+\end{atlastext}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000047}
+A fractional or textual value fails this condition.
+\end{atlasparagraph}
+\AtlasSubheading{\texttt{C-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN}}
+\AtlasLabel{Condition}
+\begin{atlastext}{T000048}
+The value is at least 1.
+\end{atlastext}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000049}
+Zero and negative values fail this condition.
+\end{atlasparagraph}
+\AtlasLabel{Results}
+\AtlasMetaLine{Outcome}{pass}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000050}
+Both conditions hold; the field accepts the value.
+\end{atlasparagraph}
+\AtlasMetaLine{Outcome}{fail}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000051}
+At least one condition fails; the field rejects the value.
+\end{atlasparagraph}
+\AtlasMetaLine{Flow}{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}
+\AtlasSubheading{\texttt{VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
+\AtlasLabel{Name}
+\begin{atlastext}{T000052}
+Request code is non-empty text
+\end{atlastext}
+\AtlasMetaLine{Scope}{field}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000053}
+The code must be text containing at least one character. Preserve the code exactly; case is significant.
+\end{atlasparagraph}
+\AtlasLabel{Inputs}
+\AtlasLabel{Name}
+\begin{atlastext}{T000054}
+Code
+\end{atlastext}
+\AtlasMetaLine{Source}{field}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000055}
+FLD-REQUEST-CODE candidate.
+\end{atlasparagraph}
+\AtlasLabel{Conditions}
+\AtlasSubheading{\texttt{C-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}NONEMPTY}}
+\AtlasLabel{Condition}
+\begin{atlastext}{T000056}
+The code is text with at least one character.
+\end{atlastext}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000057}
+An empty or non-text code fails.
+\end{atlasparagraph}
+\AtlasLabel{Results}
+\AtlasMetaLine{Outcome}{pass}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000058}
+Accept unchanged.
+\end{atlasparagraph}
+\AtlasMetaLine{Outcome}{fail}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000059}
+Refuse before persistence.
+\end{atlasparagraph}
+\AtlasMetaLine{Flow}{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}
+\AtlasLabel{Examples}
+\AtlasSubheading{\texttt{EX-\allowbreak{}REQUEST-\allowbreak{}VALID}}
+\AtlasMetaLine{Kind}{valid}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000060}
+A request with a non-empty code and a positive quantity.
+\end{atlasparagraph}
+\par\noindent\begin{minipage}{\linewidth}
+\AtlasLabel{Data}
+\begin{quote}\small\ttfamily\raggedright
+\noindent \{\par
+\noindent   "code":\allowbreak{} "REQ-\allowbreak{}001",\par
+\noindent   "quantity":\allowbreak{} 2\par
+\noindent \}\par
+\end{quote}
+\end{minipage}\par
+\AtlasSubheading{\texttt{EX-\allowbreak{}REQUEST-\allowbreak{}INVALID}}
+\AtlasMetaLine{Kind}{invalid}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000061}
+A request whose quantity is zero.
+\end{atlasparagraph}
+\par\noindent\begin{minipage}{\linewidth}
+\AtlasLabel{Data}
+\begin{quote}\small\ttfamily\raggedright
+\noindent \{\par
+\noindent   "code":\allowbreak{} "REQ-\allowbreak{}001",\par
+\noindent   "quantity":\allowbreak{} 0\par
+\noindent \}\par
+\end{quote}
+\end{minipage}\par
+\AtlasMetaLine{Assumptions}{ASM-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}UNIQUE}
+\AtlasMetaLine{Open issues}{OI-\allowbreak{}REQUEST-\allowbreak{}LATENCY}
+\begin{atlasheading}{T000016}{2}
+Abstract tools
+\end{atlasheading}
+\begin{atlasparagraph}{T000017}
+The tool exposes a capability and a contract, not an implementation.
+\end{atlasparagraph}
+\AtlasSubheading{TOOL \texttt{TOL-REQUEST-STORE}}
+\AtlasLabel{Name}
+\begin{atlastext}{T000062}
+Request store
+\end{atlastext}
+\AtlasLabel{Purpose}
+\begin{atlasparagraph}{T000063}
+Retain request records durably. The contract does not choose a database, transport, or file layout.
+\end{atlasparagraph}
+\AtlasLabel{Operations}
+\AtlasSubheading{\texttt{OP-\allowbreak{}REQUEST-\allowbreak{}STORE}}
+\AtlasLabel{Name}
+\begin{atlastext}{T000064}
+Store request
+\end{atlastext}
+\AtlasLabel{Purpose}
+\begin{atlasparagraph}{T000065}
+Create one retained request record when its code is unused.
+\end{atlasparagraph}
+\AtlasLabel{Inputs}
+\AtlasLabel{Name}
+\begin{atlastext}{T000066}
+Request code
+\end{atlastext}
+\AtlasMetaLine{Type}{text}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000067}
+The code to retain.
+\end{atlasparagraph}
+\AtlasMetaLine{Required}{true}
+\AtlasLabel{Name}
+\begin{atlastext}{T000068}
+Quantity
+\end{atlastext}
+\AtlasMetaLine{Type}{integer}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000069}
+An already validated positive integer.
+\end{atlasparagraph}
+\AtlasMetaLine{Required}{true}
+\AtlasLabel{Conditions}
+\begin{atlasparagraph}{T000070}
+The code is not allocated to a retained request.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000071}
+The store is available.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000072}
+Inputs described as ready entities already satisfy canonical entity invariants. Do not duplicate those validations inside this tool. When constructing entities from raw retained records, use the canonical entity hydration rules; operation-specific external conditions remain this tool's responsibility.
+\end{atlasparagraph}
+\AtlasLabel{Results}
+\AtlasLabel{Name}
+\begin{atlastext}{T000073}
+Stored request
+\end{atlastext}
+\AtlasMetaLine{Type}{REQUEST}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000074}
+The retained request with its code and quantity.
+\end{atlasparagraph}
+\AtlasLabel{Guarantees}
+\begin{atlasparagraph}{T000075}
+After a successful result, the record is readable by code in the same retained store.
+\end{atlasparagraph}
+\AtlasLabel{Effects}
+\begin{atlasparagraph}{T000076}
+One request record is added to the retained store.
+\end{atlasparagraph}
+\AtlasLabel{Failures}
+\AtlasMetaLine{Code}{DUPLICATE\_\allowbreak{}CODE}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000077}
+The code is already allocated.
+\end{atlasparagraph}
+\AtlasLabel{Consumer distinction}
+\begin{atlasparagraph}{T000078}
+The consumer must distinguish this from a successful store and from an unavailable store.
+\end{atlasparagraph}
+\AtlasMetaLine{Code}{STORE\_\allowbreak{}UNAVAILABLE}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000079}
+The store did not confirm the write.
+\end{atlasparagraph}
+\AtlasLabel{Consumer distinction}
+\begin{atlasparagraph}{T000080}
+Return write\AtlasCharUnderscore{}outcome=not\AtlasCharUnderscore{}applied only when the tool can guarantee no write; otherwise return write\AtlasCharUnderscore{}outcome=unknown. Neither outcome is confirmation. An unknown outcome must not trigger an automatic retry.
+\end{atlasparagraph}
+\AtlasLabel{Guarantees}
+\begin{atlasparagraph}{T000081}
+A successful result confirms one retained record.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000082}
+A duplicate-code failure leaves the existing record unchanged.
+\end{atlasparagraph}
+\begin{atlasheading}{T000018}{2}
+Use cases
+\end{atlasheading}
+\begin{atlasparagraph}{T000019}
+Functional and non-functional requirements are declared in the case.
+\end{atlasparagraph}
+\AtlasSubheading{USE CASE \texttt{UC-REQUEST-SUBMIT}}
+\AtlasLabel{Name}
+\begin{atlastext}{T000083}
+Submit request
+\end{atlastext}
+\AtlasLabel{Objective}
+\begin{atlasparagraph}{T000084}
+Retain one valid request and confirm the stored record.
+\end{atlasparagraph}
+\AtlasLabel{Actors}
+\AtlasMetaLine{Actor}{ACT-\allowbreak{}REQUESTER}
+\AtlasLabel{Permission}
+\begin{atlastext}{T000085}
+Permitted to submit requests.
+\end{atlastext}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000086}
+The requester supplies a code and quantity.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000087}
+Resolve this permission from trusted context for the concrete initiating caller; deny absent or unresolved evidence.
+\end{atlasparagraph}
+\AtlasLabel{Trigger}
+\begin{atlasparagraph}{T000088}
+The requester submits the request form.
+\end{atlasparagraph}
+\AtlasLabel{Context}
+\begin{atlasparagraph}{T000089}
+One request is submitted against the single request register.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000090}
+Caller context must contain a resolved authenticated principal, the relevant case permissions, and a validity status. Its origin is the application's trusted identity-and-permission authority; request fields and caller-supplied role strings are not trusted authorization evidence. Anonymous execution is not permitted. Missing, unresolved, expired or insufficient context is denied before any validation, tool access or effect.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000091}
+The initiating actor is ACT-REQUESTER. The actor is a role; the caller is the concrete principal. The identity/authentication mechanism and channel encoding remain later design decisions.
+\end{atlasparagraph}
+\AtlasLabel{Inputs}
+\AtlasLabel{Name}
+\begin{atlastext}{T000092}
+Request code
+\end{atlastext}
+\AtlasMetaLine{Type}{text}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000093}
+The code that identifies the request.
+\end{atlasparagraph}
+\AtlasMetaLine{Required}{true}
+\AtlasLabel{Name}
+\begin{atlastext}{T000094}
+Quantity
+\end{atlastext}
+\AtlasMetaLine{Type}{integer}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000095}
+The number of units requested.
+\end{atlasparagraph}
+\AtlasMetaLine{Required}{true}
+\AtlasLabel{Entry conditions}
+\begin{atlasparagraph}{T000096}
+Requests may arrive without valid caller context; the explicit denial path handles them before any collaborator is invoked.
+\end{atlasparagraph}
+\AtlasLabel{Entities}
+\AtlasMetaLine{Entity}{ENT-\allowbreak{}REQUEST}
+\AtlasMetaLine{Validations}{VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY, VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}
+\AtlasLabel{Purpose}
+\begin{atlasparagraph}{T000097}
+Hold the supplied code and quantity and validate the quantity.
+\end{atlasparagraph}
+\AtlasLabel{Tools}
+\AtlasMetaLine{Tool}{TOL-\allowbreak{}REQUEST-\allowbreak{}STORE}
+\AtlasMetaLine{Operation}{OP-\allowbreak{}REQUEST-\allowbreak{}STORE}
+\AtlasLabel{Purpose}
+\begin{atlasparagraph}{T000098}
+Retain the request after validation succeeds.
+\end{atlasparagraph}
+\AtlasMetaLine{Calls}{none}
+\AtlasLabel{Outcomes}
+\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}CONFIRMED}}
+\AtlasMetaLine{Kind}{success}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000099}
+The request is retained and confirmed.
+\end{atlasparagraph}
+\AtlasLabel{Effects}
+\begin{atlasparagraph}{T000100}
+One new request record exists in the store.
+\end{atlasparagraph}
+\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}INVALID}}
+\AtlasMetaLine{Kind}{refusal}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000101}
+The code or quantity is invalid; the request is refused.
+\end{atlasparagraph}
+\AtlasLabel{Effects}
+\begin{atlasparagraph}{T000102}
+No store call and no retained record.
+\end{atlasparagraph}
+\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}DENIED}}
+\AtlasMetaLine{Kind}{refusal}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000103}
+The actor is absent or not permitted.
+\end{atlasparagraph}
+\AtlasLabel{Effects}
+\begin{atlasparagraph}{T000104}
+No validation, store call, or retained record.
+\end{atlasparagraph}
+\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}FAILURE}}
+\AtlasMetaLine{Kind}{failure}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000105}
+The store reports that it is unavailable.
+\end{atlasparagraph}
+\AtlasLabel{Effects}
+\begin{atlasparagraph}{T000106}
+No confirmed request is reported.
+\end{atlasparagraph}
+\AtlasSubheading{\texttt{OUT-\allowbreak{}REQUEST-\allowbreak{}DUPLICATE}}
+\AtlasMetaLine{Kind}{refusal}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000107}
+The request code is already retained.
+\end{atlasparagraph}
+\AtlasLabel{Effects}
+\begin{atlasparagraph}{T000108}
+This invocation leaves the existing request unchanged.
+\end{atlasparagraph}
+\AtlasLabel{Functional requirements}
+\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}01}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000109}
+The case admits only an actor with the requester permission and refuses every other actor before any validation, store call, or effect.
+\end{atlasparagraph}
+\AtlasMetaLine{Scope}{case}
+\AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, INT-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
+\AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}PERM, N-\allowbreak{}REQ-\allowbreak{}DENY, E-\allowbreak{}REQ-\allowbreak{}2}
+\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}02}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000110}
+The case applies VLD-REQUEST-QUANTITY to the supplied quantity and, when the validation reports fail, refuses the request with the invalid-data outcome and no store call.
+\end{atlasparagraph}
+\AtlasMetaLine{Scope}{case}
+\AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, INT-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
+\AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}VALIDATE, N-\allowbreak{}REQ-\allowbreak{}QTYDEC, N-\allowbreak{}REQ-\allowbreak{}INVALID, E-\allowbreak{}REQ-\allowbreak{}4, E-\allowbreak{}REQ-\allowbreak{}5}
+\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}03}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000111}
+After a passing validation, the case calls OP-REQUEST-STORE with the code and quantity; a stored result produces the confirmation outcome.
+\end{atlasparagraph}
+\AtlasMetaLine{Scope}{operation}
+\AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, OP-\allowbreak{}REQUEST-\allowbreak{}STORE}
+\AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}STORE, E-\allowbreak{}REQ-\allowbreak{}6, E-\allowbreak{}REQ-\allowbreak{}7}
+\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}04}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000112}
+When OP-REQUEST-STORE reports STORE\AtlasCharUnderscore{}UNAVAILABLE, the case reports the store-unavailable failure and does not claim a confirmed request.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000113}
+Preserve whether the tool guarantees not\AtlasCharUnderscore{}applied or reports unknown. A lost confirmation is not evidence of no write; do not automatically retry.
+\end{atlasparagraph}
+\AtlasMetaLine{Scope}{operation}
+\AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, OP-\allowbreak{}REQUEST-\allowbreak{}STORE}
+\AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}STOREERROR, E-\allowbreak{}REQ-\allowbreak{}8}
+\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}05}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000114}
+A confirmed request result contains the supplied code and quantity and identifies the new record.
+\end{atlasparagraph}
+\AtlasMetaLine{Scope}{interaction}
+\AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, INT-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
+\AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}SUCCESS, E-\allowbreak{}REQ-\allowbreak{}7}
+\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}06}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000115}
+When OP-REQUEST-STORE reports DUPLICATE\AtlasCharUnderscore{}CODE, refuse the duplicate and leave the existing request unchanged; do not report confirmation.
+\end{atlasparagraph}
+\AtlasMetaLine{Scope}{operation}
+\AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT, OP-\allowbreak{}REQUEST-\allowbreak{}STORE}
+\AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}DUPLICATE, E-\allowbreak{}REQ-\allowbreak{}DUPLICATE}
+\AtlasSubheading{\texttt{RF-\allowbreak{}REQUEST-\allowbreak{}07}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000116}
+After authorization and before quantity validation, apply VLD-REQUEST-CODE. Refuse invalid code without storage; preserve valid code exactly.
+\end{atlasparagraph}
+\AtlasMetaLine{Scope}{case}
+\AtlasMetaLine{Applies to}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
+\AtlasMetaLine{Flow references}{N-\allowbreak{}REQ-\allowbreak{}INVALID, N-\allowbreak{}REQ-\allowbreak{}CODE, N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID, E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}2, E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}3}
+\AtlasLabel{Nonfunctional requirements}
+\AtlasSubheading{\texttt{RNF-\allowbreak{}REQUEST-\allowbreak{}01}}
+\AtlasMetaLine{Scope}{interaction}
+\AtlasMetaLine{Applies to}{INT-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000117}
+For inputs within the declared field limits and an available store, the boundary presents a confirmed or refused result within 2 seconds of the submit stimulus.
+\end{atlasparagraph}
+\AtlasLabel{Verifiable criterion}
+\begin{atlasparagraph}{T000118}
+The elapsed time from the submit stimulus to the visible result is at most 2 seconds.
+\end{atlasparagraph}
+\AtlasLabel{Verification}
+\begin{atlasparagraph}{T000119}
+Run 30 sequential submissions with valid and invalid quantities against the declared local configuration and record the result time for each.
+\end{atlasparagraph}
+\AtlasLabel{Metric}
+\AtlasLabel{Name}
+\begin{atlastext}{T000120}
+Visible result time
+\end{atlastext}
+\AtlasLabel{Unit}
+\begin{atlastext}{T000121}
+seconds
+\end{atlastext}
+\AtlasMetaLine{Target}{2}
+\AtlasMetaLine{Operator}{<=\allowbreak{}}
+\AtlasLabel{Measurement}
+\AtlasLabel{Start}
+\begin{atlasparagraph}{T000122}
+The submit stimulus is accepted by the boundary.
+\end{atlasparagraph}
+\AtlasLabel{End}
+\begin{atlasparagraph}{T000123}
+The result state is visible to the actor.
+\end{atlasparagraph}
+\AtlasMetaLine{References}{SRC-\allowbreak{}REQUEST-\allowbreak{}BRIEF}
+\AtlasLabel{Applicability}
+\begin{atlasparagraph}{T000124}
+Origin: SRC-REQUEST-BRIEF. This is a synthetic teaching obligation; any numeric target and scenario count are illustrative assumptions, not an accepted production SLA or a measurement made by this repository.
+\end{atlasparagraph}
+\AtlasLabel{Flows}
+\AtlasMetaLine{Main}{GRAPH-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
+\AtlasMetaLine{Subflows}{none}
+\AtlasLabel{Flow text}
+\begin{atlasparagraph}{T000125}
+Start: the case receives the request and actor. If the actor is not permitted, refuse with no effects (RF-REQUEST-01).
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000126}
+Apply VLD-REQUEST-CODE before the quantity check. An invalid code is refused without storage (RF-REQUEST-07).
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000127}
+Apply VLD-REQUEST-QUANTITY (RF-REQUEST-02). A fail result refuses the request as invalid data.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000128}
+On pass, call OP-REQUEST-STORE (RF-REQUEST-03). A stored result produces the confirmed outcome (RF-REQUEST-05). STORE\AtlasCharUnderscore{}UNAVAILABLE produces the store-unavailable failure (RF-REQUEST-04).
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000129}
+DUPLICATE\AtlasCharUnderscore{}CODE is the duplicate refusal with no change to the preexisting request (RF-REQUEST-06). A write failure retains its known-not-applied versus unknown distinction (RF-REQUEST-04).
+\end{atlasparagraph}
+\AtlasLabel{Acceptance criteria}
+\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}01}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000130}
+A requester with a valid code and quantity of 2 receives a confirmed result; a later lookup of the code returns quantity 2.
+\end{atlasparagraph}
+\AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}02, RF-\allowbreak{}REQUEST-\allowbreak{}03, RF-\allowbreak{}REQUEST-\allowbreak{}05}
+\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}02}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000131}
+A quantity of 0 is refused as invalid data, and no record is created.
+\end{atlasparagraph}
+\AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
+\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}03}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000132}
+An actor absent from the permitted set is refused before validation or store access.
+\end{atlasparagraph}
+\AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}01}
+\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}04}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000133}
+Submit the same code twice. The second attempt reports duplicate-code refusal and preserves the first retained quantity.
+\end{atlasparagraph}
+\AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}06}
+\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}05}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000134}
+If a store write has an unknown final outcome, return the failure without claiming success or no write and without automatic retry.
+\end{atlasparagraph}
+\AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}04}
+\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}06}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000135}
+An empty code is refused before quantity validation and store invocation.
+\end{atlasparagraph}
+\AtlasMetaLine{Verifies}{RF-\allowbreak{}REQUEST-\allowbreak{}07}
+\AtlasSubheading{\texttt{AC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT-\allowbreak{}QUALITY}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000136}
+In the declared didactic configuration, demonstrate the canonical quality criterion and its stated verification procedure; preserve its status as a teaching assumption, not a measured production claim.
+\end{atlasparagraph}
+\AtlasMetaLine{Verifies}{RNF-\allowbreak{}REQUEST-\allowbreak{}01}
+\AtlasLabel{Traceability}
+\AtlasSubheading{\texttt{TRC-\allowbreak{}REQUEST-\allowbreak{}01}}
+\AtlasMetaLine{Source}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
+\AtlasMetaLine{Targets}{VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY, AC-\allowbreak{}REQUEST-\allowbreak{}02}
+\AtlasLabel{Note}
+\begin{atlasparagraph}{T000137}
+The case applies the entity validation and states the refusal.
+\end{atlasparagraph}
+\AtlasSubheading{\texttt{TRC-\allowbreak{}REQUEST-\allowbreak{}02}}
+\AtlasMetaLine{Source}{RF-\allowbreak{}REQUEST-\allowbreak{}03}
+\AtlasMetaLine{Targets}{OP-\allowbreak{}REQUEST-\allowbreak{}STORE, AC-\allowbreak{}REQUEST-\allowbreak{}01}
+\AtlasLabel{Note}
+\begin{atlasparagraph}{T000138}
+The abstract tool contract carries the persistence guarantee.
+\end{atlasparagraph}
+\AtlasSubheading{\texttt{TRC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT-\allowbreak{}ORIGIN}}
+\AtlasMetaLine{Source}{SRC-\allowbreak{}REQUEST-\allowbreak{}BRIEF}
+\AtlasMetaLine{Targets}{RF-\allowbreak{}REQUEST-\allowbreak{}01, RF-\allowbreak{}REQUEST-\allowbreak{}02, RF-\allowbreak{}REQUEST-\allowbreak{}03, RF-\allowbreak{}REQUEST-\allowbreak{}04, RF-\allowbreak{}REQUEST-\allowbreak{}05, RF-\allowbreak{}REQUEST-\allowbreak{}06, RF-\allowbreak{}REQUEST-\allowbreak{}07, RNF-\allowbreak{}REQUEST-\allowbreak{}01}
+\AtlasLabel{Note}
+\begin{atlasparagraph}{T000139}
+Versioned synthetic origin for these example obligations.
+\end{atlasparagraph}
+\AtlasMetaLine{Assumptions}{ASM-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}UNIQUE}
+\AtlasMetaLine{Sources}{SRC-\allowbreak{}REQUEST-\allowbreak{}BRIEF}
+\AtlasMetaLine{Open issues}{OI-\allowbreak{}REQUEST-\allowbreak{}LATENCY}
+\begin{atlasheading}{T000020}{2}
+Interaction boundaries
+\end{atlasheading}
+\begin{atlasparagraph}{T000021}
+The boundary maps the case inputs and results to a web form.
+\end{atlasparagraph}
+\AtlasSubheading{BOUNDARY \texttt{BND-REQUEST-WEB}}
+\AtlasLabel{Name}
+\begin{atlastext}{T000140}
+Request register web form
+\end{atlastext}
+\AtlasMetaLine{Modality}{web}
+\AtlasLabel{Purpose}
+\begin{atlasparagraph}{T000141}
+Expose the submit-request case through one form.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000142}
+Origin classification: this channel is an illustrative solution proposal. Its form, command syntax, layout and encoding are outside the L1 conformance claim. The referenced cases define domain inputs and outcomes independently of this channel.
+\end{atlasparagraph}
+\AtlasLabel{Audience}
+\begin{atlasparagraph}{T000143}
+Requesters using the local register.
+\end{atlasparagraph}
+\AtlasLabel{Interactions}
+\AtlasSubheading{\texttt{INT-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}}
+\AtlasLabel{Name}
+\begin{atlastext}{T000144}
+Submit request form
+\end{atlastext}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000145}
+A form with Request code, Quantity, and Submit request. The result area presents confirmation, invalid data, duplicate code, or store failure.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000146}
+Illustration only; no channel-specific UI or command choice is promoted to a domain RF by appearing here.
+\end{atlasparagraph}
+\AtlasMetaLine{Use case}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
+\AtlasLabel{Trigger}
+\begin{atlasparagraph}{T000147}
+The requester activates Submit request.
+\end{atlasparagraph}
+\AtlasLabel{Input mapping}
+\AtlasMetaLine{Source}{form.\allowbreak{}code}
+\AtlasMetaLine{Target}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT.\allowbreak{}input.\allowbreak{}code}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000148}
+Maps the Request code field to the case code input.
+\end{atlasparagraph}
+\AtlasMetaLine{Source}{form.\allowbreak{}quantity}
+\AtlasMetaLine{Target}{UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT.\allowbreak{}input.\allowbreak{}quantity}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000149}
+Maps the Quantity field to the case quantity input.
+\end{atlasparagraph}
+\AtlasLabel{Result mapping}
+\AtlasMetaLine{Source}{OUT-\allowbreak{}REQUEST-\allowbreak{}CONFIRMED}
+\AtlasMetaLine{Target}{result.\allowbreak{}confirmation}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000150}
+The request is retained and confirmed.
+\end{atlasparagraph}
+\AtlasMetaLine{Source}{OUT-\allowbreak{}REQUEST-\allowbreak{}INVALID}
+\AtlasMetaLine{Target}{result.\allowbreak{}invalid\_\allowbreak{}data}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000151}
+The code or quantity is invalid; the request is refused.
+\end{atlasparagraph}
+\AtlasMetaLine{Source}{OUT-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}FAILURE}
+\AtlasMetaLine{Target}{result.\allowbreak{}store\_\allowbreak{}unavailable}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000152}
+The store reports that it is unavailable.
+\end{atlasparagraph}
+\AtlasMetaLine{Source}{OUT-\allowbreak{}REQUEST-\allowbreak{}DENIED}
+\AtlasMetaLine{Target}{result.\allowbreak{}out-\allowbreak{}request-\allowbreak{}denied}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000153}
+The actor is absent or not permitted.
+\end{atlasparagraph}
+\AtlasMetaLine{Source}{OUT-\allowbreak{}REQUEST-\allowbreak{}DUPLICATE}
+\AtlasMetaLine{Target}{result.\allowbreak{}out-\allowbreak{}request-\allowbreak{}duplicate}
+\AtlasLabel{Meaning}
+\begin{atlasparagraph}{T000154}
+The request code is already retained.
+\end{atlasparagraph}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}01, RF-\allowbreak{}REQUEST-\allowbreak{}02, RF-\allowbreak{}REQUEST-\allowbreak{}03, RF-\allowbreak{}REQUEST-\allowbreak{}04, RF-\allowbreak{}REQUEST-\allowbreak{}05, RF-\allowbreak{}REQUEST-\allowbreak{}06, RF-\allowbreak{}REQUEST-\allowbreak{}07}
+\AtlasMetaLine{Resources}{RES-\allowbreak{}REQUEST-\allowbreak{}WIRE, RES-\allowbreak{}REQUEST-\allowbreak{}FLOW}
+\AtlasLabel{Examples}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.62\linewidth]{assets/request-form.png}
+\end{figure}
+\begin{atlastext}{T000155}
+Wireframe with Request code, Quantity, and Submit request.
+\end{atlastext}
+\AtlasMetaLine{Alternative text}{}
+\begin{atlastext}{T000156}
+A form with a Request code field, a Quantity field, and a Submit request button.
+\end{atlastext}
+\AtlasMetaLine{Assumptions}{ASM-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}UNIQUE}
+\AtlasMetaLine{Sources}{SRC-\allowbreak{}REQUEST-\allowbreak{}BRIEF}
+\AtlasMetaLine{Open issues}{OI-\allowbreak{}REQUEST-\allowbreak{}LATENCY}
+\AtlasAppendixHeading{Appendix: graphs}
+\AtlasSubheading{Graph \texttt{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}}
+\begin{atlastext}{T000157}
+Quantity validation
+\end{atlastext}
+\AtlasMetaLine{Kind}{flow}
+\AtlasLabel{Nodes}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}START} (start)}
+\begin{atlastext}{T000158}
+Start
+\end{atlastext}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}READ} (action)}
+\begin{atlastext}{T000159}
+Read quantity
+\end{atlastext}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE} (decision)}
+\begin{atlastext}{T000160}
+Integer?
+\end{atlastext}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN} (decision)}
+\begin{atlastext}{T000161}
+At least 1?
+\end{atlastext}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}PASS} (result)}
+\begin{atlastext}{T000162}
+Valid
+\end{atlastext}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}TYPE} (refusal)}
+\begin{atlastext}{T000163}
+Invalid: not an integer
+\end{atlastext}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}MIN} (refusal)}
+\begin{atlastext}{T000164}
+Invalid: less than 1
+\end{atlastext}
+\AtlasLabel{Edges}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}1}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}START} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}READ}}
+\AtlasMetaLine{Requirement refs}{none}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}2}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}READ} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE}}
+\AtlasMetaLine{Requirement refs}{none}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}3}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}TYPE}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000165}
+no
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{none}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}4}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}TYPE} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000166}
+yes
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{none}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}5}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}FAIL-\allowbreak{}MIN}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000167}
+no
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{none}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}6}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}MIN} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}PASS}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000168}
+yes
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{none}
+\par\noindent\begin{minipage}{\linewidth}
+\begin{atlasderived}{DERIVED-GRAPH-GRAPH-VLD-REQUEST-QUANTITY}
+Topology of GRAPH-VLD-REQUEST-QUANTITY:
+
+Nodes:
+- N-VLD-REQ-START (start)
+- N-VLD-REQ-READ (action)
+- N-VLD-REQ-TYPE (decision)
+- N-VLD-REQ-MIN (decision)
+- N-VLD-REQ-PASS (result)
+- N-VLD-REQ-FAIL-TYPE (refusal)
+- N-VLD-REQ-FAIL-MIN (refusal)
+
+Edges:
+- E-VLD-REQ-1: N-VLD-REQ-START -> N-VLD-REQ-READ
+- E-VLD-REQ-2: N-VLD-REQ-READ -> N-VLD-REQ-TYPE
+- E-VLD-REQ-3: N-VLD-REQ-TYPE -> N-VLD-REQ-FAIL-TYPE
+- E-VLD-REQ-4: N-VLD-REQ-TYPE -> N-VLD-REQ-MIN
+- E-VLD-REQ-5: N-VLD-REQ-MIN -> N-VLD-REQ-FAIL-MIN
+- E-VLD-REQ-6: N-VLD-REQ-MIN -> N-VLD-REQ-PASS
+\end{atlasderived}
+\end{minipage}\par
+% atlas:tikz:begin id=TIKZ-GRAPH-VLD-REQUEST-QUANTITY
+\clearpage
+\noindent{\large\bfseries Quantity validation}\par
+\noindent{\small GRAPH-VLD-REQUEST-QUANTITY}\par
+\begin{center}
+\scalebox{1.0000}{%
+\begin{tikzpicture}[
+  >=Stealth, line width=0.65pt, draw=black!65,
+  box/.style={draw, rounded corners=3pt, fill=blue!4, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small},
+  decision/.style={draw, diamond, aspect=1.7, fill=orange!8, align=center, text width=2.5cm, inner sep=3pt, font=\small},
+  terminal/.style={draw, rounded corners=9pt, fill=blue!8, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small\bfseries},
+  state/.style={draw, ellipse, fill=blue!4, align=center, text width=3.3cm, inner sep=5pt, font=\small},
+  note/.style={draw, dashed, fill=black!3, align=center, text width=3.5cm, inner sep=5pt, font=\small\itshape},
+  edgekey/.style={fill=white, inner sep=1.5pt, font=\scriptsize\bfseries}
+]
+\node[terminal] (n0) at (0.00,0.00) {Start};
+\node[box] (n1) at (0.00,-1.85) {Read quantity};
+\node[decision] (n2) at (0.00,-4.05) {Integer?};
+\node[decision] (n3) at (-2.20,-6.60) {At least 1?};
+\node[terminal] (n4) at (-2.20,-8.86) {Valid};
+\node[terminal] (n5) at (2.20,-6.60) {Invalid: not\\an integer};
+\node[terminal] (n6) at (2.20,-8.86) {Invalid: less\\than 1};
+\draw[->] (n0.south) -- node[edgekey,pos=0.65]{E1} (n1.north);
+\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E2} (n2.north);
+\draw[->] (n2.south) -- node[edgekey,pos=0.65]{E3} (n5.north);
+\draw[->] (n2.south) -- node[edgekey,pos=0.65]{E4} (n3.north);
+\draw[->] (n3.south) -- node[edgekey,pos=0.65]{E5} (n6.north);
+\draw[->] (n3.south) -- node[edgekey,pos=0.65]{E6} (n4.north);
+\end{tikzpicture}%
+}
+\end{center}
+\noindent\textbf{Edge key}\par
+\begingroup\small\raggedright\setlength{\parskip}{1pt}
+\noindent\textbf{E1} E-VLD-REQ-1\par
+\noindent\textbf{E2} E-VLD-REQ-2\par
+\noindent\textbf{E3} E-VLD-REQ-3 --- no\par
+\noindent\textbf{E4} E-VLD-REQ-4 --- yes\par
+\noindent\textbf{E5} E-VLD-REQ-5 --- no\par
+\noindent\textbf{E6} E-VLD-REQ-6 --- yes\par
+\endgroup
+\clearpage
+% atlas:tikz:end id=TIKZ-GRAPH-VLD-REQUEST-QUANTITY
+\AtlasSubheading{Graph \texttt{GRAPH-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}}
+\begin{atlastext}{T000169}
+Submit request
+\end{atlastext}
+\AtlasMetaLine{Kind}{flow}
+\AtlasLabel{Nodes}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}START} (start)}
+\begin{atlastext}{T000170}
+Start
+\end{atlastext}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}PERM} (decision)}
+\begin{atlastext}{T000171}
+Actor permitted?
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}01}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}DENY} (refusal)}
+\begin{atlastext}{T000172}
+Refuse: actor not permitted
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}01}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}VALIDATE} (validation)}
+\begin{atlastext}{T000173}
+Apply VLD-REQUEST-QUANTITY
+\end{atlastext}
+\AtlasMetaLine{Call}{validation \texttt{VLD-\allowbreak{}REQUEST-\allowbreak{}QUANTITY}}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}QTYDEC} (decision)}
+\begin{atlastext}{T000174}
+Quantity valid?
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}INVALID} (refusal)}
+\begin{atlastext}{T000175}
+Invalid code or quantity
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}02, RF-\allowbreak{}REQUEST-\allowbreak{}07}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}STORE} (operation)}
+\begin{atlastext}{T000176}
+Store request
+\end{atlastext}
+\AtlasMetaLine{Call}{operation \texttt{OP-\allowbreak{}REQUEST-\allowbreak{}STORE}}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}03}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}STOREERROR} (failure)}
+\begin{atlastext}{T000177}
+Report STORE\AtlasCharUnderscore{}UNAVAILABLE
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}04}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}SUCCESS} (result)}
+\begin{atlastext}{T000178}
+Request confirmed
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}05}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}DUPLICATE} (refusal)}
+\begin{atlastext}{T000179}
+Duplicate code; no change
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}06}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE} (validation)}
+\begin{atlastext}{T000180}
+Apply code validity
+\end{atlastext}
+\AtlasMetaLine{Call}{validation \texttt{VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}07}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID} (decision)}
+\begin{atlastext}{T000181}
+Code valid?
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}07}
+\AtlasLabel{Edges}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}1}: \texttt{N-\allowbreak{}REQ-\allowbreak{}START} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}PERM}}
+\AtlasMetaLine{Requirement refs}{none}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}2}: \texttt{N-\allowbreak{}REQ-\allowbreak{}PERM} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}DENY}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000182}
+no
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}01}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}3}: \texttt{N-\allowbreak{}REQ-\allowbreak{}PERM} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000183}
+yes
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{none}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}4}: \texttt{N-\allowbreak{}REQ-\allowbreak{}VALIDATE} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}QTYDEC}}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}5}: \texttt{N-\allowbreak{}REQ-\allowbreak{}QTYDEC} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}INVALID}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000184}
+fail
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}02}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}6}: \texttt{N-\allowbreak{}REQ-\allowbreak{}QTYDEC} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}STORE}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000185}
+pass
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}03}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}7}: \texttt{N-\allowbreak{}REQ-\allowbreak{}STORE} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}SUCCESS}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000186}
+stored
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}03, RF-\allowbreak{}REQUEST-\allowbreak{}05}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}8}: \texttt{N-\allowbreak{}REQ-\allowbreak{}STORE} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}STOREERROR}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000187}
+STORE\AtlasCharUnderscore{}UNAVAILABLE
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}04}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}DUPLICATE}: \texttt{N-\allowbreak{}REQ-\allowbreak{}STORE} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}DUPLICATE}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000188}
+DUPLICATE\AtlasCharUnderscore{}CODE
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}06}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}1}: \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID}}
+\AtlasMetaLine{Requirement refs}{none}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}2}: \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}VALIDATE}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000189}
+pass
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}07}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}3}: \texttt{N-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}VALID} $\rightarrow$ \texttt{N-\allowbreak{}REQ-\allowbreak{}INVALID}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000190}
+fail
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{RF-\allowbreak{}REQUEST-\allowbreak{}07}
+\par\noindent\begin{minipage}{\linewidth}
+\begin{atlasderived}{DERIVED-GRAPH-GRAPH-REQUEST-SUBMIT}
+Topology of GRAPH-REQUEST-SUBMIT:
+
+Nodes:
+- N-REQ-START (start)
+- N-REQ-PERM (decision)
+- N-REQ-DENY (refusal)
+- N-REQ-VALIDATE (validation)
+- N-REQ-QTYDEC (decision)
+- N-REQ-INVALID (refusal)
+- N-REQ-STORE (operation)
+- N-REQ-STOREERROR (failure)
+- N-REQ-SUCCESS (result)
+- N-REQ-DUPLICATE (refusal)
+- N-REQ-CODE (validation)
+- N-REQ-CODE-VALID (decision)
+
+Edges:
+- E-REQ-1: N-REQ-START -> N-REQ-PERM
+- E-REQ-2: N-REQ-PERM -> N-REQ-DENY
+- E-REQ-3: N-REQ-PERM -> N-REQ-CODE
+- E-REQ-4: N-REQ-VALIDATE -> N-REQ-QTYDEC
+- E-REQ-5: N-REQ-QTYDEC -> N-REQ-INVALID
+- E-REQ-6: N-REQ-QTYDEC -> N-REQ-STORE
+- E-REQ-7: N-REQ-STORE -> N-REQ-SUCCESS
+- E-REQ-8: N-REQ-STORE -> N-REQ-STOREERROR
+- E-REQ-DUPLICATE: N-REQ-STORE -> N-REQ-DUPLICATE
+- E-REQ-CODE-1: N-REQ-CODE -> N-REQ-CODE-VALID
+- E-REQ-CODE-2: N-REQ-CODE-VALID -> N-REQ-VALIDATE
+- E-REQ-CODE-3: N-REQ-CODE-VALID -> N-REQ-INVALID
+\end{atlasderived}
+\end{minipage}\par
+% atlas:tikz:begin id=TIKZ-GRAPH-REQUEST-SUBMIT
+\clearpage
+\noindent{\large\bfseries Submit request}\par
+\noindent{\small GRAPH-REQUEST-SUBMIT}\par
+\begin{center}
+\scalebox{0.8773}{%
+\begin{tikzpicture}[
+  >=Stealth, line width=0.65pt, draw=black!65,
+  box/.style={draw, rounded corners=3pt, fill=blue!4, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small},
+  decision/.style={draw, diamond, aspect=1.7, fill=orange!8, align=center, text width=2.5cm, inner sep=3pt, font=\small},
+  terminal/.style={draw, rounded corners=9pt, fill=blue!8, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small\bfseries},
+  state/.style={draw, ellipse, fill=blue!4, align=center, text width=3.3cm, inner sep=5pt, font=\small},
+  note/.style={draw, dashed, fill=black!3, align=center, text width=3.5cm, inner sep=5pt, font=\small\itshape},
+  edgekey/.style={fill=white, inner sep=1.5pt, font=\scriptsize\bfseries}
+]
+\node[terminal] (n0) at (0.00,0.00) {Start};
+\node[decision] (n1) at (0.00,-2.20) {Actor permitted?};
+\node[terminal] (n2) at (-2.20,-4.46) {Refuse: actor\\not permitted};
+\node[box] (n3) at (0.00,-8.96) {Apply VLD-\\REQUEST-QUANTITY};
+\node[decision] (n4) at (0.00,-11.22) {Quantity valid?};
+\node[terminal] (n5) at (-2.20,-13.47) {Invalid code\\or quantity};
+\node[box] (n6) at (2.20,-13.47) {Store request};
+\node[terminal] (n7) at (-4.40,-15.62) {Report STORE\_\\UNAVAILABLE};
+\node[terminal] (n8) at (0.00,-15.62) {Request\\confirmed};
+\node[terminal] (n9) at (4.40,-15.62) {Duplicate\\code; no\\change};
+\node[box] (n10) at (2.20,-4.46) {Apply code\\validity};
+\node[decision] (n11) at (0.00,-6.71) {Code valid?};
+\draw[->] (n0.south) -- node[edgekey,pos=0.65]{E1} (n1.north);
+\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E2} (n2.north);
+\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E3} (n10.north);
+\draw[->] (n3.south) -- node[edgekey,pos=0.65]{E4} (n4.north);
+\draw[->] (n4.south) -- node[edgekey,pos=0.65]{E5} (n5.north);
+\draw[->] (n4.south) -- node[edgekey,pos=0.65]{E6} (n6.north);
+\draw[->] (n6.south) -- node[edgekey,pos=0.65]{E7} (n8.north);
+\draw[->] (n6.south) -- node[edgekey,pos=0.65]{E8} (n7.north);
+\draw[->] (n6.south) -- node[edgekey,pos=0.65]{E9} (n9.north);
+\draw[->] (n10.south) -- node[edgekey,pos=0.65]{E10} (n11.north);
+\draw[->] (n11.south) -- node[edgekey,pos=0.65]{E11} (n3.north);
+\draw[->] (n11.south) -- (0.00,-7.84) -- (6.85,-7.84) -- node[edgekey,pos=0.500]{E12} (6.85,-12.64) -- (-2.20,-12.64) -- (n5.north);
+\end{tikzpicture}%
+}
+\end{center}
+\noindent\textbf{Edge key}\par
+\begingroup\small\raggedright\setlength{\parskip}{1pt}
+\noindent\textbf{E1} E-REQ-1\par
+\noindent\textbf{E2} E-REQ-2 --- no\par
+\noindent\textbf{E3} E-REQ-3 --- yes\par
+\noindent\textbf{E4} E-REQ-4\par
+\noindent\textbf{E5} E-REQ-5 --- fail\par
+\noindent\textbf{E6} E-REQ-6 --- pass\par
+\noindent\textbf{E7} E-REQ-7 --- stored\par
+\noindent\textbf{E8} E-REQ-8 --- STORE\_UNAVAILABLE\par
+\noindent\textbf{E9} E-REQ-DUPLICATE --- DUPLICATE\_CODE\par
+\noindent\textbf{E10} E-REQ-CODE-1\par
+\noindent\textbf{E11} E-REQ-CODE-2 --- pass\par
+\noindent\textbf{E12} E-REQ-CODE-3 --- fail\par
+\endgroup
+\clearpage
+% atlas:tikz:end id=TIKZ-GRAPH-REQUEST-SUBMIT
+\AtlasSubheading{Graph \texttt{GRAPH-\allowbreak{}VLD-\allowbreak{}REQUEST-\allowbreak{}CODE}}
+\begin{atlastext}{T000191}
+Request code validity
+\end{atlastext}
+\AtlasMetaLine{Kind}{flow}
+\AtlasLabel{Nodes}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}START} (start)}
+\begin{atlastext}{T000192}
+Receive code
+\end{atlastext}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK} (decision)}
+\begin{atlastext}{T000193}
+Non-empty text?
+\end{atlastext}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}PASS} (result)}
+\begin{atlastext}{T000194}
+Pass unchanged
+\end{atlastext}
+\AtlasSubheading{Node \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}FAIL} (refusal)}
+\begin{atlastext}{T000195}
+Invalid code
+\end{atlastext}
+\AtlasLabel{Edges}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}1}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}START} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK}}
+\AtlasMetaLine{Requirement refs}{none}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}2}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}PASS}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000196}
+yes
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{none}
+\AtlasSubheading{Edge \texttt{E-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}3}: \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}CHECK} $\rightarrow$ \texttt{N-\allowbreak{}VLD-\allowbreak{}REQ-\allowbreak{}CODE-\allowbreak{}FAIL}}
+\AtlasLabel{Label}
+\begin{atlastext}{T000197}
+no
+\end{atlastext}
+\AtlasMetaLine{Requirement refs}{none}
+\par\noindent\begin{minipage}{\linewidth}
+\begin{atlasderived}{DERIVED-GRAPH-GRAPH-VLD-REQUEST-CODE}
+Topology of GRAPH-VLD-REQUEST-CODE:
+
+Nodes:
+- N-VLD-REQ-CODE-START (start)
+- N-VLD-REQ-CODE-CHECK (decision)
+- N-VLD-REQ-CODE-PASS (result)
+- N-VLD-REQ-CODE-FAIL (refusal)
+
+Edges:
+- E-VLD-REQ-CODE-1: N-VLD-REQ-CODE-START -> N-VLD-REQ-CODE-CHECK
+- E-VLD-REQ-CODE-2: N-VLD-REQ-CODE-CHECK -> N-VLD-REQ-CODE-PASS
+- E-VLD-REQ-CODE-3: N-VLD-REQ-CODE-CHECK -> N-VLD-REQ-CODE-FAIL
+\end{atlasderived}
+\end{minipage}\par
+% atlas:tikz:begin id=TIKZ-GRAPH-VLD-REQUEST-CODE
+\clearpage
+\noindent{\large\bfseries Request code validity}\par
+\noindent{\small GRAPH-VLD-REQUEST-CODE}\par
+\begin{center}
+\scalebox{1.0000}{%
+\begin{tikzpicture}[
+  >=Stealth, line width=0.65pt, draw=black!65,
+  box/.style={draw, rounded corners=3pt, fill=blue!4, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small},
+  decision/.style={draw, diamond, aspect=1.7, fill=orange!8, align=center, text width=2.5cm, inner sep=3pt, font=\small},
+  terminal/.style={draw, rounded corners=9pt, fill=blue!8, align=center, text width=3.5cm, minimum height=1.0cm, inner sep=5pt, font=\small\bfseries},
+  state/.style={draw, ellipse, fill=blue!4, align=center, text width=3.3cm, inner sep=5pt, font=\small},
+  note/.style={draw, dashed, fill=black!3, align=center, text width=3.5cm, inner sep=5pt, font=\small\itshape},
+  edgekey/.style={fill=white, inner sep=1.5pt, font=\scriptsize\bfseries}
+]
+\node[terminal] (n0) at (0.00,0.00) {Receive code};
+\node[decision] (n1) at (0.00,-2.20) {Non-empty text?};
+\node[terminal] (n2) at (-2.20,-4.40) {Pass unchanged};
+\node[terminal] (n3) at (2.20,-4.40) {Invalid code};
+\draw[->] (n0.south) -- node[edgekey,pos=0.65]{E1} (n1.north);
+\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E2} (n2.north);
+\draw[->] (n1.south) -- node[edgekey,pos=0.65]{E3} (n3.north);
+\end{tikzpicture}%
+}
+\end{center}
+\noindent\textbf{Edge key}\par
+\begingroup\small\raggedright\setlength{\parskip}{1pt}
+\noindent\textbf{E1} E-VLD-REQ-CODE-1\par
+\noindent\textbf{E2} E-VLD-REQ-CODE-2 --- yes\par
+\noindent\textbf{E3} E-VLD-REQ-CODE-3 --- no\par
+\endgroup
+\clearpage
+% atlas:tikz:end id=TIKZ-GRAPH-VLD-REQUEST-CODE
+\AtlasAppendixHeading{Appendix: resources}
+\AtlasSubheading{Resource \texttt{RES-\allowbreak{}REQUEST-\allowbreak{}WIRE}}
+\AtlasMetaLine{Path}{\texttt{assets/\allowbreak{}request-\allowbreak{}form.\allowbreak{}svg}}
+\AtlasMetaLine{Media type}{image/\allowbreak{}svg+xml}
+\AtlasMetaLine{SHA-256}{\texttt{f5a97fb7cb43af96\allowbreak{}81b2083fe1deebe3\allowbreak{}8bb3eda24adb947c\allowbreak{}3314317fc8a24de9\allowbreak{}}}
+\AtlasLabel{Drawing source}
+\AtlasMetaLine{Path}{assets/\allowbreak{}request-\allowbreak{}form.\allowbreak{}svg}
+\AtlasMetaLine{Revision}{1}
+\AtlasMetaLine{Tool}{scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py}
+\AtlasLabel{Caption}
+\begin{atlasparagraph}{T000198}
+Request form wireframe: Request code, Quantity, and Submit request.
+\end{atlasparagraph}
+\AtlasLabel{Alternative text}
+\begin{atlasparagraph}{T000199}
+A form with a Request code field, a Quantity field, and a Submit request button. A result area reports confirmation, invalid data, duplicate code, or tool failure.
+\end{atlasparagraph}
+\AtlasLabel{Text present in the image}
+\begin{atlasitem}{T000200}
+Request code
+\end{atlasitem}
+\begin{atlasitem}{T000201}
+Quantity
+\end{atlasitem}
+\begin{atlasitem}{T000202}
+Submit request
+\end{atlasitem}
+\AtlasLabel{Variants}
+\AtlasMetaLine{Path}{assets/\allowbreak{}request-\allowbreak{}form.\allowbreak{}png}
+\AtlasMetaLine{Media type}{image/\allowbreak{}png}
+\AtlasMetaLine{Sha256}{5dd57bf8bccc9bcd\allowbreak{}9b68e1be1ea50163\allowbreak{}777caf93d83f6fbf\allowbreak{}ec1a099eb1d84347\allowbreak{}}
+\AtlasMetaLine{Size}{22242}
+\AtlasMetaLine{Relation}{publication}
+\AtlasMetaLine{Derived from}{assets/\allowbreak{}request-\allowbreak{}form.\allowbreak{}svg}
+\AtlasMetaLine{Producer}{scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py}
+\AtlasSubheading{Resource \texttt{RES-\allowbreak{}REQUEST-\allowbreak{}FLOW}}
+\AtlasMetaLine{Path}{\texttt{assets/\allowbreak{}request-\allowbreak{}flow.\allowbreak{}svg}}
+\AtlasMetaLine{Media type}{image/\allowbreak{}svg+xml}
+\AtlasMetaLine{SHA-256}{\texttt{71f3a97b667a8804\allowbreak{}1cc5812da8c8e7e1\allowbreak{}ddaced2f9c835e56\allowbreak{}c2c7d6d1b4252206\allowbreak{}}}
+\AtlasLabel{Drawing source}
+\AtlasMetaLine{Path}{assets/\allowbreak{}request-\allowbreak{}flow.\allowbreak{}svg}
+\AtlasMetaLine{Revision}{1286331986e92aa7\allowbreak{}0d90981f34da7aaa\allowbreak{}1dc45b09fa69106b\allowbreak{}4717745a2a095c0a\allowbreak{}}
+\AtlasMetaLine{Tool}{scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py}
+\AtlasMetaLine{Derived from graph}{GRAPH-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
+\AtlasLabel{Caption}
+\begin{atlasparagraph}{T000203}
+Submission flow with authorization, code and quantity validation, persistence, duplicate refusal and explicit write failure. The edge key identifies every structured edge.
+\end{atlasparagraph}
+\AtlasLabel{Alternative text}
+\begin{atlasparagraph}{T000204}
+Every node and edge of GRAPH-REQUEST-SUBMIT, with wrapped labels and an edge key. The text and graph records provide the complete accessible description.
+\end{atlasparagraph}
+\AtlasLabel{Text present in the image}
+\begin{atlasitem}{T000205}
+Start
+\end{atlasitem}
+\begin{atlasitem}{T000206}
+Actor permitted?
+\end{atlasitem}
+\begin{atlasitem}{T000207}
+Refuse: actor not permitted
+\end{atlasitem}
+\begin{atlasitem}{T000208}
+Apply VLD-REQUEST-QUANTITY
+\end{atlasitem}
+\begin{atlasitem}{T000209}
+Quantity valid?
+\end{atlasitem}
+\begin{atlasitem}{T000210}
+Invalid code or quantity
+\end{atlasitem}
+\begin{atlasitem}{T000211}
+Store request
+\end{atlasitem}
+\begin{atlasitem}{T000212}
+Report STORE\AtlasCharUnderscore{}UNAVAILABLE
+\end{atlasitem}
+\begin{atlasitem}{T000213}
+Request confirmed
+\end{atlasitem}
+\begin{atlasitem}{T000214}
+Duplicate code; no change
+\end{atlasitem}
+\begin{atlasitem}{T000215}
+Apply code validity
+\end{atlasitem}
+\begin{atlasitem}{T000216}
+Code valid?
+\end{atlasitem}
+\begin{atlasitem}{T000217}
+no
+\end{atlasitem}
+\begin{atlasitem}{T000218}
+yes
+\end{atlasitem}
+\begin{atlasitem}{T000219}
+fail
+\end{atlasitem}
+\begin{atlasitem}{T000220}
+pass
+\end{atlasitem}
+\begin{atlasitem}{T000221}
+stored
+\end{atlasitem}
+\begin{atlasitem}{T000222}
+STORE\AtlasCharUnderscore{}UNAVAILABLE
+\end{atlasitem}
+\begin{atlasitem}{T000223}
+DUPLICATE\AtlasCharUnderscore{}CODE
+\end{atlasitem}
+\begin{atlasitem}{T000224}
+pass
+\end{atlasitem}
+\begin{atlasitem}{T000225}
+fail
+\end{atlasitem}
+\AtlasLabel{Variants}
+\AtlasMetaLine{Path}{assets/\allowbreak{}request-\allowbreak{}flow.\allowbreak{}png}
+\AtlasMetaLine{Media type}{image/\allowbreak{}png}
+\AtlasMetaLine{Sha256}{53545111afdda2bc\allowbreak{}f5b113667ef14dc2\allowbreak{}233ca3f7e5e73074\allowbreak{}9d3f50473ed81f8b\allowbreak{}}
+\AtlasMetaLine{Size}{73547}
+\AtlasMetaLine{Relation}{publication}
+\AtlasMetaLine{Derived from}{assets/\allowbreak{}request-\allowbreak{}flow.\allowbreak{}svg}
+\AtlasMetaLine{Producer}{scripts/\allowbreak{}build\_\allowbreak{}examples.\allowbreak{}py}
+\AtlasAppendixHeading{Appendix: assumptions}
+\AtlasSubheading{\texttt{ASM-\allowbreak{}REQUEST-\allowbreak{}STORE-\allowbreak{}UNIQUE}}
+\AtlasLabel{Statement}
+\begin{atlasparagraph}{T000226}
+A future implementation of the request store can enforce code uniqueness atomically.
+\end{atlasparagraph}
+\AtlasMetaLine{Status}{open}
+\AtlasMetaLine{Affected}{TOL-\allowbreak{}REQUEST-\allowbreak{}STORE, UC-\allowbreak{}REQUEST-\allowbreak{}SUBMIT}
+\AtlasAppendixHeading{Appendix: decisions}
+\AtlasSubheading{\texttt{DEC-\allowbreak{}MIN-\allowbreak{}TOOL-\allowbreak{}ABSTRACTION}}
+\AtlasLabel{Title}
+\begin{atlastext}{T000227}
+Keep the store abstract
+\end{atlastext}
+\AtlasLabel{Context}
+\begin{atlasparagraph}{T000228}
+The example needs persistence but must not choose a technology.
+\end{atlasparagraph}
+\AtlasLabel{Decision}
+\begin{atlasparagraph}{T000229}
+Define OP-REQUEST-STORE as a tool contract only.
+\end{atlasparagraph}
+\AtlasLabel{Alternatives}
+\begin{atlasparagraph}{T000230}
+Specify SQLite tables and SQL statements.
+\end{atlasparagraph}
+\AtlasLabel{Consequences}
+\begin{atlasparagraph}{T000231}
+Implementations may choose storage, but must satisfy the contract.
+\end{atlasparagraph}
+\AtlasMetaLine{Status}{accepted}
+\AtlasMetaLine{Refs}{TOL-\allowbreak{}REQUEST-\allowbreak{}STORE}
+\AtlasAppendixHeading{Appendix: open issues}
+\AtlasSubheading{\texttt{OI-\allowbreak{}REQUEST-\allowbreak{}LATENCY}}
+\AtlasLabel{Title}
+\begin{atlastext}{T000232}
+Confirm the latency target
+\end{atlastext}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000233}
+The 2-second target is a verifiable example target; a production adoption must confirm it with stakeholders.
+\end{atlasparagraph}
+\AtlasMetaLine{Status}{open}
+\AtlasMetaLine{Refs}{RNF-\allowbreak{}REQUEST-\allowbreak{}01}
+\AtlasAppendixHeading{Appendix: sources}
+\AtlasSubheading{\texttt{SRC-\allowbreak{}REQUEST-\allowbreak{}BRIEF}}
+\AtlasLabel{Title}
+\begin{atlastext}{T000234}
+Illustrative request-register brief
+\end{atlastext}
+\AtlasMetaLine{Uri}{null}
+\AtlasMetaLine{Revision}{2}
+\AtlasMetaLine{Accessed}{null}
+\AtlasLabel{Note}
+\begin{atlasparagraph}{T000235}
+Internal teaching source; not a commissioned requirement.
+\end{atlasparagraph}
+\begin{atlasparagraph}{T000236}
+The authorization policy, interaction sketches, and quality targets are didactic choices, not observed business facts.
+\end{atlasparagraph}
+\AtlasAppendixHeading{Appendix: history}
+\AtlasSubheading{\texttt{HIST-\allowbreak{}REQUEST-\allowbreak{}01}}
+\AtlasMetaLine{Version}{1}
+\AtlasMetaLine{Date}{2026-\allowbreak{}10-\allowbreak{}25}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000237}
+Initial reference example for the first Atlas Specifications edition, Alpha-v0.1.0. This synthetic example demonstrates the model and its representations; it does not assert stakeholder approval or execution of the described business application.
+\end{atlasparagraph}
+\begin{atlasderived}{DERIVED-SUMMARY}
+Derived summary: 5 sections; 1 actors; 1 entities; 1 tools; 1 use cases; 1 boundaries; 3 graphs; 2 resources.
+\end{atlasderived}
+%
+% atlas:structure:begin
+% {
+%   "document_id": "ATLAS-EX-MINIMAL",
+%   "title": {
+%     "@text": "T000001"
+%   },
+%   "revision": "1",
+%   "spec_version": "Alpha-v0.1.0",
+%   "profile_version": "Alpha-v0.1.0",
+%   "translator_version": "0.1.0",
+%   "language": "en",
+%   "status": "draft",
+%   "authors": [
+%     {
+%       "name": {
+%         "@text": "T000002"
+%       },
+%       "role": {
+%         "@text": "T000003"
+%       }
+%     }
+%   ],
+%   "created": "2026-10-25",
+%   "updated": "2026-10-25",
+%   "subtitle": {
+%     "@text": "T000004"
+%   },
+%   "keywords": [
+%     {
+%       "@text": "T000005"
+%     },
+%     {
+%       "@text": "T000006"
+%     },
+%     {
+%       "@text": "T000007"
+%     },
+%     {
+%       "@text": "T000008"
+%     }
+%   ],
+%   "structure": [
+%     {
+%       "id": "SEC-MIN-CONTEXT",
+%       "level": 1,
+%       "title": {
+%         "@text": "T000009"
+%       },
+%       "blocks": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000010"
+%         },
+%         {
+%           "type": "paragraph",
+%           "@text": "T000011"
+%         },
+%         {
+%           "type": "note",
+%           "@text": "T000012"
+%         },
+%         {
+%           "type": "paragraph",
+%           "@text": "T000013"
+%         }
+%       ],
+%       "items": [
+%         "ACT-REQUESTER",
+%         "VOC-REQUEST-CODE"
+%       ]
+%     },
+%     {
+%       "id": "SEC-MIN-ENTITIES",
+%       "level": 1,
+%       "title": {
+%         "@text": "T000014"
+%       },
+%       "blocks": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000015"
+%         }
+%       ],
+%       "items": [
+%         "ENT-REQUEST"
+%       ]
+%     },
+%     {
+%       "id": "SEC-MIN-TOOLS",
+%       "level": 1,
+%       "title": {
+%         "@text": "T000016"
+%       },
+%       "blocks": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000017"
+%         }
+%       ],
+%       "items": [
+%         "TOL-REQUEST-STORE"
+%       ]
+%     },
+%     {
+%       "id": "SEC-MIN-CASES",
+%       "level": 1,
+%       "title": {
+%         "@text": "T000018"
+%       },
+%       "blocks": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000019"
+%         }
+%       ],
+%       "items": [
+%         "UC-REQUEST-SUBMIT"
+%       ]
+%     },
+%     {
+%       "id": "SEC-MIN-BOUNDARIES",
+%       "level": 1,
+%       "title": {
+%         "@text": "T000020"
+%       },
+%       "blocks": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000021"
+%         }
+%       ],
+%       "items": [
+%         "BND-REQUEST-WEB"
+%       ]
+%     }
+%   ],
+%   "actors": [
+%     {
+%       "id": "ACT-REQUESTER",
+%       "name": {
+%         "@text": "T000022"
+%       },
+%       "kind": "person",
+%       "description": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000023"
+%         }
+%       ]
+%     }
+%   ],
+%   "vocabulary": [
+%     {
+%       "id": "VOC-REQUEST-CODE",
+%       "term": {
+%         "@text": "T000024"
+%       },
+%       "definition": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000025"
+%         }
+%       ],
+%       "synonyms": []
+%     }
+%   ],
+%   "types": [],
+%   "entities": [
+%     {
+%       "id": "ENT-REQUEST",
+%       "name": {
+%         "@text": "T000026"
+%       },
+%       "meaning": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000027"
+%         }
+%       ],
+%       "identity": {
+%         "description": [
+%           {
+%             "type": "paragraph",
+%             "@text": "T000028"
+%           }
+%         ],
+%         "fields": [
+%           "FLD-REQUEST-CODE"
+%         ]
+%       },
+%       "fields": [
+%         {
+%           "id": "FLD-REQUEST-CODE",
+%           "name": {
+%             "@text": "T000029"
+%           },
+%           "type": "text",
+%           "cardinality": "1",
+%           "required": true,
+%           "description": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000030"
+%             }
+%           ],
+%           "constraints": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000031"
+%             }
+%           ],
+%           "examples": {
+%             "valid": [
+%               {
+%                 "@text": "T000032"
+%               },
+%               {
+%                 "@text": "T000033"
+%               }
+%             ],
+%             "invalid": [
+%               {
+%                 "@text": "T000034"
+%               }
+%             ]
+%           }
+%         },
+%         {
+%           "id": "FLD-REQUEST-QUANTITY",
+%           "name": {
+%             "@text": "T000035"
+%           },
+%           "type": "integer",
+%           "cardinality": "1",
+%           "required": true,
+%           "description": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000036"
+%             }
+%           ],
+%           "constraints": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000037"
+%             }
+%           ],
+%           "examples": {
+%             "valid": [
+%               {
+%                 "@text": "T000038"
+%               },
+%               {
+%                 "@text": "T000039"
+%               }
+%             ],
+%             "invalid": [
+%               {
+%                 "@text": "T000040"
+%               },
+%               {
+%                 "@text": "T000041"
+%               }
+%             ]
+%           }
+%         }
+%       ],
+%       "relationships": [],
+%       "states": [],
+%       "transitions": [],
+%       "validations": [
+%         {
+%           "id": "VLD-REQUEST-QUANTITY",
+%           "name": {
+%             "@text": "T000042"
+%           },
+%           "scope": "field",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000043"
+%             }
+%           ],
+%           "inputs": [
+%             {
+%               "name": {
+%                 "@text": "T000044"
+%               },
+%               "source": "field",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000045"
+%                 }
+%               ]
+%             }
+%           ],
+%           "conditions": [
+%             {
+%               "id": "C-VLD-REQ-INT",
+%               "condition": {
+%                 "@text": "T000046"
+%               },
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000047"
+%                 }
+%               ]
+%             },
+%             {
+%               "id": "C-VLD-REQ-MIN",
+%               "condition": {
+%                 "@text": "T000048"
+%               },
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000049"
+%                 }
+%               ]
+%             }
+%           ],
+%           "results": [
+%             {
+%               "outcome": "pass",
+%               "description": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000050"
+%                 }
+%               ]
+%             },
+%             {
+%               "outcome": "fail",
+%               "description": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000051"
+%                 }
+%               ]
+%             }
+%           ],
+%           "flow": "GRAPH-VLD-REQUEST-QUANTITY"
+%         },
+%         {
+%           "id": "VLD-REQUEST-CODE",
+%           "name": {
+%             "@text": "T000052"
+%           },
+%           "scope": "field",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000053"
+%             }
+%           ],
+%           "inputs": [
+%             {
+%               "name": {
+%                 "@text": "T000054"
+%               },
+%               "source": "field",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000055"
+%                 }
+%               ]
+%             }
+%           ],
+%           "conditions": [
+%             {
+%               "id": "C-VLD-REQ-CODE-NONEMPTY",
+%               "condition": {
+%                 "@text": "T000056"
+%               },
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000057"
+%                 }
+%               ]
+%             }
+%           ],
+%           "results": [
+%             {
+%               "outcome": "pass",
+%               "description": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000058"
+%                 }
+%               ]
+%             },
+%             {
+%               "outcome": "fail",
+%               "description": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000059"
+%                 }
+%               ]
+%             }
+%           ],
+%           "flow": "GRAPH-VLD-REQUEST-CODE"
+%         }
+%       ],
+%       "examples": [
+%         {
+%           "id": "EX-REQUEST-VALID",
+%           "kind": "valid",
+%           "description": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000060"
+%             }
+%           ],
+%           "data": {
+%             "code": "REQ-001",
+%             "quantity": 2
+%           }
+%         },
+%         {
+%           "id": "EX-REQUEST-INVALID",
+%           "kind": "invalid",
+%           "description": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000061"
+%             }
+%           ],
+%           "data": {
+%             "code": "REQ-001",
+%             "quantity": 0
+%           }
+%         }
+%       ],
+%       "assumptions": [
+%         "ASM-REQUEST-STORE-UNIQUE"
+%       ],
+%       "open_issues": [
+%         "OI-REQUEST-LATENCY"
+%       ]
+%     }
+%   ],
+%   "tools": [
+%     {
+%       "id": "TOL-REQUEST-STORE",
+%       "name": {
+%         "@text": "T000062"
+%       },
+%       "purpose": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000063"
+%         }
+%       ],
+%       "operations": [
+%         {
+%           "id": "OP-REQUEST-STORE",
+%           "name": {
+%             "@text": "T000064"
+%           },
+%           "purpose": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000065"
+%             }
+%           ],
+%           "inputs": [
+%             {
+%               "name": {
+%                 "@text": "T000066"
+%               },
+%               "type": "text",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000067"
+%                 }
+%               ],
+%               "required": true
+%             },
+%             {
+%               "name": {
+%                 "@text": "T000068"
+%               },
+%               "type": "integer",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000069"
+%                 }
+%               ],
+%               "required": true
+%             }
+%           ],
+%           "conditions": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000070"
+%             },
+%             {
+%               "type": "paragraph",
+%               "@text": "T000071"
+%             },
+%             {
+%               "type": "paragraph",
+%               "@text": "T000072"
+%             }
+%           ],
+%           "results": [
+%             {
+%               "name": {
+%                 "@text": "T000073"
+%               },
+%               "type": "REQUEST",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000074"
+%                 }
+%               ],
+%               "guarantees": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000075"
+%                 }
+%               ]
+%             }
+%           ],
+%           "effects": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000076"
+%             }
+%           ],
+%           "failures": [
+%             {
+%               "code": "DUPLICATE_CODE",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000077"
+%                 }
+%               ],
+%               "consumer_distinction": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000078"
+%                 }
+%               ]
+%             },
+%             {
+%               "code": "STORE_UNAVAILABLE",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000079"
+%                 }
+%               ],
+%               "consumer_distinction": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000080"
+%                 }
+%               ]
+%             }
+%           ],
+%           "guarantees": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000081"
+%             },
+%             {
+%               "type": "paragraph",
+%               "@text": "T000082"
+%             }
+%           ]
+%         }
+%       ]
+%     }
+%   ],
+%   "use_cases": [
+%     {
+%       "id": "UC-REQUEST-SUBMIT",
+%       "name": {
+%         "@text": "T000083"
+%       },
+%       "objective": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000084"
+%         }
+%       ],
+%       "actors": [
+%         {
+%           "actor": "ACT-REQUESTER",
+%           "permission": {
+%             "@text": "T000085"
+%           },
+%           "description": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000086"
+%             },
+%             {
+%               "type": "paragraph",
+%               "@text": "T000087"
+%             }
+%           ]
+%         }
+%       ],
+%       "trigger": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000088"
+%         }
+%       ],
+%       "context": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000089"
+%         },
+%         {
+%           "type": "paragraph",
+%           "@text": "T000090"
+%         },
+%         {
+%           "type": "paragraph",
+%           "@text": "T000091"
+%         }
+%       ],
+%       "inputs": [
+%         {
+%           "name": {
+%             "@text": "T000092"
+%           },
+%           "type": "text",
+%           "meaning": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000093"
+%             }
+%           ],
+%           "required": true
+%         },
+%         {
+%           "name": {
+%             "@text": "T000094"
+%           },
+%           "type": "integer",
+%           "meaning": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000095"
+%             }
+%           ],
+%           "required": true
+%         }
+%       ],
+%       "entry_conditions": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000096"
+%         }
+%       ],
+%       "entities": [
+%         {
+%           "entity": "ENT-REQUEST",
+%           "validations": [
+%             "VLD-REQUEST-QUANTITY",
+%             "VLD-REQUEST-CODE"
+%           ],
+%           "purpose": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000097"
+%             }
+%           ]
+%         }
+%       ],
+%       "tools": [
+%         {
+%           "tool": "TOL-REQUEST-STORE",
+%           "operation": "OP-REQUEST-STORE",
+%           "purpose": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000098"
+%             }
+%           ]
+%         }
+%       ],
+%       "calls": [],
+%       "outcomes": [
+%         {
+%           "id": "OUT-REQUEST-CONFIRMED",
+%           "kind": "success",
+%           "description": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000099"
+%             }
+%           ],
+%           "effects": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000100"
+%             }
+%           ]
+%         },
+%         {
+%           "id": "OUT-REQUEST-INVALID",
+%           "kind": "refusal",
+%           "description": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000101"
+%             }
+%           ],
+%           "effects": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000102"
+%             }
+%           ]
+%         },
+%         {
+%           "id": "OUT-REQUEST-DENIED",
+%           "kind": "refusal",
+%           "description": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000103"
+%             }
+%           ],
+%           "effects": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000104"
+%             }
+%           ]
+%         },
+%         {
+%           "id": "OUT-REQUEST-STORE-FAILURE",
+%           "kind": "failure",
+%           "description": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000105"
+%             }
+%           ],
+%           "effects": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000106"
+%             }
+%           ]
+%         },
+%         {
+%           "id": "OUT-REQUEST-DUPLICATE",
+%           "kind": "refusal",
+%           "description": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000107"
+%             }
+%           ],
+%           "effects": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000108"
+%             }
+%           ]
+%         }
+%       ],
+%       "functional_requirements": [
+%         {
+%           "id": "RF-REQUEST-01",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000109"
+%             }
+%           ],
+%           "scope": "case",
+%           "applies_to": [
+%             "UC-REQUEST-SUBMIT",
+%             "INT-REQUEST-SUBMIT"
+%           ],
+%           "flow_refs": [
+%             "N-REQ-PERM",
+%             "N-REQ-DENY",
+%             "E-REQ-2"
+%           ]
+%         },
+%         {
+%           "id": "RF-REQUEST-02",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000110"
+%             }
+%           ],
+%           "scope": "case",
+%           "applies_to": [
+%             "UC-REQUEST-SUBMIT",
+%             "INT-REQUEST-SUBMIT"
+%           ],
+%           "flow_refs": [
+%             "N-REQ-VALIDATE",
+%             "N-REQ-QTYDEC",
+%             "N-REQ-INVALID",
+%             "E-REQ-4",
+%             "E-REQ-5"
+%           ]
+%         },
+%         {
+%           "id": "RF-REQUEST-03",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000111"
+%             }
+%           ],
+%           "scope": "operation",
+%           "applies_to": [
+%             "UC-REQUEST-SUBMIT",
+%             "OP-REQUEST-STORE"
+%           ],
+%           "flow_refs": [
+%             "N-REQ-STORE",
+%             "E-REQ-6",
+%             "E-REQ-7"
+%           ]
+%         },
+%         {
+%           "id": "RF-REQUEST-04",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000112"
+%             },
+%             {
+%               "type": "paragraph",
+%               "@text": "T000113"
+%             }
+%           ],
+%           "scope": "operation",
+%           "applies_to": [
+%             "UC-REQUEST-SUBMIT",
+%             "OP-REQUEST-STORE"
+%           ],
+%           "flow_refs": [
+%             "N-REQ-STOREERROR",
+%             "E-REQ-8"
+%           ]
+%         },
+%         {
+%           "id": "RF-REQUEST-05",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000114"
+%             }
+%           ],
+%           "scope": "interaction",
+%           "applies_to": [
+%             "UC-REQUEST-SUBMIT",
+%             "INT-REQUEST-SUBMIT"
+%           ],
+%           "flow_refs": [
+%             "N-REQ-SUCCESS",
+%             "E-REQ-7"
+%           ]
+%         },
+%         {
+%           "id": "RF-REQUEST-06",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000115"
+%             }
+%           ],
+%           "scope": "operation",
+%           "applies_to": [
+%             "UC-REQUEST-SUBMIT",
+%             "OP-REQUEST-STORE"
+%           ],
+%           "flow_refs": [
+%             "N-REQ-DUPLICATE",
+%             "E-REQ-DUPLICATE"
+%           ]
+%         },
+%         {
+%           "id": "RF-REQUEST-07",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000116"
+%             }
+%           ],
+%           "scope": "case",
+%           "applies_to": [
+%             "UC-REQUEST-SUBMIT"
+%           ],
+%           "flow_refs": [
+%             "N-REQ-INVALID",
+%             "N-REQ-CODE",
+%             "N-REQ-CODE-VALID",
+%             "E-REQ-CODE-2",
+%             "E-REQ-CODE-3"
+%           ]
+%         }
+%       ],
+%       "nonfunctional_requirements": [
+%         {
+%           "id": "RNF-REQUEST-01",
+%           "scope": "interaction",
+%           "applies_to": [
+%             "INT-REQUEST-SUBMIT"
+%           ],
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000117"
+%             }
+%           ],
+%           "criterion": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000118"
+%             }
+%           ],
+%           "verification": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000119"
+%             }
+%           ],
+%           "metric": {
+%             "name": {
+%               "@text": "T000120"
+%             },
+%             "unit": {
+%               "@text": "T000121"
+%             },
+%             "target": "2",
+%             "operator": "<="
+%           },
+%           "measurement": {
+%             "start": [
+%               {
+%                 "type": "paragraph",
+%                 "@text": "T000122"
+%               }
+%             ],
+%             "end": [
+%               {
+%                 "type": "paragraph",
+%                 "@text": "T000123"
+%               }
+%             ]
+%           },
+%           "references": [
+%             "SRC-REQUEST-BRIEF"
+%           ],
+%           "applicability": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000124"
+%             }
+%           ]
+%         }
+%       ],
+%       "flows": {
+%         "main": "GRAPH-REQUEST-SUBMIT",
+%         "subflows": []
+%       },
+%       "flow_text": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000125"
+%         },
+%         {
+%           "type": "paragraph",
+%           "@text": "T000126"
+%         },
+%         {
+%           "type": "paragraph",
+%           "@text": "T000127"
+%         },
+%         {
+%           "type": "paragraph",
+%           "@text": "T000128"
+%         },
+%         {
+%           "type": "paragraph",
+%           "@text": "T000129"
+%         }
+%       ],
+%       "acceptance_criteria": [
+%         {
+%           "id": "AC-REQUEST-01",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000130"
+%             }
+%           ],
+%           "verifies": [
+%             "RF-REQUEST-02",
+%             "RF-REQUEST-03",
+%             "RF-REQUEST-05"
+%           ]
+%         },
+%         {
+%           "id": "AC-REQUEST-02",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000131"
+%             }
+%           ],
+%           "verifies": [
+%             "RF-REQUEST-02"
+%           ]
+%         },
+%         {
+%           "id": "AC-REQUEST-03",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000132"
+%             }
+%           ],
+%           "verifies": [
+%             "RF-REQUEST-01"
+%           ]
+%         },
+%         {
+%           "id": "AC-REQUEST-04",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000133"
+%             }
+%           ],
+%           "verifies": [
+%             "RF-REQUEST-06"
+%           ]
+%         },
+%         {
+%           "id": "AC-REQUEST-05",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000134"
+%             }
+%           ],
+%           "verifies": [
+%             "RF-REQUEST-04"
+%           ]
+%         },
+%         {
+%           "id": "AC-REQUEST-06",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000135"
+%             }
+%           ],
+%           "verifies": [
+%             "RF-REQUEST-07"
+%           ]
+%         },
+%         {
+%           "id": "AC-REQUEST-SUBMIT-QUALITY",
+%           "statement": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000136"
+%             }
+%           ],
+%           "verifies": [
+%             "RNF-REQUEST-01"
+%           ]
+%         }
+%       ],
+%       "traceability": [
+%         {
+%           "id": "TRC-REQUEST-01",
+%           "source": "RF-REQUEST-02",
+%           "targets": [
+%             "VLD-REQUEST-QUANTITY",
+%             "AC-REQUEST-02"
+%           ],
+%           "note": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000137"
+%             }
+%           ]
+%         },
+%         {
+%           "id": "TRC-REQUEST-02",
+%           "source": "RF-REQUEST-03",
+%           "targets": [
+%             "OP-REQUEST-STORE",
+%             "AC-REQUEST-01"
+%           ],
+%           "note": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000138"
+%             }
+%           ]
+%         },
+%         {
+%           "id": "TRC-REQUEST-SUBMIT-ORIGIN",
+%           "source": "SRC-REQUEST-BRIEF",
+%           "targets": [
+%             "RF-REQUEST-01",
+%             "RF-REQUEST-02",
+%             "RF-REQUEST-03",
+%             "RF-REQUEST-04",
+%             "RF-REQUEST-05",
+%             "RF-REQUEST-06",
+%             "RF-REQUEST-07",
+%             "RNF-REQUEST-01"
+%           ],
+%           "note": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000139"
+%             }
+%           ]
+%         }
+%       ],
+%       "assumptions": [
+%         "ASM-REQUEST-STORE-UNIQUE"
+%       ],
+%       "sources": [
+%         "SRC-REQUEST-BRIEF"
+%       ],
+%       "open_issues": [
+%         "OI-REQUEST-LATENCY"
+%       ]
+%     }
+%   ],
+%   "boundaries": [
+%     {
+%       "id": "BND-REQUEST-WEB",
+%       "name": {
+%         "@text": "T000140"
+%       },
+%       "modality": "web",
+%       "purpose": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000141"
+%         },
+%         {
+%           "type": "paragraph",
+%           "@text": "T000142"
+%         }
+%       ],
+%       "audience": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000143"
+%         }
+%       ],
+%       "interactions": [
+%         {
+%           "id": "INT-REQUEST-SUBMIT",
+%           "name": {
+%             "@text": "T000144"
+%           },
+%           "description": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000145"
+%             },
+%             {
+%               "type": "paragraph",
+%               "@text": "T000146"
+%             }
+%           ],
+%           "use_case": "UC-REQUEST-SUBMIT",
+%           "trigger": [
+%             {
+%               "type": "paragraph",
+%               "@text": "T000147"
+%             }
+%           ],
+%           "input_mapping": [
+%             {
+%               "source": "form.code",
+%               "target": "UC-REQUEST-SUBMIT.input.code",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000148"
+%                 }
+%               ]
+%             },
+%             {
+%               "source": "form.quantity",
+%               "target": "UC-REQUEST-SUBMIT.input.quantity",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000149"
+%                 }
+%               ]
+%             }
+%           ],
+%           "result_mapping": [
+%             {
+%               "source": "OUT-REQUEST-CONFIRMED",
+%               "target": "result.confirmation",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000150"
+%                 }
+%               ]
+%             },
+%             {
+%               "source": "OUT-REQUEST-INVALID",
+%               "target": "result.invalid_data",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000151"
+%                 }
+%               ]
+%             },
+%             {
+%               "source": "OUT-REQUEST-STORE-FAILURE",
+%               "target": "result.store_unavailable",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000152"
+%                 }
+%               ]
+%             },
+%             {
+%               "source": "OUT-REQUEST-DENIED",
+%               "target": "result.out-request-denied",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000153"
+%                 }
+%               ]
+%             },
+%             {
+%               "source": "OUT-REQUEST-DUPLICATE",
+%               "target": "result.out-request-duplicate",
+%               "meaning": [
+%                 {
+%                   "type": "paragraph",
+%                   "@text": "T000154"
+%                 }
+%               ]
+%             }
+%           ],
+%           "requirement_refs": [
+%             "RF-REQUEST-01",
+%             "RF-REQUEST-02",
+%             "RF-REQUEST-03",
+%             "RF-REQUEST-04",
+%             "RF-REQUEST-05",
+%             "RF-REQUEST-06",
+%             "RF-REQUEST-07"
+%           ],
+%           "resources": [
+%             "RES-REQUEST-WIRE",
+%             "RES-REQUEST-FLOW"
+%           ],
+%           "examples": [
+%             {
+%               "type": "figure",
+%               "resource": "RES-REQUEST-WIRE",
+%               "caption": {
+%                 "@text": "T000155"
+%               },
+%               "alt": {
+%                 "@text": "T000156"
+%               }
+%             }
+%           ]
+%         }
+%       ],
+%       "assumptions": [
+%         "ASM-REQUEST-STORE-UNIQUE"
+%       ],
+%       "sources": [
+%         "SRC-REQUEST-BRIEF"
+%       ],
+%       "open_issues": [
+%         "OI-REQUEST-LATENCY"
+%       ]
+%     }
+%   ],
+%   "graphs": [
+%     {
+%       "id": "GRAPH-VLD-REQUEST-QUANTITY",
+%       "kind": "flow",
+%       "owner": {
+%         "kind": "validation",
+%         "id": "VLD-REQUEST-QUANTITY"
+%       },
+%       "title": {
+%         "@text": "T000157"
+%       },
+%       "nodes": [
+%         {
+%           "id": "N-VLD-REQ-START",
+%           "type": "start",
+%           "label": {
+%             "@text": "T000158"
+%           },
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "N-VLD-REQ-READ",
+%           "type": "action",
+%           "label": {
+%             "@text": "T000159"
+%           },
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "N-VLD-REQ-TYPE",
+%           "type": "decision",
+%           "label": {
+%             "@text": "T000160"
+%           },
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "N-VLD-REQ-MIN",
+%           "type": "decision",
+%           "label": {
+%             "@text": "T000161"
+%           },
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "N-VLD-REQ-PASS",
+%           "type": "result",
+%           "label": {
+%             "@text": "T000162"
+%           },
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "N-VLD-REQ-FAIL-TYPE",
+%           "type": "refusal",
+%           "label": {
+%             "@text": "T000163"
+%           },
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "N-VLD-REQ-FAIL-MIN",
+%           "type": "refusal",
+%           "label": {
+%             "@text": "T000164"
+%           },
+%           "requirement_refs": []
+%         }
+%       ],
+%       "edges": [
+%         {
+%           "id": "E-VLD-REQ-1",
+%           "from": "N-VLD-REQ-START",
+%           "to": "N-VLD-REQ-READ",
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "E-VLD-REQ-2",
+%           "from": "N-VLD-REQ-READ",
+%           "to": "N-VLD-REQ-TYPE",
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "E-VLD-REQ-3",
+%           "from": "N-VLD-REQ-TYPE",
+%           "to": "N-VLD-REQ-FAIL-TYPE",
+%           "requirement_refs": [],
+%           "label": {
+%             "@text": "T000165"
+%           }
+%         },
+%         {
+%           "id": "E-VLD-REQ-4",
+%           "from": "N-VLD-REQ-TYPE",
+%           "to": "N-VLD-REQ-MIN",
+%           "requirement_refs": [],
+%           "label": {
+%             "@text": "T000166"
+%           }
+%         },
+%         {
+%           "id": "E-VLD-REQ-5",
+%           "from": "N-VLD-REQ-MIN",
+%           "to": "N-VLD-REQ-FAIL-MIN",
+%           "requirement_refs": [],
+%           "label": {
+%             "@text": "T000167"
+%           }
+%         },
+%         {
+%           "id": "E-VLD-REQ-6",
+%           "from": "N-VLD-REQ-MIN",
+%           "to": "N-VLD-REQ-PASS",
+%           "requirement_refs": [],
+%           "label": {
+%             "@text": "T000168"
+%           }
+%         }
+%       ]
+%     },
+%     {
+%       "id": "GRAPH-REQUEST-SUBMIT",
+%       "kind": "flow",
+%       "owner": {
+%         "kind": "use_case",
+%         "id": "UC-REQUEST-SUBMIT"
+%       },
+%       "title": {
+%         "@text": "T000169"
+%       },
+%       "nodes": [
+%         {
+%           "id": "N-REQ-START",
+%           "type": "start",
+%           "label": {
+%             "@text": "T000170"
+%           },
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "N-REQ-PERM",
+%           "type": "decision",
+%           "label": {
+%             "@text": "T000171"
+%           },
+%           "requirement_refs": [
+%             "RF-REQUEST-01"
+%           ]
+%         },
+%         {
+%           "id": "N-REQ-DENY",
+%           "type": "refusal",
+%           "label": {
+%             "@text": "T000172"
+%           },
+%           "requirement_refs": [
+%             "RF-REQUEST-01"
+%           ]
+%         },
+%         {
+%           "id": "N-REQ-VALIDATE",
+%           "type": "validation",
+%           "label": {
+%             "@text": "T000173"
+%           },
+%           "requirement_refs": [
+%             "RF-REQUEST-02"
+%           ],
+%           "call": {
+%             "kind": "validation",
+%             "id": "VLD-REQUEST-QUANTITY"
+%           }
+%         },
+%         {
+%           "id": "N-REQ-QTYDEC",
+%           "type": "decision",
+%           "label": {
+%             "@text": "T000174"
+%           },
+%           "requirement_refs": [
+%             "RF-REQUEST-02"
+%           ]
+%         },
+%         {
+%           "id": "N-REQ-INVALID",
+%           "type": "refusal",
+%           "label": {
+%             "@text": "T000175"
+%           },
+%           "requirement_refs": [
+%             "RF-REQUEST-02",
+%             "RF-REQUEST-07"
+%           ]
+%         },
+%         {
+%           "id": "N-REQ-STORE",
+%           "type": "operation",
+%           "label": {
+%             "@text": "T000176"
+%           },
+%           "requirement_refs": [
+%             "RF-REQUEST-03"
+%           ],
+%           "call": {
+%             "kind": "operation",
+%             "id": "OP-REQUEST-STORE"
+%           }
+%         },
+%         {
+%           "id": "N-REQ-STOREERROR",
+%           "type": "failure",
+%           "label": {
+%             "@text": "T000177"
+%           },
+%           "requirement_refs": [
+%             "RF-REQUEST-04"
+%           ]
+%         },
+%         {
+%           "id": "N-REQ-SUCCESS",
+%           "type": "result",
+%           "label": {
+%             "@text": "T000178"
+%           },
+%           "requirement_refs": [
+%             "RF-REQUEST-05"
+%           ]
+%         },
+%         {
+%           "id": "N-REQ-DUPLICATE",
+%           "type": "refusal",
+%           "label": {
+%             "@text": "T000179"
+%           },
+%           "requirement_refs": [
+%             "RF-REQUEST-06"
+%           ]
+%         },
+%         {
+%           "id": "N-REQ-CODE",
+%           "type": "validation",
+%           "label": {
+%             "@text": "T000180"
+%           },
+%           "requirement_refs": [
+%             "RF-REQUEST-07"
+%           ],
+%           "call": {
+%             "kind": "validation",
+%             "id": "VLD-REQUEST-CODE"
+%           }
+%         },
+%         {
+%           "id": "N-REQ-CODE-VALID",
+%           "type": "decision",
+%           "label": {
+%             "@text": "T000181"
+%           },
+%           "requirement_refs": [
+%             "RF-REQUEST-07"
+%           ]
+%         }
+%       ],
+%       "edges": [
+%         {
+%           "id": "E-REQ-1",
+%           "from": "N-REQ-START",
+%           "to": "N-REQ-PERM",
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "E-REQ-2",
+%           "from": "N-REQ-PERM",
+%           "to": "N-REQ-DENY",
+%           "requirement_refs": [
+%             "RF-REQUEST-01"
+%           ],
+%           "label": {
+%             "@text": "T000182"
+%           }
+%         },
+%         {
+%           "id": "E-REQ-3",
+%           "from": "N-REQ-PERM",
+%           "to": "N-REQ-CODE",
+%           "requirement_refs": [],
+%           "label": {
+%             "@text": "T000183"
+%           }
+%         },
+%         {
+%           "id": "E-REQ-4",
+%           "from": "N-REQ-VALIDATE",
+%           "to": "N-REQ-QTYDEC",
+%           "requirement_refs": [
+%             "RF-REQUEST-02"
+%           ]
+%         },
+%         {
+%           "id": "E-REQ-5",
+%           "from": "N-REQ-QTYDEC",
+%           "to": "N-REQ-INVALID",
+%           "requirement_refs": [
+%             "RF-REQUEST-02"
+%           ],
+%           "label": {
+%             "@text": "T000184"
+%           }
+%         },
+%         {
+%           "id": "E-REQ-6",
+%           "from": "N-REQ-QTYDEC",
+%           "to": "N-REQ-STORE",
+%           "requirement_refs": [
+%             "RF-REQUEST-03"
+%           ],
+%           "label": {
+%             "@text": "T000185"
+%           }
+%         },
+%         {
+%           "id": "E-REQ-7",
+%           "from": "N-REQ-STORE",
+%           "to": "N-REQ-SUCCESS",
+%           "requirement_refs": [
+%             "RF-REQUEST-03",
+%             "RF-REQUEST-05"
+%           ],
+%           "label": {
+%             "@text": "T000186"
+%           }
+%         },
+%         {
+%           "id": "E-REQ-8",
+%           "from": "N-REQ-STORE",
+%           "to": "N-REQ-STOREERROR",
+%           "requirement_refs": [
+%             "RF-REQUEST-04"
+%           ],
+%           "label": {
+%             "@text": "T000187"
+%           }
+%         },
+%         {
+%           "id": "E-REQ-DUPLICATE",
+%           "from": "N-REQ-STORE",
+%           "to": "N-REQ-DUPLICATE",
+%           "requirement_refs": [
+%             "RF-REQUEST-06"
+%           ],
+%           "label": {
+%             "@text": "T000188"
+%           }
+%         },
+%         {
+%           "id": "E-REQ-CODE-1",
+%           "from": "N-REQ-CODE",
+%           "to": "N-REQ-CODE-VALID",
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "E-REQ-CODE-2",
+%           "from": "N-REQ-CODE-VALID",
+%           "to": "N-REQ-VALIDATE",
+%           "requirement_refs": [
+%             "RF-REQUEST-07"
+%           ],
+%           "label": {
+%             "@text": "T000189"
+%           }
+%         },
+%         {
+%           "id": "E-REQ-CODE-3",
+%           "from": "N-REQ-CODE-VALID",
+%           "to": "N-REQ-INVALID",
+%           "requirement_refs": [
+%             "RF-REQUEST-07"
+%           ],
+%           "label": {
+%             "@text": "T000190"
+%           }
+%         }
+%       ]
+%     },
+%     {
+%       "id": "GRAPH-VLD-REQUEST-CODE",
+%       "kind": "flow",
+%       "owner": {
+%         "kind": "validation",
+%         "id": "VLD-REQUEST-CODE"
+%       },
+%       "title": {
+%         "@text": "T000191"
+%       },
+%       "nodes": [
+%         {
+%           "id": "N-VLD-REQ-CODE-START",
+%           "type": "start",
+%           "label": {
+%             "@text": "T000192"
+%           },
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "N-VLD-REQ-CODE-CHECK",
+%           "type": "decision",
+%           "label": {
+%             "@text": "T000193"
+%           },
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "N-VLD-REQ-CODE-PASS",
+%           "type": "result",
+%           "label": {
+%             "@text": "T000194"
+%           },
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "N-VLD-REQ-CODE-FAIL",
+%           "type": "refusal",
+%           "label": {
+%             "@text": "T000195"
+%           },
+%           "requirement_refs": []
+%         }
+%       ],
+%       "edges": [
+%         {
+%           "id": "E-VLD-REQ-CODE-1",
+%           "from": "N-VLD-REQ-CODE-START",
+%           "to": "N-VLD-REQ-CODE-CHECK",
+%           "requirement_refs": []
+%         },
+%         {
+%           "id": "E-VLD-REQ-CODE-2",
+%           "from": "N-VLD-REQ-CODE-CHECK",
+%           "to": "N-VLD-REQ-CODE-PASS",
+%           "requirement_refs": [],
+%           "label": {
+%             "@text": "T000196"
+%           }
+%         },
+%         {
+%           "id": "E-VLD-REQ-CODE-3",
+%           "from": "N-VLD-REQ-CODE-CHECK",
+%           "to": "N-VLD-REQ-CODE-FAIL",
+%           "requirement_refs": [],
+%           "label": {
+%             "@text": "T000197"
+%           }
+%         }
+%       ]
+%     }
+%   ],
+%   "resources": [
+%     {
+%       "id": "RES-REQUEST-WIRE",
+%       "source_uri": null,
+%       "path": "assets/request-form.svg",
+%       "media_type": "image/svg+xml",
+%       "sha256": "f5a97fb7cb43af9681b2083fe1deebe38bb3eda24adb947c3314317fc8a24de9",
+%       "size": 1663,
+%       "caption": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000198"
+%         }
+%       ],
+%       "alt": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000199"
+%         }
+%       ],
+%       "embedded_text": [
+%         {
+%           "@text": "T000200"
+%         },
+%         {
+%           "@text": "T000201"
+%         },
+%         {
+%           "@text": "T000202"
+%         }
+%       ],
+%       "drawing_source": {
+%         "path": "assets/request-form.svg",
+%         "revision": "1",
+%         "tool": "scripts/build_examples.py"
+%       },
+%       "variants": [
+%         {
+%           "path": "assets/request-form.png",
+%           "media_type": "image/png",
+%           "sha256": "5dd57bf8bccc9bcd9b68e1be1ea50163777caf93d83f6fbfec1a099eb1d84347",
+%           "size": 22242,
+%           "relation": "publication",
+%           "derived_from": "assets/request-form.svg",
+%           "producer": "scripts/build_examples.py"
+%         }
+%       ]
+%     },
+%     {
+%       "id": "RES-REQUEST-FLOW",
+%       "source_uri": null,
+%       "path": "assets/request-flow.svg",
+%       "media_type": "image/svg+xml",
+%       "sha256": "71f3a97b667a88041cc5812da8c8e7e1ddaced2f9c835e56c2c7d6d1b4252206",
+%       "size": 10124,
+%       "caption": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000203"
+%         }
+%       ],
+%       "alt": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000204"
+%         }
+%       ],
+%       "embedded_text": [
+%         {
+%           "@text": "T000205"
+%         },
+%         {
+%           "@text": "T000206"
+%         },
+%         {
+%           "@text": "T000207"
+%         },
+%         {
+%           "@text": "T000208"
+%         },
+%         {
+%           "@text": "T000209"
+%         },
+%         {
+%           "@text": "T000210"
+%         },
+%         {
+%           "@text": "T000211"
+%         },
+%         {
+%           "@text": "T000212"
+%         },
+%         {
+%           "@text": "T000213"
+%         },
+%         {
+%           "@text": "T000214"
+%         },
+%         {
+%           "@text": "T000215"
+%         },
+%         {
+%           "@text": "T000216"
+%         },
+%         {
+%           "@text": "T000217"
+%         },
+%         {
+%           "@text": "T000218"
+%         },
+%         {
+%           "@text": "T000219"
+%         },
+%         {
+%           "@text": "T000220"
+%         },
+%         {
+%           "@text": "T000221"
+%         },
+%         {
+%           "@text": "T000222"
+%         },
+%         {
+%           "@text": "T000223"
+%         },
+%         {
+%           "@text": "T000224"
+%         },
+%         {
+%           "@text": "T000225"
+%         }
+%       ],
+%       "drawing_source": {
+%         "path": "assets/request-flow.svg",
+%         "revision": "1286331986e92aa70d90981f34da7aaa1dc45b09fa69106b4717745a2a095c0a",
+%         "tool": "scripts/build_examples.py"
+%       },
+%       "variants": [
+%         {
+%           "path": "assets/request-flow.png",
+%           "media_type": "image/png",
+%           "sha256": "53545111afdda2bcf5b113667ef14dc2233ca3f7e5e730749d3f50473ed81f8b",
+%           "size": 73547,
+%           "relation": "publication",
+%           "derived_from": "assets/request-flow.svg",
+%           "producer": "scripts/build_examples.py"
+%         }
+%       ],
+%       "derived_from_graph": "GRAPH-REQUEST-SUBMIT"
+%     }
+%   ],
+%   "assumptions": [
+%     {
+%       "id": "ASM-REQUEST-STORE-UNIQUE",
+%       "statement": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000226"
+%         }
+%       ],
+%       "status": "open",
+%       "affected": [
+%         "TOL-REQUEST-STORE",
+%         "UC-REQUEST-SUBMIT"
+%       ]
+%     }
+%   ],
+%   "decisions": [
+%     {
+%       "id": "DEC-MIN-TOOL-ABSTRACTION",
+%       "title": {
+%         "@text": "T000227"
+%       },
+%       "context": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000228"
+%         }
+%       ],
+%       "decision": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000229"
+%         }
+%       ],
+%       "alternatives": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000230"
+%         }
+%       ],
+%       "consequences": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000231"
+%         }
+%       ],
+%       "status": "accepted",
+%       "refs": [
+%         "TOL-REQUEST-STORE"
+%       ]
+%     }
+%   ],
+%   "open_issues": [
+%     {
+%       "id": "OI-REQUEST-LATENCY",
+%       "title": {
+%         "@text": "T000232"
+%       },
+%       "description": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000233"
+%         }
+%       ],
+%       "status": "open",
+%       "refs": [
+%         "RNF-REQUEST-01"
+%       ]
+%     }
+%   ],
+%   "sources": [
+%     {
+%       "id": "SRC-REQUEST-BRIEF",
+%       "title": {
+%         "@text": "T000234"
+%       },
+%       "uri": null,
+%       "revision": "2",
+%       "accessed": null,
+%       "note": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000235"
+%         },
+%         {
+%           "type": "paragraph",
+%           "@text": "T000236"
+%         }
+%       ]
+%     }
+%   ],
+%   "history": [
+%     {
+%       "id": "HIST-REQUEST-01",
+%       "version": "1",
+%       "date": "2026-10-25",
+%       "description": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000237"
+%         }
+%       ]
+%     }
+%   ],
+%   "presentation": {
+%     "markdown": {
+%       "include_toc": false
+%     },
+%     "latex": {
+%       "documentclass": "article",
+%       "figure_width": "0.62\\linewidth"
+%     }
+%   },
+%   "extensions": {}
+% }
+% atlas:structure:end
+\end{document}

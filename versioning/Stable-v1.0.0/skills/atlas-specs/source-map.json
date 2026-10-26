@@ -1,0 +1,151 @@
+{
+  "edition": "Alpha-v0.1.0",
+  "canonical_runtime": "translator/src/atlas_spec",
+  "purpose": "Source correspondence for a generated standalone skill; not proof of semantic completeness.",
+  "files": [
+    {
+      "source": "README.md",
+      "destination": "references/atlas-specification.md",
+      "source_sha256": "29421e96675b0bffe7a6594c7e4e54408e647e66aeb777e8de35da3c3ec082da",
+      "bundled_sha256": "bb0a2afa8c930dbd6924fe5299ef60bfba29ddde0156d64dc2f89c02b10a993d"
+    },
+    {
+      "source": "implementations/json/README.md",
+      "destination": "references/atlas-json.md",
+      "source_sha256": "1b0faacb515559f887337de4c2abe15a41ee0d4e736028a98dd0da09f10b22ec",
+      "bundled_sha256": "78b2928c1631a327275e0e6a0fb2f00ea387fa1ba80a039992aa69e3b3ee8af1"
+    },
+    {
+      "source": "implementations/markdown/README.md",
+      "destination": "references/atlas-markdown.md",
+      "source_sha256": "e8a95a5bd38adb2e703f811d7ca6bb8e9a656d2e94a77726b2826f87bcefad28",
+      "bundled_sha256": "9792a9354a81f2770ed6f99c5d10bc6dd463cc12cae73123bb7f17551b575d99"
+    },
+    {
+      "source": "implementations/latex/README.md",
+      "destination": "references/atlas-latex.md",
+      "source_sha256": "36384e9a6d87fa171f53584befa062588974ca904a649e5be670143a73d1eb2d",
+      "bundled_sha256": "7e1559284d8614b15151fbe3ae0d53ab07fa0cf83d2efa6ce4f4d5f96654f5f4"
+    },
+    {
+      "source": "translator/atlas_translate.py",
+      "destination": "scripts/atlas_translate.py",
+      "source_sha256": "382a91d4605d060a4dc217a35938c8cceba377d6f67666e4c02c7a19193430ff",
+      "bundled_sha256": "382a91d4605d060a4dc217a35938c8cceba377d6f67666e4c02c7a19193430ff"
+    },
+    {
+      "source": "pyproject.toml",
+      "destination": "scripts/requirements.txt",
+      "source_sha256": "2cc042dfe35ebe0bc961ba725359efd035d1099babe8e4522d3f5bbbacd68fc2",
+      "bundled_sha256": "9984fa6ad6d35d2468011c4c278583e9bb4983d83be6bb3f5aabcef9c99b19b7"
+    },
+    {
+      "source": "translator/src/atlas_spec/__init__.py",
+      "destination": "scripts/vendor/atlas_spec/__init__.py",
+      "source_sha256": "f6e7712dceb925b519bfab2140884fcea057ca9529837ef7a535458aa796c4f8",
+      "bundled_sha256": "f6e7712dceb925b519bfab2140884fcea057ca9529837ef7a535458aa796c4f8"
+    },
+    {
+      "source": "translator/src/atlas_spec/__main__.py",
+      "destination": "scripts/vendor/atlas_spec/__main__.py",
+      "source_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "bundled_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "source": "translator/src/atlas_spec/adapters/base.py",
+      "destination": "scripts/vendor/atlas_spec/adapters/base.py",
+      "source_sha256": "04d302f1862a7636dc79d18feda08d3ec503591adfaa1d517659bf29e8570a33",
+      "bundled_sha256": "04d302f1862a7636dc79d18feda08d3ec503591adfaa1d517659bf29e8570a33"
+    },
+    {
+      "source": "translator/src/atlas_spec/adapters/json_adapter.py",
+      "destination": "scripts/vendor/atlas_spec/adapters/json_adapter.py",
+      "source_sha256": "081384e4f3ebdd85245dd12165aef5079b09a9e3447d90c5eff45d3972da34bd",
+      "bundled_sha256": "081384e4f3ebdd85245dd12165aef5079b09a9e3447d90c5eff45d3972da34bd"
+    },
+    {
+      "source": "translator/src/atlas_spec/adapters/latex_adapter.py",
+      "destination": "scripts/vendor/atlas_spec/adapters/latex_adapter.py",
+      "source_sha256": "11aaac145039f25501727495b2e398fe4b5088933b4eb311f6c81f470ec6d9d1",
+      "bundled_sha256": "11aaac145039f25501727495b2e398fe4b5088933b4eb311f6c81f470ec6d9d1"
+    },
+    {
+      "source": "translator/src/atlas_spec/adapters/markdown_adapter.py",
+      "destination": "scripts/vendor/atlas_spec/adapters/markdown_adapter.py",
+      "source_sha256": "f8bc7cf0b9f652e86584b289fb444ae10e02e691f3366f082475808a86aa7d33",
+      "bundled_sha256": "f8bc7cf0b9f652e86584b289fb444ae10e02e691f3366f082475808a86aa7d33"
+    },
+    {
+      "source": "translator/src/atlas_spec/cli.py",
+      "destination": "scripts/vendor/atlas_spec/cli.py",
+      "source_sha256": "68e27611aa040839c37569caace0a8892ddc620fd6a83314448ef3a554ce26eb",
+      "bundled_sha256": "68e27611aa040839c37569caace0a8892ddc620fd6a83314448ef3a554ce26eb"
+    },
+    {
+      "source": "translator/src/atlas_spec/errors.py",
+      "destination": "scripts/vendor/atlas_spec/errors.py",
+      "source_sha256": "ee9cbd830b7358c4e717b39c37fb9c2a1464d0140934d0d69e3c068d781d376e",
+      "bundled_sha256": "ee9cbd830b7358c4e717b39c37fb9c2a1464d0140934d0d69e3c068d781d376e"
+    },
+    {
+      "source": "translator/src/atlas_spec/graph_render.py",
+      "destination": "scripts/vendor/atlas_spec/graph_render.py",
+      "source_sha256": "e23e895b556718d24faf0b145ce17644f8138ba1019555ed04960d658ed09397",
+      "bundled_sha256": "e23e895b556718d24faf0b145ce17644f8138ba1019555ed04960d658ed09397"
+    },
+    {
+      "source": "translator/src/atlas_spec/registry.py",
+      "destination": "scripts/vendor/atlas_spec/registry.py",
+      "source_sha256": "0cb46333ca16f55c292887a82088d810d92f35e49b2b2a43c6fbd311bb34da9e",
+      "bundled_sha256": "0cb46333ca16f55c292887a82088d810d92f35e49b2b2a43c6fbd311bb34da9e"
+    },
+    {
+      "source": "implementations/json/atlas.schema.json",
+      "destination": "scripts/vendor/atlas_spec/schemas/atlas.schema.json",
+      "source_sha256": "1072c3b4ef28ba46f5c1024812464850269cf7783ad4dbe7e21f39403ba74edb",
+      "bundled_sha256": "1072c3b4ef28ba46f5c1024812464850269cf7783ad4dbe7e21f39403ba74edb"
+    },
+    {
+      "source": "translator/src/atlas_spec/slots.py",
+      "destination": "scripts/vendor/atlas_spec/slots.py",
+      "source_sha256": "2e234b4d15159bb6b4b88cab9b72930a00ca6d980e6238192ecb7a114a8dbef2",
+      "bundled_sha256": "2e234b4d15159bb6b4b88cab9b72930a00ca6d980e6238192ecb7a114a8dbef2"
+    },
+    {
+      "source": "implementations/latex/atlas.sty",
+      "destination": "scripts/vendor/atlas_spec/templates/atlas.sty",
+      "source_sha256": "a6b85b5a9b2769c4f4392b0e05ef71fec743d11bdb11da9e21ec491b7e503b41",
+      "bundled_sha256": "a6b85b5a9b2769c4f4392b0e05ef71fec743d11bdb11da9e21ec491b7e503b41"
+    },
+    {
+      "source": "translator/src/atlas_spec/util.py",
+      "destination": "scripts/vendor/atlas_spec/util.py",
+      "source_sha256": "4ba00edeeab6801135d61dab1243c2cfd11e60b2272798bc73934ebf09dd80df",
+      "bundled_sha256": "4ba00edeeab6801135d61dab1243c2cfd11e60b2272798bc73934ebf09dd80df"
+    },
+    {
+      "source": "translator/src/atlas_spec/validation.py",
+      "destination": "scripts/vendor/atlas_spec/validation.py",
+      "source_sha256": "544f3cd67b9842608eae4d74168a199ae71e85ec7cff19ad7dd136878e6bbaec",
+      "bundled_sha256": "544f3cd67b9842608eae4d74168a199ae71e85ec7cff19ad7dd136878e6bbaec"
+    },
+    {
+      "source": "implementations/json/starter.atlas.json",
+      "destination": "assets/starter.atlas.json",
+      "source_sha256": "af26f1a77653311a6439925b69746a25d3213885e8467ae3d87f7dfd55e4ab7c",
+      "bundled_sha256": "af26f1a77653311a6439925b69746a25d3213885e8467ae3d87f7dfd55e4ab7c"
+    },
+    {
+      "source": "implementations/latex/atlas-presentation.example.tex",
+      "destination": "assets/atlas-presentation.example.tex",
+      "source_sha256": "b0329d91bfd2f32bd2b612fb09d1d27a6e7eb51c6ee59a8c9186e764f7b958a4",
+      "bundled_sha256": "b0329d91bfd2f32bd2b612fb09d1d27a6e7eb51c6ee59a8c9186e764f7b958a4"
+    },
+    {
+      "source": "LICENSE",
+      "destination": "LICENSE",
+      "source_sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de",
+      "bundled_sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    }
+  ]
+}

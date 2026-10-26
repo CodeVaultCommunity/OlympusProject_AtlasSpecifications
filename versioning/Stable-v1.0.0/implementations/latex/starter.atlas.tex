@@ -1,0 +1,222 @@
+% atlas:latex profile=atlas-latex representation=Alpha-v0.1.0 translator=0.1.0
+% Atlas LaTeX. Text records are authoritative for prose; the structure
+% appendix is authoritative for non-text data. Derived environments are
+% checked against both sources when the file is imported.
+\documentclass[11pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\usepackage{atlas}
+% Optional publication-only settings. The Atlas decoder does not read this file.
+\InputIfFileExists{atlas-presentation.tex}{}{}
+\begin{document}
+\AtlasBeginCover{ATLAS-\allowbreak{}DRAFT-\allowbreak{}001}{1}{draft}
+\begin{atlastitle}{T000001}
+Untitled specification
+\end{atlastitle}
+\begin{atlastext}{T000002}
+Working draft: project scope and requirements are not yet defined
+\end{atlastext}
+\AtlasEndCover
+\AtlasMetaLine{Document}{\texttt{ATLAS-\allowbreak{}DRAFT-\allowbreak{}001}}
+\AtlasMetaLine{Revision}{\texttt{1}}
+\AtlasMetaLine{Status}{\texttt{draft}}
+\AtlasMetaLine{Language}{\texttt{en}}
+\AtlasMetaLine{Atlas version}{\texttt{Alpha-\allowbreak{}v0.\allowbreak{}1.\allowbreak{}0}}
+\AtlasMetaLine{Profile version}{\texttt{Alpha-\allowbreak{}v0.\allowbreak{}1.\allowbreak{}0}}
+\AtlasMetaLine{Translator}{\texttt{0.\allowbreak{}1.\allowbreak{}0}}
+\AtlasMetaLine{Created}{\texttt{2026-\allowbreak{}10-\allowbreak{}25}}
+\AtlasMetaLine{Updated}{\texttt{2026-\allowbreak{}10-\allowbreak{}25}}
+\AtlasLabel{Authors}
+\begin{atlasitem}{T000003}
+Author to be assigned
+\end{atlasitem}
+\begin{atlastext}{T000004}
+Unassigned specification owner
+\end{atlastext}
+\begin{atlasheading}{T000005}{2}
+Context and vocabulary
+\end{atlasheading}
+\begin{atlasheading}{T000006}{2}
+Entities and validity
+\end{atlasheading}
+\begin{atlasheading}{T000007}{2}
+Abstract tools
+\end{atlasheading}
+\begin{atlasheading}{T000008}{2}
+Use cases and acceptance
+\end{atlasheading}
+\begin{atlasheading}{T000009}{2}
+Interaction constraints
+\end{atlasheading}
+\AtlasAppendixHeading{Appendix: open issues}
+\AtlasSubheading{\texttt{ISSUE-\allowbreak{}SCOPE}}
+\AtlasLabel{Title}
+\begin{atlastext}{T000010}
+Project scope and accountable author are unassigned
+\end{atlastext}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000011}
+No stakeholder brief, actors, use cases, product requirements or acceptance criteria have been supplied. This structurally valid draft does not claim a complete L1 specification or an executed Needs-to-L1 derivation.
+\end{atlasparagraph}
+\AtlasMetaLine{Status}{open}
+\AtlasMetaLine{Refs}{none}
+\AtlasAppendixHeading{Appendix: history}
+\AtlasSubheading{\texttt{HISTORY-\allowbreak{}INITIAL}}
+\AtlasMetaLine{Version}{1}
+\AtlasMetaLine{Date}{2026-\allowbreak{}10-\allowbreak{}25}
+\AtlasLabel{Description}
+\begin{atlasparagraph}{T000012}
+Initialized an empty working draft using the Atlas Specifications Alpha-v0.1.0 starter. No business requirements are asserted.
+\end{atlasparagraph}
+\begin{atlasderived}{DERIVED-SUMMARY}
+Derived summary: 5 sections; 0 actors; 0 entities; 0 tools; 0 use cases; 0 boundaries; 0 graphs; 0 resources.
+\end{atlasderived}
+%
+% atlas:structure:begin
+% {
+%   "document_id": "ATLAS-DRAFT-001",
+%   "title": {
+%     "@text": "T000001"
+%   },
+%   "subtitle": {
+%     "@text": "T000002"
+%   },
+%   "revision": "1",
+%   "spec_version": "Alpha-v0.1.0",
+%   "profile_version": "Alpha-v0.1.0",
+%   "translator_version": "0.1.0",
+%   "language": "en",
+%   "status": "draft",
+%   "authors": [
+%     {
+%       "name": {
+%         "@text": "T000003"
+%       },
+%       "role": {
+%         "@text": "T000004"
+%       }
+%     }
+%   ],
+%   "created": "2026-10-25",
+%   "updated": "2026-10-25",
+%   "keywords": [],
+%   "structure": [
+%     {
+%       "id": "SEC-CONTEXT",
+%       "level": 1,
+%       "title": {
+%         "@text": "T000005"
+%       },
+%       "blocks": [],
+%       "items": []
+%     },
+%     {
+%       "id": "SEC-ENTITIES",
+%       "level": 1,
+%       "title": {
+%         "@text": "T000006"
+%       },
+%       "blocks": [],
+%       "items": []
+%     },
+%     {
+%       "id": "SEC-TOOLS",
+%       "level": 1,
+%       "title": {
+%         "@text": "T000007"
+%       },
+%       "blocks": [],
+%       "items": []
+%     },
+%     {
+%       "id": "SEC-CASES",
+%       "level": 1,
+%       "title": {
+%         "@text": "T000008"
+%       },
+%       "blocks": [],
+%       "items": []
+%     },
+%     {
+%       "id": "SEC-INTERACTION",
+%       "level": 1,
+%       "title": {
+%         "@text": "T000009"
+%       },
+%       "blocks": [],
+%       "items": []
+%     }
+%   ],
+%   "actors": [],
+%   "vocabulary": [],
+%   "types": [],
+%   "entities": [],
+%   "tools": [],
+%   "use_cases": [],
+%   "boundaries": [],
+%   "graphs": [],
+%   "resources": [],
+%   "assumptions": [],
+%   "decisions": [],
+%   "open_issues": [
+%     {
+%       "id": "ISSUE-SCOPE",
+%       "title": {
+%         "@text": "T000010"
+%       },
+%       "description": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000011"
+%         }
+%       ],
+%       "status": "open",
+%       "refs": []
+%     }
+%   ],
+%   "sources": [],
+%   "history": [
+%     {
+%       "id": "HISTORY-INITIAL",
+%       "version": "1",
+%       "date": "2026-10-25",
+%       "description": [
+%         {
+%           "type": "paragraph",
+%           "@text": "T000012"
+%         }
+%       ]
+%     }
+%   ],
+%   "presentation": {
+%     "markdown": {
+%       "include_toc": true
+%     },
+%     "latex": {
+%       "documentclass": "article",
+%       "class_options": [
+%         "11pt"
+%       ],
+%       "paper": "a4paper",
+%       "toc": true,
+%       "figure_width": "0.8\\linewidth"
+%     }
+%   },
+%   "extensions": {}
+% }
+% atlas:structure:end
+\end{document}
